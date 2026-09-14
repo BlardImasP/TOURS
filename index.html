@@ -69,15 +69,15 @@
     </table>
 
     <div>
-        <span id="debug_text"></span>
+        <span id="debug_text">Debug Text</span>
     </div>
 
     <div>
-        <span id="debug_get_cookie"></span>
+        <span id="debug_get_cookie">Debug Text</span>
     </div>
 
     <div>
-        <span id="debug_set_cookie"></span>
+        <span id="debug_set_cookie">Debug Text</span>
     </div>
 
     <script src="Appeal.js"></script>
@@ -122,6 +122,8 @@
             //  コンストラクタ
             constructor(cookies) {
 
+                setTextContent("debug_text", "cookie_storage: constructor(cookies)");
+
                 this.song_id = 1;
 
                 this.costume_id = 1;
@@ -130,37 +132,43 @@
 
                 this.trustiness_level = 1;
 
-                const cookieArray = cookies.split("/");
+                try {
 
-                cookieArray.forEach((cookie) => {
+                    const cookieArray = cookies.split("/");
 
-                    const cookiePair = cookie.split("=");
+                    cookieArray.forEach((cookie) => {
 
-                    const cookieKey = cookiePair[0].trim();
+                        const cookiePair = cookie.split("=");
 
-                    switch (cookieKey) {
-                        case "song_id":
+                        const cookieKey = cookiePair[0].trim();
 
-                            this.song_id = Number(decodeURIComponent(cookiePair[1]));
-                            break;
+                        switch (cookieKey) {
+                            case "song_id":
 
-                        case "costume_id":
+                                this.song_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
 
-                            this.costume_id = Number(decodeURIComponent(cookiePair[1]));
-                            break;
+                            case "costume_id":
 
-                        case "costume_level":
+                                this.costume_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
 
-                            this.costume_level = Number(decodeURIComponent(cookiePair[1]));
-                            break;
+                            case "costume_level":
 
-                        case "trustiness_level":
+                                this.costume_level = Number(decodeURIComponent(cookiePair[1]));
+                                break;
 
-                            this.trustiness_level = Number(decodeURIComponent(cookiePair[1]));
-                            break;
-                    }
+                            case "trustiness_level":
 
-                })
+                                this.trustiness_level = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+                        }
+
+                    })
+
+                } catch (e) {
+
+                }
             }
 
             build_cookies(age) {
@@ -284,11 +292,13 @@
 
         function setup() {
 
+            setTextContent("debug_text", "setup()");
+
             const cookies = document.cookie;
 
             setTextContent("debug_get_cookie", "get cookie" + " = " + cookies);
 
-            cookieStorage = new cookie_storage(cookie);
+            cookieStorage = new cookie_storage(cookies);
 
             setup_song_select(cookieStorage.song_id);
 
