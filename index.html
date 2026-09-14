@@ -130,7 +130,7 @@
 
                 this.trustiness_level = 1;
 
-                const cookieArray = cookies.split(";");
+                const cookieArray = cookies.split("/");
 
                 cookieArray.forEach((cookie) => {
 
@@ -167,15 +167,15 @@
 
                 let cookies = "";
 
-                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + ";";
+                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + "/";
 
-                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + ";";
+                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + "/";
 
-                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + ";";
+                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + "/";
 
-                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + ";";
+                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + "/";
 
-                cookies += "max-age" + "=" + age;
+                cookies += "; " + "max-age" + "=" + age;
 
                 return cookies;
             }
