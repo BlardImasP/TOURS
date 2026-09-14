@@ -1,0 +1,559 @@
+﻿<!DOCTYPE html>
+
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <title>アピール値計算</title>
+
+</head>
+
+<body onload="body_onload()">
+
+    <div>
+        楽曲：<select id="song_select" onchange="song_select_onchange()"></select>
+    </div>
+
+    <div>
+        楽曲属性：<span id="song_bonus_text"></span>
+    </div>
+
+    <table>
+        <caption>
+            アイドルアピール
+        </caption>
+        <thead>
+            <tr>
+                <th scope="col" colspan="2"><select id="costume_select" onchange="costume_select_onchange()"></select></th>
+                <th scope="col">Vo</th>
+                <th scope="col">Da</th>
+                <th scope="col">Vi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" colspan="2">衣装アピール値</th>
+                <td id="costume_vo_text" align="right">0</td>
+                <td id="costume_da_text" align="right">0</td>
+                <td id="costume_vi_text" align="right">0</td>
+            </tr>
+            <tr>
+                <th scope="row">着こなしLv</th>
+                <td><select id="costume_level_select" onchange="costume_level_select_onchange()"></select></td>
+                <td id="costume_bonus_vo_text" align="right">0</td>
+                <td id="costume_bonus_da_text" align="right">0</td>
+                <td id="costume_bonus_vi_text" align="right">0</td>
+            </tr>
+            <tr>
+                <th scope="row">信頼度Lv</th>
+                <td><select id="trustiness_level_select" onchange="trustiness_level_select_onchange()"></select></td>
+                <td id="trustiness_bonus_vo_text" align="right">0</td>
+                <td id="trustiness_bonus_da_text" align="right">0</td>
+                <td id="trustiness_bonus_vi_text" align="right">0</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">楽曲属性ボーナス値</th>
+                <td id="song_bonus_vo_text" align="right">0</td>
+                <td id="song_bonus_da_text" align="right">0</td>
+                <td id="song_bonus_vi_text" align="right">0</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">アイドルアピール値</th>
+                <td id="idle_appeal_vo_text" align="right">0</td>
+                <td id="idle_appeal_da_text" align="right">0</td>
+                <td id="idle_appeal_vi_text" align="right">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <span id="debug_text"></span>
+    </div>
+
+    <div>
+        <span id="debug_get_cookie"></span>
+    </div>
+
+    <div>
+        <span id="debug_set_cookie"></span>
+    </div>
+
+    <script src="Appeal.js"></script>
+
+    <script src="BonusRates.js"></script>
+
+    <script src="SongBonus.js"></script>
+    <script src="SongBonusList.js"></script>
+
+    <script src="Song.js"></script>
+    <script src="SongList.js"></script>
+
+    <script src="CostumeBonus.js"></script>
+    <script src="CostumeBonusList.js"></script>
+
+    <script src="Costume.js"></script>
+    <script src="CostumeList.js"></script>
+
+    <script>
+
+        function setTextContent(id, text) {
+
+            const elementText = document.getElementById(id);
+
+            elementText.textContent = text;
+        }
+
+    </script>
+
+    <script>
+
+        class cookie_storage {
+
+            song_id;
+
+            costume_id;
+
+            costume_level;
+
+            trustiness_level;
+
+            //  コンストラクタ
+            constructor(cookies) {
+
+                this.song_id = 1;
+
+                this.costume_id = 1;
+
+                this.costume_level = 1;
+
+                this.trustiness_level = 1;
+
+                const cookieArray = cookies.split(";");
+
+                cookieArray.forEach((cookie) => {
+
+                    const cookiePair = cookie.split("=");
+
+                    const cookieKey = cookiePair[0].trim();
+
+                    switch (cookieKey) {
+                        case "song_id":
+
+                            this.song_id = Number(decodeURIComponent(cookiePair[1]));
+                            break;
+
+                        case "costume_id":
+
+                            this.costume_id = Number(decodeURIComponent(cookiePair[1]));
+                            break;
+
+                        case "costume_level":
+
+                            this.costume_level = Number(decodeURIComponent(cookiePair[1]));
+                            break;
+
+                        case "trustiness_level":
+
+                            this.trustiness_level = Number(decodeURIComponent(cookiePair[1]));
+                            break;
+                    }
+
+                })
+            }
+
+            build_cookies(age) {
+
+                let cookies = "";
+
+                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + ";";
+
+                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + ";";
+
+                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + ";";
+
+                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + ";";
+
+                cookies += "max-age" + "=" + age;
+
+                return cookies;
+            }
+        }
+
+        var cookieStorage;
+
+        function object_clear_options(object) {
+
+            const options = object.options;
+
+            let indexOptions = options.length;
+
+            while (indexOptions > 0) {
+                indexOptions--;
+
+                object.removeChild(options.item(indexOptions));
+            }
+        }
+
+        function select_clear_options(elementId) {
+
+            const selectObj = document.getElementById(elementId);
+
+            object_clear_options(selectObj);
+        }
+
+        function object_add_option(object, value, text) {
+
+            const option = document.createElement("option");
+
+            option.value = value;
+            option.text = text;
+
+            object.add(option);
+        }
+
+        function select_add_option(elementId, value, text) {
+
+            const selectObj = document.getElementById(elementId);
+
+            object_add_option(selectObj, value, text);
+        }
+
+        function setup_song_select(song_id) {
+
+            const selectSong = document.getElementById("song_select");
+
+            object_clear_options(selectSong);
+
+            song_list.forEach((song) => { object_add_option(selectSong, song.id, song.text); });
+
+            selectSong.value = song_id;
+        }
+
+        function setup_costume_select(costume_id) {
+
+            const selectCostume = document.getElementById("costume_select");
+
+            object_clear_options(selectCostume);
+
+            costume_list.forEach((costume) => { object_add_option(selectCostume, costume.id, costume.text); });
+
+            selectCostume.value = costume_id;
+        }
+
+        function setup_costume_level_select(level_max, level) {
+
+            const selectCostumeLevel = document.getElementById("costume_level_select");
+
+            object_clear_options(selectCostumeLevel);
+
+            for (let level = level_max; level >= 1; level--) {
+
+                object_add_option(selectCostumeLevel, level, level);
+            }
+
+            if (level < level_max) {
+
+                selectCostumeLevel.value = level;
+            } else {
+
+                selectCostumeLevel.value = level_max;
+            }
+        }
+
+        function setup_trustiness_level_select(level_max, level) {
+
+            const selectTrustinessLevel = document.getElementById("trustiness_level_select");
+
+            object_clear_options(selectTrustinessLevel);
+
+            for (let level = level_max; level >= 1; level--) {
+
+                object_add_option(selectTrustinessLevel, level, level);
+            }
+
+            if (level < level_max) {
+
+                selectTrustinessLevel.value = level;
+            } else {
+
+                selectTrustinessLevel.value = level_max;
+            }
+        }
+
+        function setup() {
+
+            const cookie = document.cookie;
+
+            setTextContent("debug_get_cookie", "get cookie" + " = " + cookie);
+
+            cookieStorage = new cookie_storage(cookie);
+
+            setup_song_select(cookieStorage.song_id);
+
+            setup_costume_select(cookieStorage.costume_id);
+
+            setup_costume_level_select(60, cookieStorage.costume_level);
+
+            setup_trustiness_level_select(60, cookieStorage.trustiness_level);
+        }
+
+        function get_song_selected() {
+
+            const selectSong = document.getElementById("song_select");
+
+            const indexSong = selectSong.selectedIndex;
+
+            return song_list[indexSong];
+        }
+
+        function get_costume_selected() {
+
+            const selectCostume = document.getElementById("costume_select");
+
+            const indexCostume = selectCostume.selectedIndex;
+
+            return costume_list[indexCostume];
+        }
+
+        function get_costume_level_selected() {
+
+            const selectCostumeLevel = document.getElementById("costume_level_select");
+
+            return selectCostumeLevel.value;
+        }
+
+        function get_trustiness_level_selected() {
+
+            const selectTrustinessLevel = document.getElementById("trustiness_level_select");
+
+            return selectTrustinessLevel.value;
+        }
+
+        function redraw_song_informations(song) {
+
+            const textSongBonus = document.getElementById("song_bonus_text");
+
+            textSongBonus.textContent = song.bonus_text;
+        }
+
+        function redraw_costume_informations(costume) {
+
+            const textCostumeVo = document.getElementById("costume_vo_text");
+            const textCostumeDa = document.getElementById("costume_da_text");
+            const textCostumeVi = document.getElementById("costume_vi_text");
+
+            textCostumeVo.textContent = costume.appeal_base.vo;
+            textCostumeDa.textContent = costume.appeal_base.da;
+            textCostumeVi.textContent = costume.appeal_base.vi;
+
+            setup_costume_level_select(costume.level_max, cookieStorage.costume_level);
+        }
+
+        function redraw_costume_bonus(costume_bonus_vo, costume_bonus_da, costume_bonus_vi) {
+
+            const textCostumeBonusVo = document.getElementById("costume_bonus_vo_text");
+            const textCostumeBonusDa = document.getElementById("costume_bonus_da_text");
+            const textCostumeBonusVi = document.getElementById("costume_bonus_vi_text");
+
+            textCostumeBonusVo.textContent = Math.floor(costume_bonus_vo);
+            textCostumeBonusDa.textContent = Math.floor(costume_bonus_da);
+            textCostumeBonusVi.textContent = Math.floor(costume_bonus_vi);
+        }
+
+        function redraw_trustiness_bonus(trustiness_bonus_vo, trustiness_bonus_da, trustiness_bonus_vi) {
+
+            const textTrustinessBonusVo = document.getElementById("trustiness_bonus_vo_text");
+            const textTrustinessBonusDa = document.getElementById("trustiness_bonus_da_text");
+            const textTrustinessBonusVi = document.getElementById("trustiness_bonus_vi_text");
+
+            textTrustinessBonusVo.textContent = Math.floor(trustiness_bonus_vo);
+            textTrustinessBonusDa.textContent = Math.floor(trustiness_bonus_da);
+            textTrustinessBonusVi.textContent = Math.floor(trustiness_bonus_vi);
+        }
+
+        function redraw_song_bonus(song_bonus_vo, song_bonus_da, song_bonus_vi) {
+
+            const textSongBonusVo = document.getElementById("song_bonus_vo_text");
+            const textSongBonusDa = document.getElementById("song_bonus_da_text");
+            const textSongBonusVi = document.getElementById("song_bonus_vi_text");
+
+            textSongBonusVo.textContent = Math.floor(song_bonus_vo);
+            textSongBonusDa.textContent = Math.floor(song_bonus_da);
+            textSongBonusVi.textContent = Math.floor(song_bonus_vi);
+        }
+
+        function redraw_idle_appeal(idle_appeal_vo, idle_appeal_da, idle_appeal_vi) {
+
+            const textIdleAppealVo = document.getElementById("idle_appeal_vo_text");
+            const textIdleAppealDa = document.getElementById("idle_appeal_da_text");
+            const textIdleAppealVi = document.getElementById("idle_appeal_vi_text");
+
+            textIdleAppealVo.textContent = Math.floor(idle_appeal_vo);
+            textIdleAppealDa.textContent = Math.floor(idle_appeal_da);
+            textIdleAppealVi.textContent = Math.floor(idle_appeal_vi);
+        }
+
+        function calculate_appeal(song, costume) {
+
+            const costume_level = get_costume_level_selected();
+
+            const trustiness_level = get_trustiness_level_selected();
+
+            cookieStorage.song_id = song.id;
+
+            cookieStorage.costume_id = costume.id;
+
+            cookieStorage.costume_level = costume_level;
+
+            cookieStorage.trustiness_level = trustiness_level;
+
+            let costume_bonus_vo;
+
+            let costume_bonus_da;
+
+            let costume_bonus_vi;
+
+            if (costume_level <= 1) {
+
+                costume_bonus_vo = 0;
+
+                costume_bonus_da = 0;
+
+                costume_bonus_vi = 0;
+            } else if (costume_level <= 50) {
+
+                costume_bonus_vo = costume_level * costume.appeal_base.vo * costume.bonus_rates.rate_vo / 10000;
+
+                costume_bonus_da = costume_level * costume.appeal_base.da * costume.bonus_rates.rate_da / 10000;
+
+                costume_bonus_vi = costume_level * costume.appeal_base.vi * costume.bonus_rates.rate_vi / 10000;
+            } else {
+
+                costume_bonus_vo = 50 * costume.appeal_base.vo * costume.bonus_rates.rate_vo / 10000
+                    + (costume_level - 50) * costume.appeal_base.vo * costume.bonus_ex_rates.rate_vo / 10000;
+
+                costume_bonus_da = 50 * costume.appeal_base.da * costume.bonus_rates.rate_da / 10000
+                    + (costume_level - 50) * costume.appeal_base.da * costume.bonus_ex_rates.rate_da / 10000;
+
+                costume_bonus_vi = 50 * costume.appeal_base.vi * costume.bonus_rates.rate_vi / 10000
+                    + (costume_level - 50) * costume.appeal_base.vi * costume.bonus_ex_rates.rate_vi / 10000;
+            }
+
+            redraw_costume_bonus(costume_bonus_vo, costume_bonus_da, costume_bonus_vi);
+
+            let trustiness_bonus_vo;
+
+            let trustiness_bonus_da;
+
+            let trustiness_bonus_vi;
+
+            if (costume_level <= 1) {
+
+                trustiness_bonus_vo = 0;
+
+                trustiness_bonus_da = 0;
+
+                trustiness_bonus_vi = 0;
+            } else if (costume_level <= 60) {
+
+                trustiness_bonus_vo = trustiness_level * costume.appeal_base.vo * 12 / 10000;
+
+                trustiness_bonus_da = trustiness_level * costume.appeal_base.da * 12 / 10000;
+
+                trustiness_bonus_vi = trustiness_level * costume.appeal_base.vi * 12 / 10000;
+            }
+
+            redraw_trustiness_bonus(trustiness_bonus_vo, trustiness_bonus_da, trustiness_bonus_vi);
+
+            let song_bonus_vo = costume.appeal_base.vo * song.bonus_rates.rate_vo / 100;
+
+            let song_bonus_da = costume.appeal_base.da * song.bonus_rates.rate_da / 100;
+
+            let song_bonus_vi = costume.appeal_base.vi * song.bonus_rates.rate_vi / 100;
+
+            redraw_song_bonus(song_bonus_vo, song_bonus_da, song_bonus_vi);
+
+            let idle_appeal_vo = costume.appeal_base.vo
+                + costume_bonus_vo
+                + trustiness_bonus_vo
+                + song_bonus_vo;
+
+            let idle_appeal_da = costume.appeal_base.da
+                + costume_bonus_da
+                + trustiness_bonus_da
+                + song_bonus_da;
+
+            let idle_appeal_vi = costume.appeal_base.vi
+                + costume_bonus_vi
+                + trustiness_bonus_vi
+                + song_bonus_vi;
+
+            redraw_idle_appeal(idle_appeal_vo, idle_appeal_da, idle_appeal_vi);
+
+            const cookie = cookieStorage.build_cookies(30 * 24 * 60 * 60);
+
+            setTextContent("debug_set_cookie", "set cookie" + " = " + cookie);
+
+            document.cookie = cookie;
+        }
+
+        function body_onload() {
+
+            setup();
+
+            const song = get_song_selected();
+
+            const costume = get_costume_selected();
+
+            redraw_song_informations(song);
+
+            redraw_costume_informations(costume);
+
+            calculate_appeal(song, costume);
+        }
+
+        function song_select_onchange() {
+
+            const song = get_song_selected();
+
+            const costume = get_costume_selected();
+
+            redraw_song_informations(song);
+
+            calculate_appeal(song, costume);
+        }
+
+        function costume_select_onchange() {
+
+            const song = get_song_selected();
+
+            const costume = get_costume_selected();
+
+            redraw_costume_informations(costume);
+
+            calculate_appeal(song, costume);
+        }
+
+        function costume_level_select_onchange() {
+
+            const song = get_song_selected();
+
+            const costume = get_costume_selected();
+
+            calculate_appeal(song, costume);
+        }
+
+        function trustiness_level_select_onchange() {
+
+            const song = get_song_selected();
+
+            const costume = get_costume_selected();
+
+            calculate_appeal(song, costume);
+        }
+
+    </script>
+</body>
+</html>
