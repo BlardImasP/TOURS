@@ -284,9 +284,9 @@
 
         function setup() {
 
-            const cookie = document.cookie;
+            const cookies = document.cookie;
 
-            setTextContent("debug_get_cookie", "get cookie" + " = " + cookie);
+            setTextContent("debug_get_cookie", "get cookie" + " = " + cookies);
 
             cookieStorage = new cookie_storage(cookie);
 
@@ -492,11 +492,11 @@
 
             redraw_idle_appeal(idle_appeal_vo, idle_appeal_da, idle_appeal_vi);
 
-            const cookie = cookieStorage.build_cookies(30 * 24 * 60 * 60);
+            const cookies = cookieStorage.build_cookies(30 * 24 * 60 * 60);
 
-            setTextContent("debug_set_cookie", "set cookie" + " = " + cookie);
+            setTextContent("debug_set_cookie", "set cookie" + " = " + cookies);
 
-            document.cookie = cookie;
+            document.cookie = cookies;
         }
 
         function body_onload() {
