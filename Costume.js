@@ -1,18 +1,38 @@
 ﻿
 class costume {
 
+    id;
+
+    name;
+
+    appeal_base;
+
+    bonus_text;
+
+    bonus_rates;
+
+    bonus_ex_rates;
+
+    level_max;
+
+    idols_text;
+
+    genre_text;
+
+    remarks;
+
     //  コンストラクタ
-    constructor(id, text, appeal, bonus_text, level_max, equipable_text) {
+    constructor(id, name, appeal, bonus_text, level_max, idols_text, genre_text, remarks) {
 
         this.id = id;
 
-        this.text = text;
+        this.name = name;
 
         this.appeal_base = appeal;
 
         this.bonus_text = bonus_text;
 
-        var costume_bonus = costume_bonus_list.find(item => item.text === bonus_text);
+        let costume_bonus = costume_bonus_list.find(item => item.text === bonus_text);
 
         this.bonus_rates = costume_bonus.bonus_rates;
 
@@ -20,6 +40,10 @@ class costume {
 
         this.level_max = level_max;
 
-        this.equipable_text = equipable_text;
+        this.idols_text = idols_text;
+
+        this.genre_text = genre_text;
+
+        this.remarks = remarks;
     }
 }

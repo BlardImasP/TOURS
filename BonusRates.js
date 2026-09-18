@@ -1,6 +1,12 @@
 ﻿
 class bonus_rates {
 
+    rate_vo;
+
+    rate_da;
+
+    rate_vi;
+
     //  コンストラクタ
     constructor(vo, da, vi) {
 

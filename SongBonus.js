@@ -1,6 +1,12 @@
 ﻿
 class song_bonus {
 
+    id;
+
+    text;
+
+    bonus_rates;
+
     //  コンストラクタ
     constructor(id, text, bonus_rates) {
 

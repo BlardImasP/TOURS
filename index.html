@@ -8,12 +8,30 @@
 
     <title>アピール値計算</title>
 
+    <style>
+
+        .song_selector {
+            width: 18rem;
+            font-size: 1.1em;
+        }
+
+        .costume_selector {
+            width: 21rem;
+            font-size: 1.1em;
+        }
+
+        .accessory_selector {
+            width: 21rem;
+            font-size: 1.1em;
+        }
+    </style>
+
 </head>
 
 <body onload="body_onload()">
 
     <div>
-        楽曲：<select id="song_select" onchange="song_select_onchange()"></select>
+        楽曲：<select class="song_selector" id="song_select" onchange="song_select_onchange()"></select>
     </div>
 
     <div>
@@ -21,12 +39,9 @@
     </div>
 
     <table>
-        <caption>
-            アイドルアピール
-        </caption>
         <thead>
             <tr>
-                <th scope="col" colspan="2"><select id="costume_select" onchange="costume_select_onchange()"></select></th>
+                <th scope="col" colspan="2">衣装：<select class="costume_selector" id="costume_select" onchange="costume_select_onchange()"></select></th>
                 <th scope="col">Vo</th>
                 <th scope="col">Da</th>
                 <th scope="col">Vi</th>
@@ -61,24 +76,48 @@
             </tr>
             <tr>
                 <th scope="row" colspan="2">アイドルアピール値</th>
-                <td id="idle_appeal_vo_text" align="right">0</td>
-                <td id="idle_appeal_da_text" align="right">0</td>
-                <td id="idle_appeal_vi_text" align="right">0</td>
+                <td id="idol_appeal_vo_text" align="right">0</td>
+                <td id="idol_appeal_da_text" align="right">0</td>
+                <td id="idol_appeal_vi_text" align="right">0</td>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">頭：<select class="accessory_selector" id="accessory_head_select" onchange="accessory_select_onchange()"></select></th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">顔：<select class="accessory_selector" id="accessory_face_select" onchange="accessory_select_onchange()"></select></th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">手：<select class="accessory_selector" id="accessory_hand_select" onchange="accessory_select_onchange()"></select></th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">胴：<select class="accessory_selector" id="accessory_back_select" onchange="accessory_select_onchange()"></select></th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">腰：<select class="accessory_selector" id="accessory_rump_select" onchange="accessory_select_onchange()"></select></th>
+            </tr>
+            <tr>
+                <th scope="row" colspan="2">脚：<select class="accessory_selector" id="accessory_legs_select" onchange="accessory_select_onchange()"></select></th>
             </tr>
         </tbody>
     </table>
 
     <div>
-        <span id="debug_text">Debug Text</span>
+        総合アイドルアピール値：<span id="idol_appeal_total_text"></span>
     </div>
 
-    <div>
-        <span id="debug_get_cookie">Debug Text</span>
-    </div>
-
-    <div>
-        <span id="debug_set_cookie">Debug Text</span>
-    </div>
+    <table border="1">
+        <caption>着こなしボーナス</caption>
+        <thead>
+            <tr>
+                <th scope="col">セット名</th>
+                <th scope="col">効果</th>
+                <th scope="col">衣装</th>
+                <th scope="col">アクセサリ</th>
+            </tr>
+        </thead>
+        <tbody id="set_bonus_tbody">
+        </tbody>
+    </table>
 
     <script src="Appeal.js"></script>
 
@@ -96,16 +135,11 @@
     <script src="Costume.js"></script>
     <script src="CostumeList.js"></script>
 
-    <script>
+    <script src="Accessory.js"></script>
+    <script src="AccessoryList.js"></script>
 
-        function setTextContent(id, text) {
-
-            const elementText = document.getElementById(id);
-
-            elementText.textContent = text;
-        }
-
-    </script>
+    <script src="SetBonus.js"></script>
+    <script src="SetBonusList.js"></script>
 
     <script>
 
@@ -119,18 +153,40 @@
 
             trustiness_level;
 
+            accessory_head_id;
+
+            accessory_face_id;
+
+            accessory_hand_id;
+
+            accessory_back_id;
+
+            accessory_rump_id;
+
+            accessory_legs_id;
+
             //  コンストラクタ
             constructor(cookies) {
 
-                setTextContent("debug_text", "cookie_storage: constructor(cookies)");
-
-                this.song_id = 1;
+                this.song_id = 0;
 
                 this.costume_id = 1;
 
                 this.costume_level = 1;
 
                 this.trustiness_level = 1;
+
+                this.accessory_head_id = 0;
+
+                this.accessory_face_id = 0;
+
+                this.accessory_hand_id = 0;
+
+                this.accessory_back_id = 0;
+
+                this.accessory_rump_id = 0;
+
+                this.accessory_legs_id = 0;
 
                 try {
 
@@ -162,6 +218,37 @@
 
                                 this.trustiness_level = Number(decodeURIComponent(cookiePair[1]));
                                 break;
+
+                            case "accessory_head_id":
+
+                                this.accessory_head_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
+                            case "accessory_face_id":
+
+                                this.accessory_face_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
+                            case "accessory_hand_id":
+
+                                this.accessory_hand_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
+                            case "accessory_back_id":
+
+                                this.accessory_back_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
+                            case "accessory_rump_id":
+
+                                this.accessory_rump_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
+                            case "accessory_legs_id":
+
+                                this.accessory_legs_id = Number(decodeURIComponent(cookiePair[1]));
+                                break;
+
                         }
 
                     })
@@ -183,6 +270,18 @@
 
                 cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + "/";
 
+                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + "/";
+
+                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + "/";
+
+                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + "/";
+
+                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + "/";
+
+                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + "/";
+
+                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + "/";
+
                 cookies += "; " + "max-age" + "=" + age;
 
                 return cookies;
@@ -191,7 +290,7 @@
 
         var cookieStorage;
 
-        function object_clear_options(object) {
+        function object_clear_child_objects(object) {
 
             const options = object.options;
 
@@ -204,11 +303,11 @@
             }
         }
 
-        function select_clear_options(elementId) {
+        function select_clear_options(element_id) {
 
-            const selectObj = document.getElementById(elementId);
+            const selectObject = document.getElementById(element_id);
 
-            object_clear_options(selectObj);
+            object_clear_child_objects(selectObject);
         }
 
         function object_add_option(object, value, text) {
@@ -221,20 +320,23 @@
             object.add(option);
         }
 
-        function select_add_option(elementId, value, text) {
+        function select_add_option(element_id, value, text) {
 
-            const selectObj = document.getElementById(elementId);
+            const selectObject = document.getElementById(element_id);
 
-            object_add_option(selectObj, value, text);
+            object_add_option(selectObject, value, text);
         }
 
         function setup_song_select(song_id) {
 
             const selectSong = document.getElementById("song_select");
 
-            object_clear_options(selectSong);
+            object_clear_child_objects(selectSong);
 
-            song_list.forEach((song) => { object_add_option(selectSong, song.id, song.text); });
+            song_list.forEach((song) => {
+
+                object_add_option(selectSong, song.id, song.name);
+            });
 
             selectSong.value = song_id;
         }
@@ -243,9 +345,12 @@
 
             const selectCostume = document.getElementById("costume_select");
 
-            object_clear_options(selectCostume);
+            object_clear_child_objects(selectCostume);
 
-            costume_list.forEach((costume) => { object_add_option(selectCostume, costume.id, costume.text); });
+            costume_list.forEach((costume) => {
+
+                object_add_option(selectCostume, costume.id, costume.name);
+            });
 
             selectCostume.value = costume_id;
         }
@@ -254,7 +359,7 @@
 
             const selectCostumeLevel = document.getElementById("costume_level_select");
 
-            object_clear_options(selectCostumeLevel);
+            object_clear_child_objects(selectCostumeLevel);
 
             for (let level = level_max; level >= 1; level--) {
 
@@ -274,7 +379,7 @@
 
             const selectTrustinessLevel = document.getElementById("trustiness_level_select");
 
-            object_clear_options(selectTrustinessLevel);
+            object_clear_child_objects(selectTrustinessLevel);
 
             for (let level = level_max; level >= 1; level--) {
 
@@ -290,13 +395,58 @@
             }
         }
 
+        function setup_accessory_any_select(accessory_id, element_id, area_name) {
+
+            const selectAccessory = document.getElementById(element_id);
+
+            object_clear_child_objects(selectAccessory);
+
+            accessory_list.forEach((accessory) => {
+
+                let index_found = accessory.area_names.indexOf(area_name);
+
+                if (index_found >= 0) {
+
+                    object_add_option(selectAccessory, accessory.id, accessory.name);
+                }
+            });
+
+            selectAccessory.value = accessory_id;
+        }
+
+        function setup_accessory_head_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_head_select", "頭");
+        }
+
+        function setup_accessory_face_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_face_select", "顔");
+        }
+
+        function setup_accessory_hand_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_hand_select", "手");
+        }
+
+        function setup_accessory_back_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_back_select", "胴");
+        }
+
+        function setup_accessory_rump_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_rump_select", "腰");
+        }
+
+        function setup_accessory_legs_select(accessory_id) {
+
+            setup_accessory_any_select(accessory_id, "accessory_legs_select", "脚");
+        }
+
         function setup() {
 
-            setTextContent("debug_text", "setup()");
-
             const cookies = document.cookie;
-
-            setTextContent("debug_get_cookie", "get cookie" + " = " + cookies);
 
             cookieStorage = new cookie_storage(cookies);
 
@@ -307,6 +457,18 @@
             setup_costume_level_select(60, cookieStorage.costume_level);
 
             setup_trustiness_level_select(60, cookieStorage.trustiness_level);
+
+            setup_accessory_head_select(cookieStorage.accessory_head_id);
+
+            setup_accessory_face_select(cookieStorage.accessory_face_id);
+
+            setup_accessory_hand_select(cookieStorage.accessory_hand_id);
+
+            setup_accessory_back_select(cookieStorage.accessory_back_id);
+
+            setup_accessory_rump_select(cookieStorage.accessory_rump_id);
+
+            setup_accessory_legs_select(cookieStorage.accessory_legs_id);
         }
 
         function get_song_selected() {
@@ -394,15 +556,412 @@
             textSongBonusVi.textContent = Math.floor(song_bonus_vi);
         }
 
-        function redraw_idle_appeal(idle_appeal_vo, idle_appeal_da, idle_appeal_vi) {
+        function redraw_idol_appeal(idol_appeal_vo, idol_appeal_da, idol_appeal_vi) {
 
-            const textIdleAppealVo = document.getElementById("idle_appeal_vo_text");
-            const textIdleAppealDa = document.getElementById("idle_appeal_da_text");
-            const textIdleAppealVi = document.getElementById("idle_appeal_vi_text");
+            const textIdolAppealVo = document.getElementById("idol_appeal_vo_text");
+            const textIdolAppealDa = document.getElementById("idol_appeal_da_text");
+            const textIdolAppealVi = document.getElementById("idol_appeal_vi_text");
+            const textIdolAppealTotal = document.getElementById("idol_appeal_total_text");
 
-            textIdleAppealVo.textContent = Math.floor(idle_appeal_vo);
-            textIdleAppealDa.textContent = Math.floor(idle_appeal_da);
-            textIdleAppealVi.textContent = Math.floor(idle_appeal_vi);
+            const appeal_vo = Math.floor(idol_appeal_vo);
+            const appeal_da = Math.floor(idol_appeal_da);
+            const appeal_vi = Math.floor(idol_appeal_vi);
+            const appeal_total = appeal_vo + appeal_da + appeal_vi;
+
+            textIdolAppealVo.textContent = appeal_vo;
+            textIdolAppealDa.textContent = appeal_da;
+            textIdolAppealVi.textContent = appeal_vi;
+            textIdolAppealTotal.textContent = appeal_total;
+        }
+
+        function redraw_set_bonus_list() {
+
+            const tbodySetBonus = document.getElementById("set_bonus_tbody");
+
+            while (tbodySetBonus.children.length > 0) {
+
+                tbodySetBonus.deleteRow(tbodySetBonus.children.length - 1);
+            }
+
+            const selectCostume = document.getElementById("costume_select");
+
+            const textCostume = selectCostume.selectedOptions[0].textContent;
+
+            const selectAccessoryHead = document.getElementById("accessory_head_select");
+
+            const textAccessoryHead = selectAccessoryHead.selectedOptions[0].textContent;
+
+            const selectAccessoryFace = document.getElementById("accessory_face_select");
+
+            const textAccessoryFace = selectAccessoryFace.selectedOptions[0].textContent;
+
+            const selectAccessoryHand = document.getElementById("accessory_hand_select");
+
+            const textAccessoryHand = selectAccessoryHand.selectedOptions[0].textContent;
+
+            const selectAccessoryBack = document.getElementById("accessory_back_select");
+
+            const textAccessoryBack = selectAccessoryBack.selectedOptions[0].textContent;
+
+            const selectAccessoryRump = document.getElementById("accessory_rump_select");
+
+            const textAccessoryRump = selectAccessoryRump.selectedOptions[0].textContent;
+
+            const selectAccessoryLegs = document.getElementById("accessory_legs_select");
+
+            const textAccessoryLegs = selectAccessoryLegs.selectedOptions[0].textContent;
+
+            set_bonus_list.forEach((set_bonus) => {
+
+                do {
+
+                    let indexCostume = -1;
+
+                    if (textCostume != "") {
+
+                        if (set_bonus.costume_names.length > 0) {
+
+                            indexCostume = set_bonus.costume_names.indexOf(textCostume);
+
+                            if (indexCostume < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryHead = -1;
+
+                    if (textAccessoryHead != "") {
+
+                        if (set_bonus.head_names.length > 0) {
+
+                            indexAccessoryHead = set_bonus.head_names.indexOf(textAccessoryHead);
+
+                            if (indexAccessoryHead < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryFace = -1;
+
+                    if (textAccessoryFace != "") {
+
+                        if (set_bonus.face_names.length > 0) {
+
+                            indexAccessoryFace = set_bonus.face_names.indexOf(textAccessoryFace);
+
+                            if (indexAccessoryFace < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryHand = -1;
+
+                    if (textAccessoryHand != "") {
+
+                        if (set_bonus.hand_names.length > 0) {
+
+                            indexAccessoryHand = set_bonus.hand_names.indexOf(textAccessoryHand);
+
+                            if (indexAccessoryHand < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryBack = -1;
+
+                    if (textAccessoryBack != "") {
+
+                        if (set_bonus.back_names.length > 0) {
+
+                            indexAccessoryBack = set_bonus.back_names.indexOf(textAccessoryBack);
+
+                            if (indexAccessoryBack < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryRump = -1;
+
+                    if (textAccessoryRump != "") {
+
+                        if (set_bonus.rump_names.length > 0) {
+
+                            indexAccessoryRump = set_bonus.rump_names.indexOf(textAccessoryRump);
+
+                            if (indexAccessoryRump < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    let indexAccessoryLegs = -1;
+
+                    if (textAccessoryLegs != "") {
+
+                        if (set_bonus.legs_names.length > 0) {
+
+                            indexAccessoryLegs = set_bonus.legs_names.indexOf(textAccessoryLegs);
+
+                            if (indexAccessoryLegs < 0) {
+
+                                break;
+                            }
+                        }
+                    }
+
+                    const tr = document.createElement("tr");
+
+                    //  セット名
+                    const td_name = document.createElement("td");
+
+                    td_name.append(set_bonus.name);
+
+                    tr.appendChild(td_name);
+
+                    //  効果
+                    const td_functions = document.createElement("td");
+
+                    td_functions.append(set_bonus.functions);
+
+                    tr.appendChild(td_functions);
+
+                    //  衣装
+                    const td_costume = document.createElement("td");
+
+                    if (indexCostume < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.costume_names.length) {
+
+                            if (index > 0) {
+
+                                td_costume.append(" / ");
+                            }
+
+                            td_costume.append(set_bonus.costume_names[index]);
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_costume = document.createElement("b");
+
+                        b_costume.append(set_bonus.costume_names[indexCostume]);
+
+                        td_costume.appendChild(b_costume);
+                    }
+
+                    tr.appendChild(td_costume);
+
+                    //  アクセサリ
+                    const td_accessory = document.createElement("td");
+
+                    let exist_accessory = 0;
+
+                    if (indexAccessoryHead < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.head_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.head_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.head_names[indexAccessoryHead]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    if (indexAccessoryFace < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.face_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.face_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.face_names[indexAccessoryFace]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    if (indexAccessoryHand < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.hand_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.hand_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.hand_names[indexAccessoryHand]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    if (indexAccessoryBack < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.back_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.back_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.back_names[indexAccessoryBack]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    if (indexAccessoryRump < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.rump_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.rump_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.rump_names[indexAccessoryRump]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    if (indexAccessoryLegs < 0) {
+
+                        let index = 0;
+
+                        while (index < set_bonus.legs_names.length) {
+
+                            if (index > 0) {
+
+                                td_accessory.append(" / ");
+                            } else if (exist_accessory) {
+
+                                td_accessory.appendChild(document.createElement("br"));
+                            }
+
+                            td_accessory.append(set_bonus.legs_names[index]);
+
+                            exist_accessory = 1;
+
+                            index += 1;
+                        }
+                    } else {
+
+                        const b_accessory = document.createElement("b");
+
+                        b_accessory.append(set_bonus.legs_names[indexAccessoryLegs]);
+
+                        td_accessory.appendChild(b_accessory);
+
+                        exist_accessory = 1;
+                    }
+
+                    tr.appendChild(td_accessory);
+
+                    tbodySetBonus.appendChild(tr);
+
+                } while (false);
+            });
         }
 
         function calculate_appeal(song, costume) {
@@ -459,14 +1018,14 @@
 
             let trustiness_bonus_vi;
 
-            if (costume_level <= 1) {
+            if (trustiness_level <= 1) {
 
                 trustiness_bonus_vo = 0;
 
                 trustiness_bonus_da = 0;
 
                 trustiness_bonus_vi = 0;
-            } else if (costume_level <= 60) {
+            } else if (trustiness_level <= 60) {
 
                 trustiness_bonus_vo = trustiness_level * costume.appeal_base.vo * 12 / 10000;
 
@@ -485,26 +1044,24 @@
 
             redraw_song_bonus(song_bonus_vo, song_bonus_da, song_bonus_vi);
 
-            let idle_appeal_vo = costume.appeal_base.vo
+            let idol_appeal_vo = costume.appeal_base.vo
                 + costume_bonus_vo
                 + trustiness_bonus_vo
                 + song_bonus_vo;
 
-            let idle_appeal_da = costume.appeal_base.da
+            let idol_appeal_da = costume.appeal_base.da
                 + costume_bonus_da
                 + trustiness_bonus_da
                 + song_bonus_da;
 
-            let idle_appeal_vi = costume.appeal_base.vi
+            let idol_appeal_vi = costume.appeal_base.vi
                 + costume_bonus_vi
                 + trustiness_bonus_vi
                 + song_bonus_vi;
 
-            redraw_idle_appeal(idle_appeal_vo, idle_appeal_da, idle_appeal_vi);
+            redraw_idol_appeal(idol_appeal_vo, idol_appeal_da, idol_appeal_vi);
 
             const cookies = cookieStorage.build_cookies(30 * 24 * 60 * 60);
-
-            setTextContent("debug_set_cookie", "set cookie" + " = " + cookies);
 
             document.cookie = cookies;
         }
@@ -522,6 +1079,8 @@
             redraw_costume_informations(costume);
 
             calculate_appeal(song, costume);
+
+            redraw_set_bonus_list();
         }
 
         function song_select_onchange() {
@@ -541,9 +1100,18 @@
 
             const costume = get_costume_selected();
 
+            cookieStorage.costume_level = costume.level_max;
+
             redraw_costume_informations(costume);
 
             calculate_appeal(song, costume);
+
+            redraw_set_bonus_list();
+        }
+
+        function accessory_select_onchange() {
+
+            redraw_set_bonus_list();
         }
 
         function costume_level_select_onchange() {

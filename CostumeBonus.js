@@ -1,6 +1,14 @@
 ﻿
 class costume_bonus {
 
+    id;
+
+    text;
+
+    bonus_rates;
+
+    bonus_ex_rates;
+
     //  コンストラクタ
     constructor(id, text, bonus_rates, bonus_ex_rates) {
 
