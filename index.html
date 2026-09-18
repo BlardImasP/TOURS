@@ -591,25 +591,37 @@
 
             const textAccessoryHead = selectAccessoryHead.selectedOptions[0].textContent;
 
+            cookieStorage.accessory_head_id = selectAccessoryHead.value;
+
             const selectAccessoryFace = document.getElementById("accessory_face_select");
 
             const textAccessoryFace = selectAccessoryFace.selectedOptions[0].textContent;
+
+            cookieStorage.accessory_face_id = selectAccessoryFace.value;
 
             const selectAccessoryHand = document.getElementById("accessory_hand_select");
 
             const textAccessoryHand = selectAccessoryHand.selectedOptions[0].textContent;
 
+            cookieStorage.accessory_hand_id = selectAccessoryHand.value;
+
             const selectAccessoryBack = document.getElementById("accessory_back_select");
 
             const textAccessoryBack = selectAccessoryBack.selectedOptions[0].textContent;
+
+            cookieStorage.accessory_back_id = selectAccessoryBack.value;
 
             const selectAccessoryRump = document.getElementById("accessory_rump_select");
 
             const textAccessoryRump = selectAccessoryRump.selectedOptions[0].textContent;
 
+            cookieStorage.accessory_rump_id = selectAccessoryRump.value;
+
             const selectAccessoryLegs = document.getElementById("accessory_legs_select");
 
             const textAccessoryLegs = selectAccessoryLegs.selectedOptions[0].textContent;
+
+            cookieStorage.accessory_legs_id = selectAccessoryLegs.value;
 
             set_bonus_list.forEach((set_bonus) => {
 
@@ -1060,6 +1072,9 @@
                 + song_bonus_vi;
 
             redraw_idol_appeal(idol_appeal_vo, idol_appeal_da, idol_appeal_vi);
+        }
+
+        function cookies_save() {
 
             const cookies = cookieStorage.build_cookies(30 * 24 * 60 * 60);
 
@@ -1092,6 +1107,8 @@
             redraw_song_informations(song);
 
             calculate_appeal(song, costume);
+
+            cookies_save();
         }
 
         function costume_select_onchange() {
@@ -1107,11 +1124,15 @@
             calculate_appeal(song, costume);
 
             redraw_set_bonus_list();
+
+            cookies_save();
         }
 
         function accessory_select_onchange() {
 
             redraw_set_bonus_list();
+
+            cookies_save();
         }
 
         function costume_level_select_onchange() {
