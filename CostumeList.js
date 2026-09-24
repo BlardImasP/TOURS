@@ -36,7 +36,7 @@ const costume_list = [
         new appeal(1400, 1306, 1400),
         "[Vo][Da][Vi]",
         50,
-        "765 ALL STARS",
+        "アイドルマスター",
         "エナジー",
         [""]
     ),
@@ -335,7 +335,7 @@ const costume_list = [
         "サマーティースタイル",
         new appeal(795, 1617, 1632),
         "[Da][Vi]",
-        50,
+        40,
         "女性",
         "エナジー",
         [""]
