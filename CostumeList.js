@@ -33,7 +33,7 @@ const costume_list = [
     new costume(
         3,
         "デイアフターデイAMCG",
-        new appeal(1400, 1306, 1400),
+        new appeal(1400, 1306, 1334),
         "[Vo][Da][Vi]",
         50,
         "アイドルマスター",

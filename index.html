@@ -16,17 +16,22 @@
         }
 
         .song_selector {
-            width: 18rem;
+            width: 24rem;
             font-size: 1.1em;
         }
 
         .costume_selector {
-            width: 21rem;
+            width: 28rem;
             font-size: 1.1em;
         }
 
         .accessory_selector {
-            width: 21rem;
+            width: 28rem;
+            font-size: 1.1em;
+        }
+
+        .support_selector {
+            width: 32rem;
             font-size: 1.1em;
         }
     </style>
@@ -35,21 +40,92 @@
 
 <body onload="body_onload()">
 
-    <div>
-        楽曲：<select class="song_selector" id="song_select" onchange="song_select_onchange()"></select>
-    </div>
+    <table border="1">
+        <caption>楽曲</caption>
+        <tbody>
+            <tr>
+                <th scope="row" height="32">楽曲選択</th>
+                <td><select class="song_selector" id="song_select" onchange="song_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row">楽曲属性</th>
+                <td id="song_bonus_text"></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div>
-        楽曲属性：<span id="song_bonus_text"></span>
-    </div>
+    <table border="1">
+        <caption>衣装・アクセサリ</caption>
+        <tbody>
+            <tr>
+                <th scope="row" height="32">衣装</th>
+                <td><select class="costume_selector" id="costume_select" onchange="costume_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">頭</th>
+                <td><select class="accessory_selector" id="accessory_head_select" onchange="accessory_head_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">顔</th>
+                <td><select class="accessory_selector" id="accessory_face_select" onchange="accessory_face_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">手</th>
+                <td><select class="accessory_selector" id="accessory_hand_select" onchange="accessory_hand_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">胴</th>
+                <td><select class="accessory_selector" id="accessory_back_select" onchange="accessory_back_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">腰</th>
+                <td><select class="accessory_selector" id="accessory_rump_select" onchange="accessory_rump_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <th scope="row" height="32">脚</th>
+                <td><select class="accessory_selector" id="accessory_legs_select" onchange="accessory_legs_select_onchange()"></select></td>
+            </tr>
+        </tbody>
+    </table>
 
-    <table>
+    <table border="1">
+        <caption>サポート</caption>
+        <tbody>
+            <tr>
+                <th scope="row" rowspan="2">サポート 1</th>
+                <td height="32"><select class="support_selector" id="support_1_select" onchange="support_1_select_onchange()"></select></td>
+                <td rowspan="2">全てのレアリティ</td>
+            </tr>
+            <tr>
+                <td id="support_1_functions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2">サポート 2</th>
+                <td height="32"><select class="support_selector" id="support_2_select" onchange="support_2_select_onchange()"></select></td>
+                <td rowspan="2">SR TSR CO R TR N</td>
+            </tr>
+            <tr>
+                <td id="support_2_functions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2">サポート 3</th>
+                <td height="32"><select class="support_selector" id="support_3_select" onchange="support_3_select_onchange()"></select></td>
+                <td rowspan="2">R TR N</td>
+            </tr>
+            <tr>
+                <td id="support_3_functions"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1">
+        <caption>アピール値</caption>
         <thead>
             <tr>
-                <th scope="col" colspan="2">衣装：<select class="costume_selector" id="costume_select" onchange="costume_select_onchange()"></select></th>
-                <th scope="col">Vo</th>
-                <th scope="col">Da</th>
-                <th scope="col">Vi</th>
+                <th scope="col" colspan="2"></th>
+                <th scope="col" width="48">Vo</th>
+                <th scope="col" width="48">Da</th>
+                <th scope="col" width="48">Vi</th>
             </tr>
         </thead>
         <tbody>
@@ -80,6 +156,12 @@
                 <td align="right" id="song_bonus_vi_text">0</td>
             </tr>
             <tr>
+                <th scope="row" colspan="2">サポートボーナス値</th>
+                <td align="right" id="support_bonus_vo_text">0</td>
+                <td align="right" id="support_bonus_da_text">0</td>
+                <td align="right" id="support_bonus_vi_text">0</td>
+            </tr>
+            <tr>
                 <th scope="row" colspan="2">アイドルアピール値</th>
                 <td align="right" id="idol_appeal_vo_text">0</td>
                 <td align="right" id="idol_appeal_da_text">0</td>
@@ -89,24 +171,6 @@
             <tr>
                 <th scope="row" colspan="2">総合アイドルアピール値</th>
                 <td colspan="3" align="right" id="idol_appeal_total_text">0</td>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">頭：<select class="accessory_selector" id="accessory_head_select" onchange="accessory_select_onchange()"></select></th>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">顔：<select class="accessory_selector" id="accessory_face_select" onchange="accessory_select_onchange()"></select></th>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">手：<select class="accessory_selector" id="accessory_hand_select" onchange="accessory_select_onchange()"></select></th>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">胴：<select class="accessory_selector" id="accessory_back_select" onchange="accessory_select_onchange()"></select></th>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">腰：<select class="accessory_selector" id="accessory_rump_select" onchange="accessory_select_onchange()"></select></th>
-            </tr>
-            <tr>
-                <th scope="row" colspan="2">脚：<select class="accessory_selector" id="accessory_legs_select" onchange="accessory_select_onchange()"></select></th>
             </tr>
         </tbody>
     </table>
@@ -124,6 +188,9 @@
         <tbody id="set_bonus_tbody">
         </tbody>
     </table>
+
+    <script src="Rarity.js"></script>
+    <script src="RarityList.js"></script>
 
     <script src="Genre.js"></script>
     <script src="GenreList.js"></script>
@@ -147,6 +214,12 @@
     <script src="Accessory.js"></script>
     <script src="AccessoryList.js"></script>
 
+    <script src="Support.js"></script>
+    <script src="SupportList.js"></script>
+
+    <script src="SpecialAppeal.js"></script>
+    <script src="SpecialAppealList.js"></script>
+
     <script src="SetBonus.js"></script>
     <script src="SetBonusList.js"></script>
 
@@ -157,10 +230,6 @@
             song_id;
 
             costume_id;
-
-            costume_level;
-
-            trustiness_level;
 
             accessory_head_id;
 
@@ -174,16 +243,22 @@
 
             accessory_legs_id;
 
+            support_1_id;
+
+            support_2_id;
+
+            support_3_id;
+
+            costume_level;
+
+            trustiness_level;
+
             //  コンストラクタ
             constructor(cookies) {
 
                 this.song_id = 0;
 
                 this.costume_id = 0;
-
-                this.costume_level = 1;
-
-                this.trustiness_level = 1;
 
                 this.accessory_head_id = 0;
 
@@ -197,6 +272,16 @@
 
                 this.accessory_legs_id = 0;
 
+                this.support_1_id = "";
+
+                this.support_2_id = "";
+
+                this.support_3_id = "";
+
+                this.costume_level = 1;
+
+                this.trustiness_level = 1;
+
                 try {
 
                     const cookieArray = cookies.split("/");
@@ -206,56 +291,72 @@
                         const cookiePair = cookie.split("=");
 
                         const cookieKey = cookiePair[0].trim();
+                        const cookieValue = cookiePair[1].trim();
 
                         switch (cookieKey) {
                             case "song_id":
 
-                                this.song_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.song_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "costume_id":
 
-                                this.costume_id = Number(decodeURIComponent(cookiePair[1]));
-                                break;
-
-                            case "costume_level":
-
-                                this.costume_level = Number(decodeURIComponent(cookiePair[1]));
-                                break;
-
-                            case "trustiness_level":
-
-                                this.trustiness_level = Number(decodeURIComponent(cookiePair[1]));
+                                this.costume_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_head_id":
 
-                                this.accessory_head_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_head_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_face_id":
 
-                                this.accessory_face_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_face_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_hand_id":
 
-                                this.accessory_hand_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_hand_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_back_id":
 
-                                this.accessory_back_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_back_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_rump_id":
 
-                                this.accessory_rump_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_rump_id = Number(decodeURIComponent(cookieValue));
                                 break;
 
                             case "accessory_legs_id":
 
-                                this.accessory_legs_id = Number(decodeURIComponent(cookiePair[1]));
+                                this.accessory_legs_id = Number(decodeURIComponent(cookieValue));
+                                break;
+
+                            case "support_1_id":
+
+                                this.support_1_id = decodeURIComponent(cookieValue);
+                                break;
+
+                            case "support_2_id":
+
+                                this.support_2_id = decodeURIComponent(cookieValue);
+                                break;
+
+                            case "support_3_id":
+
+                                this.support_3_id = decodeURIComponent(cookieValue);
+                                break;
+
+                            case "costume_level":
+
+                                this.costume_level = Number(decodeURIComponent(cookieValue));
+                                break;
+
+                            case "trustiness_level":
+
+                                this.trustiness_level = Number(decodeURIComponent(cookieValue));
                                 break;
 
                         }
@@ -275,10 +376,6 @@
 
                 cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + "/";
 
-                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + "/";
-
-                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + "/";
-
                 cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + "/";
 
                 cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + "/";
@@ -291,6 +388,16 @@
 
                 cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + "/";
 
+                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + "/";
+
+                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + "/";
+
+                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + "/";
+
+                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + "/";
+
+                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + "/";
+
                 cookies += "; " + "max-age" + "=" + age;
 
                 return cookies;
@@ -299,7 +406,23 @@
 
         var cookieStorage;
 
-        function object_clear_child_objects(object) {
+        var songSelected;
+
+        var costumeSelected;
+
+        var levelCostume;
+
+        var levelTrustiness;
+
+        function object_clear_childs(object) {
+
+            while (object.firstChild) {
+
+                object.removeChild(object.firstChild);
+            }
+        }
+
+        function object_clear_child_options(object) {
 
             const options = object.options;
 
@@ -316,7 +439,15 @@
 
             const selectObject = document.getElementById(element_id);
 
-            object_clear_child_objects(selectObject);
+            object_clear_child_options(selectObject);
+        }
+
+        function tbody_clear_rows(tbody) {
+
+            while (tbody.children.length > 0) {
+
+                tbody.deleteRow(tbody.children.length - 1);
+            }
         }
 
         function object_add_option(object, value, text) {
@@ -340,7 +471,7 @@
 
             const selectSong = document.getElementById("song_select");
 
-            object_clear_child_objects(selectSong);
+            object_clear_child_options(selectSong);
 
             song_list.forEach((song) => {
 
@@ -354,7 +485,7 @@
 
             const selectCostume = document.getElementById("costume_select");
 
-            object_clear_child_objects(selectCostume);
+            object_clear_child_options(selectCostume);
 
             costume_list.forEach((costume) => {
 
@@ -374,51 +505,11 @@
             selectCostume.value = costume_id;
         }
 
-        function setup_costume_level_select(level_max, level) {
-
-            const selectCostumeLevel = document.getElementById("costume_level_select");
-
-            object_clear_child_objects(selectCostumeLevel);
-
-            for (let level = level_max; level >= 1; level--) {
-
-                object_add_option(selectCostumeLevel, level, level);
-            }
-
-            if (level < level_max) {
-
-                selectCostumeLevel.value = level;
-            } else {
-
-                selectCostumeLevel.value = level_max;
-            }
-        }
-
-        function setup_trustiness_level_select(level_max, level) {
-
-            const selectTrustinessLevel = document.getElementById("trustiness_level_select");
-
-            object_clear_child_objects(selectTrustinessLevel);
-
-            for (let level = level_max; level >= 1; level--) {
-
-                object_add_option(selectTrustinessLevel, level, level);
-            }
-
-            if (level < level_max) {
-
-                selectTrustinessLevel.value = level;
-            } else {
-
-                selectTrustinessLevel.value = level_max;
-            }
-        }
-
         function setup_accessory_any_select(accessory_id, element_id, area_name) {
 
             const selectAccessory = document.getElementById(element_id);
 
-            object_clear_child_objects(selectAccessory);
+            object_clear_child_options(selectAccessory);
 
             accessory_list.forEach((accessory) => {
 
@@ -473,6 +564,82 @@
             setup_accessory_any_select(accessory_id, "accessory_legs_select", "脚");
         }
 
+        function setup_support_select(support_id, element_id, rarities) {
+
+            const selectSupport = document.getElementById(element_id);
+
+            object_clear_child_options(selectSupport);
+
+            support_list.forEach((support) => {
+
+                let index_found = rarities.indexOf(support.rarity);
+
+                if (index_found >= 0) {
+
+                    let text;
+
+                    if (support.season != "") {
+
+                        text = "［" + support.season + "/" + support.rarity + "］";
+                    } else {
+
+                        text = "［" + support.rarity + "］";
+                    }
+
+                    text += support.name;
+
+                    if (support.idols.length > 0) {
+
+                        text += "（" + support.idols[0] + "）";
+                    }
+
+                    object_add_option(selectSupport, support.id, text);
+                }
+            });
+
+            selectSupport.value = support_id;
+        }
+
+        function setup_costume_level_select(level, level_max) {
+
+            const selectCostumeLevel = document.getElementById("costume_level_select");
+
+            object_clear_child_options(selectCostumeLevel);
+
+            for (let level = level_max; level >= 1; level--) {
+
+                object_add_option(selectCostumeLevel, level, level);
+            }
+
+            if (level < level_max) {
+
+                selectCostumeLevel.value = level;
+            } else {
+
+                selectCostumeLevel.value = level_max;
+            }
+        }
+
+        function setup_trustiness_level_select(level, level_max) {
+
+            const selectTrustinessLevel = document.getElementById("trustiness_level_select");
+
+            object_clear_child_options(selectTrustinessLevel);
+
+            for (let level = level_max; level >= 1; level--) {
+
+                object_add_option(selectTrustinessLevel, level, level);
+            }
+
+            if (level < level_max) {
+
+                selectTrustinessLevel.value = level;
+            } else {
+
+                selectTrustinessLevel.value = level_max;
+            }
+        }
+
         function setup() {
 
             const cookies = document.cookie;
@@ -481,11 +648,11 @@
 
             setup_song_select(cookieStorage.song_id);
 
+            songSelected = song_list[document.getElementById("song_select").selectedIndex];
+
             setup_costume_select(cookieStorage.costume_id);
 
-            setup_costume_level_select(60, cookieStorage.costume_level);
-
-            setup_trustiness_level_select(60, cookieStorage.trustiness_level);
+            costumeSelected = costume_list[document.getElementById("costume_select").selectedIndex];
 
             setup_accessory_head_select(cookieStorage.accessory_head_id);
 
@@ -498,38 +665,20 @@
             setup_accessory_rump_select(cookieStorage.accessory_rump_id);
 
             setup_accessory_legs_select(cookieStorage.accessory_legs_id);
-        }
 
-        function get_song_selected() {
+            setup_support_select(cookieStorage.support_1_id, "support_1_select", ["SSR", "TSSR", "SR", "TSR", "CO", "R", "TR", "N", "CP", "PM"]);
 
-            const selectSong = document.getElementById("song_select");
+            setup_support_select(cookieStorage.support_2_id, "support_2_select", ["SR", "TSR", "CO", "R", "TR", "N"]);
 
-            const indexSong = selectSong.selectedIndex;
+            setup_support_select(cookieStorage.support_3_id, "support_3_select", ["R", "TR", "N"]);
 
-            return song_list[indexSong];
-        }
+            setup_costume_level_select(cookieStorage.costume_level, 60);
 
-        function get_costume_selected() {
+            levelCostume = Number(document.getElementById("costume_level_select").value);
 
-            const selectCostume = document.getElementById("costume_select");
+            setup_trustiness_level_select(cookieStorage.trustiness_level, 60);
 
-            const indexCostume = selectCostume.selectedIndex;
-
-            return costume_list[indexCostume];
-        }
-
-        function get_costume_level_selected() {
-
-            const selectCostumeLevel = document.getElementById("costume_level_select");
-
-            return selectCostumeLevel.value;
-        }
-
-        function get_trustiness_level_selected() {
-
-            const selectTrustinessLevel = document.getElementById("trustiness_level_select");
-
-            return selectTrustinessLevel.value;
+            levelTrustiness = Number(document.getElementById("trustiness_level_select").value);
         }
 
         function redraw_song_informations(song) {
@@ -537,6 +686,41 @@
             const textSongBonus = document.getElementById("song_bonus_text");
 
             textSongBonus.textContent = song.bonus_text;
+        }
+
+        function redraw_support_any_functions(functions, support_id) {
+
+            const support = support_list.find((support) => support.id === support_id);
+
+            object_clear_childs(functions);
+
+            let index = 0;
+
+            while (index < support.functions.length) {
+
+                if (index > 0) {
+
+                    functions.appendChild(document.createElement("br"));
+                }
+
+                const text_function = support.functions[index];
+
+                if (text_function[0] == "!") {
+
+                    const font_function = document.createElement("font");
+
+                    font_function.style.color = "tomato";
+
+                    font_function.append(text_function.substring(1));
+
+                    functions.appendChild(font_function);
+                } else {
+
+                    functions.append(text_function);
+                }
+
+                index += 1;
+            }
         }
 
         function redraw_costume_informations(costume) {
@@ -549,40 +733,69 @@
             textCostumeDa.textContent = costume.appeal_base.da;
             textCostumeVi.textContent = costume.appeal_base.vi;
 
-            setup_costume_level_select(costume.level_max, cookieStorage.costume_level);
+            setup_costume_level_select(cookieStorage.costume_level, costume.level_max);
         }
 
-        function redraw_costume_bonus(costume_bonus_vo, costume_bonus_da, costume_bonus_vi) {
+        function redraw_costume_bonus(costume_bonus) {
 
             const textCostumeBonusVo = document.getElementById("costume_bonus_vo_text");
             const textCostumeBonusDa = document.getElementById("costume_bonus_da_text");
             const textCostumeBonusVi = document.getElementById("costume_bonus_vi_text");
 
-            textCostumeBonusVo.textContent = Math.floor(costume_bonus_vo);
-            textCostumeBonusDa.textContent = Math.floor(costume_bonus_da);
-            textCostumeBonusVi.textContent = Math.floor(costume_bonus_vi);
+            textCostumeBonusVo.textContent = Math.floor(costume_bonus.vo);
+            textCostumeBonusDa.textContent = Math.floor(costume_bonus.da);
+            textCostumeBonusVi.textContent = Math.floor(costume_bonus.vi);
         }
 
-        function redraw_trustiness_bonus(trustiness_bonus_vo, trustiness_bonus_da, trustiness_bonus_vi) {
+        function redraw_trustiness_bonus(trustiness_bonus) {
 
             const textTrustinessBonusVo = document.getElementById("trustiness_bonus_vo_text");
             const textTrustinessBonusDa = document.getElementById("trustiness_bonus_da_text");
             const textTrustinessBonusVi = document.getElementById("trustiness_bonus_vi_text");
 
-            textTrustinessBonusVo.textContent = Math.floor(trustiness_bonus_vo);
-            textTrustinessBonusDa.textContent = Math.floor(trustiness_bonus_da);
-            textTrustinessBonusVi.textContent = Math.floor(trustiness_bonus_vi);
+            textTrustinessBonusVo.textContent = Math.floor(trustiness_bonus.vo);
+            textTrustinessBonusDa.textContent = Math.floor(trustiness_bonus.da);
+            textTrustinessBonusVi.textContent = Math.floor(trustiness_bonus.vi);
         }
 
-        function redraw_song_bonus(song_bonus_vo, song_bonus_da, song_bonus_vi) {
+        function redraw_song_bonus(song_bonus) {
 
             const textSongBonusVo = document.getElementById("song_bonus_vo_text");
             const textSongBonusDa = document.getElementById("song_bonus_da_text");
             const textSongBonusVi = document.getElementById("song_bonus_vi_text");
 
-            textSongBonusVo.textContent = Math.floor(song_bonus_vo);
-            textSongBonusDa.textContent = Math.floor(song_bonus_da);
-            textSongBonusVi.textContent = Math.floor(song_bonus_vi);
+            textSongBonusVo.textContent = Math.floor(song_bonus.vo);
+            textSongBonusDa.textContent = Math.floor(song_bonus.da);
+            textSongBonusVi.textContent = Math.floor(song_bonus.vi);
+        }
+
+        function redraw_support_bonus(support_bonus) {
+
+            const textSupportBonusVo = document.getElementById("support_bonus_vo_text");
+            const textSupportBonusDa = document.getElementById("support_bonus_da_text");
+            const textSupportBonusVi = document.getElementById("support_bonus_vi_text");
+
+            textSupportBonusVo.textContent = Math.floor(support_bonus.vo);
+            textSupportBonusDa.textContent = Math.floor(support_bonus.da);
+            textSupportBonusVi.textContent = Math.floor(support_bonus.vi);
+        }
+
+        function redraw_idol_appeal(idol_appeal) {
+
+            const textIdolAppealVo = document.getElementById("idol_appeal_vo_text");
+            const textIdolAppealDa = document.getElementById("idol_appeal_da_text");
+            const textIdolAppealVi = document.getElementById("idol_appeal_vi_text");
+            const textIdolAppealTotal = document.getElementById("idol_appeal_total_text");
+
+            const appeal_vo = Math.floor(idol_appeal.vo);
+            const appeal_da = Math.floor(idol_appeal.da);
+            const appeal_vi = Math.floor(idol_appeal.vi);
+            const appeal_total = appeal_vo + appeal_da + appeal_vi;
+
+            textIdolAppealVo.textContent = appeal_vo;
+            textIdolAppealDa.textContent = appeal_da;
+            textIdolAppealVi.textContent = appeal_vi;
+            textIdolAppealTotal.textContent = appeal_total;
         }
 
         var activeSetBonus;
@@ -663,70 +876,25 @@
             }
         }
 
-        function redraw_idol_appeal(idol_appeal_vo, idol_appeal_da, idol_appeal_vi) {
-
-            const textIdolAppealVo = document.getElementById("idol_appeal_vo_text");
-            const textIdolAppealDa = document.getElementById("idol_appeal_da_text");
-            const textIdolAppealVi = document.getElementById("idol_appeal_vi_text");
-            const textIdolAppealTotal = document.getElementById("idol_appeal_total_text");
-
-            const appeal_vo = Math.floor(idol_appeal_vo);
-            const appeal_da = Math.floor(idol_appeal_da);
-            const appeal_vi = Math.floor(idol_appeal_vi);
-            const appeal_total = appeal_vo + appeal_da + appeal_vi;
-
-            textIdolAppealVo.textContent = appeal_vo;
-            textIdolAppealDa.textContent = appeal_da;
-            textIdolAppealVi.textContent = appeal_vi;
-            textIdolAppealTotal.textContent = appeal_total;
-        }
-
         function redraw_set_bonus_list() {
 
             const tbodySetBonus = document.getElementById("set_bonus_tbody");
 
-            while (tbodySetBonus.children.length > 0) {
-
-                tbodySetBonus.deleteRow(tbodySetBonus.children.length - 1);
-            }
+            tbody_clear_rows(tbodySetBonus);
 
             const textCostume = costume_list[cookieStorage.costume_id].name;;
 
-            const selectAccessoryHead = document.getElementById("accessory_head_select");
-
-            cookieStorage.accessory_head_id = selectAccessoryHead.value;
-
             const textAccessoryHead = accessory_list[cookieStorage.accessory_head_id].name;
 
-            const selectAccessoryFace = document.getElementById("accessory_face_select");
+            const textAccessoryFace = accessory_list[cookieStorage.accessory_face_id].name;
 
-            cookieStorage.accessory_face_id = selectAccessoryFace.value;
+            const textAccessoryHand = accessory_list[cookieStorage.accessory_hand_id].name;
 
-            const textAccessoryFace = accessory_list[cookieStorage.accessory_face_id].name;;
+            const textAccessoryBack = accessory_list[cookieStorage.accessory_back_id].name;
 
-            const selectAccessoryHand = document.getElementById("accessory_hand_select");
+            const textAccessoryRump = accessory_list[cookieStorage.accessory_rump_id].name;
 
-            cookieStorage.accessory_hand_id = selectAccessoryHand.value;
-
-            const textAccessoryHand = accessory_list[cookieStorage.accessory_hand_id].name;;
-
-            const selectAccessoryBack = document.getElementById("accessory_back_select");
-
-            cookieStorage.accessory_back_id = selectAccessoryBack.value;
-
-            const textAccessoryBack = accessory_list[cookieStorage.accessory_back_id].name;;
-
-            const selectAccessoryRump = document.getElementById("accessory_rump_select");
-
-            cookieStorage.accessory_rump_id = selectAccessoryRump.value;
-
-            const textAccessoryRump = accessory_list[cookieStorage.accessory_rump_id].name;;
-
-            const selectAccessoryLegs = document.getElementById("accessory_legs_select");
-
-            cookieStorage.accessory_legs_id = selectAccessoryLegs.value;
-
-            const textAccessoryLegs = accessory_list[cookieStorage.accessory_legs_id].name;;
+            const textAccessoryLegs = accessory_list[cookieStorage.accessory_legs_id].name;
 
             set_bonus_list.forEach((set_bonus) => {
 
@@ -935,107 +1103,105 @@
             });
         }
 
-        function calculate_appeal(song, costume) {
+        function calculate_appeal_costume_bonus() {
 
-            const costume_level = get_costume_level_selected();
+            let costume_bonus = new appeal(0, 0, 0);
 
-            const trustiness_level = get_trustiness_level_selected();
+            if ((2 <= levelCostume) && (levelCostume <= 50)) {
 
-            cookieStorage.song_id = song.id;
+                costume_bonus.setAppeal(costumeSelected.appeal_base);
+                costume_bonus.multiply(levelCostume);
+                costume_bonus.multiplyRates(costumeSelected.bonus_rates);
+                costume_bonus.divide(10000);
 
-            cookieStorage.costume_id = costume.id;
+            } else if ((51 <= levelCostume) && (levelCostume <= 60)) {
 
-            cookieStorage.costume_level = costume_level;
+                costume_bonus.setAppeal(costumeSelected.appeal_base);
+                costume_bonus.multiply(50);
+                costume_bonus.multiplyRates(costumeSelected.bonus_rates);
+                costume_bonus.divide(10000);
 
-            cookieStorage.trustiness_level = trustiness_level;
+                let costume_bonus_ex = new appeal(0, 0, 0);
 
-            let costume_bonus_vo;
+                costume_bonus_ex.setAppeal(costumeSelected.appeal_base);
+                costume_bonus_ex.multiply(levelCostume - 50);
+                costume_bonus_ex.multiplyRates(costumeSelected.bonus_ex_rates);
+                costume_bonus_ex.divide(10000);
 
-            let costume_bonus_da;
-
-            let costume_bonus_vi;
-
-            if (costume_level <= 1) {
-
-                costume_bonus_vo = 0;
-
-                costume_bonus_da = 0;
-
-                costume_bonus_vi = 0;
-            } else if (costume_level <= 50) {
-
-                costume_bonus_vo = costume_level * costume.appeal_base.vo * costume.bonus_rates.rate_vo / 10000;
-
-                costume_bonus_da = costume_level * costume.appeal_base.da * costume.bonus_rates.rate_da / 10000;
-
-                costume_bonus_vi = costume_level * costume.appeal_base.vi * costume.bonus_rates.rate_vi / 10000;
-            } else {
-
-                costume_bonus_vo = 50 * costume.appeal_base.vo * costume.bonus_rates.rate_vo / 10000
-                    + (costume_level - 50) * costume.appeal_base.vo * costume.bonus_ex_rates.rate_vo / 10000;
-
-                costume_bonus_da = 50 * costume.appeal_base.da * costume.bonus_rates.rate_da / 10000
-                    + (costume_level - 50) * costume.appeal_base.da * costume.bonus_ex_rates.rate_da / 10000;
-
-                costume_bonus_vi = 50 * costume.appeal_base.vi * costume.bonus_rates.rate_vi / 10000
-                    + (costume_level - 50) * costume.appeal_base.vi * costume.bonus_ex_rates.rate_vi / 10000;
+                costume_bonus.addAppeal(costume_bonus_ex);
             }
 
-            redraw_costume_bonus(costume_bonus_vo, costume_bonus_da, costume_bonus_vi);
+            return costume_bonus;
+        }
 
-            let trustiness_bonus_vo;
+        function calculate_appeal_trustiness_bonus() {
 
-            let trustiness_bonus_da;
+            let trustiness_bonus = new appeal(0, 0, 0);
 
-            let trustiness_bonus_vi;
+            const trustiness_bonus_rates = new bonus_rates(12, 12, 12);
 
-            if (trustiness_level <= 1) {
+            if ((2 <= levelTrustiness) && (levelTrustiness <= 60)) {
 
-                trustiness_bonus_vo = 0;
+                trustiness_bonus.setAppeal(costumeSelected.appeal_base);
+                trustiness_bonus.multiply(levelTrustiness);
+                trustiness_bonus.multiplyRates(trustiness_bonus_rates);
+                trustiness_bonus.divide(10000);
 
-                trustiness_bonus_da = 0;
-
-                trustiness_bonus_vi = 0;
-            } else if (trustiness_level <= 60) {
-
-                trustiness_bonus_vo = trustiness_level * costume.appeal_base.vo * 12 / 10000;
-
-                trustiness_bonus_da = trustiness_level * costume.appeal_base.da * 12 / 10000;
-
-                trustiness_bonus_vi = trustiness_level * costume.appeal_base.vi * 12 / 10000;
             }
 
-            redraw_trustiness_bonus(trustiness_bonus_vo, trustiness_bonus_da, trustiness_bonus_vi);
+            return trustiness_bonus;
+        }
 
-            let song_bonus_vo = costume.appeal_base.vo * song.bonus_rates.rate_vo / 100;
+        function calculate_appeal_song_bonus() {
 
-            let song_bonus_da = costume.appeal_base.da * song.bonus_rates.rate_da / 100;
+            let song_bonus = new appeal(0, 0, 0);
 
-            let song_bonus_vi = costume.appeal_base.vi * song.bonus_rates.rate_vi / 100;
+            song_bonus.setAppeal(costumeSelected.appeal_base);
+            song_bonus.multiplyRates(songSelected.bonus_rates);
+            song_bonus.divide(100);
 
-            redraw_song_bonus(song_bonus_vo, song_bonus_da, song_bonus_vi);
+            return song_bonus;
+        }
 
-            let idol_appeal_vo = costume.appeal_base.vo
-                + costume_bonus_vo
-                + trustiness_bonus_vo
-                + song_bonus_vo;
+        function calculate_appeal_support_bonus() {
 
-            let idol_appeal_da = costume.appeal_base.da
-                + costume_bonus_da
-                + trustiness_bonus_da
-                + song_bonus_da;
+            let support_bonus = new appeal(0, 0, 0);
 
-            let idol_appeal_vi = costume.appeal_base.vi
-                + costume_bonus_vi
-                + trustiness_bonus_vi
-                + song_bonus_vi;
+            return support_bonus;
+        }
 
-            redraw_idol_appeal(idol_appeal_vo, idol_appeal_da, idol_appeal_vi);
+        function calculate_appeal() {
+
+            const costume_bonus = calculate_appeal_costume_bonus();
+
+            redraw_costume_bonus(costume_bonus);
+
+            const trustiness_bonus = calculate_appeal_trustiness_bonus();
+
+            redraw_trustiness_bonus(trustiness_bonus);
+
+            const song_bonus = calculate_appeal_song_bonus();
+
+            redraw_song_bonus(song_bonus);
+
+            const support_bonus = calculate_appeal_support_bonus();
+
+            redraw_support_bonus(support_bonus);
+
+            let idol_appeal = new appeal(0, 0, 0);
+
+            idol_appeal.setAppeal(costumeSelected.appeal_base);
+            idol_appeal.addAppeal(costume_bonus);
+            idol_appeal.addAppeal(trustiness_bonus);
+            idol_appeal.addAppeal(song_bonus);
+            idol_appeal.addAppeal(support_bonus);
+
+            redraw_idol_appeal(idol_appeal);
         }
 
         function cookies_save() {
 
-            const cookies = cookieStorage.build_cookies(30 * 24 * 60 * 60);
+            const cookies = cookieStorage.build_cookies(90 * 24 * 60 * 60);
 
             document.cookie = cookies;
         }
@@ -1044,72 +1210,172 @@
 
             setup();
 
-            const song = get_song_selected();
+            redraw_song_informations(songSelected);
 
-            const costume = get_costume_selected();
+            redraw_costume_informations(costumeSelected);
 
-            redraw_song_informations(song);
-
-            redraw_costume_informations(costume);
-
-            calculate_appeal(song, costume);
+            calculate_appeal();
 
             redraw_set_bonus_list();
         }
 
         function song_select_onchange() {
 
-            const song = get_song_selected();
+            songSelected = song_list[document.getElementById("song_select").selectedIndex];
 
-            const costume = get_costume_selected();
+            cookieStorage.song_id = songSelected.id;
 
-            redraw_song_informations(song);
+            redraw_song_informations(songSelected);
 
-            calculate_appeal(song, costume);
+            calculate_appeal();
 
             cookies_save();
         }
 
         function costume_select_onchange() {
 
-            const song = get_song_selected();
+            costumeSelected = costume_list[document.getElementById("costume_select").selectedIndex];
 
-            const costume = get_costume_selected();
+            cookieStorage.costume_id = costumeSelected.id;
 
-            cookieStorage.costume_level = costume.level_max;
+            levelCostume = Number(costumeSelected.level_max);
 
-            redraw_costume_informations(costume);
+            cookieStorage.costume_level = levelCostume;
 
-            calculate_appeal(song, costume);
+            redraw_costume_informations(costumeSelected);
+
+            calculate_appeal();
 
             redraw_set_bonus_list();
 
             cookies_save();
         }
 
-        function accessory_select_onchange() {
+        function accessory_head_select_onchange() {
+
+            const selectAccessoryHead = document.getElementById("accessory_head_select");
+
+            cookieStorage.accessory_head_id = selectAccessoryHead.value;
 
             redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function accessory_face_select_onchange() {
+
+            const selectAccessoryFace = document.getElementById("accessory_face_select");
+
+            cookieStorage.accessory_face_id = selectAccessoryFace.value;
+
+            redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function accessory_hand_select_onchange() {
+
+            const selectAccessoryHand = document.getElementById("accessory_hand_select");
+
+            cookieStorage.accessory_hand_id = selectAccessoryHand.value;
+
+            redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function accessory_back_select_onchange() {
+
+            const selectAccessoryBack = document.getElementById("accessory_back_select");
+
+            cookieStorage.accessory_back_id = selectAccessoryBack.value;
+
+            redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function accessory_rump_select_onchange() {
+
+            const selectAccessoryRump = document.getElementById("accessory_rump_select");
+
+            cookieStorage.accessory_rump_id = selectAccessoryRump.value;
+
+            redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function accessory_legs_select_onchange() {
+
+            const selectAccessoryLegs = document.getElementById("accessory_legs_select");
+
+            cookieStorage.accessory_legs_id = selectAccessoryLegs.value;
+
+            redraw_set_bonus_list();
+
+            cookies_save();
+        }
+
+        function support_1_select_onchange() {
+
+            const support_id = document.getElementById("support_1_select").value;
+
+            cookieStorage.support_1_id = support_id;
+
+            const functionsSupport = document.getElementById("support_1_functions");
+
+            redraw_support_any_functions(functionsSupport, support_id);
+
+            cookies_save();
+        }
+
+        function support_2_select_onchange() {
+
+            const support_id = document.getElementById("support_2_select").value;
+
+            cookieStorage.support_2_id = support_id;
+
+            const functionsSupport = document.getElementById("support_2_functions");
+
+            redraw_support_any_functions(functionsSupport, support_id);
+
+            cookies_save();
+        }
+
+        function support_3_select_onchange() {
+
+            const support_id = document.getElementById("support_3_select").value;
+
+            cookieStorage.support_3_id = support_id;
+
+            const functionsSupport = document.getElementById("support_3_functions");
+
+            redraw_support_any_functions(functionsSupport, support_id);
 
             cookies_save();
         }
 
         function costume_level_select_onchange() {
 
-            const song = get_song_selected();
+            levelCostume = Number(document.getElementById("costume_level_select").value);
 
-            const costume = get_costume_selected();
+            cookieStorage.costume_level = levelCostume;
 
-            calculate_appeal(song, costume);
+            calculate_appeal();
+
+            cookies_save();
         }
 
         function trustiness_level_select_onchange() {
 
-            const song = get_song_selected();
+            levelTrustiness = Number(document.getElementById("trustiness_level_select").value);
 
-            const costume = get_costume_selected();
+            cookieStorage.trustiness_level = levelTrustiness;
 
-            calculate_appeal(song, costume);
+            calculate_appeal();
+
+            cookies_save();
         }
 
     </script>

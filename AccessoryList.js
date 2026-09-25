@@ -728,4 +728,4 @@ const accessory_list = [
         "ワンダー",
         [""]
     ),
-]
+];

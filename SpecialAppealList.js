@@ -90,4 +90,4 @@ const special_appeal_list = [
         ["IMT-", "", "", ""],
     ),
     */
-]
+];

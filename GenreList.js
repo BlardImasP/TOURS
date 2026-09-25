@@ -24,4 +24,4 @@ const genre_list = [
         "ワンダー",
         "mediumpurple"
     ),
-]
+];
