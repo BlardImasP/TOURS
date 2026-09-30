@@ -94,7 +94,56 @@
             <tr>
                 <th scope="row" rowspan="2">サポート 1</th>
                 <td height="32"><select class="support_selector" id="support_1_select" onchange="support_1_select_onchange()"></select></td>
-                <td rowspan="2">全てのレアリティ</td>
+                <td rowspan="2">
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_ssr" value="SSR" checked onchange="support_1_rarity_any_onchange()" />
+                            SSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_tssr" value="TSSR" checked onchange="support_1_rarity_any_onchange()" />
+                            TSSR
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_sr" value="SR" checked onchange="support_1_rarity_any_onchange()" />
+                            SR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_tsr" value="TSR" checked onchange="support_1_rarity_any_onchange()" />
+                            TSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_co" value="CO" checked onchange="support_1_rarity_any_onchange()" />
+                            CO
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_r" value="R" checked onchange="support_1_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_tr" value="TR" checked onchange="support_1_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_n" value="N" checked onchange="support_1_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_cp" value="CP" checked onchange="support_1_rarity_any_onchange()" />
+                            CP
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_1_rarity_pm" value="PM" checked onchange="support_1_rarity_any_onchange()" />
+                            PM
+                        </label>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td id="support_1_functions"></td>
@@ -102,7 +151,36 @@
             <tr>
                 <th scope="row" rowspan="2">サポート 2</th>
                 <td height="32"><select class="support_selector" id="support_2_select" onchange="support_2_select_onchange()"></select></td>
-                <td rowspan="2">SR TSR CO R TR N</td>
+                <td rowspan="2">
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_sr" value="SR" checked onchange="support_2_rarity_any_onchange()" />
+                            SR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_tsr" value="TSR" checked onchange="support_2_rarity_any_onchange()" />
+                            TSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_co" value="CO" checked onchange="support_2_rarity_any_onchange()" />
+                            CO
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_r" value="R" checked onchange="support_2_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_tr" value="TR" checked onchange="support_2_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_2_rarity_n" value="N" checked onchange="support_2_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td id="support_2_functions"></td>
@@ -110,7 +188,22 @@
             <tr>
                 <th scope="row" rowspan="2">サポート 3</th>
                 <td height="32"><select class="support_selector" id="support_3_select" onchange="support_3_select_onchange()"></select></td>
-                <td rowspan="2">R TR N</td>
+                <td rowspan="2">
+                    <div>
+                        <label>
+                            <input type="checkbox" id="support_3_rarity_r" value="R" checked onchange="support_3_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_3_rarity_tr" value="TR" checked onchange="support_3_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="support_3_rarity_n" value="N" checked onchange="support_3_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                </td>
             </tr>
             <tr>
                 <td id="support_3_functions"></td>
@@ -225,6 +318,30 @@
 
     <script>
 
+        function conv_array_to_string(arraySource) {
+
+            let result = "";
+
+            if (arraySource.length > 0) {
+
+                result = arraySource.join(" ");
+            }
+
+            return result;
+        }
+
+        function conv_string_to_array(stringSource) {
+
+            let result = [""];
+
+            if (stringSource != "") {
+
+                result = [""].concat(stringSource.split(" "));
+            }
+
+            return result;
+        }
+
         class cookie_storage {
 
             song_id;
@@ -245,9 +362,15 @@
 
             support_1_id;
 
+            support_1_filter;
+
             support_2_id;
 
+            support_2_filter;
+
             support_3_id;
+
+            support_3_filter;
 
             costume_level;
 
@@ -274,13 +397,19 @@
 
                 this.support_1_id = "";
 
+                this.support_1_filter = "SSR TSSR SR TSR CO R TR N CP PM";
+
                 this.support_2_id = "";
+
+                this.support_2_filter = "SR TSR CO R TR N";
 
                 this.support_3_id = "";
 
+                this.support_3_filter = "R TR N";
+
                 this.costume_level = 1;
 
-                this.trustiness_level = 1;
+                this.trustiness_level = 60;
 
                 try {
 
@@ -339,14 +468,29 @@
                                 this.support_1_id = decodeURIComponent(cookieValue);
                                 break;
 
+                            case "support_1_filter":
+
+                                this.support_1_filter = decodeURIComponent(cookieValue);
+                                break;
+
                             case "support_2_id":
 
                                 this.support_2_id = decodeURIComponent(cookieValue);
                                 break;
 
+                            case "support_2_filter":
+
+                                this.support_2_filter = decodeURIComponent(cookieValue);
+                                break;
+
                             case "support_3_id":
 
                                 this.support_3_id = decodeURIComponent(cookieValue);
+                                break;
+
+                            case "support_3_filter":
+
+                                this.support_3_filter = decodeURIComponent(cookieValue);
                                 break;
 
                             case "costume_level":
@@ -390,9 +534,15 @@
 
                 cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + "/";
 
+                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + "/";
+
                 cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + "/";
 
+                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + "/";
+
                 cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + "/";
+
+                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + "/";
 
                 cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + "/";
 
@@ -410,9 +560,53 @@
 
         var costumeSelected;
 
+        const idSupport1Array = [
+            "support_1_rarity_ssr",
+            "support_1_rarity_tssr",
+            "support_1_rarity_sr",
+            "support_1_rarity_tsr",
+            "support_1_rarity_co",
+            "support_1_rarity_r",
+            "support_1_rarity_tr",
+            "support_1_rarity_n",
+            "support_1_rarity_cp",
+            "support_1_rarity_pm"
+        ];
+
+        var rarityiesSupport1;
+
+        var support1Selected;
+
+        const idSupport2Array = [
+            "support_2_rarity_sr",
+            "support_2_rarity_tsr",
+            "support_2_rarity_co",
+            "support_2_rarity_r",
+            "support_2_rarity_tr",
+            "support_2_rarity_n"
+        ];
+
+        var rarityiesSupport2;
+
+        var support2Selected;
+
+        const idSupport3Array = [
+            "support_3_rarity_r",
+            "support_3_rarity_tr",
+            "support_3_rarity_n"
+        ];
+
+        var rarityiesSupport3;
+
+        var support3Selected;
+
         var levelCostume;
 
         var levelTrustiness;
+
+        var activeSetBonus;
+
+        var existAccessory;
 
         function object_clear_childs(object) {
 
@@ -576,17 +770,32 @@
 
                 if (index_found >= 0) {
 
-                    let text;
+                    let text = "";
 
                     if (support.season != "") {
 
-                        text = "［" + support.season + "/" + support.rarity + "］";
+                        if (support.rarity != "") {
+
+                            text += "［" + support.season + "/" + support.rarity + "］";
+                        } else {
+
+                            text += "［" + support.season + "］";
+                        }
                     } else {
 
-                        text = "［" + support.rarity + "］";
+                        if (support.rarity != "") {
+
+                            text += "［" + support.rarity + "］";
+                        } else {
+
+                            text += "";
+                        }
                     }
 
-                    text += support.name;
+                    if (support.name != "") {
+
+                        text += support.name;
+                    }
 
                     if (support.idols.length > 0) {
 
@@ -598,6 +807,18 @@
             });
 
             selectSupport.value = support_id;
+        }
+
+        function setup_support_filter(idCheckBoxArray, rarityies) {
+
+            let checkboxRarity;
+
+            idCheckBoxArray.forEach((id) => {
+
+                checkboxRarity = document.getElementById(id);
+
+                checkboxRarity.checked = rarityies.includes(checkboxRarity.value);
+            });
         }
 
         function setup_costume_level_select(level, level_max) {
@@ -640,6 +861,25 @@
             }
         }
 
+        function filter_rarity_array(idCheckBoxArray) {
+
+            let rarityArray = [""];
+
+            let checkboxRarity;
+
+            idCheckBoxArray.forEach((id) => {
+
+                checkboxRarity = document.getElementById(id);
+
+                if (checkboxRarity.checked) {
+
+                    rarityArray.push(checkboxRarity.value);
+                }
+            });
+
+            return rarityArray;
+        }
+
         function setup() {
 
             const cookies = document.cookie;
@@ -666,11 +906,29 @@
 
             setup_accessory_legs_select(cookieStorage.accessory_legs_id);
 
-            setup_support_select(cookieStorage.support_1_id, "support_1_select", ["SSR", "TSSR", "SR", "TSR", "CO", "R", "TR", "N", "CP", "PM"]);
+            rarityiesSupport1 = conv_string_to_array(cookieStorage.support_1_filter);
 
-            setup_support_select(cookieStorage.support_2_id, "support_2_select", ["SR", "TSR", "CO", "R", "TR", "N"]);
+            setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
 
-            setup_support_select(cookieStorage.support_3_id, "support_3_select", ["R", "TR", "N"]);
+            setup_support_filter(idSupport1Array, rarityiesSupport1);
+
+            support1Selected = support_list.find((support) => support.id === cookieStorage.support_1_id);
+
+            rarityiesSupport2 = conv_string_to_array(cookieStorage.support_2_filter);
+
+            setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
+
+            setup_support_filter(idSupport2Array, rarityiesSupport2);
+
+            support2Selected = support_list.find((support) => support.id === cookieStorage.support_2_id);
+
+            rarityiesSupport3 = conv_string_to_array(cookieStorage.support_3_filter);
+
+            setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
+
+            setup_support_filter(idSupport3Array, rarityiesSupport3);
+
+            support3Selected = support_list.find((support) => support.id === cookieStorage.support_3_id);
 
             setup_costume_level_select(cookieStorage.costume_level, 60);
 
@@ -688,9 +946,7 @@
             textSongBonus.textContent = song.bonus_text;
         }
 
-        function redraw_support_any_functions(functions, support_id) {
-
-            const support = support_list.find((support) => support.id === support_id);
+        function redraw_support_any_functions(functions, support) {
 
             object_clear_childs(functions);
 
@@ -798,8 +1054,6 @@
             textIdolAppealTotal.textContent = appeal_total;
         }
 
-        var activeSetBonus;
-
         function redraw_set_bonus_costume(td, costume_set_list, costume_index) {
 
             if (costume_index < 0) {
@@ -830,8 +1084,6 @@
                 td.appendChild(b_costume);
             }
         }
-
-        var existAccessory;
 
         function redraw_set_bonus_accessory(td, accessory_set_list, accessory_index) {
 
@@ -1105,7 +1357,7 @@
 
         function calculate_appeal_costume_bonus() {
 
-            let costume_bonus = new appeal(0, 0, 0);
+            let costume_bonus = new appeal();
 
             if ((2 <= levelCostume) && (levelCostume <= 50)) {
 
@@ -1121,7 +1373,7 @@
                 costume_bonus.multiplyRates(costumeSelected.bonus_rates);
                 costume_bonus.divide(10000);
 
-                let costume_bonus_ex = new appeal(0, 0, 0);
+                let costume_bonus_ex = new appeal();
 
                 costume_bonus_ex.setAppeal(costumeSelected.appeal_base);
                 costume_bonus_ex.multiply(levelCostume - 50);
@@ -1136,11 +1388,11 @@
 
         function calculate_appeal_trustiness_bonus() {
 
-            let trustiness_bonus = new appeal(0, 0, 0);
-
-            const trustiness_bonus_rates = new bonus_rates(12, 12, 12);
+            let trustiness_bonus = new appeal();
 
             if ((2 <= levelTrustiness) && (levelTrustiness <= 60)) {
+
+                const trustiness_bonus_rates = new bonus_rates(12, 12, 12);
 
                 trustiness_bonus.setAppeal(costumeSelected.appeal_base);
                 trustiness_bonus.multiply(levelTrustiness);
@@ -1154,7 +1406,7 @@
 
         function calculate_appeal_song_bonus() {
 
-            let song_bonus = new appeal(0, 0, 0);
+            let song_bonus = new appeal();
 
             song_bonus.setAppeal(costumeSelected.appeal_base);
             song_bonus.multiplyRates(songSelected.bonus_rates);
@@ -1165,7 +1417,27 @@
 
         function calculate_appeal_support_bonus() {
 
-            let support_bonus = new appeal(0, 0, 0);
+            let support_bonus = new appeal();
+
+            let support1_bonus = new appeal();
+            let support2_bonus = new appeal();
+            let support3_bonus = new appeal();
+
+            support1_bonus.setAppeal(costumeSelected.appeal_base);
+            support1_bonus.multiplyRates(support1Selected.bonus_rates);
+            support1_bonus.divide(100000);
+
+            support2_bonus.setAppeal(costumeSelected.appeal_base);
+            support2_bonus.multiplyRates(support2Selected.bonus_rates);
+            support2_bonus.divide(100000);
+
+            support3_bonus.setAppeal(costumeSelected.appeal_base);
+            support3_bonus.multiplyRates(support3Selected.bonus_rates);
+            support3_bonus.divide(100000);
+
+            support_bonus.addAppeal(support1_bonus);
+            support_bonus.addAppeal(support2_bonus);
+            support_bonus.addAppeal(support3_bonus);
 
             return support_bonus;
         }
@@ -1188,7 +1460,7 @@
 
             redraw_support_bonus(support_bonus);
 
-            let idol_appeal = new appeal(0, 0, 0);
+            let idol_appeal = new appeal();
 
             idol_appeal.setAppeal(costumeSelected.appeal_base);
             idol_appeal.addAppeal(costume_bonus);
@@ -1323,9 +1595,13 @@
 
             cookieStorage.support_1_id = support_id;
 
+            support1Selected = support_list.find((support) => support.id === support_id);
+
             const functionsSupport = document.getElementById("support_1_functions");
 
-            redraw_support_any_functions(functionsSupport, support_id);
+            redraw_support_any_functions(functionsSupport, support1Selected);
+
+            calculate_appeal();
 
             cookies_save();
         }
@@ -1336,9 +1612,13 @@
 
             cookieStorage.support_2_id = support_id;
 
+            support2Selected = support_list.find((support) => support.id === support_id);
+
             const functionsSupport = document.getElementById("support_2_functions");
 
-            redraw_support_any_functions(functionsSupport, support_id);
+            redraw_support_any_functions(functionsSupport, support2Selected);
+
+            calculate_appeal();
 
             cookies_save();
         }
@@ -1349,9 +1629,13 @@
 
             cookieStorage.support_3_id = support_id;
 
+            support3Selected = support_list.find((support) => support.id === support_id);
+
             const functionsSupport = document.getElementById("support_3_functions");
 
-            redraw_support_any_functions(functionsSupport, support_id);
+            redraw_support_any_functions(functionsSupport, support3Selected);
+
+            calculate_appeal();
 
             cookies_save();
         }
@@ -1376,6 +1660,39 @@
             calculate_appeal();
 
             cookies_save();
+        }
+
+        function support_1_rarity_any_onchange() {
+
+            rarityiesSupport1 = filter_rarity_array(idSupport1Array);
+
+            cookieStorage.support_1_filter = conv_array_to_string(rarityiesSupport1);
+
+            setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
+
+            support_1_select_onchange();
+        }
+
+        function support_2_rarity_any_onchange() {
+
+            rarityiesSupport2 = filter_rarity_array(idSupport2Array);
+
+            cookieStorage.support_2_filter = conv_array_to_string(rarityiesSupport2);
+
+            setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
+
+            support_2_select_onchange();
+        }
+
+        function support_3_rarity_any_onchange() {
+
+            rarityiesSupport3 = filter_rarity_array(idSupport3Array);
+
+            cookieStorage.support_3_filter = conv_array_to_string(rarityiesSupport3);
+
+            setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
+
+            support_3_select_onchange();
         }
 
     </script>

@@ -1,14 +1,14 @@
 ﻿
 class appeal {
 
-    vo;
+    vo = 0;
 
-    da;
+    da = 0;
 
-    vi;
+    vi = 0;
 
     //  コンストラクタ
-    constructor(vo, da, vi) {
+    constructor(vo = 0, da = 0, vi = 0) {
 
         this.vo = vo;
 
@@ -24,6 +24,17 @@ class appeal {
         this.da = appeal.da;
 
         this.vi = appeal.vi;
+
+        return this;
+    }
+
+    add(value) {
+
+        this.vo += value;
+
+        this.da += value;
+
+        this.vi += value;
 
         return this;
     }
@@ -71,4 +82,14 @@ class appeal {
 
         return this;
     }
+
+    floor() {
+
+        this.vo = Math.floor(this.vo);
+
+        this.da = Math.floor(this.da);
+
+        this.vi = Math.floor(this.vi);
+    }
+
 }
