@@ -1,28 +1,30 @@
 ﻿
 class support {
 
-    id;
+    id = "";
 
-    season;
+    season = "";
 
-    rarity;
+    rarity = "";
 
-    name;
+    name = "";
 
-    idols;
+    idols = [""];
 
-    descriptions;
+    descriptions = [""];
 
-    target_idols;
+    target_idols = [""];
 
-    functions;
+    functions = [""];
 
-    bonus_rates;
+    bonus_rates = new bonus_rates();
 
-    remarks;
+    attentions = [];
+
+    remarks = [""];
 
     //  コンストラクタ
-    constructor(id, season, rarity, name, idols, descriptions, target_idols, functions, bonus_rates_text, remarks) {
+    constructor(id = "", season = "", rarity = "", name = "", idols = [], descriptions = [], target_idols = [], functions = [], bonus_rates_text = "", remarks = []) {
 
         this.id = id;
 
@@ -106,8 +108,13 @@ class support {
                 this.bonus_rates = new bonus_rates(0, 0, 41200)
                 break;
 
+            case "":
+                this.bonus_rates = new bonus_rates()
+                break;
+
             default:
                 this.bonus_rates = new bonus_rates();
+                this.attentions.push("※ アピールボーナス値未測定");
                 break;
         }
 

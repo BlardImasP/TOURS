@@ -2,15 +2,21 @@
 const genre_list = [
     new genre(
         //  ID
+        0,
+        "",
+        ""
+    ),
+    new genre(
+        //  ID
         1,
         "スウィート",
-        "lightpink"
+        "hotpink"
     ),
     new genre(
         //  ID
         2,
         "スマート",
-        "lightskyblue"
+        "deepskyblue"
     ),
     new genre(
         //  ID
@@ -22,6 +28,6 @@ const genre_list = [
         //  ID
         4,
         "ワンダー",
-        "mediumpurple"
+        "violet"
     ),
 ];

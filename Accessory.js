@@ -3,18 +3,20 @@ class accessory {
 
     id;
 
-    name;
+    name = "";
 
-    idols_text;
+    idols_text = "";
 
-    area_names;
+    area_names = [""];
 
-    genre_text;
+    genre_text = "";
 
-    remarks;
+    genre_color = "";
+
+    remarks = [""];
 
     //  コンストラクタ
-    constructor(id, name, idols_text, area_names, genre_text, remarks) {
+    constructor(id, name = "", idols_text = "", area_names = [], genre_text = "", remarks = []) {
 
         this.id = id;
 
@@ -25,6 +27,10 @@ class accessory {
         this.area_names = area_names;
 
         this.genre_text = genre_text;
+
+        const genre = genre_list.find((item) => (item.name === genre_text));
+
+        this.genre_color = genre.color_text;
 
         this.remarks = remarks;
     }

@@ -3,17 +3,17 @@ class genre {
 
     id;
 
-    name;
+    name = "";
 
-    color;
+    color_text = "";
 
     //  コンストラクタ
-    constructor(id, name, color) {
+    constructor(id, name = "", color_text = "") {
 
         this.id = id;
 
         this.name = name;
 
-        this.color = color;
+        this.color_text = color_text;
     }
 }

@@ -58,8 +58,11 @@
         <caption>衣装・アクセサリ</caption>
         <tbody>
             <tr>
-                <th scope="row" height="32">衣装</th>
+                <th scope="row" height="32" rowspan="2">衣装</th>
                 <td><select class="costume_selector" id="costume_select" onchange="costume_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="costume_functions"></td>
             </tr>
             <tr>
                 <th scope="row" height="32">頭</th>
@@ -397,11 +400,11 @@
 
                 this.support_1_id = "";
 
-                this.support_1_filter = "SSR TSSR SR TSR CO R TR N CP PM";
+                this.support_1_filter = "SSR TSSR CP PM";
 
                 this.support_2_id = "";
 
-                this.support_2_filter = "SR TSR CO R TR N";
+                this.support_2_filter = "SR TSR CO";
 
                 this.support_3_id = "";
 
@@ -799,7 +802,19 @@
 
                     if (support.idols.length > 0) {
 
-                        text += "（" + support.idols[0] + "）";
+                        text += "（";
+
+                        for (let index_idol = 0; index_idol < 1; index_idol++) {
+
+                            if (index_idol > 0) {
+
+                                text += "、";
+                            }
+
+                            text += support.idols[index_idol];
+                        }
+
+                        text += "）";
                     }
 
                     object_add_option(selectSupport, support.id, text);
@@ -946,36 +961,120 @@
             textSongBonus.textContent = song.bonus_text;
         }
 
+        function redraw_costume_functions(functions, costume) {
+
+            object_clear_childs(functions);
+
+            let countLine = 0;
+
+            if (costume.descriptions.length > 0) {
+
+                costume.descriptions.forEach((description) => {
+
+                    if (countLine > 0) {
+
+                        functions.appendChild(document.createElement("br"));
+                    }
+
+                    if (description[0] == "※") {
+
+                        const b_description = document.createElement("b");
+
+                        b_description.style.color = "tomato";
+
+                        b_description.append(description);
+
+                        functions.appendChild(b_description);
+                    } else {
+
+                        functions.append(description);
+                    }
+
+                    countLine++;
+                });
+            }
+
+            if (costume.card_ids.length > 0) {
+
+                if (countLine > 0) {
+
+                    functions.appendChild(document.createElement("br"));
+
+                    functions.appendChild(document.createElement("br"));
+                }
+
+                functions.append(costume.card_ids.join(" / "));
+
+                countLine++;
+            }
+        }
+
         function redraw_support_any_functions(functions, support) {
 
             object_clear_childs(functions);
 
+            let demerit = false;
+
             let index = 0;
 
             while (index < support.functions.length) {
+
+                const text_function = support.functions[index];
+
+                if (text_function == "") {
+
+                    break;
+                }
 
                 if (index > 0) {
 
                     functions.appendChild(document.createElement("br"));
                 }
 
-                const text_function = support.functions[index];
-
-                if (text_function[0] == "!") {
+                if (demerit) {
 
                     const font_function = document.createElement("font");
 
                     font_function.style.color = "tomato";
 
-                    font_function.append(text_function.substring(1));
+                    font_function.append(text_function);
 
                     functions.appendChild(font_function);
                 } else {
 
                     functions.append(text_function);
+
+                    demerit = text_function.endsWith("が、");
                 }
 
                 index += 1;
+            }
+
+            if (support.attentions.length > 0) {
+
+                functions.appendChild(document.createElement("br"));
+
+                support.attentions.forEach((attention) => {
+
+                    functions.appendChild(document.createElement("br"));
+
+                    const b_attention = document.createElement("b");
+
+                    b_attention.style.color = "tomato";
+
+                    b_attention.append(attention);
+
+                    functions.appendChild(b_attention);
+                });
+            }
+
+            if (support.id != "") {
+
+                functions.appendChild(document.createElement("br"));
+
+                functions.appendChild(document.createElement("br"));
+
+                functions.append(support.id);
             }
         }
 
@@ -988,6 +1087,10 @@
             textCostumeVo.textContent = costume.appeal_base.vo;
             textCostumeDa.textContent = costume.appeal_base.da;
             textCostumeVi.textContent = costume.appeal_base.vi;
+
+            const textCostumeFunctions = document.getElementById("costume_functions");
+
+            redraw_costume_functions(textCostumeFunctions, costume);
 
             setup_costume_level_select(cookieStorage.costume_level, costume.level_max);
         }
