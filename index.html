@@ -288,6 +288,8 @@
     <script src="Rarity.js"></script>
     <script src="RarityList.js"></script>
 
+    <script src="Card.js"></script>
+
     <script src="Genre.js"></script>
     <script src="GenreList.js"></script>
 
@@ -775,14 +777,14 @@
 
                     let text = "";
 
-                    if (support.season != "") {
+                    if (support.series != "") {
 
                         if (support.rarity != "") {
 
-                            text += "［" + support.season + "/" + support.rarity + "］";
+                            text += "［" + support.series + "/" + support.rarity + "］";
                         } else {
 
-                            text += "［" + support.season + "］";
+                            text += "［" + support.series + "］";
                         }
                     } else {
 
@@ -1528,15 +1530,15 @@
 
             support1_bonus.setAppeal(costumeSelected.appeal_base);
             support1_bonus.multiplyRates(support1Selected.bonus_rates);
-            support1_bonus.divide(100000);
+            support1_bonus.divide(100);
 
             support2_bonus.setAppeal(costumeSelected.appeal_base);
             support2_bonus.multiplyRates(support2Selected.bonus_rates);
-            support2_bonus.divide(100000);
+            support2_bonus.divide(100);
 
             support3_bonus.setAppeal(costumeSelected.appeal_base);
             support3_bonus.multiplyRates(support3Selected.bonus_rates);
-            support3_bonus.divide(100000);
+            support3_bonus.divide(100);
 
             support_bonus.addAppeal(support1_bonus);
             support_bonus.addAppeal(support2_bonus);
@@ -1588,6 +1590,18 @@
             redraw_song_informations(songSelected);
 
             redraw_costume_informations(costumeSelected);
+
+            const functionsSupport1 = document.getElementById("support_1_functions");
+
+            redraw_support_any_functions(functionsSupport1, support1Selected);
+
+            const functionsSupport2 = document.getElementById("support_2_functions");
+
+            redraw_support_any_functions(functionsSupport2, support2Selected);
+
+            const functionsSupport3 = document.getElementById("support_3_functions");
+
+            redraw_support_any_functions(functionsSupport3, support3Selected);
 
             calculate_appeal();
 
