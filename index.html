@@ -449,7 +449,7 @@
 
                 try {
 
-                    const cookieArray = cookies.split(separator);
+                    const cookieArray = cookies.split(this.separator);
 
                     cookieArray.forEach((cookie) => {
 
@@ -552,37 +552,37 @@
 
                 let cookies = "";
 
-                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + separator;
+                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + this.separator;
 
-                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + separator;
+                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + this.separator;
 
-                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + separator;
+                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + this.separator;
 
-                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + separator;
+                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + this.separator;
 
-                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + separator;
+                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + this.separator;
 
-                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + separator;
+                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + this.separator;
 
-                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + separator;
+                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + this.separator;
 
-                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + separator;
+                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + this.separator;
 
-                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + separator;
+                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + this.separator;
 
-                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + separator;
+                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + this.separator;
 
-                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + separator;
+                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + this.separator;
 
-                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + separator;
+                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + this.separator;
 
-                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + separator;
+                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + this.separator;
 
-                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + separator;
+                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + this.separator;
 
-                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + separator;
+                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + this.separator;
 
-                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + separator;
+                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + this.separator;
 
                 cookies += "max-age" + "=" + age;
 
