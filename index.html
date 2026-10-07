@@ -697,9 +697,17 @@
 
         var support3Selected;
 
-        var levelCostume;
+        var accessoryHeadSelected;
 
-        var levelTrustiness;
+        var accessoryFaceSelected;
+
+        var accessoryHandSelected;
+
+        var accessoryBackSelected;
+
+        var accessoryRumpSelected;
+
+        var accessoryLegsSelected;
 
         var activeSetBonus;
 
@@ -995,13 +1003,37 @@
 
             cookieStorage = new cookie_storage(cookies);
 
+            songSelected = song_list.find((song) => song.id == cookieStorage.song_id);
+
+            costumeSelected = costume_list.find((costume) => costume.id == cookieStorage.costume_id);
+
+            accessoryHeadSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_head_id);
+
+            accessoryFaceSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_face_id);
+
+            accessoryHandSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_hand_id);
+
+            accessoryBackSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_back_id);
+
+            accessoryRumpSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_rump_id);
+
+            accessoryLegsSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_legs_id);
+
+            support1Selected = support_card_list.find((support) => support.id == cookieStorage.support_1_id);
+
+            support2Selected = support_card_list.find((support) => support.id == cookieStorage.support_2_id);
+
+            support3Selected = support_card_list.find((support) => support.id == cookieStorage.support_3_id);
+
+            rarityiesSupport1 = conv_string_to_array(cookieStorage.support_1_filter);
+
+            rarityiesSupport2 = conv_string_to_array(cookieStorage.support_2_filter);
+
+            rarityiesSupport3 = conv_string_to_array(cookieStorage.support_3_filter);
+
             setup_song_select(cookieStorage.song_id);
 
-            songSelected = song_list[document.getElementById("song_select").selectedIndex];
-
             setup_costume_select(cookieStorage.costume_id);
-
-            costumeSelected = costume_list[document.getElementById("costume_select").selectedIndex];
 
             setup_accessory_head_select(cookieStorage.accessory_head_id);
 
@@ -1015,37 +1047,21 @@
 
             setup_accessory_legs_select(cookieStorage.accessory_legs_id);
 
-            rarityiesSupport1 = conv_string_to_array(cookieStorage.support_1_filter);
-
             setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
 
             setup_support_filter(idSupport1Array, rarityiesSupport1);
-
-            support1Selected = support_card_list.find((support) => support.id === cookieStorage.support_1_id);
-
-            rarityiesSupport2 = conv_string_to_array(cookieStorage.support_2_filter);
 
             setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
 
             setup_support_filter(idSupport2Array, rarityiesSupport2);
 
-            support2Selected = support_card_list.find((support) => support.id === cookieStorage.support_2_id);
-
-            rarityiesSupport3 = conv_string_to_array(cookieStorage.support_3_filter);
-
             setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
 
             setup_support_filter(idSupport3Array, rarityiesSupport3);
 
-            support3Selected = support_card_list.find((support) => support.id === cookieStorage.support_3_id);
-
             setup_costume_level_select(cookieStorage.costume_level, 60);
 
-            levelCostume = Number(document.getElementById("costume_level_select").value);
-
             setup_trustiness_level_select(cookieStorage.trustiness_level, 60);
-
-            levelTrustiness = Number(document.getElementById("trustiness_level_select").value);
         }
 
         function redraw_song_informations(song) {
@@ -1402,19 +1418,54 @@
 
             tbody_clear_rows(tbodySetBonus);
 
-            const textCostume = costume_list.find((costume) => costume.id == cookieStorage.costume_id).name;;
+            let textCostume = "";
 
-            const textAccessoryHead = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_head_id).name;
+            if (costumeSelected !== undefined) {
 
-            const textAccessoryFace = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_face_id).name;
+                textCostume = costumeSelected.name;
+            }
 
-            const textAccessoryHand = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_hand_id).name;
+            let textAccessoryHead = "";
 
-            const textAccessoryBack = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_back_id).name;
+            if (accessoryHeadSelected !== undefined) {
 
-            const textAccessoryRump = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_rump_id).name;
+                textAccessoryHead = accessoryHeadSelected.name;
+            }
 
-            const textAccessoryLegs = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_legs_id).name;
+            let textAccessoryFace = "";
+
+            if (accessoryFaceSelected !== undefined) {
+
+                textAccessoryFace = accessoryFaceSelected.name;
+            }
+
+            let textAccessoryHand = "";
+
+            if (accessoryHandSelected !== undefined) {
+
+                textAccessoryHand = accessoryHandSelected.name;
+            }
+
+            let textAccessoryBack = "";
+
+            if (accessoryBackSelected !== undefined) {
+
+                textAccessoryBack = accessoryBackSelected.name;
+            }
+
+            let textAccessoryRump = "";
+
+            if (accessoryRumpSelected !== undefined) {
+
+                textAccessoryRump = accessoryRumpSelected.name;
+            }
+
+            let textAccessoryLegs = "";
+
+            if (accessoryLegsSelected !== undefined) {
+
+                textAccessoryLegs = accessoryLegsSelected.name;
+            }
 
             set_bonus_list.forEach((set_bonus) => {
 
@@ -1627,13 +1678,13 @@
 
             let costume_bonus = new appeal();
 
-            if ((2 <= levelCostume) && (levelCostume <= 50)) {
+            if ((2 <= cookieStorage.costume_level) && (cookieStorage.costume_level <= 50)) {
 
                 costume_bonus.setAppeal(costumeSelected.appeal_base);
-                costume_bonus.multiply(levelCostume);
+                costume_bonus.multiply(cookieStorage.costume_level);
                 costume_bonus.multiplyPerCent(costumeSelected.bonus_rates);
 
-            } else if ((51 <= levelCostume) && (levelCostume <= 60)) {
+            } else if ((51 <= cookieStorage.costume_level) && (cookieStorage.costume_level <= 60)) {
 
                 costume_bonus.setAppeal(costumeSelected.appeal_base);
                 costume_bonus.multiply(50);
@@ -1642,7 +1693,7 @@
                 let costume_bonus_ex = new appeal();
 
                 costume_bonus_ex.setAppeal(costumeSelected.appeal_base);
-                costume_bonus_ex.multiply(levelCostume - 50);
+                costume_bonus_ex.multiply(cookieStorage.costume_level - 50);
                 costume_bonus_ex.multiplyPerCent(costumeSelected.bonus_ex_rates);
 
                 costume_bonus.addAppeal(costume_bonus_ex);
@@ -1657,10 +1708,10 @@
 
             let trustiness_bonus = new appeal();
 
-            if ((2 <= levelTrustiness) && (levelTrustiness <= 60)) {
+            if ((2 <= cookieStorage.trustiness_level) && (cookieStorage.trustiness_level <= 60)) {
 
                 trustiness_bonus.setAppeal(costumeSelected.appeal_base);
-                trustiness_bonus.multiply(levelTrustiness);
+                trustiness_bonus.multiply(cookieStorage.trustiness_level);
                 trustiness_bonus.multiplyPerCent(trustiness_bonus_rates);
 
             }
@@ -1821,29 +1872,29 @@
 
             redraw_support_any_descriptions(descriptionsSupport3, support3Selected);
 
-            const textAccessoryHeadDescriptions = document.getElementById("accessory_head_descriptions");
+            const descriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryHeadDescriptions, accessory_list[cookieStorage.accessory_head_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryHead, accessoryHeadSelected);
 
-            const textAccessoryFaceDescriptions = document.getElementById("accessory_face_descriptions");
+            const descriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryFaceDescriptions, accessory_list[cookieStorage.accessory_face_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryFace, accessoryFaceSelected);
 
-            const textAccessoryHandDescriptions = document.getElementById("accessory_hand_descriptions");
+            const descriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryHandDescriptions, accessory_list[cookieStorage.accessory_hand_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryHand, accessoryHandSelected);
 
-            const textAccessoryBackDescriptions = document.getElementById("accessory_back_descriptions");
+            const descriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryBackDescriptions, accessory_list[cookieStorage.accessory_back_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryBack, accessoryBackSelected);
 
-            const textAccessoryRumpDescriptions = document.getElementById("accessory_rump_descriptions");
+            const descriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryRumpDescriptions, accessory_list[cookieStorage.accessory_rump_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryRump, accessoryRumpSelected);
 
-            const textAccessoryLegsDescriptions = document.getElementById("accessory_legs_descriptions");
+            const descriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
 
-            redraw_equipment_descriptions(textAccessoryLegsDescriptions, accessory_list[cookieStorage.accessory_legs_id]);
+            redraw_equipment_descriptions(descriptionsAccessoryLegs, accessoryLegsSelected);
 
             calculate_appeal();
 
@@ -1871,7 +1922,7 @@
 
             cookieStorage.costume_id = costumeSelected.id;
 
-            levelCostume = Number(costumeSelected.level_max);
+            let levelCostume = Number(costumeSelected.level_max);
 
             cookieStorage.costume_level = levelCostume;
 
@@ -1888,13 +1939,15 @@
 
         function accessory_head_select_onchange() {
 
-            const selectAccessoryHead = document.getElementById("accessory_head_select");
+            const accessory_id = document.getElementById("accessory_head_select").value;
 
-            cookieStorage.accessory_head_id = selectAccessoryHead.value;
+            cookieStorage.accessory_head_id = accessory_id;
 
-            const textAccessoryHeadDescriptions = document.getElementById("accessory_head_descriptions");
+            accessoryHeadSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryHeadDescriptions, accessory_list[cookieStorage.accessory_head_id]);
+            const descriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryHead, accessoryHeadSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1903,13 +1956,15 @@
 
         function accessory_face_select_onchange() {
 
-            const selectAccessoryFace = document.getElementById("accessory_face_select");
+            const accessory_id = document.getElementById("accessory_face_select").value;
 
-            cookieStorage.accessory_face_id = selectAccessoryFace.value;
+            cookieStorage.accessory_face_id = accessory_id;
 
-            const textAccessoryFaceDescriptions = document.getElementById("accessory_face_descriptions");
+            accessoryFaceSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryFaceDescriptions, accessory_list[cookieStorage.accessory_face_id]);
+            const descriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryFace, accessoryFaceSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1918,13 +1973,15 @@
 
         function accessory_hand_select_onchange() {
 
-            const selectAccessoryHand = document.getElementById("accessory_hand_select");
+            const accessory_id = document.getElementById("accessory_hand_select").value;
 
-            cookieStorage.accessory_hand_id = selectAccessoryHand.value;
+            cookieStorage.accessory_hand_id = accessory_id;
 
-            const textAccessoryHandDescriptions = document.getElementById("accessory_hand_descriptions");
+            accessoryHandSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryHandDescriptions, accessory_list[cookieStorage.accessory_hand_id]);
+            const descriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryHand, accessoryHandSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1933,13 +1990,15 @@
 
         function accessory_back_select_onchange() {
 
-            const selectAccessoryBack = document.getElementById("accessory_back_select");
+            const accessory_id = document.getElementById("accessory_back_select").value;
 
-            cookieStorage.accessory_back_id = selectAccessoryBack.value;
+            cookieStorage.accessory_back_id = accessory_id;
 
-            const textAccessoryBackDescriptions = document.getElementById("accessory_back_descriptions");
+            accessoryBackSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryBackDescriptions, accessory_list[cookieStorage.accessory_back_id]);
+            const descriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryBack, accessoryBackSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1948,13 +2007,15 @@
 
         function accessory_rump_select_onchange() {
 
-            const selectAccessoryRump = document.getElementById("accessory_rump_select");
+            const accessory_id = document.getElementById("accessory_rump_select").value;
 
-            cookieStorage.accessory_rump_id = selectAccessoryRump.value;
+            cookieStorage.accessory_rump_id = accessory_id;
 
-            const textAccessoryRumpDescriptions = document.getElementById("accessory_rump_descriptions");
+            accessoryRumpSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryRumpDescriptions, accessory_list[cookieStorage.accessory_rump_id]);
+            const descriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryRump, accessoryRumpSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1963,13 +2024,15 @@
 
         function accessory_legs_select_onchange() {
 
-            const selectAccessoryLegs = document.getElementById("accessory_legs_select");
+            const accessory_id = document.getElementById("accessory_legs_select").value;
 
-            cookieStorage.accessory_legs_id = selectAccessoryLegs.value;
+            cookieStorage.accessory_legs_id = accessory_id;
 
-            const textAccessoryLegsDescriptions = document.getElementById("accessory_legs_descriptions");
+            accessoryLegsSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
 
-            redraw_equipment_descriptions(textAccessoryLegsDescriptions, accessory_list[cookieStorage.accessory_legs_id]);
+            const descriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
+
+            redraw_equipment_descriptions(descriptionsAccessoryLegs, accessoryLegsSelected);
 
             redraw_set_bonus_tbody();
 
@@ -1982,7 +2045,7 @@
 
             cookieStorage.support_1_id = support_id;
 
-            support1Selected = support_card_list.find((support) => support.id === support_id);
+            support1Selected = support_card_list.find((support) => support.id == support_id);
 
             const descriptionsSupport = document.getElementById("support_1_descriptions");
 
@@ -1999,7 +2062,7 @@
 
             cookieStorage.support_2_id = support_id;
 
-            support2Selected = support_card_list.find((support) => support.id === support_id);
+            support2Selected = support_card_list.find((support) => support.id == support_id);
 
             const descriptionsSupport = document.getElementById("support_2_descriptions");
 
@@ -2016,7 +2079,7 @@
 
             cookieStorage.support_3_id = support_id;
 
-            support3Selected = support_card_list.find((support) => support.id === support_id);
+            support3Selected = support_card_list.find((support) => support.id == support_id);
 
             const descriptionsSupport = document.getElementById("support_3_descriptions");
 
@@ -2029,7 +2092,7 @@
 
         function costume_level_select_onchange() {
 
-            levelCostume = Number(document.getElementById("costume_level_select").value);
+            let levelCostume = Number(document.getElementById("costume_level_select").value);
 
             cookieStorage.costume_level = levelCostume;
 
@@ -2040,7 +2103,7 @@
 
         function trustiness_level_select_onchange() {
 
-            levelTrustiness = Number(document.getElementById("trustiness_level_select").value);
+            let levelTrustiness = Number(document.getElementById("trustiness_level_select").value);
 
             cookieStorage.trustiness_level = levelTrustiness;
 
