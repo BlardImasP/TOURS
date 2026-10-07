@@ -378,6 +378,8 @@
 
         class cookie_storage {
 
+            separator = "; ";
+
             song_id;
 
             costume_id;
@@ -447,7 +449,7 @@
 
                 try {
 
-                    const cookieArray = cookies.split("/");
+                    const cookieArray = cookies.split(separator);
 
                     cookieArray.forEach((cookie) => {
 
@@ -550,39 +552,39 @@
 
                 let cookies = "";
 
-                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + "/";
+                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + separator;
 
-                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + "/";
+                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + separator;
 
-                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + "/";
+                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + separator;
 
-                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + "/";
+                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + separator;
 
-                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + "/";
+                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + separator;
 
-                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + "/";
+                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + separator;
 
-                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + "/";
+                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + separator;
 
-                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + "/";
+                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + separator;
 
-                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + "/";
+                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + separator;
 
-                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + "/";
+                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + separator;
 
-                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + "/";
+                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + separator;
 
-                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + "/";
+                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + separator;
 
-                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + "/";
+                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + separator;
 
-                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + "/";
+                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + separator;
 
-                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + "/";
+                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + separator;
 
-                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + "/";
+                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + separator;
 
-                cookies += "; " + "max-age" + "=" + age;
+                cookies += "max-age" + "=" + age;
 
                 return cookies;
             }
