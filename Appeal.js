@@ -83,6 +83,17 @@ class appeal {
         return this;
     }
 
+    multiplyPerCent(rates) {
+
+        this.vo = this.vo * rates.rate_vo / 100.0;
+
+        this.da = this.da * rates.rate_da / 100.0;
+
+        this.vi = this.vi * rates.rate_vi / 100.0;
+
+        return this;
+    }
+
     floor() {
 
         this.vo = Math.floor(this.vo);

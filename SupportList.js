@@ -14,7 +14,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-054",
-        "1弾",
+        "第1弾",
         "SSR",
         "all you've got",
         ["渋谷 凛"],
@@ -25,7 +25,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-055",
-        "1弾",
+        "第1弾",
         "SSR",
         "mutual gift",
         ["伊吹 翼"],
@@ -37,7 +37,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-056",
-        "1弾",
+        "第1弾",
         "SR",
         "glittering essence",
         ["星井 美希"],
@@ -49,7 +49,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-057",
-        "1弾",
+        "第1弾",
         "SR",
         "お腹ぺこぺこ～！",
         ["伊吹 翼"],
@@ -61,7 +61,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-058",
-        "1弾",
+        "第1弾",
         "SR",
         "Road to venue",
         ["春日 未来"],
@@ -73,7 +73,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-059",
-        "1弾",
+        "第1弾",
         "SR",
         "Dive into the sound",
         ["如月 千早"],
@@ -85,7 +85,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-060",
-        "1弾",
+        "第1弾",
         "SR",
         "雨上がり、心も晴れ",
         ["風野 灯織"],
@@ -97,7 +97,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-061",
-        "1弾",
+        "第1弾",
         "R",
         "ブライトスマイル",
         ["島村 卯月"],
@@ -109,7 +109,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-062",
-        "1弾",
+        "第1弾",
         "R",
         "二人だけのプライベートレッスン",
         ["如月 千早"],
@@ -121,7 +121,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-063",
-        "1弾",
+        "第1弾",
         "R",
         "二人だけのプライベートレッスン",
         ["最上 静香"],
@@ -133,7 +133,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-064",
-        "1弾",
+        "第1弾",
         "R",
         "一番星を目指して",
         ["天道 輝"],
@@ -145,7 +145,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-065",
-        "1弾",
+        "第1弾",
         "R",
         "凛とした立ち姿",
         ["渋谷 凛"],
@@ -157,7 +157,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-066",
-        "1弾",
+        "第1弾",
         "R",
         "ほわっと決めポーズ",
         ["櫻木 真乃"],
@@ -169,7 +169,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-067",
-        "1弾",
+        "第1弾",
         "R",
         "元気いっぱいポーズ☆彡",
         ["八宮 めぐる"],
@@ -181,7 +181,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-068",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["天海 春香"],
@@ -193,7 +193,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-069",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["如月 千早"],
@@ -205,7 +205,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-070",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["星井 美希"],
@@ -217,7 +217,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-071",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["島村 卯月"],
@@ -229,7 +229,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-072",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["渋谷 凛"],
@@ -241,7 +241,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-073",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["本田 未央"],
@@ -253,7 +253,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-074",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["春日 未来"],
@@ -265,7 +265,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-075",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["最上 静香"],
@@ -277,7 +277,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-076",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["伊吹 翼"],
@@ -289,7 +289,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-077",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["天道 輝"],
@@ -301,7 +301,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-078",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["桜庭 薫"],
@@ -313,7 +313,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-079",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["柏木 翼"],
@@ -325,7 +325,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-080",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["櫻木 真乃"],
@@ -337,7 +337,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-081",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["風野 灯織"],
@@ -349,7 +349,7 @@ const support_list = [
     ),
     new support(
         "IMT-01-082",
-        "1弾",
+        "第1弾",
         "N",
         "ライブサポート",
         ["八宮 めぐる"],
@@ -361,7 +361,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-001",
-        "1弾",
+        "第1弾",
         "TR",
         "THE IDOLM@STER",
         [],
@@ -373,7 +373,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-002",
-        "1弾",
+        "第1弾",
         "TR",
         "アイドルマスター TOURS",
         [],
@@ -385,7 +385,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-003",
-        "1弾",
+        "第1弾",
         "TR",
         "EP7",
         [],
@@ -397,7 +397,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-004",
-        "1弾",
+        "第1弾",
         "TR",
         "EP8",
         [],
@@ -409,7 +409,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-005",
-        "1弾",
+        "第1弾",
         "TR",
         "EP9",
         [],
@@ -421,7 +421,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-006",
-        "1弾",
+        "第1弾",
         "TR",
         "EP10",
         [],
@@ -433,7 +433,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-007",
-        "1弾",
+        "第1弾",
         "TR",
         "EP11",
         [],
@@ -445,7 +445,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-008",
-        "1弾",
+        "第1弾",
         "TR",
         "special art #01-01",
         [],
@@ -457,7 +457,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-009",
-        "1弾",
+        "第1弾",
         "TR",
         "special art #01-02",
         [],
@@ -469,7 +469,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-010",
-        "1弾",
+        "第1弾",
         "TR",
         "special art #01-03",
         [],
@@ -481,7 +481,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-011",
-        "1弾",
+        "第1弾",
         "TR",
         "special art #01-04",
         [],
@@ -493,7 +493,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-01-012",
-        "1弾",
+        "第1弾",
         "TR",
         "special art #01-05",
         [],
@@ -505,7 +505,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-033",
-        "2弾",
+        "第2弾",
         "SSR",
         "bright moonlight",
         ["月村 手毬"],
@@ -517,7 +517,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-034",
-        "2弾",
+        "第2弾",
         "SSR",
         "開花宣言！",
         ["島村 卯月"],
@@ -529,7 +529,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-035",
-        "2弾",
+        "第2弾",
         "SSR",
         "自分らしく、誇らしく。",
         ["如月 千早"],
@@ -541,7 +541,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-036",
-        "2弾",
+        "第2弾",
         "SR",
         "全力夏フェス！",
         ["本田 未央"],
@@ -553,7 +553,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-037",
-        "2弾",
+        "第2弾",
         "SR",
         "天翔けるチャーハン",
         ["天道 輝"],
@@ -565,7 +565,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-038",
-        "2弾",
+        "第2弾",
         "R",
         "お使いミッション！",
         ["天海 春香"],
@@ -577,7 +577,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-039",
-        "2弾",
+        "第2弾",
         "R",
         "お使いミッション！",
         ["伊吹 翼"],
@@ -589,7 +589,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-040",
-        "2弾",
+        "第2弾",
         "R",
         "一緒にランチタイム♪",
         ["島村 卯月"],
@@ -601,7 +601,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-041",
-        "2弾",
+        "第2弾",
         "R",
         "一緒にランチタイム♪",
         ["櫻木 真乃"],
@@ -613,7 +613,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-042",
-        "2弾",
+        "第2弾",
         "R",
         "リハーサル中",
         ["風野 灯織"],
@@ -625,7 +625,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-043",
-        "2弾",
+        "第2弾",
         "R",
         "つめた～い！",
         ["八宮 めぐる"],
@@ -637,7 +637,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-044",
-        "2弾",
+        "第2弾",
         "R",
         "ダンスレッスン！",
         ["柏木 翼"],
@@ -649,7 +649,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-045",
-        "2弾",
+        "第2弾",
         "R",
         "学びの瞬間",
         ["花海 咲季"],
@@ -661,7 +661,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-046",
-        "2弾",
+        "第2弾",
         "R",
         "学びの瞬間",
         ["月村 手毬"],
@@ -673,7 +673,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-047",
-        "2弾",
+        "第2弾",
         "R",
         "学びの瞬間",
         ["藤田 ことね"],
@@ -685,7 +685,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-048",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["天海 春香"],
@@ -697,7 +697,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-049",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["如月 千早"],
@@ -709,7 +709,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-050",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["星井 美希"],
@@ -721,7 +721,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-051",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["島村 卯月"],
@@ -733,7 +733,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-052",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["渋谷 凛"],
@@ -745,7 +745,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-053",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["本田 未央"],
@@ -757,7 +757,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-054",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["春日 未来"],
@@ -769,7 +769,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-055",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["最上 静香"],
@@ -781,7 +781,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-056",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["伊吹 翼"],
@@ -793,7 +793,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-057",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["天道 輝"],
@@ -805,7 +805,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-058",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["桜庭 薫"],
@@ -817,7 +817,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-059",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["柏木 翼"],
@@ -829,7 +829,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-060",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["櫻木 真乃"],
@@ -841,7 +841,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-061",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["風野 灯織"],
@@ -853,7 +853,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-062",
-        "2弾",
+        "第2弾",
         "N",
         "合同レッスン！",
         ["八宮 めぐる"],
@@ -865,7 +865,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-063",
-        "2弾",
+        "第2弾",
         "N",
         "ライブサポート",
         ["花海 咲季"],
@@ -877,7 +877,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-064",
-        "2弾",
+        "第2弾",
         "N",
         "ライブサポート",
         ["月村 手毬"],
@@ -889,7 +889,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-065",
-        "2弾",
+        "第2弾",
         "N",
         "ライブサポート",
         ["藤田 ことね"],
@@ -901,7 +901,7 @@ const support_list = [
     ),
     new support(
         "IMT-02-066",
-        "2弾",
+        "第2弾",
         "N",
         "お待たせしました！",
         ["袖屋 璃空"],
@@ -913,7 +913,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-001",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["天海 春香"],
@@ -925,7 +925,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-002",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["如月 千早"],
@@ -937,7 +937,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-003",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["星井 美希"],
@@ -949,7 +949,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-004",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["島村 卯月"],
@@ -961,7 +961,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-005",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["渋谷 凛"],
@@ -973,7 +973,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-006",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["本田 未央"],
@@ -985,7 +985,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-007",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["春日 未来"],
@@ -997,7 +997,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-008",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["最上 静香"],
@@ -1009,7 +1009,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-009",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["伊吹 翼"],
@@ -1021,7 +1021,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-010",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["天道 輝"],
@@ -1033,7 +1033,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-011",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["桜庭 薫"],
@@ -1045,7 +1045,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-012",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["柏木 翼"],
@@ -1057,7 +1057,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-013",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["櫻木 真乃"],
@@ -1069,7 +1069,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-014",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["風野 灯織"],
@@ -1081,7 +1081,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-015",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["八宮 めぐる"],
@@ -1093,7 +1093,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-016",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["花海 咲季"],
@@ -1105,7 +1105,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-017",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["月村 手毬"],
@@ -1117,7 +1117,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-018",
-        "2弾",
+        "第2弾",
         "TR",
         "プロフィール",
         ["藤田 ことね"],
@@ -1129,7 +1129,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-019",
-        "2弾",
+        "第2弾",
         "TR",
         "event1 EP1",
         ["アイドルマスター TOURS"],
@@ -1141,7 +1141,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-020",
-        "2弾",
+        "第2弾",
         "TR",
         "event1 EP2",
         ["アイドルマスター TOURS"],
@@ -1153,7 +1153,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-021",
-        "2弾",
+        "第2弾",
         "TSR",
         "event1 EP3",
         ["アイドルマスター TOURS"],
@@ -1165,7 +1165,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-022",
-        "2弾",
+        "第2弾",
         "TR",
         "event1 EP4",
         ["アイドルマスター TOURS"],
@@ -1177,7 +1177,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-023",
-        "2弾",
+        "第2弾",
         "TR",
         "event1 EP6",
         ["アイドルマスター TOURS"],
@@ -1189,7 +1189,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-024",
-        "2弾",
+        "第2弾",
         "TR",
         "special art #02-01",
         ["アイドルマスター TOURS"],
@@ -1201,7 +1201,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-025",
-        "2弾",
+        "第2弾",
         "TR",
         "special art #02-02",
         ["アイドルマスター TOURS"],
@@ -1213,7 +1213,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-026",
-        "2弾",
+        "第2弾",
         "TR",
         "special art #02-03",
         ["アイドルマスター TOURS"],
@@ -1225,7 +1225,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-027",
-        "2弾",
+        "第2弾",
         "TR",
         "special art #02-04",
         ["アイドルマスター TOURS"],
@@ -1237,7 +1237,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-02-028",
-        "2弾",
+        "第2弾",
         "TR",
         "special art #02-05",
         ["アイドルマスター TOURS"],
@@ -1249,7 +1249,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-020",
-        "3弾",
+        "第3弾",
         "SSR",
         "rabbit on the moon",
         ["水瀬 伊織"],
@@ -1261,7 +1261,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-021",
-        "3弾",
+        "第3弾",
         "SSR",
         "rabbit on the moon",
         ["星井 美希"],
@@ -1273,7 +1273,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-022",
-        "3弾",
+        "第3弾",
         "SSR",
         "LESSON 1",
         ["硲 道夫"],
@@ -1285,7 +1285,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-023",
-        "3弾",
+        "第3弾",
         "SSR",
         "LESSON 1",
         ["桜庭 薫"],
@@ -1297,7 +1297,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-024",
-        "3弾",
+        "第3弾",
         "SSR",
         "flap the wings",
         ["櫻木 真乃"],
@@ -1309,7 +1309,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-025",
-        "3弾",
+        "第3弾",
         "SSR",
         "autumn pop fes♪",
         ["本田 未央"],
@@ -1321,7 +1321,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-026",
-        "3弾",
+        "第3弾",
         "SR",
         "アンコール！",
         ["島村 卯月"],
@@ -1333,7 +1333,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-027",
-        "3弾",
+        "第3弾",
         "SR",
         "いたずら警報発令中！",
         ["伊吹 翼"],
@@ -1345,7 +1345,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-028",
-        "3弾",
+        "第3弾",
         "SR",
         "拍手喝采",
         ["桜庭 薫"],
@@ -1357,7 +1357,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-029",
-        "3弾",
+        "第3弾",
         "SR",
         "ライブの前の一口…！？",
         ["柏木 翼"],
@@ -1369,7 +1369,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-030",
-        "3弾",
+        "第3弾",
         "R",
         "アンコール…いけるの！",
         ["星井 美希"],
@@ -1381,7 +1381,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-031",
-        "3弾",
+        "第3弾",
         "R",
         "アンコール…いくよ！",
         ["渋谷 凛"],
@@ -1393,7 +1393,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-032",
-        "3弾",
+        "第3弾",
         "R",
         "準備OK！",
         ["天道 輝"],
@@ -1405,7 +1405,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-033",
-        "3弾",
+        "第3弾",
         "R",
         "準備運動は念入りに",
         ["桜庭 薫"],
@@ -1417,7 +1417,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-034",
-        "3弾",
+        "第3弾",
         "R",
         "ひとやすみ。",
         ["最上 静香"],
@@ -1429,7 +1429,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-035",
-        "3弾",
+        "第3弾",
         "R",
         "綿密な計画",
         ["硲 道夫"],
@@ -1441,7 +1441,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-036",
-        "3弾",
+        "第3弾",
         "R",
         "100点満点！",
         ["花海 咲季"],
@@ -1453,7 +1453,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-037",
-        "3弾",
+        "第3弾",
         "R",
         "水分補給を忘れずに",
         ["藤田 ことね"],
@@ -1465,7 +1465,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-038",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["天海 春香"],
@@ -1477,7 +1477,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-039",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["如月 千早"],
@@ -1489,7 +1489,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-040",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["星井 美希"],
@@ -1501,7 +1501,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-041",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["水瀬 伊織"],
@@ -1513,7 +1513,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-042",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["島村 卯月"],
@@ -1525,7 +1525,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-043",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["渋谷 凛"],
@@ -1537,7 +1537,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-044",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["本田 未央"],
@@ -1549,7 +1549,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-045",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["春日 未来"],
@@ -1561,7 +1561,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-046",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["最上 静香"],
@@ -1573,7 +1573,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-047",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["伊吹 翼"],
@@ -1585,7 +1585,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-048",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["天道 輝"],
@@ -1597,7 +1597,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-049",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["桜庭 薫"],
@@ -1609,7 +1609,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-050",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["柏木 翼"],
@@ -1621,7 +1621,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-051",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["硲 道夫"],
@@ -1633,7 +1633,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-052",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["櫻木 真乃"],
@@ -1645,7 +1645,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-053",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["風野 灯織"],
@@ -1657,7 +1657,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-054",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["八宮 めぐる"],
@@ -1669,7 +1669,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-055",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["花海 咲季"],
@@ -1681,7 +1681,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-056",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["月村 手毬"],
@@ -1693,7 +1693,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-057",
-        "3弾",
+        "第3弾",
         "N",
         "宣材写真！",
         ["藤田 ことね"],
@@ -1705,7 +1705,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-058",
-        "3弾",
+        "第3弾",
         "N",
         "ライブサポート",
         ["水瀬 伊織"],
@@ -1717,7 +1717,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-059",
-        "3弾",
+        "第3弾",
         "N",
         "ライブサポート",
         ["硲 道夫"],
@@ -1729,7 +1729,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-060",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["天海 春香"],
@@ -1741,7 +1741,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-061",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["如月 千早"],
@@ -1753,7 +1753,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-062",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["星井 美希"],
@@ -1765,7 +1765,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-063",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["水瀬 伊織"],
@@ -1777,7 +1777,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-064",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["島村 卯月"],
@@ -1789,7 +1789,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-065",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["渋谷 凛"],
@@ -1801,7 +1801,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-066",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["本田 未央"],
@@ -1813,7 +1813,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-067",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["春日 未来"],
@@ -1825,7 +1825,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-068",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["最上 静香"],
@@ -1837,7 +1837,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-069",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["伊吹 翼"],
@@ -1849,7 +1849,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-070",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["天道 輝"],
@@ -1861,7 +1861,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-071",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["桜庭 薫"],
@@ -1873,7 +1873,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-072",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["柏木 翼"],
@@ -1885,7 +1885,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-073",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["硲 道夫"],
@@ -1897,7 +1897,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-074",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["櫻木 真乃"],
@@ -1909,7 +1909,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-075",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["風野 灯織"],
@@ -1921,7 +1921,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-076",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["八宮 めぐる"],
@@ -1933,7 +1933,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-077",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["花海 咲季"],
@@ -1945,7 +1945,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-078",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["月村 手毬"],
@@ -1957,7 +1957,7 @@ const support_list = [
     ),
     new support(
         "IMT-03-079",
-        "3弾",
+        "第3弾",
         "CO",
         "宣材写真！",
         ["藤田 ことね"],
@@ -1969,7 +1969,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-001",
-        "3弾",
+        "第3弾",
         "TSSR",
         "event2 EP6-01",
         ["アイドルマスター TOURS"],
@@ -1981,7 +1981,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-002",
-        "3弾",
+        "第3弾",
         "TSSR",
         "event2 EP6-02",
         ["アイドルマスター TOURS"],
@@ -1993,7 +1993,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-003",
-        "3弾",
+        "第3弾",
         "TSR",
         "special art #03-01",
         ["水瀬 伊織"],
@@ -2005,7 +2005,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-004",
-        "3弾",
+        "第3弾",
         "TSR",
         "special art #03-02",
         ["アイドルマスター TOURS"],
@@ -2017,7 +2017,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-005",
-        "3弾",
+        "第3弾",
         "TSR",
         "special art #03-03",
         ["アイドルマスター TOURS"],
@@ -2029,7 +2029,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-006",
-        "3弾",
+        "第3弾",
         "TSR",
         "special art #03-04",
         ["アイドルマスター TOURS"],
@@ -2041,7 +2041,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-03-007",
-        "3弾",
+        "第3弾",
         "TSR",
         "special art #03-05",
         ["アイドルマスター TOURS"],
@@ -2053,7 +2053,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-022",
-        "4弾",
+        "第4弾",
         "SSR",
         "Rondo of light and shadow",
         ["神崎 蘭子"],
@@ -2065,7 +2065,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-023",
-        "4弾",
+        "第4弾",
         "SSR",
         "Rondo of light and shadow",
         ["神崎 蘭子"],
@@ -2077,7 +2077,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-024",
-        "4弾",
+        "第4弾",
         "SSR",
         "snow＊parade",
         ["真壁 瑞希"],
@@ -2089,7 +2089,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-025",
-        "4弾",
+        "第4弾",
         "SSR",
         "snow＊parade",
         ["真壁 瑞希"],
@@ -2101,7 +2101,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-026",
-        "4弾",
+        "第4弾",
         "SSR",
         "3,2,1…！",
         ["天海 春香"],
@@ -2113,7 +2113,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-027",
-        "4弾",
+        "第4弾",
         "SSR",
         "あたしのものがたり",
         ["藤田 ことね"],
@@ -2125,7 +2125,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-028",
-        "4弾",
+        "第4弾",
         "SR",
         "真剣なまなざし",
         ["水瀬 伊織"],
@@ -2137,7 +2137,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-029",
-        "4弾",
+        "第4弾",
         "SR",
         "winter mode",
         ["水瀬 伊織"],
@@ -2149,7 +2149,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-030",
-        "4弾",
+        "第4弾",
         "SR",
         "Chocolat Berryな私",
         ["島村 卯月"],
@@ -2161,7 +2161,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-031",
-        "4弾",
+        "第4弾",
         "SR",
         "Relief and afterglow",
         ["春日 未来"],
@@ -2173,7 +2173,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-032",
-        "4弾",
+        "第4弾",
         "SR",
         "snow dances",
         ["花海 咲季"],
@@ -2185,7 +2185,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-033",
-        "4弾",
+        "第4弾",
         "R",
         "振付チェック",
         ["春日 未来"],
@@ -2197,7 +2197,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-034",
-        "4弾",
+        "第4弾",
         "R",
         "振付チェック",
         ["最上 静香"],
@@ -2209,7 +2209,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-035",
-        "4弾",
+        "第4弾",
         "R",
         "衣装合わせ",
         ["伊吹 翼"],
@@ -2221,7 +2221,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-036",
-        "4弾",
+        "第4弾",
         "R",
         "衣装合わせ",
         ["本田 未央"],
@@ -2233,7 +2233,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-037",
-        "4弾",
+        "第4弾",
         "R",
         "冬の定番アイテム",
         ["硲 道夫"],
@@ -2245,7 +2245,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-038",
-        "4弾",
+        "第4弾",
         "R",
         "台本確認",
         ["天道 輝"],
@@ -2257,7 +2257,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-039",
-        "4弾",
+        "第4弾",
         "R",
         "ライブお疲れ様でした！",
         ["月村 手毬"],
@@ -2269,7 +2269,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-040",
-        "4弾",
+        "第4弾",
         "R",
         "お弁当届きました！",
         ["袖屋 璃空"],
@@ -2281,7 +2281,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-041",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["天海 春香"],
@@ -2293,7 +2293,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-042",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["如月 千早"],
@@ -2305,7 +2305,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-043",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["星井 美希"],
@@ -2317,7 +2317,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-044",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["水瀬 伊織"],
@@ -2329,7 +2329,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-045",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["島村 卯月"],
@@ -2341,7 +2341,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-046",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["渋谷 凛"],
@@ -2353,7 +2353,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-047",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["本田 未央"],
@@ -2365,7 +2365,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-048",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["神崎 蘭子"],
@@ -2377,7 +2377,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-049",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["春日 未来"],
@@ -2389,7 +2389,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-050",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["最上 静香"],
@@ -2401,7 +2401,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-051",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["伊吹 翼"],
@@ -2413,7 +2413,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-052",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["真壁 瑞希"],
@@ -2425,7 +2425,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-053",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["天道 輝"],
@@ -2437,7 +2437,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-054",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["桜庭 薫"],
@@ -2449,7 +2449,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-055",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["柏木 翼"],
@@ -2461,7 +2461,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-056",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["硲 道夫"],
@@ -2473,7 +2473,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-057",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["櫻木 真乃"],
@@ -2485,7 +2485,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-058",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["風野 灯織"],
@@ -2497,7 +2497,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-059",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["八宮 めぐる"],
@@ -2509,7 +2509,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-060",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["花海 咲季"],
@@ -2521,7 +2521,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-061",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["月村 手毬"],
@@ -2533,7 +2533,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-062",
-        "4弾",
+        "第4弾",
         "N",
         "ハートのハンドサイン",
         ["藤田 ことね"],
@@ -2545,7 +2545,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-063",
-        "4弾",
+        "第4弾",
         "N",
         "ライブサポート",
         ["神崎 蘭子"],
@@ -2557,7 +2557,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-064",
-        "4弾",
+        "第4弾",
         "N",
         "ライブサポート",
         ["真壁 瑞希"],
@@ -2569,7 +2569,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-065",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["天海 春香"],
@@ -2581,7 +2581,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-066",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["如月 千早"],
@@ -2593,7 +2593,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-067",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["星井 美希"],
@@ -2605,7 +2605,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-068",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["水瀬 伊織"],
@@ -2617,7 +2617,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-069",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["島村 卯月"],
@@ -2629,7 +2629,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-070",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["渋谷 凛"],
@@ -2641,7 +2641,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-071",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["本田 未央"],
@@ -2653,7 +2653,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-072",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["神崎 蘭子"],
@@ -2665,7 +2665,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-073",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["春日 未来"],
@@ -2677,7 +2677,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-074",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["最上 静香"],
@@ -2689,7 +2689,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-075",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["伊吹 翼"],
@@ -2701,7 +2701,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-076",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["真壁 瑞希"],
@@ -2713,7 +2713,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-077",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["天道 輝"],
@@ -2725,7 +2725,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-078",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["桜庭 薫"],
@@ -2737,7 +2737,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-079",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["柏木 翼"],
@@ -2749,7 +2749,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-080",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["硲 道夫"],
@@ -2761,7 +2761,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-081",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["櫻木 真乃"],
@@ -2773,7 +2773,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-082",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["風野 灯織"],
@@ -2785,7 +2785,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-083",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["八宮 めぐる"],
@@ -2797,7 +2797,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-084",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["花海 咲季"],
@@ -2809,7 +2809,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-085",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["月村 手毬"],
@@ -2821,7 +2821,7 @@ const support_list = [
     ),
     new support(
         "IMT-04-086",
-        "4弾",
+        "第4弾",
         "CO",
         "ハートのハンドサイン",
         ["藤田 ことね"],
@@ -2833,7 +2833,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-001",
-        "4弾",
+        "第4弾",
         "TSSR",
         "event3 EP7-01",
         [],
@@ -2845,7 +2845,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-002",
-        "4弾",
+        "第4弾",
         "TSSR",
         "event3 EP7-02",
         [],
@@ -2857,7 +2857,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-003",
-        "4弾",
+        "第4弾",
         "TSR",
         "special art #04-01",
         [],
@@ -2869,7 +2869,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-004",
-        "4弾",
+        "第4弾",
         "TSR",
         "special art #04-02",
         [],
@@ -2881,7 +2881,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-005",
-        "4弾",
+        "第4弾",
         "TSR",
         "DRAMATIC STARS",
         ["アイドルマスター TOURS"],
@@ -2893,7 +2893,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-008",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["如月 千早"],
@@ -2905,7 +2905,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-009",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["神崎 蘭子"],
@@ -2917,7 +2917,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-010",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["真壁 瑞希"],
@@ -2929,7 +2929,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-011",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["柏木 翼"],
@@ -2941,7 +2941,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-012",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["櫻木 真乃"],
@@ -2953,7 +2953,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-04-013",
-        "4弾",
+        "第4弾",
         "TR",
         "プロフィール",
         ["花海 咲季"],
@@ -2965,7 +2965,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-021",
-        "5弾",
+        "第5弾",
         "SSR",
         "小宮果穂、参上！",
         ["小宮 果穂"],
@@ -2977,7 +2977,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-022",
-        "5弾",
+        "第5弾",
         "SSR",
         "小宮果穂、参上！",
         ["小宮 果穂"],
@@ -2989,7 +2989,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-023",
-        "5弾",
+        "第5弾",
         "SSR",
         "Campus mode!!",
         ["紫雲 清夏"],
@@ -3001,7 +3001,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-024",
-        "5弾",
+        "第5弾",
         "SSR",
         "Campus mode!!",
         ["紫雲 清夏"],
@@ -3013,7 +3013,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-025",
-        "5弾",
+        "第5弾",
         "SSR",
         "twinkle☆star",
         ["星井 美希"],
@@ -3025,7 +3025,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-026",
-        "5弾",
+        "第5弾",
         "SSR",
         "Blooming Stage♪",
         ["櫻木 真乃"],
@@ -3037,7 +3037,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-027",
-        "5弾",
+        "第5弾",
         "SR",
         "Prologue",
         ["真壁 瑞希"],
@@ -3049,7 +3049,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-028",
-        "5弾",
+        "第5弾",
         "SR",
         "木漏れ日の中で",
         ["硲 道夫"],
@@ -3061,7 +3061,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-029",
-        "5弾",
+        "第5弾",
         "SR",
         "ツバサ、舞う",
         ["八宮 めぐる"],
@@ -3073,7 +3073,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-030",
-        "5弾",
+        "第5弾",
         "SR",
         "sing for fun",
         ["花海 咲季"],
@@ -3085,7 +3085,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-031",
-        "5弾",
+        "第5弾",
         "R",
         "ディスカッション！",
         ["島村 卯月"],
@@ -3097,7 +3097,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-032",
-        "5弾",
+        "第5弾",
         "R",
         "ディスカッション！",
         ["最上 静香"],
@@ -3109,7 +3109,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-033",
-        "5弾",
+        "第5弾",
         "R",
         "ブレイクタイム",
         ["柏木 翼"],
@@ -3121,7 +3121,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-034",
-        "5弾",
+        "第5弾",
         "R",
         "ブレイクタイム",
         ["硲 道夫"],
@@ -3133,7 +3133,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-035",
-        "5弾",
+        "第5弾",
         "R",
         "春の陽気に誘われて",
         ["如月 千早"],
@@ -3145,7 +3145,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-036",
-        "5弾",
+        "第5弾",
         "R",
         "日進月歩",
         ["春日 未来"],
@@ -3157,7 +3157,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-037",
-        "5弾",
+        "第5弾",
         "R",
         "Stroll",
         ["月村 手毬"],
@@ -3169,7 +3169,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-038",
-        "5弾",
+        "第5弾",
         "R",
         "調子、ばっちりでした！",
         ["藤田 ことね"],
@@ -3181,7 +3181,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-039",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["天海 春香"],
@@ -3193,7 +3193,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-040",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["如月 千早"],
@@ -3205,7 +3205,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-041",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["星井 美希"],
@@ -3217,7 +3217,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-042",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["渋谷 凛"],
@@ -3229,7 +3229,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-043",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["本田 未央"],
@@ -3241,7 +3241,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-044",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["神崎 蘭子"],
@@ -3253,7 +3253,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-045",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["春日 未来"],
@@ -3265,7 +3265,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-046",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["伊吹 翼"],
@@ -3277,7 +3277,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-047",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["真壁 瑞希"],
@@ -3289,7 +3289,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-048",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["天道 輝"],
@@ -3301,7 +3301,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-049",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["桜庭 薫"],
@@ -3313,7 +3313,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-050",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["柏木 翼"],
@@ -3325,7 +3325,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-051",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["風野 灯織"],
@@ -3337,7 +3337,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-052",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["八宮 めぐる"],
@@ -3349,7 +3349,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-053",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["小宮 果穂"],
@@ -3361,7 +3361,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-054",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["花海 咲季"],
@@ -3373,7 +3373,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-055",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["月村 手毬"],
@@ -3385,7 +3385,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-056",
-        "5弾",
+        "第5弾",
         "N",
         "フルーツパーティ！",
         ["藤田 ことね"],
@@ -3397,7 +3397,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-057",
-        "5弾",
+        "第5弾",
         "N",
         "ライブサポート",
         ["小宮 果穂"],
@@ -3409,7 +3409,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-058",
-        "5弾",
+        "第5弾",
         "N",
         "ライブサポート",
         ["紫雲 清夏"],
@@ -3421,7 +3421,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-059",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["天海 春香"],
@@ -3433,7 +3433,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-060",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["如月 千早"],
@@ -3445,7 +3445,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-061",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["星井 美希"],
@@ -3457,7 +3457,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-062",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["渋谷 凛"],
@@ -3469,7 +3469,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-063",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["本田 未央"],
@@ -3481,7 +3481,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-064",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["神崎 蘭子"],
@@ -3493,7 +3493,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-065",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["春日 未来"],
@@ -3505,7 +3505,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-066",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["伊吹 翼"],
@@ -3517,7 +3517,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-067",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["真壁 瑞希"],
@@ -3529,7 +3529,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-068",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["天道 輝"],
@@ -3541,7 +3541,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-069",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["桜庭 薫"],
@@ -3553,7 +3553,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-070",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["柏木 翼"],
@@ -3565,7 +3565,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-071",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["風野 灯織"],
@@ -3577,7 +3577,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-072",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["八宮 めぐる"],
@@ -3589,7 +3589,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-073",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["小宮 果穂"],
@@ -3601,7 +3601,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-074",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["花海 咲季"],
@@ -3613,7 +3613,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-075",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["月村 手毬"],
@@ -3625,7 +3625,7 @@ const support_list = [
     ),
     new support(
         "IMT-05-076",
-        "5弾",
+        "第5弾",
         "CO",
         "フルーツパーティ！",
         ["藤田 ことね"],
@@ -3637,7 +3637,7 @@ const support_list = [
     ),
     new support(
         "IMT-TR-05-013",
-        "5弾",
+        "第5弾",
         "TSR",
         "new generations",
         ["アイドルマスター TOURS"],
@@ -4353,6 +4353,6 @@ const support_list = [
         ["全員"],
         ["SEを変更する(花火)", "アピール値(Vi)上昇(極大)", "PERFECT判定時のスコアUP(大)"],
         "アピール値(Vi)上昇(極大)",
-        ["2026 レイトサマーキャンペーン 晩夏の調べ", "アピール値上昇倍率確認完了"]
+        ["2026 レイトサマーキャンペーン 晩夏の調べ"]
     ),
 ];

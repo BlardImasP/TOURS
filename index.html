@@ -55,38 +55,14 @@
     </table>
 
     <table border="1">
-        <caption>衣装・アクセサリ</caption>
+        <caption>衣装</caption>
         <tbody>
             <tr>
                 <th scope="row" height="32" rowspan="2">衣装</th>
                 <td><select class="costume_selector" id="costume_select" onchange="costume_select_onchange()"></select></td>
             </tr>
             <tr>
-                <td id="costume_functions"></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">頭</th>
-                <td><select class="accessory_selector" id="accessory_head_select" onchange="accessory_head_select_onchange()"></select></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">顔</th>
-                <td><select class="accessory_selector" id="accessory_face_select" onchange="accessory_face_select_onchange()"></select></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">手</th>
-                <td><select class="accessory_selector" id="accessory_hand_select" onchange="accessory_hand_select_onchange()"></select></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">胴</th>
-                <td><select class="accessory_selector" id="accessory_back_select" onchange="accessory_back_select_onchange()"></select></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">腰</th>
-                <td><select class="accessory_selector" id="accessory_rump_select" onchange="accessory_rump_select_onchange()"></select></td>
-            </tr>
-            <tr>
-                <th scope="row" height="32">脚</th>
-                <td><select class="accessory_selector" id="accessory_legs_select" onchange="accessory_legs_select_onchange()"></select></td>
+                <td id="costume_descriptions"></td>
             </tr>
         </tbody>
     </table>
@@ -149,7 +125,7 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_1_functions"></td>
+                <td id="support_1_descriptions"></td>
             </tr>
             <tr>
                 <th scope="row" rowspan="2">サポート 2</th>
@@ -186,7 +162,7 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_2_functions"></td>
+                <td id="support_2_descriptions"></td>
             </tr>
             <tr>
                 <th scope="row" rowspan="2">サポート 3</th>
@@ -209,7 +185,7 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_3_functions"></td>
+                <td id="support_3_descriptions"></td>
             </tr>
         </tbody>
     </table>
@@ -272,6 +248,54 @@
     </table>
 
     <table border="1">
+        <caption>アクセサリ</caption>
+        <tbody>
+            <tr>
+                <th scope="row" rowspan="2" height="32">頭</th>
+                <td><select class="accessory_selector" id="accessory_head_select" onchange="accessory_head_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_head_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2" height="32">顔</th>
+                <td><select class="accessory_selector" id="accessory_face_select" onchange="accessory_face_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_face_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2" height="32">手</th>
+                <td><select class="accessory_selector" id="accessory_hand_select" onchange="accessory_hand_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_hand_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2" height="32">胴</th>
+                <td><select class="accessory_selector" id="accessory_back_select" onchange="accessory_back_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_back_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2" height="32">腰</th>
+                <td><select class="accessory_selector" id="accessory_rump_select" onchange="accessory_rump_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_rump_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="2" height="32">脚</th>
+                <td><select class="accessory_selector" id="accessory_legs_select" onchange="accessory_legs_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td id="accessory_legs_descriptions"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1">
         <caption>セットボーナス</caption>
         <thead>
             <tr>
@@ -297,14 +321,19 @@
 
     <script src="BonusRates.js"></script>
 
+    <script src="AppealBonus.js"></script>
+    <script src="AppealBonusList.js"></script>
+
     <script src="SongBonus.js"></script>
     <script src="SongBonusList.js"></script>
+
+    <script src="CostumeBonus.js"></script>
+    <script src="CostumeBonusList.js"></script>
 
     <script src="Song.js"></script>
     <script src="SongList.js"></script>
 
-    <script src="CostumeBonus.js"></script>
-    <script src="CostumeBonusList.js"></script>
+    <script src="Equipment.js"></script>
 
     <script src="Costume.js"></script>
     <script src="CostumeList.js"></script>
@@ -963,57 +992,121 @@
             textSongBonus.textContent = song.bonus_text;
         }
 
-        function redraw_costume_functions(functions, costume) {
+        function redraw_equipment_descriptions(descriptions, equipment) {
 
-            object_clear_childs(functions);
+            object_clear_childs(descriptions);
 
             let countLine = 0;
 
-            if (costume.descriptions.length > 0) {
+            if (equipment.descriptions.length > 0) {
 
-                costume.descriptions.forEach((description) => {
+                equipment.descriptions.forEach((textDescription) => {
 
                     if (countLine > 0) {
 
-                        functions.appendChild(document.createElement("br"));
+                        descriptions.appendChild(document.createElement("br"));
                     }
 
-                    if (description[0] == "※") {
+                    if (textDescription[0] == "※") {
 
                         const b_description = document.createElement("b");
 
-                        b_description.style.color = "tomato";
+                        b_description.style.color = "gold";
 
-                        b_description.append(description);
+                        b_description.append(textDescription);
 
-                        functions.appendChild(b_description);
+                        descriptions.appendChild(b_description);
                     } else {
 
-                        functions.append(description);
+                        descriptions.append(textDescription);
                     }
 
                     countLine++;
                 });
             }
 
-            if (costume.card_ids.length > 0) {
+            if (equipment.functions.length > 0) {
 
                 if (countLine > 0) {
 
-                    functions.appendChild(document.createElement("br"));
-
-                    functions.appendChild(document.createElement("br"));
+                    descriptions.appendChild(document.createElement("br"));
                 }
 
-                functions.append(costume.card_ids.join(" / "));
+                equipment.functions.forEach((textFunction) => {
+
+                    if (countLine > 0) {
+
+                        descriptions.appendChild(document.createElement("br"));
+                    }
+
+                    if (textFunction[0] == "※") {
+
+                        const b_function = document.createElement("b");
+
+                        b_function.style.color = "gold";
+
+                        b_function.append(textFunction);
+
+                        descriptions.appendChild(b_function);
+                    } else {
+
+                        descriptions.append(textFunction);
+                    }
+
+                    countLine++;
+                });
+            }
+
+            if (equipment.attentions.length > 0) {
+
+                if (countLine > 0) {
+
+                    descriptions.appendChild(document.createElement("br"));
+                }
+
+                equipment.attentions.forEach((textAttention) => {
+
+                    if (countLine > 0) {
+
+                        descriptions.appendChild(document.createElement("br"));
+                    }
+
+                    const b_attention = document.createElement("b");
+
+                    if (textAttention[0] == "※") {
+
+                        b_attention.style.color = "tomato";
+                    } else {
+
+                        b_attention.style.color = "gold";
+                    }
+
+                    b_attention.append(textAttention);
+
+                    descriptions.appendChild(b_attention);
+
+                    countLine++;
+                });
+            }
+
+            if (equipment.card_ids.length > 0) {
+
+                if (countLine > 0) {
+
+                    descriptions.appendChild(document.createElement("br"));
+
+                    descriptions.appendChild(document.createElement("br"));
+                }
+
+                descriptions.append(equipment.card_ids.join(" / "));
 
                 countLine++;
             }
         }
 
-        function redraw_support_any_functions(functions, support) {
+        function redraw_support_any_descriptions(descriptions, support) {
 
-            object_clear_childs(functions);
+            object_clear_childs(descriptions);
 
             let demerit = false;
 
@@ -1030,7 +1123,7 @@
 
                 if (index > 0) {
 
-                    functions.appendChild(document.createElement("br"));
+                    descriptions.appendChild(document.createElement("br"));
                 }
 
                 if (demerit) {
@@ -1041,10 +1134,10 @@
 
                     font_function.append(text_function);
 
-                    functions.appendChild(font_function);
+                    descriptions.appendChild(font_function);
                 } else {
 
-                    functions.append(text_function);
+                    descriptions.append(text_function);
 
                     demerit = text_function.endsWith("が、");
                 }
@@ -1054,11 +1147,11 @@
 
             if (support.attentions.length > 0) {
 
-                functions.appendChild(document.createElement("br"));
+                descriptions.appendChild(document.createElement("br"));
 
                 support.attentions.forEach((attention) => {
 
-                    functions.appendChild(document.createElement("br"));
+                    descriptions.appendChild(document.createElement("br"));
 
                     const b_attention = document.createElement("b");
 
@@ -1066,17 +1159,17 @@
 
                     b_attention.append(attention);
 
-                    functions.appendChild(b_attention);
+                    descriptions.appendChild(b_attention);
                 });
             }
 
             if (support.id != "") {
 
-                functions.appendChild(document.createElement("br"));
+                descriptions.appendChild(document.createElement("br"));
 
-                functions.appendChild(document.createElement("br"));
+                descriptions.appendChild(document.createElement("br"));
 
-                functions.append(support.id);
+                descriptions.append(support.id);
             }
         }
 
@@ -1090,9 +1183,9 @@
             textCostumeDa.textContent = costume.appeal_base.da;
             textCostumeVi.textContent = costume.appeal_base.vi;
 
-            const textCostumeFunctions = document.getElementById("costume_functions");
+            const textCostumeDescriptions = document.getElementById("costume_descriptions");
 
-            redraw_costume_functions(textCostumeFunctions, costume);
+            redraw_equipment_descriptions(textCostumeDescriptions, costume);
 
             setup_costume_level_select(cookieStorage.costume_level, costume.level_max);
         }
@@ -1190,7 +1283,7 @@
             }
         }
 
-        function redraw_set_bonus_accessory(td, accessory_set_list, accessory_index) {
+        function redraw_set_bonus_accessory(td, area_name, accessory_set_list, accessory_index) {
 
             if (accessory_index < 0) {
 
@@ -1201,9 +1294,14 @@
                     if (index > 0) {
 
                         td.append(" / ");
-                    } else if (existAccessory) {
+                    } else {
 
-                        td.appendChild(document.createElement("br"));
+                        if (existAccessory) {
+
+                            td.appendChild(document.createElement("br"));
+                        }
+
+                        td.append(area_name);
                     }
 
                     td.append(accessory_set_list[index]);
@@ -1225,6 +1323,8 @@
 
                 b_accessory.style.color = "springgreen";
 
+                b_accessory.append(area_name);
+
                 b_accessory.append(accessory_set_list[accessory_index]);
 
                 td.appendChild(b_accessory);
@@ -1239,19 +1339,19 @@
 
             tbody_clear_rows(tbodySetBonus);
 
-            const textCostume = costume_list[cookieStorage.costume_id].name;;
+            const textCostume = costume_list.find((costume) => costume.id == cookieStorage.costume_id).name;;
 
-            const textAccessoryHead = accessory_list[cookieStorage.accessory_head_id].name;
+            const textAccessoryHead = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_head_id).name;
 
-            const textAccessoryFace = accessory_list[cookieStorage.accessory_face_id].name;
+            const textAccessoryFace = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_face_id).name;
 
-            const textAccessoryHand = accessory_list[cookieStorage.accessory_hand_id].name;
+            const textAccessoryHand = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_hand_id).name;
 
-            const textAccessoryBack = accessory_list[cookieStorage.accessory_back_id].name;
+            const textAccessoryBack = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_back_id).name;
 
-            const textAccessoryRump = accessory_list[cookieStorage.accessory_rump_id].name;
+            const textAccessoryRump = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_rump_id).name;
 
-            const textAccessoryLegs = accessory_list[cookieStorage.accessory_legs_id].name;
+            const textAccessoryLegs = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_legs_id).name;
 
             set_bonus_list.forEach((set_bonus) => {
 
@@ -1382,17 +1482,17 @@
 
                     existAccessory = 0;
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.head_names, indexAccessoryHead);
+                    redraw_set_bonus_accessory(td_accessory, "［頭］", set_bonus.head_names, indexAccessoryHead);
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.face_names, indexAccessoryFace);
+                    redraw_set_bonus_accessory(td_accessory, "［顔］", set_bonus.face_names, indexAccessoryFace);
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.hand_names, indexAccessoryHand);
+                    redraw_set_bonus_accessory(td_accessory, "［手］", set_bonus.hand_names, indexAccessoryHand);
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.back_names, indexAccessoryBack);
+                    redraw_set_bonus_accessory(td_accessory, "［胴］", set_bonus.back_names, indexAccessoryBack);
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.rump_names, indexAccessoryRump);
+                    redraw_set_bonus_accessory(td_accessory, "［腰］", set_bonus.rump_names, indexAccessoryRump);
 
-                    redraw_set_bonus_accessory(td_accessory, set_bonus.legs_names, indexAccessoryLegs);
+                    redraw_set_bonus_accessory(td_accessory, "［脚］", set_bonus.legs_names, indexAccessoryLegs);
 
                     if (activeSetBonus) {
 
@@ -1468,22 +1568,19 @@
 
                 costume_bonus.setAppeal(costumeSelected.appeal_base);
                 costume_bonus.multiply(levelCostume);
-                costume_bonus.multiplyRates(costumeSelected.bonus_rates);
-                costume_bonus.divide(10000);
+                costume_bonus.multiplyPerCent(costumeSelected.bonus_rates);
 
             } else if ((51 <= levelCostume) && (levelCostume <= 60)) {
 
                 costume_bonus.setAppeal(costumeSelected.appeal_base);
                 costume_bonus.multiply(50);
-                costume_bonus.multiplyRates(costumeSelected.bonus_rates);
-                costume_bonus.divide(10000);
+                costume_bonus.multiplyPerCent(costumeSelected.bonus_rates);
 
                 let costume_bonus_ex = new appeal();
 
                 costume_bonus_ex.setAppeal(costumeSelected.appeal_base);
                 costume_bonus_ex.multiply(levelCostume - 50);
-                costume_bonus_ex.multiplyRates(costumeSelected.bonus_ex_rates);
-                costume_bonus_ex.divide(10000);
+                costume_bonus_ex.multiplyPerCent(costumeSelected.bonus_ex_rates);
 
                 costume_bonus.addAppeal(costume_bonus_ex);
             }
@@ -1491,18 +1588,17 @@
             return costume_bonus;
         }
 
+        const trustiness_bonus_rates = new bonus_rates(0.12, 0.12, 0.12);
+
         function calculate_appeal_trustiness_bonus() {
 
             let trustiness_bonus = new appeal();
 
             if ((2 <= levelTrustiness) && (levelTrustiness <= 60)) {
 
-                const trustiness_bonus_rates = new bonus_rates(12, 12, 12);
-
                 trustiness_bonus.setAppeal(costumeSelected.appeal_base);
                 trustiness_bonus.multiply(levelTrustiness);
-                trustiness_bonus.multiplyRates(trustiness_bonus_rates);
-                trustiness_bonus.divide(10000);
+                trustiness_bonus.multiplyPerCent(trustiness_bonus_rates);
 
             }
 
@@ -1514,8 +1610,7 @@
             let song_bonus = new appeal();
 
             song_bonus.setAppeal(costumeSelected.appeal_base);
-            song_bonus.multiplyRates(songSelected.bonus_rates);
-            song_bonus.divide(100);
+            song_bonus.multiplyPerCent(songSelected.bonus_rates);
 
             return song_bonus;
         }
@@ -1529,16 +1624,13 @@
             let support3_bonus = new appeal();
 
             support1_bonus.setAppeal(costumeSelected.appeal_base);
-            support1_bonus.multiplyRates(support1Selected.bonus_rates);
-            support1_bonus.divide(100);
+            support1_bonus.multiplyPerCent(support1Selected.bonus_rates);
 
             support2_bonus.setAppeal(costumeSelected.appeal_base);
-            support2_bonus.multiplyRates(support2Selected.bonus_rates);
-            support2_bonus.divide(100);
+            support2_bonus.multiplyPerCent(support2Selected.bonus_rates);
 
             support3_bonus.setAppeal(costumeSelected.appeal_base);
-            support3_bonus.multiplyRates(support3Selected.bonus_rates);
-            support3_bonus.divide(100);
+            support3_bonus.multiplyPerCent(support3Selected.bonus_rates);
 
             support_bonus.addAppeal(support1_bonus);
             support_bonus.addAppeal(support2_bonus);
@@ -1591,17 +1683,41 @@
 
             redraw_costume_informations(costumeSelected);
 
-            const functionsSupport1 = document.getElementById("support_1_functions");
+            const descriptionsSupport1 = document.getElementById("support_1_descriptions");
 
-            redraw_support_any_functions(functionsSupport1, support1Selected);
+            redraw_support_any_descriptions(descriptionsSupport1, support1Selected);
 
-            const functionsSupport2 = document.getElementById("support_2_functions");
+            const descriptionsSupport2 = document.getElementById("support_2_descriptions");
 
-            redraw_support_any_functions(functionsSupport2, support2Selected);
+            redraw_support_any_descriptions(descriptionsSupport2, support2Selected);
 
-            const functionsSupport3 = document.getElementById("support_3_functions");
+            const descriptionsSupport3 = document.getElementById("support_3_descriptions");
 
-            redraw_support_any_functions(functionsSupport3, support3Selected);
+            redraw_support_any_descriptions(descriptionsSupport3, support3Selected);
+
+            const textAccessoryHeadDescriptions = document.getElementById("accessory_head_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryHeadDescriptions, accessory_list[cookieStorage.accessory_head_id]);
+
+            const textAccessoryFaceDescriptions = document.getElementById("accessory_face_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryFaceDescriptions, accessory_list[cookieStorage.accessory_face_id]);
+
+            const textAccessoryHandDescriptions = document.getElementById("accessory_hand_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryHandDescriptions, accessory_list[cookieStorage.accessory_hand_id]);
+
+            const textAccessoryBackDescriptions = document.getElementById("accessory_back_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryBackDescriptions, accessory_list[cookieStorage.accessory_back_id]);
+
+            const textAccessoryRumpDescriptions = document.getElementById("accessory_rump_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryRumpDescriptions, accessory_list[cookieStorage.accessory_rump_id]);
+
+            const textAccessoryLegsDescriptions = document.getElementById("accessory_legs_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryLegsDescriptions, accessory_list[cookieStorage.accessory_legs_id]);
 
             calculate_appeal();
 
@@ -1646,6 +1762,10 @@
 
             cookieStorage.accessory_head_id = selectAccessoryHead.value;
 
+            const textAccessoryHeadDescriptions = document.getElementById("accessory_head_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryHeadDescriptions, accessory_list[cookieStorage.accessory_head_id]);
+
             redraw_set_bonus_list();
 
             cookies_save();
@@ -1656,6 +1776,10 @@
             const selectAccessoryFace = document.getElementById("accessory_face_select");
 
             cookieStorage.accessory_face_id = selectAccessoryFace.value;
+
+            const textAccessoryFaceDescriptions = document.getElementById("accessory_face_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryFaceDescriptions, accessory_list[cookieStorage.accessory_face_id]);
 
             redraw_set_bonus_list();
 
@@ -1668,6 +1792,10 @@
 
             cookieStorage.accessory_hand_id = selectAccessoryHand.value;
 
+            const textAccessoryHandDescriptions = document.getElementById("accessory_hand_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryHandDescriptions, accessory_list[cookieStorage.accessory_hand_id]);
+
             redraw_set_bonus_list();
 
             cookies_save();
@@ -1678,6 +1806,10 @@
             const selectAccessoryBack = document.getElementById("accessory_back_select");
 
             cookieStorage.accessory_back_id = selectAccessoryBack.value;
+
+            const textAccessoryBackDescriptions = document.getElementById("accessory_back_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryBackDescriptions, accessory_list[cookieStorage.accessory_back_id]);
 
             redraw_set_bonus_list();
 
@@ -1690,6 +1822,10 @@
 
             cookieStorage.accessory_rump_id = selectAccessoryRump.value;
 
+            const textAccessoryRumpDescriptions = document.getElementById("accessory_rump_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryRumpDescriptions, accessory_list[cookieStorage.accessory_rump_id]);
+
             redraw_set_bonus_list();
 
             cookies_save();
@@ -1700,6 +1836,10 @@
             const selectAccessoryLegs = document.getElementById("accessory_legs_select");
 
             cookieStorage.accessory_legs_id = selectAccessoryLegs.value;
+
+            const textAccessoryLegsDescriptions = document.getElementById("accessory_legs_descriptions");
+
+            redraw_equipment_descriptions(textAccessoryLegsDescriptions, accessory_list[cookieStorage.accessory_legs_id]);
 
             redraw_set_bonus_list();
 
@@ -1714,9 +1854,9 @@
 
             support1Selected = support_list.find((support) => support.id === support_id);
 
-            const functionsSupport = document.getElementById("support_1_functions");
+            const descriptionsSupport = document.getElementById("support_1_descriptions");
 
-            redraw_support_any_functions(functionsSupport, support1Selected);
+            redraw_support_any_descriptions(descriptionsSupport, support1Selected);
 
             calculate_appeal();
 
@@ -1731,9 +1871,9 @@
 
             support2Selected = support_list.find((support) => support.id === support_id);
 
-            const functionsSupport = document.getElementById("support_2_functions");
+            const descriptionsSupport = document.getElementById("support_2_descriptions");
 
-            redraw_support_any_functions(functionsSupport, support2Selected);
+            redraw_support_any_descriptions(descriptionsSupport, support2Selected);
 
             calculate_appeal();
 
@@ -1748,9 +1888,9 @@
 
             support3Selected = support_list.find((support) => support.id === support_id);
 
-            const functionsSupport = document.getElementById("support_3_functions");
+            const descriptionsSupport = document.getElementById("support_3_descriptions");
 
-            redraw_support_any_functions(functionsSupport, support3Selected);
+            redraw_support_any_descriptions(descriptionsSupport, support3Selected);
 
             calculate_appeal();
 

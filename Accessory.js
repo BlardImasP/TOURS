@@ -1,37 +1,12 @@
 ﻿
-class accessory {
-
-    id;
-
-    name = "";
-
-    idols_text = "";
+class accessory extends equipment {
 
     area_names = [""];
 
-    genre_text = "";
-
-    genre_color = "";
-
-    remarks = [""];
-
     //  コンストラクタ
-    constructor(id, name = "", idols_text = "", area_names = [], genre_text = "", remarks = []) {
-
-        this.id = id;
-
-        this.name = name;
-
-        this.idols_text = idols_text;
+    constructor(id, name = "", genre_text = "", genre_level = "", idols_text = "", descriptions = [], attentions = [], area_names = [], card_ids = [], remarks = []) {
+        super(id, name, genre_text, genre_level, idols_text, descriptions, [], attentions, card_ids, remarks);
 
         this.area_names = area_names;
-
-        this.genre_text = genre_text;
-
-        const genre = genre_list.find((item) => (item.name === genre_text));
-
-        this.genre_color = genre.color_text;
-
-        this.remarks = remarks;
     }
 }

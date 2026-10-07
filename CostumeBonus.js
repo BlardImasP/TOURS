@@ -3,14 +3,14 @@ class costume_bonus {
 
     id;
 
-    text;
+    text = "";
 
     bonus_rates;
 
     bonus_ex_rates;
 
     //  コンストラクタ
-    constructor(id, text, bonus_rates, bonus_ex_rates) {
+    constructor(id, text = "", bonus_rates = new bonus_rates(), bonus_ex_rates = new bonus_rates()) {
 
         this.id = id;
 
