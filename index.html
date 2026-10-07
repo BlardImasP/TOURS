@@ -548,45 +548,91 @@
                 }
             }
 
-            build_cookies(age) {
+            save(cookieKey, age) {
 
-                let cookies = "";
 
-                cookies += "song_id" + "=" + encodeURIComponent(String(this.song_id)) + this.separator;
+                switch (cookieKey) {
+                    case "song_id":
 
-                cookies += "costume_id" + "=" + encodeURIComponent(String(this.costume_id)) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.song_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "accessory_head_id" + "=" + encodeURIComponent(String(this.accessory_head_id)) + this.separator;
+                    case "costume_id":
 
-                cookies += "accessory_face_id" + "=" + encodeURIComponent(String(this.accessory_face_id)) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.costume_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "accessory_hand_id" + "=" + encodeURIComponent(String(this.accessory_hand_id)) + this.separator;
+                    case "accessory_head_id":
 
-                cookies += "accessory_back_id" + "=" + encodeURIComponent(String(this.accessory_back_id)) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_head_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "accessory_rump_id" + "=" + encodeURIComponent(String(this.accessory_rump_id)) + this.separator;
+                    case "accessory_face_id":
 
-                cookies += "accessory_legs_id" + "=" + encodeURIComponent(String(this.accessory_legs_id)) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_face_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "support_1_id" + "=" + encodeURIComponent(this.support_1_id) + this.separator;
+                    case "accessory_hand_id":
 
-                cookies += "support_1_filter" + "=" + encodeURIComponent(this.support_1_filter) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_hand_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "support_2_id" + "=" + encodeURIComponent(this.support_2_id) + this.separator;
+                    case "accessory_back_id":
 
-                cookies += "support_2_filter" + "=" + encodeURIComponent(this.support_2_filter) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_back_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "support_3_id" + "=" + encodeURIComponent(this.support_3_id) + this.separator;
+                    case "accessory_rump_id":
 
-                cookies += "support_3_filter" + "=" + encodeURIComponent(this.support_3_filter) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_rump_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "costume_level" + "=" + encodeURIComponent(String(this.costume_level)) + this.separator;
+                    case "accessory_legs_id":
 
-                cookies += "trustiness_level" + "=" + encodeURIComponent(String(this.trustiness_level)) + this.separator;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_legs_id)) + this.separator + "max-age" + "=" + age;
+                        break;
 
-                cookies += "max-age" + "=" + age;
+                    case "support_1_id":
 
-                return cookies;
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_1_id) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "support_1_filter":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_1_filter) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "support_2_id":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_2_id) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "support_2_filter":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_2_filter) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "support_3_id":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_3_id) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "support_3_filter":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_3_filter) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "costume_level":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.costume_level)) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                    case "trustiness_level":
+
+                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.trustiness_level)) + this.separator + "max-age" + "=" + age;
+                        break;
+
+                }
             }
         }
 
@@ -1670,13 +1716,6 @@
             redraw_idol_appeal(idol_appeal);
         }
 
-        function cookies_save() {
-
-            const cookies = cookieStorage.build_cookies(90 * 24 * 60 * 60);
-
-            document.cookie = cookies;
-        }
-
         function body_onload() {
 
             setup();
@@ -1736,7 +1775,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("song_id", 90 * 24 * 60 * 60);
         }
 
         function costume_select_onchange() {
@@ -1755,7 +1794,9 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("costume_id", 90 * 24 * 60 * 60);
+
+            cookieStorage.save("costume_level", 90 * 24 * 60 * 60);
         }
 
         function accessory_head_select_onchange() {
@@ -1770,7 +1811,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_head_id", 90 * 24 * 60 * 60);
         }
 
         function accessory_face_select_onchange() {
@@ -1785,7 +1826,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_face_id", 90 * 24 * 60 * 60);
         }
 
         function accessory_hand_select_onchange() {
@@ -1800,7 +1841,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_hand_id", 90 * 24 * 60 * 60);
         }
 
         function accessory_back_select_onchange() {
@@ -1815,7 +1856,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_back_id", 90 * 24 * 60 * 60);
         }
 
         function accessory_rump_select_onchange() {
@@ -1830,7 +1871,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_rump_id", 90 * 24 * 60 * 60);
         }
 
         function accessory_legs_select_onchange() {
@@ -1845,7 +1886,7 @@
 
             redraw_set_bonus_list();
 
-            cookies_save();
+            cookieStorage.save("accessory_legs_id", 90 * 24 * 60 * 60);
         }
 
         function support_1_select_onchange() {
@@ -1862,7 +1903,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("support_1_id", 90 * 24 * 60 * 60);
         }
 
         function support_2_select_onchange() {
@@ -1879,7 +1920,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("support_2_id", 90 * 24 * 60 * 60);
         }
 
         function support_3_select_onchange() {
@@ -1896,7 +1937,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("support_3_id", 90 * 24 * 60 * 60);
         }
 
         function costume_level_select_onchange() {
@@ -1907,7 +1948,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("costume_level", 90 * 24 * 60 * 60);
         }
 
         function trustiness_level_select_onchange() {
@@ -1918,7 +1959,7 @@
 
             calculate_appeal();
 
-            cookies_save();
+            cookieStorage.save("trustiness_level", 90 * 24 * 60 * 60);
         }
 
         function support_1_rarity_any_onchange() {
@@ -1930,6 +1971,8 @@
             setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
 
             support_1_select_onchange();
+
+            cookieStorage.save("support_1_filter", 90 * 24 * 60 * 60);
         }
 
         function support_2_rarity_any_onchange() {
@@ -1941,6 +1984,8 @@
             setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
 
             support_2_select_onchange();
+
+            cookieStorage.save("support_2_filter", 90 * 24 * 60 * 60);
         }
 
         function support_3_rarity_any_onchange() {
@@ -1952,6 +1997,8 @@
             setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
 
             support_3_select_onchange();
+
+            cookieStorage.save("support_3_filter", 90 * 24 * 60 * 60);
         }
 
     </script>
