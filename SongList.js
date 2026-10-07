@@ -148,3 +148,7 @@ const song_list = [
         "2026/09/17"
     )
 ];
+
+const song_list_last_updated = "2026/10/07";
+
+const song_list_remarks = ["バージョン 2.0.2 までの対応"];

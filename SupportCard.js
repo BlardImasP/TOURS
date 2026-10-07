@@ -1,5 +1,5 @@
 ﻿
-class support extends card {
+class support_card extends card {
 
     target_idols = [""];
 

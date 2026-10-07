@@ -91,3 +91,7 @@ const special_appeal_list = [
     ),
     */
 ];
+
+const special_appeal_list_last_update = "2026/10/07";
+
+const special_appeal_list_remarks = ["クラス設計中"];

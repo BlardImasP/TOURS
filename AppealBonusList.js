@@ -181,3 +181,7 @@ const appeal_bonus_list = [
         new bonus_rates(0, 0, 28.812)
     ),
 ];
+
+const appeal_bonus_list_last_updated = "2026/10/07";
+
+const appeal_bonus_list_remarks = ["バージョン 2.0.2 で確認"];

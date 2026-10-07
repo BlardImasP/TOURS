@@ -79,3 +79,7 @@ const rarity_list = [
         "ツアーズスーパースペシャルレア"
     ),
 ];
+
+const rarity_list_last_updated = "2026/10/07";
+
+const rarity_list_remarks = [];

@@ -49,3 +49,7 @@ const costume_bonus_list = [
         new bonus_rates(0, 0, 0.1)
     )
 ];
+
+const costume_bonus_list_last_updated = "2026/10/07";
+
+const costume_bonus_list_remarks = ["バージョン 2.0.2 で確認"];

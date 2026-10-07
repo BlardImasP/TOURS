@@ -1129,3 +1129,7 @@ const accessory_list = [
         []
     ),
 ];
+
+const accessory_list_last_updated = "2026/10/07";
+
+const accessory_list_remarks = ["第1弾 から S1弾ツアーズレア まで対応"];

@@ -41,3 +41,7 @@ const song_bonus_list = [
         new bonus_rates(40, 40, 40)
     )
 ];
+
+const song_bonus_list_last_updated = "2026/10/07";
+
+const song_bonus_list_remarks = ["バージョン 2.0.2 で確認"];

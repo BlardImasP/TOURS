@@ -865,3 +865,7 @@ const set_bonus_list = [
         ["バージョン 2.0.2", "2026/09/17", ""]
     ),
 ];
+
+const set_bonus_list_last_updated = "2026/10/07";
+
+const set_bonus_list_remarks = ["バージョン 2.0.2 までの対応"];

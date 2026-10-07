@@ -31,3 +31,7 @@ const genre_list = [
         "violet"
     ),
 ];
+
+const genre_list_last_updated = "2026/10/07";
+
+const genre_list_remarks = [];

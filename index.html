@@ -309,6 +309,21 @@
         </tbody>
     </table>
 
+    <hr>
+
+    <table border="1">
+        <caption>最終更新</caption>
+        <thead>
+            <tr>
+                <th scope="col" width="192">リスト名称</th>
+                <th scope="col" width="128">最終更新日</th>
+                <th scope="col" width="512">備考</th>
+            </tr>
+        </thead>
+        <tbody id="last_updated_tboby">
+        </tbody>
+    </table>
+
     <script src="Rarity.js"></script>
     <script src="RarityList.js"></script>
 
@@ -341,8 +356,8 @@
     <script src="Accessory.js"></script>
     <script src="AccessoryList.js"></script>
 
-    <script src="Support.js"></script>
-    <script src="SupportList.js"></script>
+    <script src="SupportCard.js"></script>
+    <script src="SupportCardList.js"></script>
 
     <script src="SpecialAppeal.js"></script>
     <script src="SpecialAppealList.js"></script>
@@ -846,7 +861,7 @@
 
             object_clear_child_options(selectSupport);
 
-            support_list.forEach((support) => {
+            support_card_list.forEach((support) => {
 
                 let index_found = rarities.indexOf(support.rarity);
 
@@ -1006,7 +1021,7 @@
 
             setup_support_filter(idSupport1Array, rarityiesSupport1);
 
-            support1Selected = support_list.find((support) => support.id === cookieStorage.support_1_id);
+            support1Selected = support_card_list.find((support) => support.id === cookieStorage.support_1_id);
 
             rarityiesSupport2 = conv_string_to_array(cookieStorage.support_2_filter);
 
@@ -1014,7 +1029,7 @@
 
             setup_support_filter(idSupport2Array, rarityiesSupport2);
 
-            support2Selected = support_list.find((support) => support.id === cookieStorage.support_2_id);
+            support2Selected = support_card_list.find((support) => support.id === cookieStorage.support_2_id);
 
             rarityiesSupport3 = conv_string_to_array(cookieStorage.support_3_filter);
 
@@ -1022,7 +1037,7 @@
 
             setup_support_filter(idSupport3Array, rarityiesSupport3);
 
-            support3Selected = support_list.find((support) => support.id === cookieStorage.support_3_id);
+            support3Selected = support_card_list.find((support) => support.id === cookieStorage.support_3_id);
 
             setup_costume_level_select(cookieStorage.costume_level, 60);
 
@@ -1381,7 +1396,7 @@
             }
         }
 
-        function redraw_set_bonus_list() {
+        function redraw_set_bonus_tbody() {
 
             const tbodySetBonus = document.getElementById("set_bonus_tbody");
 
@@ -1716,6 +1731,76 @@
             redraw_idol_appeal(idol_appeal);
         }
 
+        function add_last_updated_tbody_row(tbodyLastUpdated, name = "", last_updated = "", remarks = []) {
+
+            const tr = document.createElement("tr");
+
+            //  リスト名称
+            const thName = document.createElement("th");
+
+            thName.scope = 'row';
+
+            thName.append(name);
+
+            tr.appendChild(thName);
+
+            //  最終更新日
+            const tdLastUpdated = document.createElement("td");
+
+            tdLastUpdated.align = "center";
+
+            tdLastUpdated.append(last_updated);
+
+            tr.appendChild(tdLastUpdated);
+
+            //  備考
+            const tdRemarks = document.createElement("td");
+
+            if (remarks.length > 0) {
+
+                let index = 0;
+
+                while (index < remarks.length) {
+
+                    if (index > 0) {
+
+                        tdRemarks.appendChild(document.createElement("br"));
+                    }
+
+                    tdRemarks.append(remarks[index]);
+
+                    index += 1;
+                }
+            }
+
+            tr.appendChild(tdRemarks);
+
+            tbodyLastUpdated.appendChild(tr);
+        }
+
+        function redraw_last_updated_tboby() {
+
+            const tbodyLastUpdated = document.getElementById("last_updated_tboby");
+
+            tbody_clear_rows(tbodyLastUpdated);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "SongList.js", song_list_last_updated, song_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "SongBonusList.js", song_bonus_list_last_updated, song_bonus_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "CostumeList.js", costume_list_last_updated, costume_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "CostumeBonusList.js", costume_bonus_list_last_updated, costume_bonus_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "SupportCardList.js", support_card_list_last_updated, support_card_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "AppealBonusList.js", appeal_bonus_list_last_updated, appeal_bonus_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "AccessoryList.js", accessory_list_last_updated, accessory_list_remarks);
+
+            add_last_updated_tbody_row(tbodyLastUpdated, "SetBonusList.js", set_bonus_list_last_updated, set_bonus_list_remarks);
+        }
+
         function body_onload() {
 
             setup();
@@ -1762,7 +1847,9 @@
 
             calculate_appeal();
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
+
+            redraw_last_updated_tboby();
         }
 
         function song_select_onchange() {
@@ -1792,7 +1879,7 @@
 
             calculate_appeal();
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("costume_id", 90 * 24 * 60 * 60);
 
@@ -1809,7 +1896,7 @@
 
             redraw_equipment_descriptions(textAccessoryHeadDescriptions, accessory_list[cookieStorage.accessory_head_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_head_id", 90 * 24 * 60 * 60);
         }
@@ -1824,7 +1911,7 @@
 
             redraw_equipment_descriptions(textAccessoryFaceDescriptions, accessory_list[cookieStorage.accessory_face_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_face_id", 90 * 24 * 60 * 60);
         }
@@ -1839,7 +1926,7 @@
 
             redraw_equipment_descriptions(textAccessoryHandDescriptions, accessory_list[cookieStorage.accessory_hand_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_hand_id", 90 * 24 * 60 * 60);
         }
@@ -1854,7 +1941,7 @@
 
             redraw_equipment_descriptions(textAccessoryBackDescriptions, accessory_list[cookieStorage.accessory_back_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_back_id", 90 * 24 * 60 * 60);
         }
@@ -1869,7 +1956,7 @@
 
             redraw_equipment_descriptions(textAccessoryRumpDescriptions, accessory_list[cookieStorage.accessory_rump_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_rump_id", 90 * 24 * 60 * 60);
         }
@@ -1884,7 +1971,7 @@
 
             redraw_equipment_descriptions(textAccessoryLegsDescriptions, accessory_list[cookieStorage.accessory_legs_id]);
 
-            redraw_set_bonus_list();
+            redraw_set_bonus_tbody();
 
             cookieStorage.save("accessory_legs_id", 90 * 24 * 60 * 60);
         }
@@ -1895,7 +1982,7 @@
 
             cookieStorage.support_1_id = support_id;
 
-            support1Selected = support_list.find((support) => support.id === support_id);
+            support1Selected = support_card_list.find((support) => support.id === support_id);
 
             const descriptionsSupport = document.getElementById("support_1_descriptions");
 
@@ -1912,7 +1999,7 @@
 
             cookieStorage.support_2_id = support_id;
 
-            support2Selected = support_list.find((support) => support.id === support_id);
+            support2Selected = support_card_list.find((support) => support.id === support_id);
 
             const descriptionsSupport = document.getElementById("support_2_descriptions");
 
@@ -1929,7 +2016,7 @@
 
             cookieStorage.support_3_id = support_id;
 
-            support3Selected = support_list.find((support) => support.id === support_id);
+            support3Selected = support_card_list.find((support) => support.id === support_id);
 
             const descriptionsSupport = document.getElementById("support_3_descriptions");
 

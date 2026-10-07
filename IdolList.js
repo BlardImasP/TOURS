@@ -392,4 +392,8 @@ const idol_list = [
         "2026/09/17",
         [""]
     ),
-]
+];
+
+const idol_list_last_updated = "2026/10/07";
+
+const idol_list_remarks = ["編集中"];

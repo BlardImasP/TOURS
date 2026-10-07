@@ -545,3 +545,7 @@ const costume_list = [
         [""]
     ),
 ];
+
+const costume_list_last_updated = "2026/10/07";
+
+const costume_list_remarks = ["第1弾 から S1弾ツアーズレア まで対応"];
