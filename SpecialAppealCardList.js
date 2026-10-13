@@ -1,6 +1,6 @@
 ﻿
-const special_appeal_list = [
-    new special_appeal(
+const listSpecialAppealCard = [
+    new SpecialAppealCard(
         "0083",
         "ソングオブピース",
         ["このカードを使用するとSPアピールを変更できます。"],
@@ -8,7 +8,7 @@ const special_appeal_list = [
         ["成功判定時のコンボ数UP(中)", "判定が長くなる(中)"],
         ["IMT-01-083", "SSR", "柏木 翼", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0270",
         "Leave it to us!",
         ["このカードを使用するとSPアピールを変更できます。"],
@@ -16,7 +16,7 @@ const special_appeal_list = [
         ["PERFECT判定時のスコアUP(極大)するが、", "判定が短くなる(大)"],
         ["IMT-02-067", "SSR", "藤田 ことね", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0271",
         "わたしが１番になってみせるわ！",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「花海 咲季」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -24,7 +24,7 @@ const special_appeal_list = [
         ["コンボ時のスコアUP(大)するが、", "FEVERゲージを消費する(大)", "※FEVERゲージが消費できない場合、発動しない"],
         ["IMT-02-068", "SR", "花海 咲季", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0272",
         "Shouting my soul",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「最上 静香」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -32,7 +32,7 @@ const special_appeal_list = [
         ["PERFECT判定時のスコアUP(中)", "GOOD以上判定がPERFECTになるが、", "MISS判定時スコアDOWN(小)"],
         ["IMT-02-069", "SR", "最上 静香", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0390",
         "Bashful smile",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「風野 灯織」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -40,7 +40,7 @@ const special_appeal_list = [
         ["GREAT以上判定時のスコアUP(中)", "判定が長くなる(中)が、", "MISS判定時スコアDOWN(中)"],
         ["IMT-03-081", "SR", "風野 灯織", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0510",
         "はいっ、注目☆",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「藤田 ことね」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -48,7 +48,7 @@ const special_appeal_list = [
         ["コンボ数に応じてスコア獲得(大)", "コンボ時のスコアUP(極小)するが、", "判定が短くなる(大)"],
         ["IMT-04-088", "SR", "藤田 ことね", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0619",
         "翼を胸に",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「櫻木 真乃」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -56,7 +56,7 @@ const special_appeal_list = [
         ["コンボ時のスコアUP(大)", "コンボ時のスコアUP(小)するが、", "MISS判定時スコアDOWN(大)"],
         ["IMT-05-078", "SR", "櫻木 真乃", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0716",
         "BESTIE!",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「天海 春香」と「如月 千早」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -64,7 +64,7 @@ const special_appeal_list = [
         ["FEVERゲージ上昇率UP(極大)", "成功判定のコンボ数UP(小)"],
         ["IMT-S1-066", "SSR", "如月 千早", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0717",
         "Blanc et Noir",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「萩原 雪歩」と「菊地 真」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -72,7 +72,7 @@ const special_appeal_list = [
         ["PERFECT判定時のスコアUP(中)", "判定が長くなる(小)が、", "MISS判定時スコアDOWN(大)"],
         ["IMT-S1-067", "SSR", "菊地 真", ""]
     ),
-    new special_appeal(
+    new SpecialAppealCard(
         "0769",
         "ちゃんと見ててよね！",
         ["このカードを使用するとSPアピールを変更できます。", "※演出は対象が「周防 桃子」の場合のみ発動します。", "※SPアピール効果は対象にかかわらず発動します。"],
@@ -81,7 +81,7 @@ const special_appeal_list = [
         ["IMT-TR-S1-016", "TSR", "周防 桃子", ""],
     ),
     /*
-    new special_appeal(
+    new SpecialAppealCard(
         "",
         "",
         ["このカードを使用するとSPアピールを変更できます。"],
@@ -92,6 +92,6 @@ const special_appeal_list = [
     */
 ];
 
-const special_appeal_list_last_update = "2026/10/07";
+const lastUpdate_listSpecialAppealCard = "2026/10/13";
 
-const special_appeal_list_remarks = ["クラス設計中"];
+const remarks_listSpecialAppealCard = ["クラス設計中"];

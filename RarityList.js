@@ -1,78 +1,76 @@
 ﻿
-const rarity_list = [
-    new rarity(
+const listRarity = [
+    new Rarity(
         //  ID
-        0,
-        "",
-        ""
+        0
     ),
-    new rarity(
+    new Rarity(
         //  ID
         1,
         "N",
         "ノーマル"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         2,
         "R",
         "レア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         3,
         "SR",
         "スペシャルレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         4,
         "SSR",
         "スーパースペシャルレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         5,
         "TR",
         "ツアーズレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         6,
         "CO",
         "コンセプトレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         7,
         "PM",
         "プロモーション"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         8,
         "CP",
         "キャンペーン"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         9,
         "EX",
         "エクストラ"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         10,
         "UR",
         "ウルトラレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         11,
         "TSR",
         "ツアーズスペシャルレア"
     ),
-    new rarity(
+    new Rarity(
         //  ID
         12,
         "TSSR",
@@ -80,6 +78,6 @@ const rarity_list = [
     ),
 ];
 
-const rarity_list_last_updated = "2026/10/07";
+const lastUpdated_listRarity = "2026/10/13";
 
-const rarity_list_remarks = [];
+const remarks_listRarity = [];

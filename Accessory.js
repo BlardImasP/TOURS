@@ -1,12 +1,12 @@
 ﻿
-class accessory extends equipment {
+class Accessory extends Equipment {
 
-    area_names = [""];
+    areaNames = [""];
 
     //  コンストラクタ
-    constructor(id, name = "", genre_text = "", genre_level = "", idols_text = "", descriptions = [], attentions = [], area_names = [], card_ids = [], remarks = []) {
-        super(id, name, genre_text, genre_level, idols_text, descriptions, [], attentions, card_ids, remarks);
+    constructor(id, name = "", genreName = "", genreLevel = "", idolsText = "", descriptions = [], attentions = [], areaNames = [], cardIds = [], remarks = []) {
+        super(id, name, genreName, genreLevel, idolsText, descriptions, [], attentions, cardIds, remarks);
 
-        this.area_names = area_names;
+        this.areaNames = areaNames;
     }
 }

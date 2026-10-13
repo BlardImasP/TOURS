@@ -1,146 +1,145 @@
 ﻿
-const song_list = [
-    new song(
+const listSong = [
+    new Song(
         0,
         "",
         "",
-        "全員",
-        "2025/03/26"
+        "なし"
     ),
-    new song(
+    new Song(
         1,
         "なんどでも笑おう",
         "[Vo][Da][Vi]",
         "全員",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         2,
         "VOY@GER",
         "[Da]",
         "全員",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         3,
         "THE IDOLM@STER",
         "[Vo][Vi]",
         "女性",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         4,
         "お願い！シンデレラ",
         "[Vo][Vi]",
         "女性",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         5,
         "Thank You!",
         "[Da][Vi]",
         "女性",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         6,
         "DRIVE A LIVE",
         "[Da][Vi]",
         "男性",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         7,
         "Spread the Wings!!",
         "[Vi]",
         "女性",
         "2025/03/26"
     ),
-    new song(
+    new Song(
         8,
         "初",
         "[Vo][Vi]",
         "女性",
         "2025/08/06"
     ),
-    new song(
+    new Song(
         9,
         "M@STERPIECE",
         "[Vo][Da]",
         "女性",
         "2025/10/29"
     ),
-    new song(
+    new Song(
         10,
         "Beyond The Dream",
         "[Vo][Da]",
         "男性",
         "2025/10/29"
     ),
-    new song(
+    new Song(
         11,
         "READY!!",
         "[Vo]",
         "女性",
         "2025/12/17"
     ),
-    new song(
+    new Song(
         12,
         "Shine!!",
         "[Vi]",
         "女性",
         "2026/01/27"
     ),
-    new song(
+    new Song(
         13,
         "UNION!!",
         "[Vo][Da][Vi]",
         "女性",
         "2026/01/27"
     ),
-    new song(
+    new Song(
         14,
         "STARLIGHT CELEBRATE!",
         "[Vo]",
         "男性",
         "2026/03/18"
     ),
-    new song(
+    new Song(
         15,
         "Ambitious Eve",
         "[Da][Vi]",
         "女性",
         "2026/04/23"
     ),
-    new song(
+    new Song(
         16,
         "Campus mode!!",
         "[Da]",
         "女性",
         "2026/04/23"
     ),
-    new song(
+    new Song(
         17,
         "流れ星キセキ",
         "[Vo]",
         "女性",
         "2026/06/04"
     ),
-    new song(
+    new Song(
         18,
         "GO MY WAY!!",
         "[Da]",
         "女性",
         "2026/08/06"
     ),
-    new song(
+    new Song(
         19,
         "→→→SP",
         "[Vo][Da]",
         "全員",
         "2026/08/06"
     ),
-    new song(
+    new Song(
         20,
         "ローリング△さんかく",
         "[Vi]",
@@ -149,6 +148,6 @@ const song_list = [
     )
 ];
 
-const song_list_last_updated = "2026/10/07";
+const lastUpdated_listSong = "2026/10/13";
 
-const song_list_remarks = ["バージョン 2.0.2 までの対応"];
+const remarks_listSong = ["バージョン 2.0.2 までの対応"];

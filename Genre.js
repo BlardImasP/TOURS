@@ -1,19 +1,19 @@
 ﻿
-class genre {
+class Genre {
 
     id;
 
     name = "";
 
-    color_text = "";
+    colorText = "";
 
     //  コンストラクタ
-    constructor(id, name = "", color_text = "") {
+    constructor(id, name = "", colorText = "") {
 
         this.id = id;
 
         this.name = name;
 
-        this.color_text = color_text;
+        this.colorText = colorText;
     }
 }

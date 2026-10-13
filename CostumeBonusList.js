@@ -1,55 +1,52 @@
 ﻿
-const costume_bonus_list = [
-    new costume_bonus(
-        0,
-        "",
-        new bonus_rates(0, 0, 0),
-        new bonus_rates(0, 0, 0)
+const listCostumeBonus = [
+    new CostumeBonus(
+        0
     ),
-    new costume_bonus(
+    new CostumeBonus(
         1,
         "[Vo][Da][Vi]",
-        new bonus_rates(0.48, 0.48, 0.48),
-        new bonus_rates(0.10, 0.10, 0.10)
+        new BonusRates(0.48, 0.48, 0.48),
+        new BonusRates(0.10, 0.10, 0.10)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         2,
         "[Vo][Da]",
-        new bonus_rates(0.45, 0.45, 0),
-        new bonus_rates(0.10, 0.10, 0)
+        new BonusRates(0.45, 0.45, 0),
+        new BonusRates(0.10, 0.10, 0)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         3,
         "[Vo][Vi]",
-        new bonus_rates(0.45, 0, 0.45),
-        new bonus_rates(0.10, 0, 0.10)
+        new BonusRates(0.45, 0, 0.45),
+        new BonusRates(0.10, 0, 0.10)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         4,
         "[Da][Vi]",
-        new bonus_rates(0, 0.45, 0.45),
-        new bonus_rates(0, 0.10, 0.10)
+        new BonusRates(0, 0.45, 0.45),
+        new BonusRates(0, 0.10, 0.10)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         5,
         "[Vo]",
-        new bonus_rates(1.0, 0, 0),
-        new bonus_rates(0.1, 0, 0)
+        new BonusRates(1.0, 0, 0),
+        new BonusRates(0.1, 0, 0)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         6,
         "[Da]",
-        new bonus_rates(0, 1.0, 0),
-        new bonus_rates(0, 0.1, 0)
+        new BonusRates(0, 1.0, 0),
+        new BonusRates(0, 0.1, 0)
     ),
-    new costume_bonus(
+    new CostumeBonus(
         7,
         "[Vi]",
-        new bonus_rates(0, 0, 1.0),
-        new bonus_rates(0, 0, 0.1)
+        new BonusRates(0, 0, 1.0),
+        new BonusRates(0, 0, 0.1)
     )
 ];
 
-const costume_bonus_list_last_updated = "2026/10/07";
+const lastUpdated_listCostumeBonus = "2026/10/13";
 
-const costume_bonus_list_remarks = ["バージョン 2.0.2 で確認"];
+const remarks_listCostumeBonus = ["バージョン 2.0.2 で確認"];

@@ -1,30 +1,30 @@
 ﻿
-class set_bonus {
+class SetBonus {
 
     id;
 
-    name;
+    name = "";
 
-    functions;
+    functions = "";
 
-    costume_names;
+    listCostume = [""];
 
-    head_names;
+    listAccessoryHead = [""];
 
-    face_names;
+    listAccessoryFace = [""];
 
-    hand_names;
+    listAccessoryHand = [""];
 
-    back_names;
+    listAccessoryBack = [""];
 
-    rump_names;
+    listAccessoryRump = [""];
 
-    legs_names;
+    listAccessoryLegs = [""];
 
-    remarks;
+    remarks = [""];
 
     //  コンストラクタ
-    constructor(id, name, functions, costume_names, head_names, face_names, hand_names, back_names, rump_names, legs_names, remarks) {
+    constructor(id, name = "", functions = "", listCostume = [], listAccessoryHead = [], listAccessoryFace = [], listAccessoryHand = [], listAccessoryBack = [], listAccessoryRump = [], listAccessoryLegs = [], remarks = []) {
 
         this.id = id;
 
@@ -32,19 +32,19 @@ class set_bonus {
 
         this.functions = functions;
 
-        this.costume_names = costume_names;
+        this.listCostume = listCostume;
 
-        this.head_names = head_names;
+        this.listAccessoryHead = listAccessoryHead;
 
-        this.face_names = face_names;
+        this.listAccessoryFace = listAccessoryFace;
 
-        this.hand_names = hand_names;
+        this.listAccessoryHand = listAccessoryHand;
 
-        this.back_names = back_names;
+        this.listAccessoryBack = listAccessoryBack;
 
-        this.rump_names = rump_names;
+        this.listAccessoryRump = listAccessoryRump;
 
-        this.legs_names = legs_names;
+        this.listAccessoryLegs = listAccessoryLegs;
 
         this.remarks = remarks;
     }

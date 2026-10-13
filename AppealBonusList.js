@@ -1,187 +1,185 @@
 ﻿
-const appeal_bonus_list = [
-    new appeal_bonus(
-        0,
-        "",
-        new bonus_rates(0, 0, 0)
+const listAppealBonus = [
+    new AppealBonus(
+        0
     ),
-    new appeal_bonus(
+    new AppealBonus(
         1,
         "アピール値(Vo,Da,Vi)上昇(極大)",
-        new bonus_rates(52.5, 52.5, 52.5)
+        new BonusRates(52.5, 52.5, 52.5)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         2,
         "アピール値(Vo,Da)上昇(極大)",
-        new bonus_rates(67.0, 67.0, 0)
+        new BonusRates(67.0, 67.0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         3,
         "アピール値(Vo,Vi)上昇(極大)",
-        new bonus_rates(67.0, 0, 67.0)
+        new BonusRates(67.0, 0, 67.0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         4,
         "アピール値(Da,Vi)上昇(極大)",
-        new bonus_rates(0, 67.0, 67.0)
+        new BonusRates(0, 67.0, 67.0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         5,
         "アピール値(Vo)上昇(極大)",
-        new bonus_rates(120.0, 0, 0)
+        new BonusRates(120.0, 0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         6,
         "アピール値(Da)上昇(極大)",
-        new bonus_rates(0, 120.0, 0)
+        new BonusRates(0, 120.0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         7,
         "アピール値(Vi)上昇(極大)",
-        new bonus_rates(0, 0, 120.0)
+        new BonusRates(0, 0, 120.0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         8,
         "アピール値(Vo,Da,Vi)上昇(大)",
-        new bonus_rates(36.75, 36.75, 36.75)
+        new BonusRates(36.75, 36.75, 36.75)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         9,
         "アピール値(Vo,Da)上昇(大)",
-        new bonus_rates(46.9, 46.9, 0)
+        new BonusRates(46.9, 46.9, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         10,
         "アピール値(Vo,Vi)上昇(大)",
-        new bonus_rates(46.9, 0, 46.9)
+        new BonusRates(46.9, 0, 46.9)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         11,
         "アピール値(Da,Vi)上昇(大)",
-        new bonus_rates(0, 46.9, 46.9)
+        new BonusRates(0, 46.9, 46.9)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         12,
         "アピール値(Vo)上昇(大)",
-        new bonus_rates(84.0, 0, 0)
+        new BonusRates(84.0, 0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         13,
         "アピール値(Da)上昇(大)",
-        new bonus_rates(0, 84.0, 0)
+        new BonusRates(0, 84.0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         14,
         "アピール値(Vi)上昇(大)",
-        new bonus_rates(0, 0, 84.0)
+        new BonusRates(0, 0, 84.0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         15,
         "アピール値(Vo,Da,Vi)上昇(中)",
-        new bonus_rates(25.725, 25.725, 25.725)
+        new BonusRates(25.725, 25.725, 25.725)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         16,
         "アピール値(Vo,Da)上昇(中)",
-        new bonus_rates(32.830, 32.830, 0)
+        new BonusRates(32.830, 32.830, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         17,
         "アピール値(Vo,Vi)上昇(中)",
-        new bonus_rates(32.830, 0, 32.830)
+        new BonusRates(32.830, 0, 32.830)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         18,
         "アピール値(Da,Vi)上昇(中)",
-        new bonus_rates(0, 32.830, 32.830)
+        new BonusRates(0, 32.830, 32.830)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         19,
         "アピール値(Vo)上昇(中)",
-        new bonus_rates(58.800, 0, 0)
+        new BonusRates(58.800, 0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         20,
         "アピール値(Da)上昇(中)",
-        new bonus_rates(0, 58.800, 0)
+        new BonusRates(0, 58.800, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         21,
         "アピール値(Vi)上昇(中)",
-        new bonus_rates(0, 0, 58.800)
+        new BonusRates(0, 0, 58.800)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         22,
         "アピール値(Vo,Da,Vi)上昇(小)",
-        new bonus_rates(18.0075, 18.0075, 18.0075)
+        new BonusRates(18.0075, 18.0075, 18.0075)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         23,
         "アピール値(Vo,Da)上昇(小)",
-        new bonus_rates(22.981, 22.981, 0)
+        new BonusRates(22.981, 22.981, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         24,
         "アピール値(Vo,Vi)上昇(小)",
-        new bonus_rates(22.981, 0, 22.981)
+        new BonusRates(22.981, 0, 22.981)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         25,
         "アピール値(Da,Vi)上昇(小)",
-        new bonus_rates(0, 22.981, 22.981)
+        new BonusRates(0, 22.981, 22.981)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         26,
         "アピール値(Vo)上昇(小)",
-        new bonus_rates(41.160, 0, 0)
+        new BonusRates(41.160, 0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         27,
         "アピール値(Da)上昇(小)",
-        new bonus_rates(0, 41.160, 0)
+        new BonusRates(0, 41.160, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         28,
         "アピール値(Vi)上昇(小)",
-        new bonus_rates(0, 0, 41.160)
+        new BonusRates(0, 0, 41.160)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         29,
         "アピール値(Vo,Da,Vi)上昇(極小)",
-        new bonus_rates(12.60525, 12.60525, 12.60525)
+        new BonusRates(12.60525, 12.60525, 12.60525)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         30,
         "アピール値(Vo,Da)上昇(極小)",
-        new bonus_rates(16.0867, 16.0867, 0)
+        new BonusRates(16.0867, 16.0867, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         31,
         "アピール値(Vo,Vi)上昇(極小)",
-        new bonus_rates(16.0867, 0, 16.0867)
+        new BonusRates(16.0867, 0, 16.0867)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         32,
         "アピール値(Da,Vi)上昇(極小)",
-        new bonus_rates(0, 16.0867, 16.0867)
+        new BonusRates(0, 16.0867, 16.0867)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         33,
         "アピール値(Vo)上昇(極小)",
-        new bonus_rates(28.812, 0, 0)
+        new BonusRates(28.812, 0, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         35,
         "アピール値(Da)上昇(極小)",
-        new bonus_rates(0, 28.812, 0)
+        new BonusRates(0, 28.812, 0)
     ),
-    new appeal_bonus(
+    new AppealBonus(
         36,
         "アピール値(Vi)上昇(極小)",
-        new bonus_rates(0, 0, 28.812)
+        new BonusRates(0, 0, 28.812)
     ),
 ];
 
-const appeal_bonus_list_last_updated = "2026/10/07";
+const lastUpdated_listAppealBonus = "2026/10/13";
 
-const appeal_bonus_list_remarks = ["バージョン 2.0.2 で確認"];
+const remarks_listAppealBonus = ["バージョン 2.0.2 で確認"];

@@ -1,5 +1,5 @@
 ﻿
-class special_appeal {
+class SpecialAppealCard {
 
     id;
 
@@ -7,14 +7,14 @@ class special_appeal {
 
     descriptions;
 
-    target_idols;
+    targetIdols;
 
     functions;
 
     remarks;
 
     //  コンストラクタ
-    constructor(id, name, descriptions, target_idols, functions, remarks) {
+    constructor(id, name, descriptions, targetIdols, functions, remarks) {
 
         this.id = id;
 
@@ -22,7 +22,7 @@ class special_appeal {
 
         this.descriptions = descriptions;
 
-        this.target_idols = target_idols;
+        this.targetIdols = targetIdols;
 
         this.functions = functions;
 

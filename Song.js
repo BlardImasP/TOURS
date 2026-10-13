@@ -1,33 +1,45 @@
 ﻿
-class song {
+class Song {
 
     id;
 
-    name;
+    name = "";
 
-    bonus_text;
+    bonusText = "";
 
-    bonus_rates;
+    bonusRates = new BonusRates();
 
-    idols_text;
+    idolsText = "全員";
 
-    update;
+    update = new Date("2025/03/26");
+
+    attentions = [""];
+
+    remarks = [""];
 
     //  コンストラクタ
-    constructor(id, name, bonus_text, idols_text, update_text) {
+    constructor(id, name = "", bonusText = "", idolsText = "全員", updateText = "2025/03/26", remarks = []) {
 
         this.id = id;
 
         this.name = name;
 
-        this.bonus_text = bonus_text;
+        this.bonusText = bonusText;
 
-        let song_bonus = song_bonus_list.find(item => item.text === bonus_text);
+        let songBonus = listSongBonus.find(item => item.text === bonusText);
 
-        this.bonus_rates = song_bonus.bonus_rates;
+        if (songBonus !== undefined) {
 
-        this.idols_text = idols_text;
+            this.bonusRates = songBonus.bonusRates;
+        } else {
 
-        this.update = new Date(update_text);
+            this.attentions.push("※ 楽曲ボーナス値未定義");
+        }
+
+        this.idolsText = idolsText;
+
+        this.update = new Date(updateText);
+
+        this.remarks = remarks;
     }
 }

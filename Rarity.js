@@ -1,14 +1,14 @@
 ﻿
-class rarity {
+class Rarity {
 
     id;
 
-    text;
+    text = "";
 
-    name;
+    name = "";
 
     //  コンストラクタ
-    constructor(id, text, name) {
+    constructor(id, text = "", name = "") {
 
         this.id = id;
 

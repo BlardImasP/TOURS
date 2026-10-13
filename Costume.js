@@ -1,36 +1,36 @@
 ﻿
-class costume extends equipment {
+class Costume extends Equipment {
 
-    appeal_base = new appeal();
+    appealBase = new Appeal();
 
-    bonus_text = "";
+    bonusText = "";
 
-    bonus_ratesnew = new bonus_rates();
+    bonusRates = new BonusRates();
 
-    bonus_ex_rates = new bonus_rates();
+    bonusRatesEx = new BonusRates();
 
-    level_max = 1;
+    levelMax = 1;
 
     //  コンストラクタ
-    constructor(id, name = "", genre_text = "", genre_level = "", idols_text = "", descriptions = [], attentions = [], vo = 0, da = 0, vi = 0, bonus_text = "", level_max = 1, card_ids = [], remarks = []) {
-        super(id, name, genre_text, genre_level, idols_text, descriptions, [], attentions, card_ids, remarks);
+    constructor(id, name = "", genreName = "", genreLevel = "", idolsText = "", descriptions = [], attentions = [], vo = 0, da = 0, vi = 0, bonusText = "", levelMax = 1, cardIds = [], remarks = []) {
+        super(id, name, genreName, genreLevel, idolsText, descriptions, [], attentions, cardIds, remarks);
 
-        this.appeal_base = new appeal(vo, da, vi);
+        this.appealBase = new Appeal(vo, da, vi);
 
-        this.bonus_text = bonus_text;
+        this.bonusText = bonusText;
 
-        const costume_bonus = costume_bonus_list.find((item) => (item.text === bonus_text));
+        const costumeBonus = listCostumeBonus.find((item) => (item.text === bonusText));
 
-        if (costume_bonus !== undefined) {
+        if (costumeBonus !== undefined) {
 
-            this.bonus_rates = costume_bonus.bonus_rates;
+            this.bonusRates = costumeBonus.bonusRates;
 
-            this.bonus_ex_rates = costume_bonus.bonus_ex_rates;
+            this.bonusRatesEx = costumeBonus.bonusRatesEx;
         } else {
 
             this.attentions.push("※ コスチュームボーナス値未定義");
         }
 
-        this.level_max = level_max;
+        this.levelMax = levelMax;
     }
 }

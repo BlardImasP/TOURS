@@ -1,19 +1,19 @@
 ﻿
-class bonus_rates {
+class BonusRates {
 
-    rate_vo;
+    rateVo = 0;
 
-    rate_da;
+    rateDa = 0;
 
-    rate_vi;
+    rateVi = 0;
 
     //  コンストラクタ
-    constructor(rate_vo = 0, rate_da = 0, rate_vi = 0) {
+    constructor(rateVo = 0, rateDa = 0, rateVi = 0) {
 
-        this.rate_vo = rate_vo;
+        this.rateVo = rateVo;
 
-        this.rate_da = rate_da;
+        this.rateDa = rateDa;
 
-        this.rate_vi = rate_vi;
+        this.rateVi = rateVi;
     }
 }

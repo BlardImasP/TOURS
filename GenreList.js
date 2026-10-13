@@ -1,30 +1,30 @@
 ﻿
-const genre_list = [
-    new genre(
+const listGenre = [
+    new Genre(
         //  ID
         0,
         "",
         ""
     ),
-    new genre(
+    new Genre(
         //  ID
         1,
         "スウィート",
         "hotpink"
     ),
-    new genre(
+    new Genre(
         //  ID
         2,
         "スマート",
         "deepskyblue"
     ),
-    new genre(
+    new Genre(
         //  ID
         3,
         "エナジー",
         "gold"
     ),
-    new genre(
+    new Genre(
         //  ID
         4,
         "ワンダー",
@@ -32,6 +32,6 @@ const genre_list = [
     ),
 ];
 
-const genre_list_last_updated = "2026/10/07";
+const lastUpdated_listGenre = "2026/10/13";
 
-const genre_list_remarks = [];
+const remarks_listGenre = [];

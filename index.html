@@ -44,12 +44,11 @@
         <caption>楽曲</caption>
         <tbody>
             <tr>
-                <th scope="row" height="32">楽曲選択</th>
+                <th scope="row" height="32" rowspan="2">楽曲</th>
                 <td><select class="song_selector" id="song_select" onchange="song_select_onchange()"></select></td>
             </tr>
             <tr>
-                <th scope="row">楽曲属性</th>
-                <td id="song_bonus_text"></td>
+                <td id="song_descriptions"></td>
             </tr>
         </tbody>
     </table>
@@ -367,7 +366,7 @@
 
     <script>
 
-        function conv_array_to_string(arraySource) {
+        function convertArrayToString(arraySource) {
 
             let result = "";
 
@@ -379,7 +378,7 @@
             return result;
         }
 
-        function conv_string_to_array(stringSource) {
+        function convertStringToArray(stringSource) {
 
             let result = [""];
 
@@ -391,9 +390,11 @@
             return result;
         }
 
-        class cookie_storage {
+        class CookieStorage {
 
             separator = "; ";
+
+            operator = "=";
 
             song_id;
 
@@ -468,7 +469,7 @@
 
                     cookieArray.forEach((cookie) => {
 
-                        const cookiePair = cookie.split("=");
+                        const cookiePair = cookie.split(this.operator);
 
                         const cookieKey = cookiePair[0].trim();
                         const cookieValue = cookiePair[1].trim();
@@ -558,106 +559,121 @@
 
                     })
 
-                } catch (e) {
+                } catch (ex) {
 
                 }
             }
 
-            save(cookieKey, age) {
+            saveValue(cookieKey, value, age = 90 * 24 * 60 * 60) {
 
+                document.cookie = cookieKey + this.operator + encodeURIComponent(String(value)) + this.separator + "max-age" + this.operator + String(age);
+            }
+
+            saveText(cookieKey, text, age = 90 * 24 * 60 * 60) {
+
+                document.cookie = cookieKey + this.operator + encodeURIComponent(text.trim()) + this.separator + "max-age" + this.operator + String(age);
+            }
+
+            save(cookieKey, age = 90 * 24 * 60 * 60) {
 
                 switch (cookieKey) {
                     case "song_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.song_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.song_id, age);
                         break;
 
                     case "costume_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.costume_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.costume_id, age);
                         break;
 
                     case "accessory_head_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_head_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_head_id, age);
                         break;
 
                     case "accessory_face_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_face_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_face_id, age);
                         break;
 
                     case "accessory_hand_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_hand_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_hand_id, age);
                         break;
 
                     case "accessory_back_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_back_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_back_id, age);
                         break;
 
                     case "accessory_rump_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_rump_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_rump_id, age);
                         break;
 
                     case "accessory_legs_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.accessory_legs_id)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.accessory_legs_id, age);
                         break;
 
                     case "support_1_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_1_id.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_1_id, age);
                         break;
 
                     case "support_1_filter":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_1_filter.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_1_filter, age);
                         break;
 
                     case "support_2_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_2_id.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_2_id, age);
                         break;
 
                     case "support_2_filter":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_2_filter.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_2_filter, age);
                         break;
 
                     case "support_3_id":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_3_id.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_3_id, age);
                         break;
 
                     case "support_3_filter":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(this.support_3_filter.trim()) + this.separator + "max-age" + "=" + age;
+                        saveText(cookieKey, this.support_3_filter, age);
                         break;
 
                     case "costume_level":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.costume_level)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.costume_level, age);
                         break;
 
                     case "trustiness_level":
 
-                        document.cookie = cookieKey + "=" + encodeURIComponent(String(this.trustiness_level)) + this.separator + "max-age" + "=" + age;
+                        saveValue(cookieKey, this.trustiness_level, age);
                         break;
 
                 }
             }
         }
 
-        var cookieStorage;
+        const COLOR_DESCRIPTION_NOTE = "gold";
 
-        var songSelected;
+        const COLOR_DESCRIPTION_ATTENTION = "gold";
 
-        var costumeSelected;
+        const COLOR_DESCRIPTION_EXCEPTION = "tomato";
 
-        var idSupport1Array = [
+        const COLOR_SUPPORT_DEMERIT = "tomato";
+
+        const COLOR_SET_BONUS_ACVITE = "springgreen";
+
+        const WORD_SUPPORT_END_OF_MERIT = "が、"
+
+        const listSupport1RarityCheckboxId = [
             "support_1_rarity_ssr",
             "support_1_rarity_tssr",
             "support_1_rarity_sr",
@@ -670,11 +686,7 @@
             "support_1_rarity_pm"
         ];
 
-        var rarityiesSupport1;
-
-        var support1Selected;
-
-        var idSupport2Array = [
+        const listSupport2RarityCheckboxId = [
             "support_2_rarity_sr",
             "support_2_rarity_tsr",
             "support_2_rarity_co",
@@ -683,17 +695,27 @@
             "support_2_rarity_n"
         ];
 
-        var rarityiesSupport2;
-
-        var support2Selected;
-
-        var idSupport3Array = [
+        const listSupport3RarityCheckboxId = [
             "support_3_rarity_r",
             "support_3_rarity_tr",
             "support_3_rarity_n"
         ];
 
-        var rarityiesSupport3;
+        var cookieStorage;
+
+        var songSelected;
+
+        var costumeSelected;
+
+        var filterRaritiesSupport1;
+
+        var support1Selected;
+
+        var filterRaritiesSupport2;
+
+        var support2Selected;
+
+        var filterRaritiesSupport3;
 
         var support3Selected;
 
@@ -709,224 +731,183 @@
 
         var accessoryLegsSelected;
 
-        var activeSetBonus;
+        var activeSetBonus = false;
 
-        var existAccessory;
+        var existAccessory = false;
 
-        function object_clear_childs(object) {
+        function clearElementChildren(element) {
 
-            while (object.firstChild) {
+            const children = element.childNodes;
 
-                object.removeChild(object.firstChild);
+            let indexChild = children.length;
+
+            while (indexChild > 0) {
+
+                indexChild--;
+
+                element.removeChild(children.item(indexChild));
             }
         }
 
-        function object_clear_child_options(object) {
-
-            const options = object.options;
-
-            let indexOptions = options.length;
-
-            while (indexOptions > 0) {
-                indexOptions--;
-
-                object.removeChild(options.item(indexOptions));
-            }
-        }
-
-        function select_clear_options(element_id) {
-
-            const selectObject = document.getElementById(element_id);
-
-            object_clear_child_options(selectObject);
-        }
-
-        function tbody_clear_rows(tbody) {
-
-            while (tbody.children.length > 0) {
-
-                tbody.deleteRow(tbody.children.length - 1);
-            }
-        }
-
-        function object_add_option(object, value, text) {
+        function appendSelectOption(elementSelect, value, text) {
 
             const option = document.createElement("option");
 
             option.value = value;
             option.text = text;
 
-            object.add(option);
+            elementSelect.add(option);
         }
 
-        function select_add_option(element_id, value, text) {
-
-            const selectObject = document.getElementById(element_id);
-
-            object_add_option(selectObject, value, text);
-        }
-
-        function setup_song_select(song_id) {
+        function setupSongSelect(idSong) {
 
             const selectSong = document.getElementById("song_select");
 
-            object_clear_child_options(selectSong);
+            clearElementChildren(selectSong);
 
-            song_list.forEach((song) => {
+            listSong.forEach((itemSong) => {
 
-                object_add_option(selectSong, song.id, song.name);
+                appendSelectOption(selectSong, itemSong.id, itemSong.name);
             });
 
-            selectSong.value = song_id;
+            selectSong.value = idSong;
         }
 
-        function setup_costume_select(costume_id) {
+        function setupCostumeSelect(idCostume) {
 
             const selectCostume = document.getElementById("costume_select");
 
-            object_clear_child_options(selectCostume);
+            clearElementChildren(selectCostume);
 
-            costume_list.forEach((costume) => {
+            listCostume.forEach((itemCostume) => {
 
                 let text;
 
-                if (costume.genre_text != "") {
+                if (itemCostume.genreName != "") {
 
-                    text = "［" + costume.genre_text + "］" + costume.name;
+                    text = "［" + itemCostume.genreName + "］" + itemCostume.name;
                 } else {
 
-                    text = costume.name;
+                    text = itemCostume.name;
                 }
 
-                object_add_option(selectCostume, costume.id, text);
+                appendSelectOption(selectCostume, itemCostume.id, text);
             });
 
-            selectCostume.value = costume_id;
+            selectCostume.value = idCostume;
         }
 
-        function setup_accessory_any_select(accessory_id, element_id, area_name) {
+        function setupAccessoryAnySelect(idAccessory, idElement, areaName) {
 
-            const selectAccessory = document.getElementById(element_id);
+            const selectAccessory = document.getElementById(idElement);
 
-            object_clear_child_options(selectAccessory);
+            clearElementChildren(selectAccessory);
 
-            accessory_list.forEach((accessory) => {
+            listAccessory.forEach((itemAccessory) => {
 
-                let index_found = accessory.area_names.indexOf(area_name);
+                let indexArea = itemAccessory.areaNames.indexOf(areaName);
 
-                if (index_found >= 0) {
+                if (indexArea >= 0) {
 
                     let text;
 
-                    if (accessory.genre_text != "") {
+                    if (itemAccessory.genreName != "") {
 
-                        text = "［" + accessory.genre_text + "］" + accessory.name;
+                        text = "［" + itemAccessory.genreName + "］" + itemAccessory.name;
                     } else {
 
-                        text = accessory.name;
+                        text = itemAccessory.name;
                     }
 
-                    object_add_option(selectAccessory, accessory.id, text);
+                    appendSelectOption(selectAccessory, itemAccessory.id, text);
                 }
             });
 
-            selectAccessory.value = accessory_id;
+            selectAccessory.value = idAccessory;
         }
 
-        function setup_accessory_head_select(accessory_id) {
+        function setupAccessoryHeadSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_head_select", "頭");
+            setupAccessoryAnySelect(idAccessory, "accessory_head_select", "頭");
         }
 
-        function setup_accessory_face_select(accessory_id) {
+        function setupAccessoryFaceSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_face_select", "顔");
+            setupAccessoryAnySelect(idAccessory, "accessory_face_select", "顔");
         }
 
-        function setup_accessory_hand_select(accessory_id) {
+        function setupAccessoryHandSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_hand_select", "手");
+            setupAccessoryAnySelect(idAccessory, "accessory_hand_select", "手");
         }
 
-        function setup_accessory_back_select(accessory_id) {
+        function setupAccessoryBackSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_back_select", "胴");
+            setupAccessoryAnySelect(idAccessory, "accessory_back_select", "胴");
         }
 
-        function setup_accessory_rump_select(accessory_id) {
+        function setupAccessoryRumpSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_rump_select", "腰");
+            setupAccessoryAnySelect(idAccessory, "accessory_rump_select", "腰");
         }
 
-        function setup_accessory_legs_select(accessory_id) {
+        function setupAccessoryLegsSelect(idAccessory) {
 
-            setup_accessory_any_select(accessory_id, "accessory_legs_select", "脚");
+            setupAccessoryAnySelect(idAccessory, "accessory_legs_select", "脚");
         }
 
-        function setup_support_select(support_id, element_id, rarities) {
+        function setupSupportSelect(idSupportCard, idElement, filterRarities) {
 
-            const selectSupport = document.getElementById(element_id);
+            const selectSupport = document.getElementById(idElement);
 
-            object_clear_child_options(selectSupport);
+            clearElementChildren(selectSupport);
 
-            support_card_list.forEach((support) => {
+            listSupportCard.forEach((itemSupportCard) => {
 
-                let index_found = rarities.indexOf(support.rarity);
+                let indexFound = filterRarities.indexOf(itemSupportCard.rarity);
 
-                if (index_found >= 0) {
+                if (indexFound >= 0) {
 
                     let text = "";
 
-                    if (support.series != "") {
+                    if (itemSupportCard.series != "") {
 
-                        if (support.rarity != "") {
+                        if (itemSupportCard.rarity != "") {
 
-                            text += "［" + support.series + "/" + support.rarity + "］";
+                            text += "［" + itemSupportCard.series + "/" + itemSupportCard.rarity + "］";
                         } else {
 
-                            text += "［" + support.series + "］";
+                            text += "［" + itemSupportCard.series + "］";
                         }
                     } else {
 
-                        if (support.rarity != "") {
+                        if (itemSupportCard.rarity != "") {
 
-                            text += "［" + support.rarity + "］";
+                            text += "［" + itemSupportCard.rarity + "］";
                         } else {
 
                             text += "";
                         }
                     }
 
-                    if (support.name != "") {
+                    if (itemSupportCard.name != "") {
 
-                        text += support.name;
+                        text += itemSupportCard.name;
                     }
 
-                    if (support.idols.length > 0) {
+                    if (itemSupportCard.idols.length > 0) {
 
-                        text += "（";
-
-                        for (let index_idol = 0; index_idol < 1; index_idol++) {
-
-                            if (index_idol > 0) {
-
-                                text += "、";
-                            }
-
-                            text += support.idols[index_idol];
-                        }
-
-                        text += "）";
+                        text += "（" + itemSupportCard.idols.join("、") + "）";
                     }
 
-                    object_add_option(selectSupport, support.id, text);
+                    appendSelectOption(selectSupport, itemSupportCard.id, text);
                 }
             });
 
-            selectSupport.value = support_id;
+            selectSupport.value = idSupportCard;
         }
 
-        function setup_support_filter(idCheckBoxArray, rarityies) {
+        function setupSupportFilter(idCheckBoxArray, rarityies) {
 
             let checkboxRarity;
 
@@ -938,437 +919,412 @@
             });
         }
 
-        function setup_costume_level_select(level, level_max) {
+        function setupCostumeLevelSelect(level, levelMax) {
 
             const selectCostumeLevel = document.getElementById("costume_level_select");
 
-            object_clear_child_options(selectCostumeLevel);
+            clearElementChildren(selectCostumeLevel);
 
-            for (let level = level_max; level >= 1; level--) {
+            for (let level = levelMax; level >= 1; level--) {
 
-                object_add_option(selectCostumeLevel, level, level);
+                appendSelectOption(selectCostumeLevel, level, level);
             }
 
-            if (level < level_max) {
+            if (level < levelMax) {
 
                 selectCostumeLevel.value = level;
             } else {
 
-                selectCostumeLevel.value = level_max;
+                selectCostumeLevel.value = levelMax;
             }
         }
 
-        function setup_trustiness_level_select(level, level_max) {
+        function setupTrustinessLevelSelect(level, levelMax) {
 
             const selectTrustinessLevel = document.getElementById("trustiness_level_select");
 
-            object_clear_child_options(selectTrustinessLevel);
+            clearElementChildren(selectTrustinessLevel);
 
-            for (let level = level_max; level >= 1; level--) {
+            for (let level = levelMax; level >= 1; level--) {
 
-                object_add_option(selectTrustinessLevel, level, level);
+                appendSelectOption(selectTrustinessLevel, level, level);
             }
 
-            if (level < level_max) {
+            if (level < levelMax) {
 
                 selectTrustinessLevel.value = level;
             } else {
 
-                selectTrustinessLevel.value = level_max;
+                selectTrustinessLevel.value = levelMax;
             }
         }
 
-        function filter_rarity_array(idCheckBoxArray) {
+        function extractFilterRarity(listRarityCheckboxId) {
 
-            let rarityArray = [""];
+            let filter = [""];
 
-            let checkboxRarity;
+            listRarityCheckboxId.forEach((id) => {
 
-            idCheckBoxArray.forEach((id) => {
-
-                checkboxRarity = document.getElementById(id);
+                const checkboxRarity = document.getElementById(id);
 
                 if (checkboxRarity.checked) {
 
-                    rarityArray.push(checkboxRarity.value);
+                    filter.push(checkboxRarity.value);
                 }
             });
 
-            return rarityArray;
+            return filter;
         }
 
         function setup() {
 
             const cookies = document.cookie;
 
-            cookieStorage = new cookie_storage(cookies);
+            cookieStorage = new CookieStorage(cookies);
 
-            songSelected = song_list.find((song) => song.id == cookieStorage.song_id);
+            songSelected = listSong.find((song) => song.id == cookieStorage.song_id);
 
-            costumeSelected = costume_list.find((costume) => costume.id == cookieStorage.costume_id);
+            costumeSelected = listCostume.find((costume) => costume.id == cookieStorage.costume_id);
 
-            accessoryHeadSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_head_id);
+            accessoryHeadSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_head_id);
 
-            accessoryFaceSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_face_id);
+            accessoryFaceSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_face_id);
 
-            accessoryHandSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_hand_id);
+            accessoryHandSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_hand_id);
 
-            accessoryBackSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_back_id);
+            accessoryBackSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_back_id);
 
-            accessoryRumpSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_rump_id);
+            accessoryRumpSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_rump_id);
 
-            accessoryLegsSelected = accessory_list.find((accessory) => accessory.id == cookieStorage.accessory_legs_id);
+            accessoryLegsSelected = listAccessory.find((accessory) => accessory.id == cookieStorage.accessory_legs_id);
 
-            support1Selected = support_card_list.find((support) => support.id == cookieStorage.support_1_id);
+            support1Selected = listSupportCard.find((support) => support.id == cookieStorage.support_1_id);
 
-            support2Selected = support_card_list.find((support) => support.id == cookieStorage.support_2_id);
+            support2Selected = listSupportCard.find((support) => support.id == cookieStorage.support_2_id);
 
-            support3Selected = support_card_list.find((support) => support.id == cookieStorage.support_3_id);
+            support3Selected = listSupportCard.find((support) => support.id == cookieStorage.support_3_id);
 
-            rarityiesSupport1 = conv_string_to_array(cookieStorage.support_1_filter);
+            filterRaritiesSupport1 = convertStringToArray(cookieStorage.support_1_filter);
 
-            rarityiesSupport2 = conv_string_to_array(cookieStorage.support_2_filter);
+            filterRaritiesSupport2 = convertStringToArray(cookieStorage.support_2_filter);
 
-            rarityiesSupport3 = conv_string_to_array(cookieStorage.support_3_filter);
+            filterRaritiesSupport3 = convertStringToArray(cookieStorage.support_3_filter);
 
-            setup_song_select(cookieStorage.song_id);
+            setupSongSelect(cookieStorage.song_id);
 
-            setup_costume_select(cookieStorage.costume_id);
+            setupCostumeSelect(cookieStorage.costume_id);
 
-            setup_accessory_head_select(cookieStorage.accessory_head_id);
+            setupAccessoryHeadSelect(cookieStorage.accessory_head_id);
 
-            setup_accessory_face_select(cookieStorage.accessory_face_id);
+            setupAccessoryFaceSelect(cookieStorage.accessory_face_id);
 
-            setup_accessory_hand_select(cookieStorage.accessory_hand_id);
+            setupAccessoryHandSelect(cookieStorage.accessory_hand_id);
 
-            setup_accessory_back_select(cookieStorage.accessory_back_id);
+            setupAccessoryBackSelect(cookieStorage.accessory_back_id);
 
-            setup_accessory_rump_select(cookieStorage.accessory_rump_id);
+            setupAccessoryRumpSelect(cookieStorage.accessory_rump_id);
 
-            setup_accessory_legs_select(cookieStorage.accessory_legs_id);
+            setupAccessoryLegsSelect(cookieStorage.accessory_legs_id);
 
-            setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
+            setupSupportSelect(cookieStorage.support_1_id, "support_1_select", filterRaritiesSupport1);
 
-            setup_support_filter(idSupport1Array, rarityiesSupport1);
+            setupSupportFilter(listSupport1RarityCheckboxId, filterRaritiesSupport1);
 
-            setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
+            setupSupportSelect(cookieStorage.support_2_id, "support_2_select", filterRaritiesSupport2);
 
-            setup_support_filter(idSupport2Array, rarityiesSupport2);
+            setupSupportFilter(listSupport2RarityCheckboxId, filterRaritiesSupport2);
 
-            setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
+            setupSupportSelect(cookieStorage.support_3_id, "support_3_select", filterRaritiesSupport3);
 
-            setup_support_filter(idSupport3Array, rarityiesSupport3);
+            setupSupportFilter(listSupport3RarityCheckboxId, filterRaritiesSupport3);
 
-            setup_costume_level_select(cookieStorage.costume_level, 60);
+            setupCostumeLevelSelect(cookieStorage.costume_level, 60);
 
-            setup_trustiness_level_select(cookieStorage.trustiness_level, 60);
+            setupTrustinessLevelSelect(cookieStorage.trustiness_level, 60);
         }
 
-        function redraw_song_informations(song) {
+        function forEachAppendBr(array, element, action, countLine = 0) {
 
-            const textSongBonus = document.getElementById("song_bonus_text");
+            if (array.length > 0) {
 
-            textSongBonus.textContent = song.bonus_text;
+                if (countLine > 0) {
+
+                    element.appendChild(document.createElement("br"));
+                }
+
+                array.forEach((item) => {
+
+                    if (item != "") {
+
+                        if (countLine > 0) {
+
+                            element.appendChild(document.createElement("br"));
+                        }
+
+                        action(item);
+                    }
+
+                    countLine++;
+                });
+            }
+
+            return countLine;
         }
 
-        function redraw_equipment_descriptions(descriptions, equipment) {
+        function redrawAnyAttentions(elementDescriptions, attentions, countLine = 0) {
 
-            object_clear_childs(descriptions);
+            countLine = forEachAppendBr(attentions, elementDescriptions, (item) => {
+
+                if (item[0] == "※") {
+
+                    const bDescription = document.createElement("b");
+
+                    bDescription.style.color = COLOR_DESCRIPTION_EXCEPTION;
+
+                    bDescription.append(item);
+
+                    elementDescriptions.appendChild(bDescription);
+                } else {
+
+                    const bAttention = document.createElement("b");
+
+                    bAttention.style.color = COLOR_DESCRIPTION_ATTENTION;
+
+                    bAttention.append(item);
+
+                    elementDescriptions.appendChild(bAttention);
+                }
+                
+            }, countLine);
+
+            return countLine;
+        }
+
+        function redrawSongDescriptions(elementDescriptions, song) {
+
+            clearElementChildren(elementDescriptions);
+
+            elementDescriptions.append("楽曲属性：" + song.bonusText);
+
+            elementDescriptions.appendChild(document.createElement("br"));
+
+            elementDescriptions.append("対象アイドル：" + song.idolsText);
+        }
+
+        function redrawEquipmentDescriptions(elementDescriptions, equipment) {
+
+            clearElementChildren(elementDescriptions);
 
             let countLine = 0;
 
-            if (equipment.descriptions.length > 0) {
+            countLine = forEachAppendBr(equipment.descriptions, elementDescriptions, (item) => {
 
-                equipment.descriptions.forEach((textDescription) => {
+                if (item[0] == "※") {
 
-                    if (countLine > 0) {
+                    const bDescription = document.createElement("b");
 
-                        descriptions.appendChild(document.createElement("br"));
-                    }
+                    bDescription.style.color = COLOR_DESCRIPTION_NOTE;
 
-                    if (textDescription[0] == "※") {
+                    bDescription.append(item);
 
-                        const b_description = document.createElement("b");
+                    elementDescriptions.appendChild(bDescription);
+                } else {
 
-                        b_description.style.color = "gold";
+                    elementDescriptions.append(item);
+                }
 
-                        b_description.append(textDescription);
+            }, countLine);
 
-                        descriptions.appendChild(b_description);
-                    } else {
+            countLine = forEachAppendBr(equipment.functions, elementDescriptions, (item) => {
 
-                        descriptions.append(textDescription);
-                    }
+                if (item[0] == "※") {
 
-                    countLine++;
-                });
-            }
+                    const bDescription = document.createElement("b");
 
-            if (equipment.functions.length > 0) {
+                    bDescription.style.color = COLOR_DESCRIPTION_NOTE;
+
+                    bDescription.append(item);
+
+                    elementDescriptions.appendChild(bDescription);
+                } else {
+
+                    elementDescriptions.append(item);
+                }
+
+            }, countLine);
+
+            countLine = redrawAnyAttentions(elementDescriptions, equipment.attentions, countLine);
+
+            if (equipment.cardIds.length > 0) {
 
                 if (countLine > 0) {
 
-                    descriptions.appendChild(document.createElement("br"));
+                    elementDescriptions.appendChild(document.createElement("br"));
+
+                    elementDescriptions.appendChild(document.createElement("br"));
                 }
 
-                equipment.functions.forEach((textFunction) => {
-
-                    if (countLine > 0) {
-
-                        descriptions.appendChild(document.createElement("br"));
-                    }
-
-                    if (textFunction[0] == "※") {
-
-                        const b_function = document.createElement("b");
-
-                        b_function.style.color = "gold";
-
-                        b_function.append(textFunction);
-
-                        descriptions.appendChild(b_function);
-                    } else {
-
-                        descriptions.append(textFunction);
-                    }
-
-                    countLine++;
-                });
-            }
-
-            if (equipment.attentions.length > 0) {
-
-                if (countLine > 0) {
-
-                    descriptions.appendChild(document.createElement("br"));
-                }
-
-                equipment.attentions.forEach((textAttention) => {
-
-                    if (countLine > 0) {
-
-                        descriptions.appendChild(document.createElement("br"));
-                    }
-
-                    const b_attention = document.createElement("b");
-
-                    if (textAttention[0] == "※") {
-
-                        b_attention.style.color = "tomato";
-                    } else {
-
-                        b_attention.style.color = "gold";
-                    }
-
-                    b_attention.append(textAttention);
-
-                    descriptions.appendChild(b_attention);
-
-                    countLine++;
-                });
-            }
-
-            if (equipment.card_ids.length > 0) {
-
-                if (countLine > 0) {
-
-                    descriptions.appendChild(document.createElement("br"));
-
-                    descriptions.appendChild(document.createElement("br"));
-                }
-
-                descriptions.append(equipment.card_ids.join(" / "));
+                elementDescriptions.append(equipment.cardIds.join(" / "));
 
                 countLine++;
             }
         }
 
-        function redraw_support_any_descriptions(descriptions, support) {
+        function redrawSupportDescriptions(elementDescriptions, support) {
 
-            object_clear_childs(descriptions);
+            clearElementChildren(elementDescriptions);
+
+            let countLine = 0;
 
             let demerit = false;
 
-            let index = 0;
-
-            while (index < support.functions.length) {
-
-                const text_function = support.functions[index];
-
-                if (text_function == "") {
-
-                    break;
-                }
-
-                if (index > 0) {
-
-                    descriptions.appendChild(document.createElement("br"));
-                }
+            countLine = forEachAppendBr(support.functions, elementDescriptions, (item) => {
 
                 if (demerit) {
 
-                    const font_function = document.createElement("font");
+                    const fontFunction = document.createElement("font");
 
-                    font_function.style.color = "tomato";
+                    fontFunction.style.color = COLOR_SUPPORT_DEMERIT;
 
-                    font_function.append(text_function);
+                    fontFunction.append(item);
 
-                    descriptions.appendChild(font_function);
+                    elementDescriptions.appendChild(fontFunction);
                 } else {
 
-                    descriptions.append(text_function);
+                    elementDescriptions.append(item);
 
-                    demerit = text_function.endsWith("が、");
+                    demerit = item.endsWith(WORD_SUPPORT_END_OF_MERIT);
                 }
 
-                index += 1;
-            }
+            }, countLine);
 
-            if (support.attentions.length > 0) {
-
-                descriptions.appendChild(document.createElement("br"));
-
-                support.attentions.forEach((attention) => {
-
-                    descriptions.appendChild(document.createElement("br"));
-
-                    const b_attention = document.createElement("b");
-
-                    b_attention.style.color = "tomato";
-
-                    b_attention.append(attention);
-
-                    descriptions.appendChild(b_attention);
-                });
-            }
+            countLine = redrawAnyAttentions(elementDescriptions, support.attentions, countLine);
 
             if (support.id != "") {
 
-                descriptions.appendChild(document.createElement("br"));
+                if (countLine > 0) {
 
-                descriptions.appendChild(document.createElement("br"));
+                    elementDescriptions.appendChild(document.createElement("br"));
 
-                descriptions.append(support.id);
+                    elementDescriptions.appendChild(document.createElement("br"));
+                }
+
+                elementDescriptions.append(support.id);
             }
         }
 
-        function redraw_costume_informations(costume) {
+        function redrawCostumeAppeal(costume) {
 
-            const textCostumeVo = document.getElementById("costume_vo_text");
-            const textCostumeDa = document.getElementById("costume_da_text");
-            const textCostumeVi = document.getElementById("costume_vi_text");
+            const elementCostumeVo = document.getElementById("costume_vo_text");
+            const elementCostumeDa = document.getElementById("costume_da_text");
+            const elementCostumeVi = document.getElementById("costume_vi_text");
 
-            textCostumeVo.textContent = costume.appeal_base.vo;
-            textCostumeDa.textContent = costume.appeal_base.da;
-            textCostumeVi.textContent = costume.appeal_base.vi;
-
-            const textCostumeDescriptions = document.getElementById("costume_descriptions");
-
-            redraw_equipment_descriptions(textCostumeDescriptions, costume);
-
-            setup_costume_level_select(cookieStorage.costume_level, costume.level_max);
+            elementCostumeVo.textContent = costume.appealBase.vo;
+            elementCostumeDa.textContent = costume.appealBase.da;
+            elementCostumeVi.textContent = costume.appealBase.vi;
         }
 
-        function redraw_costume_bonus(costume_bonus) {
+        function redrawCostumeBonus(bonusCostume) {
 
-            const textCostumeBonusVo = document.getElementById("costume_bonus_vo_text");
-            const textCostumeBonusDa = document.getElementById("costume_bonus_da_text");
-            const textCostumeBonusVi = document.getElementById("costume_bonus_vi_text");
+            const elementCostumeBonusVo = document.getElementById("costume_bonus_vo_text");
+            const elementCostumeBonusDa = document.getElementById("costume_bonus_da_text");
+            const elementCostumeBonusVi = document.getElementById("costume_bonus_vi_text");
 
-            textCostumeBonusVo.textContent = Math.floor(costume_bonus.vo);
-            textCostumeBonusDa.textContent = Math.floor(costume_bonus.da);
-            textCostumeBonusVi.textContent = Math.floor(costume_bonus.vi);
+            elementCostumeBonusVo.textContent = Math.floor(bonusCostume.vo);
+            elementCostumeBonusDa.textContent = Math.floor(bonusCostume.da);
+            elementCostumeBonusVi.textContent = Math.floor(bonusCostume.vi);
         }
 
-        function redraw_trustiness_bonus(trustiness_bonus) {
+        function redrawTrustinessBonus(bonusTrustiness) {
 
-            const textTrustinessBonusVo = document.getElementById("trustiness_bonus_vo_text");
-            const textTrustinessBonusDa = document.getElementById("trustiness_bonus_da_text");
-            const textTrustinessBonusVi = document.getElementById("trustiness_bonus_vi_text");
+            const elementTrustinessBonusVo = document.getElementById("trustiness_bonus_vo_text");
+            const elementTrustinessBonusDa = document.getElementById("trustiness_bonus_da_text");
+            const elementTrustinessBonusVi = document.getElementById("trustiness_bonus_vi_text");
 
-            textTrustinessBonusVo.textContent = Math.floor(trustiness_bonus.vo);
-            textTrustinessBonusDa.textContent = Math.floor(trustiness_bonus.da);
-            textTrustinessBonusVi.textContent = Math.floor(trustiness_bonus.vi);
+            elementTrustinessBonusVo.textContent = Math.floor(bonusTrustiness.vo);
+            elementTrustinessBonusDa.textContent = Math.floor(bonusTrustiness.da);
+            elementTrustinessBonusVi.textContent = Math.floor(bonusTrustiness.vi);
         }
 
-        function redraw_song_bonus(song_bonus) {
+        function redrawSongBonus(bonusSong) {
 
-            const textSongBonusVo = document.getElementById("song_bonus_vo_text");
-            const textSongBonusDa = document.getElementById("song_bonus_da_text");
-            const textSongBonusVi = document.getElementById("song_bonus_vi_text");
+            const elementSongBonusVo = document.getElementById("song_bonus_vo_text");
+            const elementSongBonusDa = document.getElementById("song_bonus_da_text");
+            const elementSongBonusVi = document.getElementById("song_bonus_vi_text");
 
-            textSongBonusVo.textContent = Math.floor(song_bonus.vo);
-            textSongBonusDa.textContent = Math.floor(song_bonus.da);
-            textSongBonusVi.textContent = Math.floor(song_bonus.vi);
+            elementSongBonusVo.textContent = Math.floor(bonusSong.vo);
+            elementSongBonusDa.textContent = Math.floor(bonusSong.da);
+            elementSongBonusVi.textContent = Math.floor(bonusSong.vi);
         }
 
-        function redraw_support_bonus(support_bonus) {
+        function redrawSupportBonus(bonusSupport) {
 
-            const textSupportBonusVo = document.getElementById("support_bonus_vo_text");
-            const textSupportBonusDa = document.getElementById("support_bonus_da_text");
-            const textSupportBonusVi = document.getElementById("support_bonus_vi_text");
+            const elementSupportBonusVo = document.getElementById("support_bonus_vo_text");
+            const elementSupportBonusDa = document.getElementById("support_bonus_da_text");
+            const elementSupportBonusVi = document.getElementById("support_bonus_vi_text");
 
-            textSupportBonusVo.textContent = Math.floor(support_bonus.vo);
-            textSupportBonusDa.textContent = Math.floor(support_bonus.da);
-            textSupportBonusVi.textContent = Math.floor(support_bonus.vi);
+            elementSupportBonusVo.textContent = Math.floor(bonusSupport.vo);
+            elementSupportBonusDa.textContent = Math.floor(bonusSupport.da);
+            elementSupportBonusVi.textContent = Math.floor(bonusSupport.vi);
         }
 
-        function redraw_idol_appeal(idol_appeal) {
+        function redrawIdolAppeal(appealIdol) {
 
-            const textIdolAppealVo = document.getElementById("idol_appeal_vo_text");
-            const textIdolAppealDa = document.getElementById("idol_appeal_da_text");
-            const textIdolAppealVi = document.getElementById("idol_appeal_vi_text");
-            const textIdolAppealTotal = document.getElementById("idol_appeal_total_text");
+            const valueAppealVo = Math.floor(appealIdol.vo);
+            const valueAppealDa = Math.floor(appealIdol.da);
+            const valueAppealVi = Math.floor(appealIdol.vi);
 
-            const appeal_vo = Math.floor(idol_appeal.vo);
-            const appeal_da = Math.floor(idol_appeal.da);
-            const appeal_vi = Math.floor(idol_appeal.vi);
-            const appeal_total = appeal_vo + appeal_da + appeal_vi;
+            const valueAppealTotal = valueAppealVo + valueAppealDa + valueAppealVi;
 
-            textIdolAppealVo.textContent = appeal_vo;
-            textIdolAppealDa.textContent = appeal_da;
-            textIdolAppealVi.textContent = appeal_vi;
-            textIdolAppealTotal.textContent = appeal_total;
+            const elementIdolAppealVo = document.getElementById("idol_appeal_vo_text");
+            const elementIdolAppealDa = document.getElementById("idol_appeal_da_text");
+            const elementIdolAppealVi = document.getElementById("idol_appeal_vi_text");
+            const elementIdolAppealTotal = document.getElementById("idol_appeal_total_text");
+
+            elementIdolAppealVo.textContent = valueAppealVo;
+            elementIdolAppealDa.textContent = valueAppealDa;
+            elementIdolAppealVi.textContent = valueAppealVi;
+            elementIdolAppealTotal.textContent = valueAppealTotal;
         }
 
-        function redraw_set_bonus_costume(td, costume_set_list, costume_index) {
+        function redrawSetBonusCostume(td, listCostume, indexCostume) {
 
-            if (costume_index < 0) {
+            if (indexCostume < 0) {
 
                 let index = 0;
 
-                while (index < costume_set_list.length) {
+                while (index < listCostume.length) {
 
                     if (index > 0) {
 
                         td.append(" / ");
                     }
 
-                    td.append(costume_set_list[index]);
+                    td.append(listCostume[index]);
 
-                    activeSetBonus = 0;
+                    activeSetBonus = false;
 
                     index += 1;
                 }
             } else {
 
-                const b_costume = document.createElement("b");
+                const bCostume = document.createElement("b");
 
-                b_costume.style.color = "springgreen";
+                bCostume.style.color = COLOR_SET_BONUS_ACVITE;
 
-                b_costume.append(costume_set_list[costume_index]);
+                bCostume.append(listCostume[indexCostume]);
 
-                td.appendChild(b_costume);
+                td.appendChild(bCostume);
             }
         }
 
-        function redraw_set_bonus_accessory(td, area_name, accessory_set_list, accessory_index) {
+        function redrawSetBonusAccessory(td, textAreaName, listAccessoryNames, indexAccessory) {
 
-            if (accessory_index < 0) {
+            if (indexAccessory < 0) {
 
                 let index = 0;
 
-                while (index < accessory_set_list.length) {
+                while (index < listAccessoryNames.length) {
 
                     if (index > 0) {
 
@@ -1380,14 +1336,14 @@
                             td.appendChild(document.createElement("br"));
                         }
 
-                        td.append(area_name);
+                        td.append(textAreaName);
                     }
 
-                    td.append(accessory_set_list[index]);
+                    td.append(listAccessoryNames[index]);
 
-                    activeSetBonus = 0;
+                    activeSetBonus = false;
 
-                    existAccessory = 1;
+                    existAccessory = true;
 
                     index += 1;
                 }
@@ -1398,25 +1354,25 @@
                     td.appendChild(document.createElement("br"));
                 }
 
-                const b_accessory = document.createElement("b");
+                const bAccessory = document.createElement("b");
 
-                b_accessory.style.color = "springgreen";
+                bAccessory.style.color = COLOR_SET_BONUS_ACVITE;
 
-                b_accessory.append(area_name);
+                bAccessory.append(textAreaName);
 
-                b_accessory.append(accessory_set_list[accessory_index]);
+                bAccessory.append(listAccessoryNames[indexAccessory]);
 
-                td.appendChild(b_accessory);
+                td.appendChild(bAccessory);
 
-                existAccessory = 1;
+                existAccessory = true;
             }
         }
 
-        function redraw_set_bonus_tbody() {
+        function redrawSetBonusTBody() {
 
             const tbodySetBonus = document.getElementById("set_bonus_tbody");
 
-            tbody_clear_rows(tbodySetBonus);
+            clearElementChildren(tbodySetBonus);
 
             let textCostume = "";
 
@@ -1467,7 +1423,7 @@
                 textAccessoryLegs = accessoryLegsSelected.name;
             }
 
-            set_bonus_list.forEach((set_bonus) => {
+            listSetBonus.forEach((itemSetBonus) => {
 
                 do {
 
@@ -1475,9 +1431,9 @@
 
                     if (textCostume != "") {
 
-                        if (set_bonus.costume_names.length > 0) {
+                        if (itemSetBonus.listCostume.length > 0) {
 
-                            indexCostume = set_bonus.costume_names.indexOf(textCostume);
+                            indexCostume = itemSetBonus.listCostume.indexOf(textCostume);
 
                             if (indexCostume < 0) {
 
@@ -1490,9 +1446,9 @@
 
                     if (textAccessoryHead != "") {
 
-                        if (set_bonus.head_names.length > 0) {
+                        if (itemSetBonus.listAccessoryHead.length > 0) {
 
-                            indexAccessoryHead = set_bonus.head_names.indexOf(textAccessoryHead);
+                            indexAccessoryHead = itemSetBonus.listAccessoryHead.indexOf(textAccessoryHead);
 
                             if (indexAccessoryHead < 0) {
 
@@ -1505,9 +1461,9 @@
 
                     if (textAccessoryFace != "") {
 
-                        if (set_bonus.face_names.length > 0) {
+                        if (itemSetBonus.listAccessoryFace.length > 0) {
 
-                            indexAccessoryFace = set_bonus.face_names.indexOf(textAccessoryFace);
+                            indexAccessoryFace = itemSetBonus.listAccessoryFace.indexOf(textAccessoryFace);
 
                             if (indexAccessoryFace < 0) {
 
@@ -1520,9 +1476,9 @@
 
                     if (textAccessoryHand != "") {
 
-                        if (set_bonus.hand_names.length > 0) {
+                        if (itemSetBonus.listAccessoryHand.length > 0) {
 
-                            indexAccessoryHand = set_bonus.hand_names.indexOf(textAccessoryHand);
+                            indexAccessoryHand = itemSetBonus.listAccessoryHand.indexOf(textAccessoryHand);
 
                             if (indexAccessoryHand < 0) {
 
@@ -1535,9 +1491,9 @@
 
                     if (textAccessoryBack != "") {
 
-                        if (set_bonus.back_names.length > 0) {
+                        if (itemSetBonus.listAccessoryBack.length > 0) {
 
-                            indexAccessoryBack = set_bonus.back_names.indexOf(textAccessoryBack);
+                            indexAccessoryBack = itemSetBonus.listAccessoryBack.indexOf(textAccessoryBack);
 
                             if (indexAccessoryBack < 0) {
 
@@ -1550,9 +1506,9 @@
 
                     if (textAccessoryRump != "") {
 
-                        if (set_bonus.rump_names.length > 0) {
+                        if (itemSetBonus.listAccessoryRump.length > 0) {
 
-                            indexAccessoryRump = set_bonus.rump_names.indexOf(textAccessoryRump);
+                            indexAccessoryRump = itemSetBonus.listAccessoryRump.indexOf(textAccessoryRump);
 
                             if (indexAccessoryRump < 0) {
 
@@ -1565,9 +1521,9 @@
 
                     if (textAccessoryLegs != "") {
 
-                        if (set_bonus.legs_names.length > 0) {
+                        if (itemSetBonus.listAccessoryLegs.length > 0) {
 
-                            indexAccessoryLegs = set_bonus.legs_names.indexOf(textAccessoryLegs);
+                            indexAccessoryLegs = itemSetBonus.listAccessoryLegs.indexOf(textAccessoryLegs);
 
                             if (indexAccessoryLegs < 0) {
 
@@ -1576,97 +1532,79 @@
                         }
                     }
 
-                    activeSetBonus = 1;
+                    activeSetBonus = true;
 
                     const tr = document.createElement("tr");
 
                     //  セット名
-                    const td_name = document.createElement("td");
+                    const tdName = document.createElement("td");
 
                     //  効果
-                    const td_functions = document.createElement("td");
+                    const tdFunctions = document.createElement("td");
 
                     //  衣装
-                    const td_costume = document.createElement("td");
+                    const tdCostume = document.createElement("td");
 
-                    redraw_set_bonus_costume(td_costume, set_bonus.costume_names, indexCostume);
+                    redrawSetBonusCostume(tdCostume, itemSetBonus.listCostume, indexCostume);
 
                     //  アクセサリ
-                    const td_accessory = document.createElement("td");
+                    const tdAccessory = document.createElement("td");
 
-                    existAccessory = 0;
+                    existAccessory = false;
 
-                    redraw_set_bonus_accessory(td_accessory, "［頭］", set_bonus.head_names, indexAccessoryHead);
+                    redrawSetBonusAccessory(tdAccessory, "［頭］", itemSetBonus.listAccessoryHead, indexAccessoryHead);
 
-                    redraw_set_bonus_accessory(td_accessory, "［顔］", set_bonus.face_names, indexAccessoryFace);
+                    redrawSetBonusAccessory(tdAccessory, "［顔］", itemSetBonus.listAccessoryFace, indexAccessoryFace);
 
-                    redraw_set_bonus_accessory(td_accessory, "［手］", set_bonus.hand_names, indexAccessoryHand);
+                    redrawSetBonusAccessory(tdAccessory, "［手］", itemSetBonus.listAccessoryHand, indexAccessoryHand);
 
-                    redraw_set_bonus_accessory(td_accessory, "［胴］", set_bonus.back_names, indexAccessoryBack);
+                    redrawSetBonusAccessory(tdAccessory, "［胴］", itemSetBonus.listAccessoryBack, indexAccessoryBack);
 
-                    redraw_set_bonus_accessory(td_accessory, "［腰］", set_bonus.rump_names, indexAccessoryRump);
+                    redrawSetBonusAccessory(tdAccessory, "［腰］", itemSetBonus.listAccessoryRump, indexAccessoryRump);
 
-                    redraw_set_bonus_accessory(td_accessory, "［脚］", set_bonus.legs_names, indexAccessoryLegs);
+                    redrawSetBonusAccessory(tdAccessory, "［脚］", itemSetBonus.listAccessoryLegs, indexAccessoryLegs);
 
                     if (activeSetBonus) {
 
                         //  セット名
-                        const b_name = document.createElement("b");
+                        const bName = document.createElement("b");
 
-                        b_name.style.color = "springgreen";
+                        bName.style.color = COLOR_SET_BONUS_ACVITE;
 
-                        b_name.append(set_bonus.name);
+                        bName.append(itemSetBonus.name);
 
-                        td_name.appendChild(b_name);
+                        tdName.appendChild(bName);
 
                         //  効果
-                        let index = 0;
+                        forEachAppendBr(itemSetBonus.functions, tdFunctions, (item) => {
 
-                        while (index < set_bonus.functions.length) {
+                            const bFunction = document.createElement("b");
 
-                            if (index > 0) {
+                            bFunction.style.color = COLOR_SET_BONUS_ACVITE;
 
-                                td_functions.appendChild(document.createElement("br"));
-                            }
+                            bFunction.append(item);
 
-                            const b_function = document.createElement("b");
-
-                            b_function.style.color = "springgreen";
-
-                            b_function.append(set_bonus.functions[index]);
-
-                            td_functions.appendChild(b_function);
-
-                            index += 1;
-                        }
+                            tdFunctions.appendChild(bFunction);
+                        });
                     } else {
 
                         //  セット名
-                        td_name.append(set_bonus.name);
+                        tdName.append(itemSetBonus.name);
 
                         //  効果
-                        let index = 0;
+                        forEachAppendBr(itemSetBonus.functions, tdFunctions, (item) => {
 
-                        while (index < set_bonus.functions.length) {
-
-                            if (index > 0) {
-
-                                td_functions.appendChild(document.createElement("br"));
-                            }
-
-                            td_functions.append(set_bonus.functions[index]);
-
-                            index += 1;
-                        }
+                            tdFunctions.append(item);
+                        });
                     }
 
-                    tr.appendChild(td_name);
+                    tr.appendChild(tdName);
 
-                    tr.appendChild(td_functions);
+                    tr.appendChild(tdFunctions);
 
-                    tr.appendChild(td_costume);
+                    tr.appendChild(tdCostume);
 
-                    tr.appendChild(td_accessory);
+                    tr.appendChild(tdAccessory);
 
                     tbodySetBonus.appendChild(tr);
 
@@ -1674,124 +1612,126 @@
             });
         }
 
-        function calculate_appeal_costume_bonus() {
+        function calculateAppealCostumeBonus() {
 
-            let costume_bonus = new appeal();
+            let bonusCostume = new Appeal();
 
             if ((2 <= cookieStorage.costume_level) && (cookieStorage.costume_level <= 50)) {
 
-                costume_bonus.setAppeal(costumeSelected.appeal_base);
-                costume_bonus.multiply(cookieStorage.costume_level);
-                costume_bonus.multiplyPerCent(costumeSelected.bonus_rates);
+                bonusCostume.setAppeal(costumeSelected.appealBase);
+                bonusCostume.multiply(cookieStorage.costume_level);
+                bonusCostume.multiplyPerCent(costumeSelected.bonusRates);
 
             } else if ((51 <= cookieStorage.costume_level) && (cookieStorage.costume_level <= 60)) {
 
-                costume_bonus.setAppeal(costumeSelected.appeal_base);
-                costume_bonus.multiply(50);
-                costume_bonus.multiplyPerCent(costumeSelected.bonus_rates);
+                bonusCostume.setAppeal(costumeSelected.appealBase);
+                bonusCostume.multiply(50);
+                bonusCostume.multiplyPerCent(costumeSelected.bonusRates);
 
-                let costume_bonus_ex = new appeal();
+                let bonusCostumeEx = new Appeal();
 
-                costume_bonus_ex.setAppeal(costumeSelected.appeal_base);
-                costume_bonus_ex.multiply(cookieStorage.costume_level - 50);
-                costume_bonus_ex.multiplyPerCent(costumeSelected.bonus_ex_rates);
+                bonusCostumeEx.setAppeal(costumeSelected.appealBase);
+                bonusCostumeEx.multiply(cookieStorage.costume_level - 50);
+                bonusCostumeEx.multiplyPerCent(costumeSelected.bonusRatesEx);
 
-                costume_bonus.addAppeal(costume_bonus_ex);
+                bonusCostume.addAppeal(bonusCostumeEx);
             }
 
-            return costume_bonus;
+            return bonusCostume;
         }
 
-        const trustiness_bonus_rates = new bonus_rates(0.12, 0.12, 0.12);
+        const ratesTrustinessBonus = new BonusRates(0.12, 0.12, 0.12);
 
-        function calculate_appeal_trustiness_bonus() {
+        function calculateAppealTrustinessBonus() {
 
-            let trustiness_bonus = new appeal();
+            let bonusTrustiness = new Appeal();
 
             if ((2 <= cookieStorage.trustiness_level) && (cookieStorage.trustiness_level <= 60)) {
 
-                trustiness_bonus.setAppeal(costumeSelected.appeal_base);
-                trustiness_bonus.multiply(cookieStorage.trustiness_level);
-                trustiness_bonus.multiplyPerCent(trustiness_bonus_rates);
+                bonusTrustiness.setAppeal(costumeSelected.appealBase);
+                bonusTrustiness.multiply(cookieStorage.trustiness_level);
+                bonusTrustiness.multiplyPerCent(ratesTrustinessBonus);
 
             }
 
-            return trustiness_bonus;
+            return bonusTrustiness;
         }
 
-        function calculate_appeal_song_bonus() {
+        function calculateAppealSongBonus() {
 
-            let song_bonus = new appeal();
+            let bonusSong = new Appeal();
 
-            song_bonus.setAppeal(costumeSelected.appeal_base);
-            song_bonus.multiplyPerCent(songSelected.bonus_rates);
+            bonusSong.setAppeal(costumeSelected.appealBase);
+            bonusSong.multiplyPerCent(songSelected.bonusRates);
 
-            return song_bonus;
+            return bonusSong;
         }
 
-        function calculate_appeal_support_bonus() {
+        function calculateAppealSupportBonus() {
 
-            let support_bonus = new appeal();
+            let bonusSupport1 = new Appeal();
 
-            let support1_bonus = new appeal();
-            let support2_bonus = new appeal();
-            let support3_bonus = new appeal();
+            bonusSupport1.setAppeal(costumeSelected.appealBase);
+            bonusSupport1.multiplyPerCent(support1Selected.bonusRates);
 
-            support1_bonus.setAppeal(costumeSelected.appeal_base);
-            support1_bonus.multiplyPerCent(support1Selected.bonus_rates);
+            let bonusSupport2 = new Appeal();
 
-            support2_bonus.setAppeal(costumeSelected.appeal_base);
-            support2_bonus.multiplyPerCent(support2Selected.bonus_rates);
+            bonusSupport2.setAppeal(costumeSelected.appealBase);
+            bonusSupport2.multiplyPerCent(support2Selected.bonusRates);
 
-            support3_bonus.setAppeal(costumeSelected.appeal_base);
-            support3_bonus.multiplyPerCent(support3Selected.bonus_rates);
+            let bonusSupport3 = new Appeal();
 
-            support_bonus.addAppeal(support1_bonus);
-            support_bonus.addAppeal(support2_bonus);
-            support_bonus.addAppeal(support3_bonus);
+            bonusSupport3.setAppeal(costumeSelected.appealBase);
+            bonusSupport3.multiplyPerCent(support3Selected.bonusRates);
 
-            return support_bonus;
+            let bonusSupport = new Appeal();
+
+            bonusSupport.addAppeal(bonusSupport1);
+            bonusSupport.addAppeal(bonusSupport2);
+            bonusSupport.addAppeal(bonusSupport3);
+
+            return bonusSupport;
         }
 
-        function calculate_appeal() {
+        function calculateAppeal() {
 
-            const costume_bonus = calculate_appeal_costume_bonus();
+            const bonusCostume = calculateAppealCostumeBonus();
 
-            redraw_costume_bonus(costume_bonus);
+            redrawCostumeBonus(bonusCostume);
 
-            const trustiness_bonus = calculate_appeal_trustiness_bonus();
+            const bonusTrustiness = calculateAppealTrustinessBonus();
 
-            redraw_trustiness_bonus(trustiness_bonus);
+            redrawTrustinessBonus(bonusTrustiness);
 
-            const song_bonus = calculate_appeal_song_bonus();
+            const bonusSong = calculateAppealSongBonus();
 
-            redraw_song_bonus(song_bonus);
+            redrawSongBonus(bonusSong);
 
-            const support_bonus = calculate_appeal_support_bonus();
+            const bonusSupport = calculateAppealSupportBonus();
 
-            redraw_support_bonus(support_bonus);
+            redrawSupportBonus(bonusSupport);
 
-            let idol_appeal = new appeal();
+            let appealIdol = new Appeal();
 
-            idol_appeal.setAppeal(costumeSelected.appeal_base);
-            idol_appeal.addAppeal(costume_bonus);
-            idol_appeal.addAppeal(trustiness_bonus);
-            idol_appeal.addAppeal(song_bonus);
-            idol_appeal.addAppeal(support_bonus);
+            appealIdol.setAppeal(costumeSelected.appealBase);
+            appealIdol.addAppeal(bonusCostume);
+            appealIdol.addAppeal(bonusTrustiness);
+            appealIdol.addAppeal(bonusSong);
+            appealIdol.addAppeal(bonusSupport);
 
-            redraw_idol_appeal(idol_appeal);
+            redrawIdolAppeal(appealIdol);
         }
 
-        function add_last_updated_tbody_row(tbodyLastUpdated, name = "", last_updated = "", remarks = []) {
+        function appendLastUpdatedTBodyRow(tbodyLastUpdated, textName = "", textLastUpdated = "", remarks = []) {
 
             const tr = document.createElement("tr");
 
             //  リスト名称
             const thName = document.createElement("th");
 
-            thName.scope = 'row';
+            thName.scope = "row";
 
-            thName.append(name);
+            thName.append(textName);
 
             tr.appendChild(thName);
 
@@ -1800,7 +1740,7 @@
 
             tdLastUpdated.align = "center";
 
-            tdLastUpdated.append(last_updated);
+            tdLastUpdated.append(textLastUpdated);
 
             tr.appendChild(tdLastUpdated);
 
@@ -1829,265 +1769,323 @@
             tbodyLastUpdated.appendChild(tr);
         }
 
-        function redraw_last_updated_tboby() {
+        function redrawLastUpdatedTBoby() {
 
             const tbodyLastUpdated = document.getElementById("last_updated_tboby");
 
-            tbody_clear_rows(tbodyLastUpdated);
+            clearElementChildren(tbodyLastUpdated);
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "SongList.js", song_list_last_updated, song_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "SongList.js",
+                lastUpdated_listSong,
+                remarks_listSong
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "SongBonusList.js", song_bonus_list_last_updated, song_bonus_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "SongBonusList.js",
+                lastUpdated_listSongBonus,
+                remarks_listSongBonus
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "CostumeList.js", costume_list_last_updated, costume_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "CostumeList.js",
+                lastUpdated_listCostume,
+                remarks_listCostume
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "CostumeBonusList.js", costume_bonus_list_last_updated, costume_bonus_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "CostumeBonusList.js",
+                lastUpdated_listCostumeBonus,
+                remarks_listCostumeBonus
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "SupportCardList.js", support_card_list_last_updated, support_card_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "SupportCardList.js",
+                lastUpdate_listSupportCard,
+                remarks_listSupportCard
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "AppealBonusList.js", appeal_bonus_list_last_updated, appeal_bonus_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "AppealBonusList.js",
+                lastUpdated_listAppealBonus,
+                remarks_listAppealBonus
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "AccessoryList.js", accessory_list_last_updated, accessory_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "AccessoryList.js",
+                lastUpdated_listAccessory,
+                remarks_listAccessory
+            );
 
-            add_last_updated_tbody_row(tbodyLastUpdated, "SetBonusList.js", set_bonus_list_last_updated, set_bonus_list_remarks);
+            appendLastUpdatedTBodyRow(
+                tbodyLastUpdated,
+                "SetBonusList.js",
+                lastUpdated_listSetBonus,
+                remarks_listSetBonus
+            );
         }
 
         function body_onload() {
 
             setup();
 
-            redraw_song_informations(songSelected);
+            const elementDescriptionsSong = document.getElementById("song_descriptions");
 
-            redraw_costume_informations(costumeSelected);
+            redrawSongDescriptions(elementDescriptionsSong, songSelected);
 
-            const descriptionsSupport1 = document.getElementById("support_1_descriptions");
+            const elementDescriptionsCostume = document.getElementById("costume_descriptions");
 
-            redraw_support_any_descriptions(descriptionsSupport1, support1Selected);
+            redrawEquipmentDescriptions(elementDescriptionsCostume, costumeSelected);
 
-            const descriptionsSupport2 = document.getElementById("support_2_descriptions");
+            redrawCostumeAppeal(costumeSelected);
 
-            redraw_support_any_descriptions(descriptionsSupport2, support2Selected);
+            const elementDescriptionsSupport1 = document.getElementById("support_1_descriptions");
 
-            const descriptionsSupport3 = document.getElementById("support_3_descriptions");
+            redrawSupportDescriptions(elementDescriptionsSupport1, support1Selected);
 
-            redraw_support_any_descriptions(descriptionsSupport3, support3Selected);
+            const elementDescriptionsSupport2 = document.getElementById("support_2_descriptions");
 
-            const descriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
+            redrawSupportDescriptions(elementDescriptionsSupport2, support2Selected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryHead, accessoryHeadSelected);
+            const elementDescriptionsSupport3 = document.getElementById("support_3_descriptions");
 
-            const descriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
+            redrawSupportDescriptions(elementDescriptionsSupport3, support3Selected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryFace, accessoryFaceSelected);
+            const elementDescriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
 
-            const descriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryHead, accessoryHeadSelected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryHand, accessoryHandSelected);
+            const elementDescriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
 
-            const descriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryFace, accessoryFaceSelected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryBack, accessoryBackSelected);
+            const elementDescriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
 
-            const descriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryHand, accessoryHandSelected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryRump, accessoryRumpSelected);
+            const elementDescriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
 
-            const descriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryBack, accessoryBackSelected);
 
-            redraw_equipment_descriptions(descriptionsAccessoryLegs, accessoryLegsSelected);
+            const elementDescriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
 
-            calculate_appeal();
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryRump, accessoryRumpSelected);
 
-            redraw_set_bonus_tbody();
+            const elementDescriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
 
-            redraw_last_updated_tboby();
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryLegs, accessoryLegsSelected);
+
+            calculateAppeal();
+
+            redrawSetBonusTBody();
+
+            redrawLastUpdatedTBoby();
         }
 
         function song_select_onchange() {
 
-            songSelected = song_list[document.getElementById("song_select").selectedIndex];
+            const idSong = document.getElementById("song_select").value;
 
-            cookieStorage.song_id = songSelected.id;
+            cookieStorage.song_id = idSong;
 
-            redraw_song_informations(songSelected);
+            songSelected = listSong.find((costume) => costume.id == idSong);
 
-            calculate_appeal();
+            const elementDescriptionsSong = document.getElementById("song_descriptions");
 
-            cookieStorage.save("song_id", 90 * 24 * 60 * 60);
+            redrawSongDescriptions(elementDescriptionsSong, songSelected);
+
+            calculateAppeal();
+
+            cookieStorage.save("song_id");
         }
 
         function costume_select_onchange() {
 
-            costumeSelected = costume_list[document.getElementById("costume_select").selectedIndex];
+            const idCostume = document.getElementById("costume_select").value;
 
-            cookieStorage.costume_id = costumeSelected.id;
+            cookieStorage.costume_id = idCostume;
 
-            let levelCostume = Number(costumeSelected.level_max);
+            costumeSelected = listCostume.find((costume) => costume.id == idCostume);
+
+            let levelCostume = Number(costumeSelected.levelMax);
 
             cookieStorage.costume_level = levelCostume;
 
-            redraw_costume_informations(costumeSelected);
+            setupCostumeLevelSelect(cookieStorage.costume_level, costumeSelected.levelMax);
 
-            calculate_appeal();
+            const elementDescriptionsCostume = document.getElementById("costume_descriptions");
 
-            redraw_set_bonus_tbody();
+            redrawEquipmentDescriptions(elementDescriptionsCostume, costumeSelected);
 
-            cookieStorage.save("costume_id", 90 * 24 * 60 * 60);
+            redrawCostumeAppeal(costumeSelected);
 
-            cookieStorage.save("costume_level", 90 * 24 * 60 * 60);
+            calculateAppeal();
+
+            redrawSetBonusTBody();
+
+            cookieStorage.save("costume_id");
+
+            cookieStorage.save("costume_level");
         }
 
         function accessory_head_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_head_select").value;
+            const idAccessory = document.getElementById("accessory_head_select").value;
 
-            cookieStorage.accessory_head_id = accessory_id;
+            cookieStorage.accessory_head_id = idAccessory;
 
-            accessoryHeadSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryHeadSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
+            const elementDescriptionsAccessoryHead = document.getElementById("accessory_head_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryHead, accessoryHeadSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryHead, accessoryHeadSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_head_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_head_id");
         }
 
         function accessory_face_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_face_select").value;
+            const idAccessory = document.getElementById("accessory_face_select").value;
 
-            cookieStorage.accessory_face_id = accessory_id;
+            cookieStorage.accessory_face_id = idAccessory;
 
-            accessoryFaceSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryFaceSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
+            const elementDescriptionsAccessoryFace = document.getElementById("accessory_face_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryFace, accessoryFaceSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryFace, accessoryFaceSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_face_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_face_id");
         }
 
         function accessory_hand_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_hand_select").value;
+            const idAccessory = document.getElementById("accessory_hand_select").value;
 
-            cookieStorage.accessory_hand_id = accessory_id;
+            cookieStorage.accessory_hand_id = idAccessory;
 
-            accessoryHandSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryHandSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
+            const elementDescriptionsAccessoryHand = document.getElementById("accessory_hand_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryHand, accessoryHandSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryHand, accessoryHandSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_hand_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_hand_id");
         }
 
         function accessory_back_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_back_select").value;
+            const idAccessory = document.getElementById("accessory_back_select").value;
 
-            cookieStorage.accessory_back_id = accessory_id;
+            cookieStorage.accessory_back_id = idAccessory;
 
-            accessoryBackSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryBackSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
+            const elementDescriptionsAccessoryBack = document.getElementById("accessory_back_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryBack, accessoryBackSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryBack, accessoryBackSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_back_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_back_id");
         }
 
         function accessory_rump_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_rump_select").value;
+            const idAccessory = document.getElementById("accessory_rump_select").value;
 
-            cookieStorage.accessory_rump_id = accessory_id;
+            cookieStorage.accessory_rump_id = idAccessory;
 
-            accessoryRumpSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryRumpSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
+            const elementDescriptionsAccessoryRump = document.getElementById("accessory_rump_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryRump, accessoryRumpSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryRump, accessoryRumpSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_rump_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_rump_id");
         }
 
         function accessory_legs_select_onchange() {
 
-            const accessory_id = document.getElementById("accessory_legs_select").value;
+            const idAccessory = document.getElementById("accessory_legs_select").value;
 
-            cookieStorage.accessory_legs_id = accessory_id;
+            cookieStorage.accessory_legs_id = idAccessory;
 
-            accessoryLegsSelected = accessory_list.find((accessory) => accessory.id == accessory_id);
+            accessoryLegsSelected = listAccessory.find((accessory) => accessory.id == idAccessory);
 
-            const descriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
+            const elementDescriptionsAccessoryLegs = document.getElementById("accessory_legs_descriptions");
 
-            redraw_equipment_descriptions(descriptionsAccessoryLegs, accessoryLegsSelected);
+            redrawEquipmentDescriptions(elementDescriptionsAccessoryLegs, accessoryLegsSelected);
 
-            redraw_set_bonus_tbody();
+            redrawSetBonusTBody();
 
-            cookieStorage.save("accessory_legs_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("accessory_legs_id");
         }
 
         function support_1_select_onchange() {
 
-            const support_id = document.getElementById("support_1_select").value;
+            const idSupport = document.getElementById("support_1_select").value;
 
-            cookieStorage.support_1_id = support_id;
+            cookieStorage.support_1_id = idSupport;
 
-            support1Selected = support_card_list.find((support) => support.id == support_id);
+            support1Selected = listSupportCard.find((support) => support.id == idSupport);
 
             const descriptionsSupport = document.getElementById("support_1_descriptions");
 
-            redraw_support_any_descriptions(descriptionsSupport, support1Selected);
+            redrawSupportDescriptions(descriptionsSupport, support1Selected);
 
-            calculate_appeal();
+            calculateAppeal();
 
-            cookieStorage.save("support_1_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_1_id");
         }
 
         function support_2_select_onchange() {
 
-            const support_id = document.getElementById("support_2_select").value;
+            const idSupport = document.getElementById("support_2_select").value;
 
-            cookieStorage.support_2_id = support_id;
+            cookieStorage.support_2_id = idSupport;
 
-            support2Selected = support_card_list.find((support) => support.id == support_id);
+            support2Selected = listSupportCard.find((support) => support.id == idSupport);
 
             const descriptionsSupport = document.getElementById("support_2_descriptions");
 
-            redraw_support_any_descriptions(descriptionsSupport, support2Selected);
+            redrawSupportDescriptions(descriptionsSupport, support2Selected);
 
-            calculate_appeal();
+            calculateAppeal();
 
-            cookieStorage.save("support_2_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_2_id");
         }
 
         function support_3_select_onchange() {
 
-            const support_id = document.getElementById("support_3_select").value;
+            const idSupport = document.getElementById("support_3_select").value;
 
-            cookieStorage.support_3_id = support_id;
+            cookieStorage.support_3_id = idSupport;
 
-            support3Selected = support_card_list.find((support) => support.id == support_id);
+            support3Selected = listSupportCard.find((support) => support.id == idSupport);
 
             const descriptionsSupport = document.getElementById("support_3_descriptions");
 
-            redraw_support_any_descriptions(descriptionsSupport, support3Selected);
+            redrawSupportDescriptions(descriptionsSupport, support3Selected);
 
-            calculate_appeal();
+            calculateAppeal();
 
-            cookieStorage.save("support_3_id", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_3_id");
         }
 
         function costume_level_select_onchange() {
@@ -2096,9 +2094,9 @@
 
             cookieStorage.costume_level = levelCostume;
 
-            calculate_appeal();
+            calculateAppeal();
 
-            cookieStorage.save("costume_level", 90 * 24 * 60 * 60);
+            cookieStorage.save("costume_level");
         }
 
         function trustiness_level_select_onchange() {
@@ -2107,48 +2105,48 @@
 
             cookieStorage.trustiness_level = levelTrustiness;
 
-            calculate_appeal();
+            calculateAppeal();
 
-            cookieStorage.save("trustiness_level", 90 * 24 * 60 * 60);
+            cookieStorage.save("trustiness_level");
         }
 
         function support_1_rarity_any_onchange() {
 
-            rarityiesSupport1 = filter_rarity_array(idSupport1Array);
+            filterRaritiesSupport1 = extractFilterRarity(listSupport1RarityCheckboxId);
 
-            cookieStorage.support_1_filter = conv_array_to_string(rarityiesSupport1);
+            cookieStorage.support_1_filter = convertArrayToString(filterRaritiesSupport1);
 
-            setup_support_select(cookieStorage.support_1_id, "support_1_select", rarityiesSupport1);
+            setupSupportSelect(cookieStorage.support_1_id, "support_1_select", filterRaritiesSupport1);
 
             support_1_select_onchange();
 
-            cookieStorage.save("support_1_filter", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_1_filter");
         }
 
         function support_2_rarity_any_onchange() {
 
-            rarityiesSupport2 = filter_rarity_array(idSupport2Array);
+            filterRaritiesSupport2 = extractFilterRarity(listSupport2RarityCheckboxId);
 
-            cookieStorage.support_2_filter = conv_array_to_string(rarityiesSupport2);
+            cookieStorage.support_2_filter = convertArrayToString(filterRaritiesSupport2);
 
-            setup_support_select(cookieStorage.support_2_id, "support_2_select", rarityiesSupport2);
+            setupSupportSelect(cookieStorage.support_2_id, "support_2_select", filterRaritiesSupport2);
 
             support_2_select_onchange();
 
-            cookieStorage.save("support_2_filter", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_2_filter");
         }
 
         function support_3_rarity_any_onchange() {
 
-            rarityiesSupport3 = filter_rarity_array(idSupport3Array);
+            filterRaritiesSupport3 = extractFilterRarity(listSupport3RarityCheckboxId);
 
-            cookieStorage.support_3_filter = conv_array_to_string(rarityiesSupport3);
+            cookieStorage.support_3_filter = convertArrayToString(filterRaritiesSupport3);
 
-            setup_support_select(cookieStorage.support_3_id, "support_3_select", rarityiesSupport3);
+            setupSupportSelect(cookieStorage.support_3_id, "support_3_select", filterRaritiesSupport3);
 
             support_3_select_onchange();
 
-            cookieStorage.save("support_3_filter", 90 * 24 * 60 * 60);
+            cookieStorage.save("support_3_filter");
         }
 
     </script>

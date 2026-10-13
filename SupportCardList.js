@@ -1,6 +1,6 @@
 ﻿
-const support_card_list = [
-    new support_card(
+const listSupportCard = [
+    new SupportCard(
         "",
         "",
         "",
@@ -12,7 +12,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-054",
         "第1弾",
         "SSR",
@@ -22,8 +22,9 @@ const support_card_list = [
         ["全員"],
         ["PERFECT判定時のスコアUP(極大)するが、", "判定が短くなる(大)", ""],
         "",
+        [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-055",
         "第1弾",
         "SSR",
@@ -35,7 +36,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-056",
         "第1弾",
         "SR",
@@ -47,7 +48,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-057",
         "第1弾",
         "SR",
@@ -59,7 +60,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-058",
         "第1弾",
         "SR",
@@ -71,7 +72,7 @@ const support_card_list = [
         "アピール値(Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-059",
         "第1弾",
         "SR",
@@ -83,7 +84,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-060",
         "第1弾",
         "SR",
@@ -95,7 +96,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-061",
         "第1弾",
         "R",
@@ -107,7 +108,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-062",
         "第1弾",
         "R",
@@ -119,7 +120,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-063",
         "第1弾",
         "R",
@@ -131,7 +132,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-064",
         "第1弾",
         "R",
@@ -143,7 +144,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-065",
         "第1弾",
         "R",
@@ -155,7 +156,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-066",
         "第1弾",
         "R",
@@ -167,7 +168,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-067",
         "第1弾",
         "R",
@@ -179,7 +180,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-068",
         "第1弾",
         "N",
@@ -191,7 +192,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-069",
         "第1弾",
         "N",
@@ -203,7 +204,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-070",
         "第1弾",
         "N",
@@ -215,7 +216,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-071",
         "第1弾",
         "N",
@@ -227,7 +228,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-072",
         "第1弾",
         "N",
@@ -239,7 +240,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-073",
         "第1弾",
         "N",
@@ -251,7 +252,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-074",
         "第1弾",
         "N",
@@ -263,7 +264,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-075",
         "第1弾",
         "N",
@@ -275,7 +276,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-076",
         "第1弾",
         "N",
@@ -287,7 +288,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-077",
         "第1弾",
         "N",
@@ -299,7 +300,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-078",
         "第1弾",
         "N",
@@ -311,7 +312,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-079",
         "第1弾",
         "N",
@@ -323,7 +324,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-080",
         "第1弾",
         "N",
@@ -335,7 +336,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-081",
         "第1弾",
         "N",
@@ -347,7 +348,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-01-082",
         "第1弾",
         "N",
@@ -359,7 +360,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-001",
         "第1弾",
         "TR",
@@ -371,7 +372,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-002",
         "第1弾",
         "TR",
@@ -383,127 +384,127 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-003",
         "第1弾",
         "TR",
         "EP7",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["スコアUP系のSPアピールが強化される(極小)", "判定が長くなる(極小)", ""],
         "",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-004",
         "第1弾",
         "TR",
         "EP8",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["PERFECT判定時のスコアUP(極小)", "スコアUP系のSPアピールが強化される(極小)", ""],
         "",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-005",
         "第1弾",
         "TR",
         "EP9",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["アピール値(Vo,Da)上昇(極小)", "FEVERゲージ上昇率UP(極小)", ""],
         "アピール値(Vo,Da)上昇(極小)",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-006",
         "第1弾",
         "TR",
         "EP10",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["アピール値(Da,Vi)上昇(極小)", "GREAT以上判定時のスコアUP(極小)", ""],
         "アピール値(Da,Vi)上昇(極小)",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-007",
         "第1弾",
         "TR",
         "EP11",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["アピール値(Vo,Vi)上昇(極小)", "GOOD以上判定時のスコアUP(極小)", ""],
         "アピール値(Vo,Vi)上昇(極小)",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-008",
         "第1弾",
         "TR",
         "special art #01-01",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["アイドルマスター"],
         ["【アイドルマスターのアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-009",
         "第1弾",
         "TR",
         "special art #01-02",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["アイドルマスター シンデレラガールズ"],
         ["【アイドルマスター シンデレラガールズのアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-010",
         "第1弾",
         "TR",
         "special art #01-03",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["アイドルマスター ミリオンライブ！"],
         ["【アイドルマスター ミリオンライブ！のアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-011",
         "第1弾",
         "TR",
         "special art #01-04",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["アイドルマスター SideM"],
         ["【アイドルマスター SideMのアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-01-012",
         "第1弾",
         "TR",
         "special art #01-05",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["アイドルマスター シャイニーカラーズ"],
         ["【アイドルマスター シャイニーカラーズのアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-033",
         "第2弾",
         "SSR",
@@ -515,7 +516,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-034",
         "第2弾",
         "SSR",
@@ -527,7 +528,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-035",
         "第2弾",
         "SSR",
@@ -539,7 +540,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-036",
         "第2弾",
         "SR",
@@ -551,7 +552,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-037",
         "第2弾",
         "SR",
@@ -563,7 +564,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-038",
         "第2弾",
         "R",
@@ -575,7 +576,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-039",
         "第2弾",
         "R",
@@ -587,7 +588,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-040",
         "第2弾",
         "R",
@@ -599,7 +600,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-041",
         "第2弾",
         "R",
@@ -611,7 +612,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-042",
         "第2弾",
         "R",
@@ -623,7 +624,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-043",
         "第2弾",
         "R",
@@ -635,7 +636,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-044",
         "第2弾",
         "R",
@@ -647,7 +648,7 @@ const support_card_list = [
         "アピール値(Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-045",
         "第2弾",
         "R",
@@ -659,7 +660,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-046",
         "第2弾",
         "R",
@@ -671,7 +672,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-047",
         "第2弾",
         "R",
@@ -683,7 +684,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-048",
         "第2弾",
         "N",
@@ -695,7 +696,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-049",
         "第2弾",
         "N",
@@ -707,7 +708,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-050",
         "第2弾",
         "N",
@@ -719,7 +720,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-051",
         "第2弾",
         "N",
@@ -731,7 +732,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-052",
         "第2弾",
         "N",
@@ -743,7 +744,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-053",
         "第2弾",
         "N",
@@ -755,7 +756,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-054",
         "第2弾",
         "N",
@@ -767,7 +768,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-055",
         "第2弾",
         "N",
@@ -779,7 +780,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-056",
         "第2弾",
         "N",
@@ -791,7 +792,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-057",
         "第2弾",
         "N",
@@ -803,7 +804,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-058",
         "第2弾",
         "N",
@@ -815,7 +816,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-059",
         "第2弾",
         "N",
@@ -827,7 +828,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-060",
         "第2弾",
         "N",
@@ -839,7 +840,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-061",
         "第2弾",
         "N",
@@ -851,7 +852,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-062",
         "第2弾",
         "N",
@@ -863,7 +864,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-063",
         "第2弾",
         "N",
@@ -875,7 +876,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-064",
         "第2弾",
         "N",
@@ -887,7 +888,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-065",
         "第2弾",
         "N",
@@ -899,7 +900,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-02-066",
         "第2弾",
         "N",
@@ -911,7 +912,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-001",
         "第2弾",
         "TR",
@@ -923,7 +924,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-002",
         "第2弾",
         "TR",
@@ -935,7 +936,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-003",
         "第2弾",
         "TR",
@@ -947,7 +948,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-004",
         "第2弾",
         "TR",
@@ -959,7 +960,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-005",
         "第2弾",
         "TR",
@@ -971,7 +972,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-006",
         "第2弾",
         "TR",
@@ -983,7 +984,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-007",
         "第2弾",
         "TR",
@@ -995,7 +996,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-008",
         "第2弾",
         "TR",
@@ -1007,7 +1008,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-009",
         "第2弾",
         "TR",
@@ -1019,7 +1020,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-010",
         "第2弾",
         "TR",
@@ -1031,7 +1032,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-011",
         "第2弾",
         "TR",
@@ -1043,7 +1044,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-012",
         "第2弾",
         "TR",
@@ -1055,7 +1056,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-013",
         "第2弾",
         "TR",
@@ -1067,7 +1068,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-014",
         "第2弾",
         "TR",
@@ -1079,7 +1080,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-015",
         "第2弾",
         "TR",
@@ -1091,7 +1092,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-016",
         "第2弾",
         "TR",
@@ -1103,7 +1104,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-017",
         "第2弾",
         "TR",
@@ -1115,7 +1116,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-018",
         "第2弾",
         "TR",
@@ -1127,7 +1128,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-019",
         "第2弾",
         "TR",
@@ -1137,9 +1138,9 @@ const support_card_list = [
         ["学園アイドルマスター"],
         ["【学園アイドルマスターのアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-020",
         "第2弾",
         "TR",
@@ -1149,9 +1150,9 @@ const support_card_list = [
         ["全員"],
         ["アピール値(Da)上昇(小)", "スコアUP系のSPアピールが強化される(小)", ""],
         "アピール値(Da)上昇(小)",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-021",
         "第2弾",
         "TSR",
@@ -1161,9 +1162,9 @@ const support_card_list = [
         ["全員"],
         ["PERFECT判定時のスコアUP(小)", "判定が長くなる(中)が、", "MISS判定時スコアDOWN(小)"],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-022",
         "第2弾",
         "TR",
@@ -1173,9 +1174,9 @@ const support_card_list = [
         ["全員"],
         ["FEVERゲージ上昇率UP(小)", "判定が長くなる(小)", ""],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-023",
         "第2弾",
         "TR",
@@ -1185,9 +1186,9 @@ const support_card_list = [
         ["学園アイドルマスター"],
         ["【学園アイドルマスターのアイドル限定】", "獲得信頼度Lv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-024",
         "第2弾",
         "TR",
@@ -1197,9 +1198,9 @@ const support_card_list = [
         ["アイドルマスター"],
         ["【アイドルマスターのアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-025",
         "第2弾",
         "TR",
@@ -1209,9 +1210,9 @@ const support_card_list = [
         ["アイドルマスター シンデレラガールズ"],
         ["【アイドルマスター シンデレラガールズのアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-026",
         "第2弾",
         "TR",
@@ -1221,9 +1222,9 @@ const support_card_list = [
         ["アイドルマスター ミリオンライブ！"],
         ["【アイドルマスター ミリオンライブ！のアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-027",
         "第2弾",
         "TR",
@@ -1233,9 +1234,9 @@ const support_card_list = [
         ["アイドルマスター SideM"],
         ["【アイドルマスター SideMのアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-02-028",
         "第2弾",
         "TR",
@@ -1245,9 +1246,9 @@ const support_card_list = [
         ["アイドルマスター シャイニーカラーズ"],
         ["【アイドルマスター シャイニーカラーズのアイドル限定】", "獲得着こなしLv経験値UP(中)", ""],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-020",
         "第3弾",
         "SSR",
@@ -1259,7 +1260,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-021",
         "第3弾",
         "SSR",
@@ -1271,7 +1272,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-022",
         "第3弾",
         "SSR",
@@ -1283,7 +1284,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-023",
         "第3弾",
         "SSR",
@@ -1295,7 +1296,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-024",
         "第3弾",
         "SSR",
@@ -1307,7 +1308,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-025",
         "第3弾",
         "SSR",
@@ -1319,7 +1320,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-026",
         "第3弾",
         "SR",
@@ -1331,7 +1332,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-027",
         "第3弾",
         "SR",
@@ -1343,7 +1344,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-028",
         "第3弾",
         "SR",
@@ -1355,7 +1356,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-029",
         "第3弾",
         "SR",
@@ -1367,7 +1368,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-030",
         "第3弾",
         "R",
@@ -1379,7 +1380,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-031",
         "第3弾",
         "R",
@@ -1391,7 +1392,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-032",
         "第3弾",
         "R",
@@ -1403,7 +1404,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-033",
         "第3弾",
         "R",
@@ -1415,7 +1416,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-034",
         "第3弾",
         "R",
@@ -1427,7 +1428,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-035",
         "第3弾",
         "R",
@@ -1439,7 +1440,7 @@ const support_card_list = [
         "アピール値(Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-036",
         "第3弾",
         "R",
@@ -1451,7 +1452,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-037",
         "第3弾",
         "R",
@@ -1463,7 +1464,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-038",
         "第3弾",
         "N",
@@ -1475,7 +1476,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-039",
         "第3弾",
         "N",
@@ -1487,7 +1488,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-040",
         "第3弾",
         "N",
@@ -1499,7 +1500,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-041",
         "第3弾",
         "N",
@@ -1511,7 +1512,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-042",
         "第3弾",
         "N",
@@ -1523,7 +1524,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-043",
         "第3弾",
         "N",
@@ -1535,7 +1536,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-044",
         "第3弾",
         "N",
@@ -1547,7 +1548,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-045",
         "第3弾",
         "N",
@@ -1559,7 +1560,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-046",
         "第3弾",
         "N",
@@ -1571,7 +1572,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-047",
         "第3弾",
         "N",
@@ -1583,7 +1584,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-048",
         "第3弾",
         "N",
@@ -1595,7 +1596,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-049",
         "第3弾",
         "N",
@@ -1607,7 +1608,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-050",
         "第3弾",
         "N",
@@ -1619,7 +1620,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-051",
         "第3弾",
         "N",
@@ -1631,7 +1632,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-052",
         "第3弾",
         "N",
@@ -1643,7 +1644,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-053",
         "第3弾",
         "N",
@@ -1655,7 +1656,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-054",
         "第3弾",
         "N",
@@ -1667,7 +1668,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-055",
         "第3弾",
         "N",
@@ -1679,7 +1680,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-056",
         "第3弾",
         "N",
@@ -1691,7 +1692,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-057",
         "第3弾",
         "N",
@@ -1703,7 +1704,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-058",
         "第3弾",
         "N",
@@ -1715,7 +1716,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-059",
         "第3弾",
         "N",
@@ -1727,7 +1728,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-060",
         "第3弾",
         "CO",
@@ -1739,7 +1740,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-061",
         "第3弾",
         "CO",
@@ -1751,7 +1752,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-062",
         "第3弾",
         "CO",
@@ -1763,7 +1764,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-063",
         "第3弾",
         "CO",
@@ -1775,7 +1776,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-064",
         "第3弾",
         "CO",
@@ -1787,7 +1788,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-065",
         "第3弾",
         "CO",
@@ -1799,7 +1800,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-066",
         "第3弾",
         "CO",
@@ -1811,7 +1812,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-067",
         "第3弾",
         "CO",
@@ -1823,7 +1824,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-068",
         "第3弾",
         "CO",
@@ -1835,7 +1836,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-069",
         "第3弾",
         "CO",
@@ -1847,7 +1848,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-070",
         "第3弾",
         "CO",
@@ -1859,7 +1860,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-071",
         "第3弾",
         "CO",
@@ -1871,7 +1872,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-072",
         "第3弾",
         "CO",
@@ -1883,7 +1884,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-073",
         "第3弾",
         "CO",
@@ -1895,7 +1896,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-074",
         "第3弾",
         "CO",
@@ -1907,7 +1908,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-075",
         "第3弾",
         "CO",
@@ -1919,7 +1920,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-076",
         "第3弾",
         "CO",
@@ -1931,7 +1932,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-077",
         "第3弾",
         "CO",
@@ -1943,7 +1944,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-078",
         "第3弾",
         "CO",
@@ -1955,7 +1956,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-03-079",
         "第3弾",
         "CO",
@@ -1967,7 +1968,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-001",
         "第3弾",
         "TSSR",
@@ -1977,9 +1978,9 @@ const support_card_list = [
         ["全員"],
         ["GREAT以上判定時のスコアUP(大)", "判定が長くなる(小)", ""],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-002",
         "第3弾",
         "TSSR",
@@ -1989,9 +1990,9 @@ const support_card_list = [
         ["全員"],
         ["スコアUP系のSPアピールが強化される(大)", "FEVERゲージ上昇率UP(大)", ""],
         "",
-        [""]
+        ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-003",
         "第3弾",
         "TSR",
@@ -2001,9 +2002,9 @@ const support_card_list = [
         ["アイドルマスター"],
         ["【アイドルマスターのアイドル限定】", "獲得ファン数UP(中)", "獲得信頼度Lvと着こなしLv経験値UP(小)"],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-004",
         "第3弾",
         "TSR",
@@ -2013,9 +2014,9 @@ const support_card_list = [
         ["アイドルマスター シンデレラガールズ"],
         ["【アイドルマスター シンデレラガールズのアイドル限定】", "獲得ファン数UP(中)", "獲得信頼度Lvと着こなしLv経験値UP(小)"],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-005",
         "第3弾",
         "TSR",
@@ -2025,9 +2026,9 @@ const support_card_list = [
         ["アイドルマスター ミリオンライブ！"],
         ["【アイドルマスター ミリオンライブ！のアイドル限定】", "獲得ファン数UP(中)", "獲得信頼度Lvと着こなしLv経験値UP(小)"],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-006",
         "第3弾",
         "TSR",
@@ -2037,9 +2038,9 @@ const support_card_list = [
         ["アイドルマスター SideM"],
         ["【アイドルマスター SideMのアイドル限定】", "獲得ファン数UP(中)", "獲得信頼度Lvと着こなしLv経験値UP(小)"],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-03-007",
         "第3弾",
         "TSR",
@@ -2049,9 +2050,9 @@ const support_card_list = [
         ["アイドルマスター シャイニーカラーズ"],
         ["【アイドルマスター シャイニーカラーズのアイドル限定】", "獲得ファン数UP(中)", "獲得信頼度Lvと着こなしLv経験値UP(小)"],
         "",
-        [""]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-022",
         "第4弾",
         "SSR",
@@ -2063,7 +2064,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-023",
         "第4弾",
         "SSR",
@@ -2075,7 +2076,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-024",
         "第4弾",
         "SSR",
@@ -2087,7 +2088,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-025",
         "第4弾",
         "SSR",
@@ -2099,7 +2100,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-026",
         "第4弾",
         "SSR",
@@ -2111,7 +2112,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-027",
         "第4弾",
         "SSR",
@@ -2123,7 +2124,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(極大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-028",
         "第4弾",
         "SR",
@@ -2135,7 +2136,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-029",
         "第4弾",
         "SR",
@@ -2147,7 +2148,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-030",
         "第4弾",
         "SR",
@@ -2159,7 +2160,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-031",
         "第4弾",
         "SR",
@@ -2171,7 +2172,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-032",
         "第4弾",
         "SR",
@@ -2183,7 +2184,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-033",
         "第4弾",
         "R",
@@ -2195,7 +2196,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-034",
         "第4弾",
         "R",
@@ -2207,7 +2208,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-035",
         "第4弾",
         "R",
@@ -2219,7 +2220,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-036",
         "第4弾",
         "R",
@@ -2231,7 +2232,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-037",
         "第4弾",
         "R",
@@ -2243,7 +2244,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-038",
         "第4弾",
         "R",
@@ -2255,7 +2256,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-039",
         "第4弾",
         "R",
@@ -2267,7 +2268,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-040",
         "第4弾",
         "R",
@@ -2279,7 +2280,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-041",
         "第4弾",
         "N",
@@ -2291,7 +2292,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-042",
         "第4弾",
         "N",
@@ -2303,7 +2304,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-043",
         "第4弾",
         "N",
@@ -2315,7 +2316,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-044",
         "第4弾",
         "N",
@@ -2327,7 +2328,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-045",
         "第4弾",
         "N",
@@ -2339,7 +2340,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-046",
         "第4弾",
         "N",
@@ -2351,7 +2352,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-047",
         "第4弾",
         "N",
@@ -2363,7 +2364,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-048",
         "第4弾",
         "N",
@@ -2375,7 +2376,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-049",
         "第4弾",
         "N",
@@ -2387,7 +2388,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-050",
         "第4弾",
         "N",
@@ -2399,7 +2400,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-051",
         "第4弾",
         "N",
@@ -2411,7 +2412,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-052",
         "第4弾",
         "N",
@@ -2423,7 +2424,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-053",
         "第4弾",
         "N",
@@ -2435,7 +2436,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-054",
         "第4弾",
         "N",
@@ -2447,7 +2448,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-055",
         "第4弾",
         "N",
@@ -2459,7 +2460,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-056",
         "第4弾",
         "N",
@@ -2471,7 +2472,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-057",
         "第4弾",
         "N",
@@ -2483,7 +2484,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-058",
         "第4弾",
         "N",
@@ -2495,7 +2496,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-059",
         "第4弾",
         "N",
@@ -2507,7 +2508,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-060",
         "第4弾",
         "N",
@@ -2519,7 +2520,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-061",
         "第4弾",
         "N",
@@ -2531,7 +2532,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-062",
         "第4弾",
         "N",
@@ -2543,7 +2544,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-063",
         "第4弾",
         "N",
@@ -2555,7 +2556,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-064",
         "第4弾",
         "N",
@@ -2567,7 +2568,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-065",
         "第4弾",
         "CO",
@@ -2579,7 +2580,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-066",
         "第4弾",
         "CO",
@@ -2591,7 +2592,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-067",
         "第4弾",
         "CO",
@@ -2603,7 +2604,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-068",
         "第4弾",
         "CO",
@@ -2615,7 +2616,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-069",
         "第4弾",
         "CO",
@@ -2627,7 +2628,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-070",
         "第4弾",
         "CO",
@@ -2639,7 +2640,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-071",
         "第4弾",
         "CO",
@@ -2651,7 +2652,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-072",
         "第4弾",
         "CO",
@@ -2663,7 +2664,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-073",
         "第4弾",
         "CO",
@@ -2675,7 +2676,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-074",
         "第4弾",
         "CO",
@@ -2687,7 +2688,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-075",
         "第4弾",
         "CO",
@@ -2699,7 +2700,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-076",
         "第4弾",
         "CO",
@@ -2711,7 +2712,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-077",
         "第4弾",
         "CO",
@@ -2723,7 +2724,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-078",
         "第4弾",
         "CO",
@@ -2735,7 +2736,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-079",
         "第4弾",
         "CO",
@@ -2747,7 +2748,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-080",
         "第4弾",
         "CO",
@@ -2759,7 +2760,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-081",
         "第4弾",
         "CO",
@@ -2771,7 +2772,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-082",
         "第4弾",
         "CO",
@@ -2783,7 +2784,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-083",
         "第4弾",
         "CO",
@@ -2795,7 +2796,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-084",
         "第4弾",
         "CO",
@@ -2807,7 +2808,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-085",
         "第4弾",
         "CO",
@@ -2819,7 +2820,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-04-086",
         "第4弾",
         "CO",
@@ -2831,55 +2832,55 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-001",
         "第4弾",
         "TSSR",
         "event3 EP7-01",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["コンボ時のスコアUP(中)", "判定が長くなる(小)", ""],
         "",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-002",
         "第4弾",
         "TSSR",
         "event3 EP7-02",
-        [],
+        ["アイドルマスター TOURS"],
         [""],
         ["全員"],
         ["PERFECT判定時のスコアUP(極大)", "GREAT以上判定時のスコアUP(大)するが、判定が短くなる(大)", ""],
         "",
         ["ストーリーイラスト"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-003",
         "第4弾",
         "TSR",
         "special art #04-01",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["全員"],
         ["GREAT以上判定時のスコアUP(中)", "一定回数GOOD以上判定がPERFECTになる(小)", ""],
         "",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-004",
         "第4弾",
         "TSR",
         "special art #04-02",
-        [],
+        ["アイドルマスター TOURS"],
         ["このカードを使用するとライブのサポートができます。"],
         ["全員"],
         ["アピール値(Vo,Da,Vi)上昇(中)", "スコアUP系のSPアピールが強化される(中)", ""],
         "アピール値(Vo,Da,Vi)上昇(中)",
-        ["イラストレーターコラボ"]
+        ["ストーリーイラスト", "イラストレーターコラボ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-005",
         "第4弾",
         "TSR",
@@ -2891,7 +2892,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-008",
         "第4弾",
         "TR",
@@ -2903,7 +2904,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-009",
         "第4弾",
         "TR",
@@ -2915,7 +2916,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-010",
         "第4弾",
         "TR",
@@ -2927,7 +2928,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-011",
         "第4弾",
         "TR",
@@ -2939,7 +2940,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-012",
         "第4弾",
         "TR",
@@ -2951,7 +2952,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-04-013",
         "第4弾",
         "TR",
@@ -2963,7 +2964,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-021",
         "第5弾",
         "SSR",
@@ -2975,7 +2976,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-022",
         "第5弾",
         "SSR",
@@ -2987,7 +2988,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-023",
         "第5弾",
         "SSR",
@@ -2999,7 +3000,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-024",
         "第5弾",
         "SSR",
@@ -3011,7 +3012,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-025",
         "第5弾",
         "SSR",
@@ -3023,7 +3024,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(極大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-026",
         "第5弾",
         "SSR",
@@ -3035,7 +3036,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-027",
         "第5弾",
         "SR",
@@ -3047,7 +3048,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-028",
         "第5弾",
         "SR",
@@ -3059,7 +3060,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-029",
         "第5弾",
         "SR",
@@ -3071,7 +3072,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-030",
         "第5弾",
         "SR",
@@ -3083,7 +3084,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-031",
         "第5弾",
         "R",
@@ -3095,7 +3096,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-032",
         "第5弾",
         "R",
@@ -3107,7 +3108,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-033",
         "第5弾",
         "R",
@@ -3119,7 +3120,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-034",
         "第5弾",
         "R",
@@ -3131,7 +3132,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-035",
         "第5弾",
         "R",
@@ -3143,7 +3144,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-036",
         "第5弾",
         "R",
@@ -3155,7 +3156,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-037",
         "第5弾",
         "R",
@@ -3167,7 +3168,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-038",
         "第5弾",
         "R",
@@ -3179,7 +3180,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-039",
         "第5弾",
         "N",
@@ -3191,7 +3192,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-040",
         "第5弾",
         "N",
@@ -3203,7 +3204,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-041",
         "第5弾",
         "N",
@@ -3215,7 +3216,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-042",
         "第5弾",
         "N",
@@ -3227,7 +3228,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-043",
         "第5弾",
         "N",
@@ -3239,7 +3240,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-044",
         "第5弾",
         "N",
@@ -3251,7 +3252,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-045",
         "第5弾",
         "N",
@@ -3263,7 +3264,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-046",
         "第5弾",
         "N",
@@ -3275,7 +3276,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-047",
         "第5弾",
         "N",
@@ -3287,7 +3288,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-048",
         "第5弾",
         "N",
@@ -3299,7 +3300,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-049",
         "第5弾",
         "N",
@@ -3311,7 +3312,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-050",
         "第5弾",
         "N",
@@ -3323,7 +3324,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-051",
         "第5弾",
         "N",
@@ -3335,7 +3336,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-052",
         "第5弾",
         "N",
@@ -3347,7 +3348,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-053",
         "第5弾",
         "N",
@@ -3359,7 +3360,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-054",
         "第5弾",
         "N",
@@ -3371,7 +3372,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-055",
         "第5弾",
         "N",
@@ -3383,7 +3384,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-056",
         "第5弾",
         "N",
@@ -3395,7 +3396,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-057",
         "第5弾",
         "N",
@@ -3407,7 +3408,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-058",
         "第5弾",
         "N",
@@ -3419,7 +3420,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-059",
         "第5弾",
         "CO",
@@ -3431,7 +3432,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-060",
         "第5弾",
         "CO",
@@ -3443,7 +3444,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-061",
         "第5弾",
         "CO",
@@ -3455,7 +3456,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-062",
         "第5弾",
         "CO",
@@ -3467,7 +3468,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-063",
         "第5弾",
         "CO",
@@ -3479,7 +3480,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-064",
         "第5弾",
         "CO",
@@ -3491,7 +3492,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-065",
         "第5弾",
         "CO",
@@ -3503,7 +3504,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-066",
         "第5弾",
         "CO",
@@ -3515,7 +3516,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-067",
         "第5弾",
         "CO",
@@ -3527,7 +3528,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-068",
         "第5弾",
         "CO",
@@ -3539,7 +3540,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-069",
         "第5弾",
         "CO",
@@ -3551,7 +3552,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-070",
         "第5弾",
         "CO",
@@ -3563,7 +3564,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-071",
         "第5弾",
         "CO",
@@ -3575,7 +3576,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-072",
         "第5弾",
         "CO",
@@ -3587,7 +3588,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-073",
         "第5弾",
         "CO",
@@ -3599,7 +3600,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-074",
         "第5弾",
         "CO",
@@ -3611,7 +3612,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-075",
         "第5弾",
         "CO",
@@ -3623,7 +3624,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-05-076",
         "第5弾",
         "CO",
@@ -3635,7 +3636,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-05-013",
         "第5弾",
         "TSR",
@@ -3647,7 +3648,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-018",
         "S1弾",
         "SSR",
@@ -3659,7 +3660,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-019",
         "S1弾",
         "SSR",
@@ -3671,7 +3672,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-020",
         "S1弾",
         "SSR",
@@ -3683,7 +3684,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-021",
         "S1弾",
         "SSR",
@@ -3695,7 +3696,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-022",
         "S1弾",
         "SSR",
@@ -3707,7 +3708,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-023",
         "S1弾",
         "SSR",
@@ -3719,7 +3720,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-024",
         "S1弾",
         "SR",
@@ -3731,7 +3732,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-025",
         "S1弾",
         "SR",
@@ -3743,7 +3744,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-026",
         "S1弾",
         "R",
@@ -3755,7 +3756,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-027",
         "S1弾",
         "R",
@@ -3767,7 +3768,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-028",
         "S1弾",
         "R",
@@ -3779,7 +3780,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-029",
         "S1弾",
         "R",
@@ -3791,7 +3792,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-030",
         "S1弾",
         "R",
@@ -3803,7 +3804,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-031",
         "S1弾",
         "R",
@@ -3815,7 +3816,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-032",
         "S1弾",
         "R",
@@ -3827,7 +3828,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-033",
         "S1弾",
         "R",
@@ -3839,7 +3840,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-034",
         "S1弾",
         "N",
@@ -3851,7 +3852,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-035",
         "S1弾",
         "N",
@@ -3863,7 +3864,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-036",
         "S1弾",
         "N",
@@ -3875,7 +3876,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-037",
         "S1弾",
         "N",
@@ -3887,7 +3888,7 @@ const support_card_list = [
         "アピール値(Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-038",
         "S1弾",
         "N",
@@ -3899,7 +3900,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-039",
         "S1弾",
         "N",
@@ -3911,7 +3912,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-040",
         "S1弾",
         "N",
@@ -3923,7 +3924,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-041",
         "S1弾",
         "N",
@@ -3935,7 +3936,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-042",
         "S1弾",
         "N",
@@ -3947,7 +3948,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(極小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-043",
         "S1弾",
         "N",
@@ -3959,7 +3960,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-044",
         "S1弾",
         "N",
@@ -3971,7 +3972,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-045",
         "S1弾",
         "N",
@@ -3983,7 +3984,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-046",
         "S1弾",
         "N",
@@ -3995,7 +3996,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-047",
         "S1弾",
         "N",
@@ -4007,7 +4008,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-048",
         "S1弾",
         "CO",
@@ -4019,7 +4020,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-049",
         "S1弾",
         "CO",
@@ -4031,7 +4032,7 @@ const support_card_list = [
         "アピール値(Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-050",
         "S1弾",
         "CO",
@@ -4043,7 +4044,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-051",
         "S1弾",
         "CO",
@@ -4055,7 +4056,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-052",
         "S1弾",
         "CO",
@@ -4067,7 +4068,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-053",
         "S1弾",
         "CO",
@@ -4079,7 +4080,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-054",
         "S1弾",
         "CO",
@@ -4091,7 +4092,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(小)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-055",
         "S1弾",
         "CO",
@@ -4103,7 +4104,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-056",
         "S1弾",
         "CO",
@@ -4115,7 +4116,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-057",
         "S1弾",
         "CO",
@@ -4127,7 +4128,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-058",
         "S1弾",
         "CO",
@@ -4139,7 +4140,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-059",
         "S1弾",
         "CO",
@@ -4151,7 +4152,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-060",
         "S1弾",
         "CO",
@@ -4163,7 +4164,7 @@ const support_card_list = [
         "アピール値(Vo,Vi)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-061",
         "S1弾",
         "CO",
@@ -4175,7 +4176,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-062",
         "S1弾",
         "CO",
@@ -4187,7 +4188,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-063",
         "S1弾",
         "CO",
@@ -4199,7 +4200,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-064",
         "S1弾",
         "CO",
@@ -4211,7 +4212,7 @@ const support_card_list = [
         "アピール値(Da)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-065",
         "S1弾",
         "CO",
@@ -4223,7 +4224,7 @@ const support_card_list = [
         "アピール値(Vo,Da)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-S1-081",
         "S1弾",
         "SSR",
@@ -4235,7 +4236,7 @@ const support_card_list = [
         "アピール値(Da,Vi)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-S1-012",
         "S1弾",
         "TSSR",
@@ -4247,7 +4248,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-S1-013",
         "S1弾",
         "TSR",
@@ -4259,7 +4260,7 @@ const support_card_list = [
         "アピール値(Vo,Da,Vi)上昇(大)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-S1-014",
         "S1弾",
         "TR",
@@ -4271,7 +4272,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-TR-S1-015",
         "S1弾",
         "TR",
@@ -4283,7 +4284,7 @@ const support_card_list = [
         "",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-007",
         "",
         "CP",
@@ -4295,7 +4296,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-008",
         "",
         "CP",
@@ -4307,7 +4308,7 @@ const support_card_list = [
         "アピール値(Vo)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-009",
         "",
         "CP",
@@ -4319,7 +4320,7 @@ const support_card_list = [
         "アピール値(Da)上昇(中)",
         [""]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-037",
         "",
         "CP",
@@ -4331,7 +4332,7 @@ const support_card_list = [
         "",
         ["「ゴールドアクセサリー」ゲットキャンペーン"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-047",
         "",
         "CP",
@@ -4343,7 +4344,7 @@ const support_card_list = [
         "アピール値(Vi)上昇(小)",
         ["2026 レイトサマーキャンペーン 晩夏の調べ"]
     ),
-    new support_card(
+    new SupportCard(
         "IMT-CP-053",
         "",
         "CP",
@@ -4357,6 +4358,6 @@ const support_card_list = [
     ),
 ];
 
-const support_card_list_last_updated = "2026/10/07";
+const lastUpdate_listSupportCard = "2026/10/13";
 
-const support_card_list_remarks = ["第1弾 から S1弾ツアーズレア まで対応"];
+const remarks_listSupportCard = ["第1弾 から S1弾ツアーズレア まで対応"];

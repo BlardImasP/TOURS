@@ -1,5 +1,5 @@
 ﻿
-class appeal {
+class Appeal {
 
     vo = 0;
 
@@ -74,22 +74,22 @@ class appeal {
 
     multiplyRates(rates) {
 
-        this.vo *= rates.rate_vo;
+        this.vo *= rates.rateVo;
 
-        this.da *= rates.rate_da;
+        this.da *= rates.rateDa;
 
-        this.vi *= rates.rate_vi;
+        this.vi *= rates.rateVi;
 
         return this;
     }
 
     multiplyPerCent(rates) {
 
-        this.vo = this.vo * rates.rate_vo / 100.0;
+        this.vo = this.vo * rates.rateVo / 100.0;
 
-        this.da = this.da * rates.rate_da / 100.0;
+        this.da = this.da * rates.rateDa / 100.0;
 
-        this.vi = this.vi * rates.rate_vi / 100.0;
+        this.vi = this.vi * rates.rateVi / 100.0;
 
         return this;
     }

@@ -1,21 +1,21 @@
 ﻿
-class support_card extends card {
+class SupportCard extends Card {
 
-    target_idols = [""];
+    targetIdols = [""];
 
-    bonus_rates = new bonus_rates();
+    bonusRates = new BonusRates();
 
     //  コンストラクタ
-    constructor(id = "", series = "", rarity = "", name = "", idols = [], descriptions = [], target_idols = [], functions = [], appeal_bonus_text = "", remarks = []) {
+    constructor(id = "", series = "", rarity = "", name = "", idols = [], descriptions = [], targetIdols = [], functions = [], appealBonusText = "", remarks = []) {
         super(id, series, rarity, "サポート", name, idols, descriptions, functions, [], remarks);
 
-        this.target_idols = target_idols;
+        this.targetIdols = targetIdols;
 
-        const appeal_bonus = appeal_bonus_list.find((appeal_bonus) => appeal_bonus.text == appeal_bonus_text);
+        const appealBonus = listAppealBonus.find((appealBonus) => appealBonus.text == appealBonusText);
 
-        if (appeal_bonus !== undefined) {
+        if (appealBonus !== undefined) {
 
-            this.bonus_rates = appeal_bonus.bonus_rates;
+            this.bonusRates = appealBonus.bonusRates;
         } else {
 
             this.attentions.push("※ アピールボーナス値未定義");

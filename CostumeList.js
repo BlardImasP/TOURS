@@ -1,6 +1,6 @@
 ﻿
-const costume_list = [
-    new costume(
+const listCostume = [
+    new Costume(
         0,
         "",
         "",
@@ -16,7 +16,7 @@ const costume_list = [
         [],
         [""]
     ),
-    new costume(
+    new Costume(
         1,
         "フューチャーコネクト",
         "",
@@ -32,7 +32,7 @@ const costume_list = [
         [],
         [""]
     ),
-    new costume(
+    new Costume(
         2,
         "デイアフターデイAMCG",
         "エナジー",
@@ -48,7 +48,7 @@ const costume_list = [
         ["IMT-01-007", "IMT-01-008", "IMT-01-009", "IMT-01-010", "IMT-05-085"],
         [""]
     ),
-    new costume(
+    new Costume(
         3,
         "ノーブルプライド",
         "スマート",
@@ -64,7 +64,7 @@ const costume_list = [
         ["IMT-01-011", "IMT-01-012", "IMT-01-013", "IMT-01-014", "IMT-05-088"],
         [""]
     ),
-    new costume(
+    new Costume(
         4,
         "アテンダントツアラー",
         "エナジー",
@@ -80,7 +80,7 @@ const costume_list = [
         ["IMT-01-001", "IMT-01-002", "IMT-01-003", "IMT-01-004", "IMT-01-005", "IMT-01-006", "IMT-02-005", "IMT-02-006", "IMT-02-007", "IMT-02-008", "IMT-03-005", "IMT-03-006", "IMT-04-005", "IMT-04-006", "IMT-05-006", "IMT-05-007", "IMT-05-090", "IMT-CP-036"],
         [""]
     ),
-    new costume(
+    new Costume(
         5,
         "トワイライトダンス",
         "スマート",
@@ -96,7 +96,7 @@ const costume_list = [
         ["IMT-01-015", "IMT-01-016"],
         [""]
     ),
-    new costume(
+    new Costume(
         6,
         "ディープワイヤード",
         "エナジー",
@@ -112,7 +112,7 @@ const costume_list = [
         ["IMT-01-017", "IMT-01-018", "IMT-S1-006"],
         [""]
     ),
-    new costume(
+    new Costume(
         7,
         "オリエンタルクロシズ",
         "エナジー",
@@ -128,7 +128,7 @@ const costume_list = [
         ["IMT-01-019", "IMT-01-020"],
         [""]
     ),
-    new costume(
+    new Costume(
         8,
         "ドリームナビゲーター",
         "ワンダー",
@@ -144,7 +144,7 @@ const costume_list = [
         ["IMT-01-021", "IMT-01-022", "IMT-S1-005"],
         [""]
     ),
-    new costume(
+    new Costume(
         9,
         "ミキシンググルーヴ",
         "エナジー",
@@ -160,7 +160,7 @@ const costume_list = [
         ["IMT-01-023", "IMT-01-024", "IMT-PM-046", "IMT-04-009"],
         [""]
     ),
-    new costume(
+    new Costume(
         10,
         "ワルツ・ド・ペガサス",
         "スウィート",
@@ -176,7 +176,7 @@ const costume_list = [
         ["IMT-02-001", "IMT-02-002", "IMT-02-003", "IMT-02-004", "IMT-05-086"],
         [""]
     ),
-    new costume(
+    new Costume(
         11,
         "リラックスリゾート",
         "スマート",
@@ -192,7 +192,7 @@ const costume_list = [
         ["IMT-02-009", "IMT-TR-S1-006"],
         [""]
     ),
-    new costume(
+    new Costume(
         12,
         "チアフルドリーマー",
         "エナジー",
@@ -208,7 +208,7 @@ const costume_list = [
         ["IMT-02-010"],
         [""]
     ),
-    new costume(
+    new Costume(
         13,
         "ブルーサマーグルーヴ",
         "スマート",
@@ -224,7 +224,7 @@ const costume_list = [
         ["IMT-02-011", "IMT-02-012"],
         [""]
     ),
-    new costume(
+    new Costume(
         14,
         "パビリオンファンタジア",
         "ワンダー",
@@ -240,7 +240,7 @@ const costume_list = [
         ["IMT-03-001", "IMT-03-002", "IMT-03-003", "IMT-03-004", "IMT-05-087"],
         [""]
     ),
-    new costume(
+    new Costume(
         15,
         "スターピースメモリーズ",
         "スウィート",
@@ -256,7 +256,7 @@ const costume_list = [
         ["IMT-03-007"],
         [""]
     ),
-    new costume(
+    new Costume(
         16,
         "オータムテイラード",
         "スマート",
@@ -272,7 +272,7 @@ const costume_list = [
         ["IMT-03-008"],
         [""]
     ),
-    new costume(
+    new Costume(
         17,
         "ロマンチカフェザー",
         "スウィート",
@@ -288,7 +288,7 @@ const costume_list = [
         ["IMT-04-001", "IMT-04-002", "IMT-04-003", "IMT-04-004", "IMT-05-089"],
         [""]
     ),
-    new costume(
+    new Costume(
         18,
         "暁光ノ装",
         "エナジー",
@@ -304,7 +304,7 @@ const costume_list = [
         ["IMT-04-007", "IMT-CP-048", "IMT-CP-054"],
         [""]
     ),
-    new costume(
+    new Costume(
         19,
         "フォンダンショコラベリー",
         "スウィート",
@@ -320,7 +320,7 @@ const costume_list = [
         ["IMT-04-008"],
         [""]
     ),
-    new costume(
+    new Costume(
         20,
         "フューチャーノワール",
         "スマート",
@@ -336,7 +336,7 @@ const costume_list = [
         ["IMT-TR-04-006", "IMT-TR-04-007"],
         [""]
     ),
-    new costume(
+    new Costume(
         21,
         "エターナルブライト",
         "スマート",
@@ -352,7 +352,7 @@ const costume_list = [
         ["IMT-05-001", "IMT-05-002", "IMT-05-003", "IMT-S1-079", "IMT-S1-080", "IMT-TR-S1-028"],
         [""]
     ),
-    new costume(
+    new Costume(
         22,
         "ホワイトナイトダンス",
         "スマート",
@@ -368,7 +368,7 @@ const costume_list = [
         ["IMT-05-004", "IMT-05-005"],
         [""]
     ),
-    new costume(
+    new Costume(
         23,
         "花蝶爛漫",
         "スウィート",
@@ -384,7 +384,7 @@ const costume_list = [
         ["IMT-05-008"],
         [""]
     ),
-    new costume(
+    new Costume(
         24,
         "モフモフビースト",
         "ワンダー",
@@ -400,7 +400,7 @@ const costume_list = [
         ["IMT-05-009", "IMT-05-009"],
         [""]
     ),
-    new costume(
+    new Costume(
         25,
         "アッシュスクールユニフォーム",
         "スマート",
@@ -416,7 +416,7 @@ const costume_list = [
         ["IMT-TR-05-001", "IMT-TR-05-002", "IMT-TR-05-003", "IMT-TR-05-004", "IMT-TR-05-005", "IMT-TR-05-006", "IMT-TR-05-007", "IMT-TR-05-008", "IMT-TR-05-009", "IMT-TR-05-010", "IMT-TR-05-011", "IMT-TR-05-012"],
         [""]
     ),
-    new costume(
+    new Costume(
         26,
         "アーリーサマーメモリー",
         "スウィート",
@@ -432,7 +432,7 @@ const costume_list = [
         ["IMT-S1-001", "IMT-S1-082"],
         [""]
     ),
-    new costume(
+    new Costume(
         27,
         "サイレントクライ",
         "エナジー",
@@ -448,7 +448,7 @@ const costume_list = [
         ["IMT-S1-002", "IMT-S1-083"],
         [""]
     ),
-    new costume(
+    new Costume(
         28,
         "セーラーミズギ",
         "ワンダー",
@@ -464,7 +464,7 @@ const costume_list = [
         ["IMT-S1-003", "IMT-S1-075", "IMT-S1-076", "IMT-S1-077", "IMT-S1-078"],
         [""]
     ),
-    new costume(
+    new Costume(
         29,
         "ロイヤルテイラード",
         "スマート",
@@ -480,7 +480,7 @@ const costume_list = [
         ["IMT-S1-004"],
         [""]
     ),
-    new costume(
+    new Costume(
         30,
         "サマーティースタイル",
         "エナジー",
@@ -496,7 +496,7 @@ const costume_list = [
         ["IMT-TR-S1-001", "IMT-TR-S1-002", "IMT-TR-S1-003", "IMT-TR-S1-004", "IMT-TR-S1-005"],
         [""]
     ),
-    new costume(
+    new Costume(
         202503001,
         "レッスンウェア",
         "エナジー",
@@ -512,7 +512,7 @@ const costume_list = [
         ["IMT-EX-006", "IMT-EX-007", "IMT-EX-008", "IMT-EX-009", "IMT-EX-010", "IMT-EX-011", "IMT-EX-012", "IMT-EX-013", "IMT-EX-014", "IMT-EX-015", "IMT-EX-016", "IMT-EX-017", "IMT-EX-018", "IMT-EX-019", "IMT-EX-020"],
         [""]
     ),
-    new costume(
+    new Costume(
         202505001,
         "フルブルームユニフォーム",
         "スウィート",
@@ -528,7 +528,7 @@ const costume_list = [
         ["IMT-CP-001", "IMT-CP-002", "IMT-CP-003", "IMT-CP-004", "IMT-CP-005", "IMT-CP-042", "IMT-CP-043", "IMT-CP-044"],
         [""]
     ),
-    new costume(
+    new Costume(
         202609001,
         "恋花小町",
         "スウィート",
@@ -546,6 +546,6 @@ const costume_list = [
     ),
 ];
 
-const costume_list_last_updated = "2026/10/07";
+const lastUpdated_listCostume = "2026/10/13";
 
-const costume_list_remarks = ["第1弾 から S1弾ツアーズレア まで対応"];
+const remarks_listCostume = ["第1弾 から S1弾ツアーズレア まで対応"];

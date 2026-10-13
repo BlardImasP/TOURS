@@ -1,17 +1,17 @@
 ﻿
-class equipment {
+class Equipment {
 
     id = 0;
 
     name = "";
 
-    genre_text = "";
+    genreName = "";
 
-    genre_color = "";
+    colorGenre = "";
 
-    genre_level = "";
+    genreLevel = "";
 
-    idols_text = "";
+    idolsText = "";
 
     descriptions = [""];
 
@@ -19,26 +19,29 @@ class equipment {
 
     attentions = [""];
 
-    card_ids = [""];
+    cardIds = [""];
 
     remarks = [""];
 
     //  コンストラクタ
-    constructor(id, name = "", genre_text = "", genre_level = "", idols_text = "", descriptions = [], functions = [], attentions = [], card_ids = [], remarks = []) {
+    constructor(id, name = "", genreName = "", genreLevel = "", idolsText = "", descriptions = [], functions = [], attentions = [], cardIds = [], remarks = []) {
 
         this.id = id;
 
         this.name = name;
 
-        this.genre_text = genre_text;
+        this.genreName = genreName;
 
-        const genre = genre_list.find((item) => (item.name === genre_text));
+        const genre = listGenre.find((item) => (item.name === genreName));
 
-        this.genre_color = genre.color_text;
+        if (genre !== undefined) {
 
-        this.genre_level = genre_level;
+            this.colorGenre = genre.colorText;
+        }
 
-        this.idols_text = idols_text;
+        this.genreLevel = genreLevel;
+
+        this.idolsText = idolsText;
 
         this.descriptions = descriptions;
 
@@ -46,7 +49,7 @@ class equipment {
 
         this.attentions = attentions;
 
-        this.card_ids = card_ids;
+        this.cardIds = cardIds;
 
         this.remarks = remarks;
     }

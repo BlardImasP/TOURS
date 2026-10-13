@@ -1,19 +1,19 @@
 ﻿
-class appeal_bonus {
+class AppealBonus {
 
     id;
 
     text = "";
 
-    bonus_rates;
+    bonusRates = new BonusRates();
 
     //  コンストラクタ
-    constructor(id, text = "", bonus_rates = new bonus_rates()) {
+    constructor(id, text = "", bonusRates = new BonusRates()) {
 
         this.id = id;
 
         this.text = text;
 
-        this.bonus_rates = bonus_rates;
+        this.bonusRates = bonusRates;
     }
 }

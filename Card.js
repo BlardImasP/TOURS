@@ -1,5 +1,5 @@
 ﻿
-class card {
+class Card {
 
     id = "";
 

@@ -1,6 +1,6 @@
 ﻿
-const idol_list = [
-    new idol(
+const listIdol = [
+    new Idol(
         //  ID
         "01001",
         "天海 春香",
@@ -14,7 +14,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "01002",
         "如月 千早",
@@ -28,7 +28,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "01003",
         "星井 美希",
@@ -42,7 +42,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "02001",
         "島村 卯月",
@@ -56,7 +56,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "02002",
         "渋谷 凛",
@@ -70,7 +70,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "02003",
         "本田 未央",
@@ -84,7 +84,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "03001",
         "春日 未来",
@@ -98,7 +98,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "03002",
         "最上 静香",
@@ -112,7 +112,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "03003",
         "伊吹 翼",
@@ -126,7 +126,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "04001",
         "天道 輝",
@@ -140,7 +140,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "04002",
         "桜庭 薫",
@@ -154,7 +154,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "04003",
         "柏木 翼",
@@ -168,7 +168,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "05001",
         "櫻木 真乃",
@@ -182,7 +182,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "05002",
         "風野 灯織",
@@ -196,7 +196,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "05003",
         "八宮 めぐる",
@@ -210,7 +210,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "07001",
         "袖屋 璃空",
@@ -224,7 +224,7 @@ const idol_list = [
         "2025/03/26",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "06001",
         "花海 咲季",
@@ -238,7 +238,7 @@ const idol_list = [
         "2025/08/06",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "06002",
         "月村 手毬",
@@ -252,7 +252,7 @@ const idol_list = [
         "2025/08/06",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "06003",
         "藤田 ことね",
@@ -266,7 +266,7 @@ const idol_list = [
         "2025/08/06",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "01004",
         "水瀬 伊織",
@@ -280,7 +280,7 @@ const idol_list = [
         "2025/10/29",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "04004",
         "硲 道夫",
@@ -294,7 +294,7 @@ const idol_list = [
         "2025/10/29",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "02004",
         "神崎 蘭子",
@@ -308,7 +308,7 @@ const idol_list = [
         "2026/01/27",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "03004",
         "真壁 瑞希",
@@ -322,7 +322,7 @@ const idol_list = [
         "2026/01/27",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "05004",
         "小宮 果穂",
@@ -336,7 +336,7 @@ const idol_list = [
         "2026/04/23",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "06004",
         "紫雲 清夏",
@@ -350,7 +350,7 @@ const idol_list = [
         "2026/04/23",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "01005",
         "萩原 雪歩",
@@ -364,7 +364,7 @@ const idol_list = [
         "2026/08/06",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "01006",
         "菊地 真",
@@ -378,7 +378,7 @@ const idol_list = [
         "2026/08/06",
         [""]
     ),
-    new idol(
+    new Idol(
         //  ID
         "03005",
         "周防 桃子",
@@ -394,6 +394,6 @@ const idol_list = [
     ),
 ];
 
-const idol_list_last_updated = "2026/10/07";
+const lastUpdated_listIdol = "2026/10/13";
 
-const idol_list_remarks = ["編集中"];
+const remarks_listIdol = ["編集中"];

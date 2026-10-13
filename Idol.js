@@ -1,32 +1,32 @@
 ﻿
-class idol {
+class Idol {
 
     id;
 
-    name;
+    name = "";
 
-    brand;
+    brand = "";
 
-    sex;
+    sex = "";
 
-    age;
+    age = "";
 
-    blood_type;
+    typeOfBlood = "";
 
-    date_of_birth;
+    dateOfBirth = "";
 
-    zodiac_sign;
+    zodiacSign = "";
 
-    birthplace;
+    birthplace = "";
 
-    hobbies;
+    hobbies = [""];
 
-    update;
+    update = "";
 
-    remarks;
+    remarks = [""];
 
     //  コンストラクタ
-    constructor(id, name, brand, sex, age, blood_type, date_of_birth, birthplace, hobbies, update_text, remarks) {
+    constructor(id, name, brand, sex, age, typeOfBlood, dateOfBirth, birthplace, hobbies, updateText, remarks) {
 
         this.id = id;
 
@@ -38,15 +38,15 @@ class idol {
 
         this.age = age;
 
-        this.blood_type = blood_type;
+        this.typeOfBlood = typeOfBlood;
 
-        this.date_of_birth = date_of_birth;
+        this.dateOfBirth = dateOfBirth;
 
         this.birthplace = birthplace;
 
         this.hobbies = hobbies;
 
-        this.update = new Date(update_text);
+        this.update = new Date(updateText);
 
         this.remarks = remarks;
     }

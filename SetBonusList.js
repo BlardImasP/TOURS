@@ -1,6 +1,6 @@
 ﻿
-const set_bonus_list = [
-    new set_bonus(
+const listSetBonus = [
+    new SetBonus(
         //  ID
         1,
         //  セット名
@@ -24,7 +24,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         2,
         //  セット名
@@ -48,7 +48,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         3,
         //  セット名
@@ -72,7 +72,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         4,
         //  セット名
@@ -96,7 +96,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         5,
         //  セット名
@@ -120,7 +120,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         6,
         //  セット名
@@ -144,7 +144,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         7,
         //  セット名
@@ -168,7 +168,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         8,
         //  セット名
@@ -192,7 +192,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         9,
         //  セット名
@@ -216,7 +216,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         10,
         //  セット名
@@ -240,7 +240,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         11,
         //  セット名
@@ -264,7 +264,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", "※2.0.2 のアップデートにて、狐のお面（ピンク）が対象に追加されました。", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         12,
         //  セット名
@@ -288,7 +288,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         13,
         //  セット名
@@ -312,7 +312,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         14,
         //  セット名
@@ -336,7 +336,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         15,
         //  セット名
@@ -360,7 +360,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         16,
         //  セット名
@@ -384,7 +384,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         17,
         //  セット名
@@ -408,7 +408,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         18,
         //  セット名
@@ -432,7 +432,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         19,
         //  セット名
@@ -456,7 +456,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         20,
         //  セット名
@@ -480,7 +480,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         21,
         //  セット名
@@ -504,7 +504,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         22,
         //  セット名
@@ -528,7 +528,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         23,
         //  セット名
@@ -552,7 +552,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         24,
         //  セット名
@@ -576,7 +576,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         25,
         //  セット名
@@ -600,7 +600,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         26,
         //  セット名
@@ -624,7 +624,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         27,
         //  セット名
@@ -648,7 +648,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         28,
         //  セット名
@@ -672,7 +672,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         29,
         //  セット名
@@ -696,7 +696,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         30,
         //  セット名
@@ -720,7 +720,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         31,
         //  セット名
@@ -744,7 +744,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         32,
         //  セット名
@@ -768,7 +768,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.1", "2026/08/06", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         33,
         //  セット名
@@ -792,7 +792,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.2", "2026/09/17", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         34,
         //  セット名
@@ -816,7 +816,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.2", "2026/09/17", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         35,
         //  セット名
@@ -840,7 +840,7 @@ const set_bonus_list = [
         //  備考
         ["バージョン 2.0.2", "2026/09/17", ""]
     ),
-    new set_bonus(
+    new SetBonus(
         //  ID
         36,
         //  セット名
@@ -866,6 +866,6 @@ const set_bonus_list = [
     ),
 ];
 
-const set_bonus_list_last_updated = "2026/10/07";
+const lastUpdated_listSetBonus = "2026/10/13";
 
-const set_bonus_list_remarks = ["バージョン 2.0.2 までの対応"];
+const remarks_listSetBonus = ["バージョン 2.0.2 までの対応"];

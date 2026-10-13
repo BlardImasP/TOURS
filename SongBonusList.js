@@ -1,47 +1,45 @@
 ﻿
-const song_bonus_list = [
-    new song_bonus(
-        0,
-        "",
-        new bonus_rates(0, 0, 0)
+const listSongBonus = [
+    new SongBonus(
+        0
     ),
-    new song_bonus(
+    new SongBonus(
         1,
-        "[Vo]",
-        new bonus_rates(100, 0, 0)
-    ),
-    new song_bonus(
-        2,
-        "[Da]",
-        new bonus_rates(0, 100, 0)
-    ),
-    new song_bonus(
-        3,
-        "[Vo][Da]",
-        new bonus_rates(55, 55, 0)
-    ),
-    new song_bonus(
-        4,
-        "[Vi]",
-        new bonus_rates(0, 0, 100)
-    ),
-    new song_bonus(
-        5,
-        "[Vo][Vi]",
-        new bonus_rates(55, 0, 55)
-    ),
-    new song_bonus(
-        6,
-        "[Da][Vi]",
-        new bonus_rates(0, 55, 55)
-    ),
-    new song_bonus(
-        7,
         "[Vo][Da][Vi]",
-        new bonus_rates(40, 40, 40)
-    )
+        new BonusRates(40, 40, 40)
+    ),
+    new SongBonus(
+        2,
+        "[Vo][Da]",
+        new BonusRates(55, 55, 0)
+    ),
+    new SongBonus(
+        3,
+        "[Vo][Vi]",
+        new BonusRates(55, 0, 55)
+    ),
+    new SongBonus(
+        4,
+        "[Da][Vi]",
+        new BonusRates(0, 55, 55)
+    ),
+    new SongBonus(
+        5,
+        "[Vo]",
+        new BonusRates(100, 0, 0)
+    ),
+    new SongBonus(
+        6,
+        "[Da]",
+        new BonusRates(0, 100, 0)
+    ),
+    new SongBonus(
+        7,
+        "[Vi]",
+        new BonusRates(0, 0, 100)
+    ),
 ];
 
-const song_bonus_list_last_updated = "2026/10/07";
+const lastUpdated_listSongBonus = "2026/10/13";
 
-const song_bonus_list_remarks = ["バージョン 2.0.2 で確認"];
+const remarks_listSongBonus = ["バージョン 2.0.2 で確認"];

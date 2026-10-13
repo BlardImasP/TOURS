@@ -1,6 +1,6 @@
 ﻿
-const accessory_list = [
-    new accessory(
+const listAccessory = [
+    new Accessory(
         0,
         "",
         "",
@@ -12,7 +12,7 @@ const accessory_list = [
         [],
         [""]
     ),
-    new accessory(
+    new Accessory(
         1,
         "花の冠（青）",
         "ワンダー",
@@ -24,7 +24,7 @@ const accessory_list = [
         ["IMT-01-025"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         2,
         "シルクハット（黒）",
         "スマート",
@@ -36,7 +36,7 @@ const accessory_list = [
         ["IMT-01-026"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         3,
         "天使のリング",
         "スウィート",
@@ -48,7 +48,7 @@ const accessory_list = [
         ["IMT-01-027"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         4,
         "天使の羽",
         "スウィート",
@@ -60,7 +60,7 @@ const accessory_list = [
         ["IMT-01-028"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         5,
         "狐のお面",
         "スマート",
@@ -72,7 +72,7 @@ const accessory_list = [
         ["IMT-01-029", "IMT-03-017", "IMT-04-020"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         6,
         "クラウン",
         "スマート",
@@ -84,7 +84,7 @@ const accessory_list = [
         ["IMT-01-030", "IMT-03-018"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         7,
         "眼帯（黒）",
         "ワンダー",
@@ -96,7 +96,7 @@ const accessory_list = [
         ["IMT-01-031"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         8,
         "ハートペイント（ピンク）",
         "スウィート",
@@ -108,7 +108,7 @@ const accessory_list = [
         ["IMT-01-032"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         9,
         "マスカレードマスク（黒）",
         "スマート",
@@ -120,7 +120,7 @@ const accessory_list = [
         ["IMT-01-033"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         10,
         "ブライトブレスレット（白）",
         "スウィート",
@@ -132,7 +132,7 @@ const accessory_list = [
         ["IMT-01-034"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         11,
         "ブライトアンクレット（白）",
         "スウィート",
@@ -144,7 +144,7 @@ const accessory_list = [
         ["IMT-01-035"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         12,
         "お姫様ティアラ",
         "スウィート",
@@ -156,7 +156,7 @@ const accessory_list = [
         ["IMT-01-036"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         13,
         "宇宙人アンテナ",
         "ワンダー",
@@ -168,7 +168,7 @@ const accessory_list = [
         ["IMT-01-037"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         14,
         "悪魔の角（紫）",
         "ワンダー",
@@ -180,7 +180,7 @@ const accessory_list = [
         ["IMT-01-038", "IMT-02-030"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         15,
         "悪魔の羽（紫）",
         "ワンダー",
@@ -192,7 +192,7 @@ const accessory_list = [
         ["IMT-01-039", "IMT-02-031"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         16,
         "悪魔の尻尾（紫）",
         "ワンダー",
@@ -204,7 +204,7 @@ const accessory_list = [
         ["IMT-01-040", "IMT-02-032"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         17,
         "ねこみみ（白）",
         "スウィート",
@@ -216,7 +216,7 @@ const accessory_list = [
         ["IMT-01-041", "IMT-01-042"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         18,
         "ねこしっぽ（白）",
         "スウィート",
@@ -228,7 +228,7 @@ const accessory_list = [
         ["IMT-01-043", "IMT-01-044"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         19,
         "ねこみみ（三毛）",
         "エナジー",
@@ -240,7 +240,7 @@ const accessory_list = [
         ["IMT-01-045"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         20,
         "ねこしっぽ（三毛）",
         "エナジー",
@@ -252,7 +252,7 @@ const accessory_list = [
         ["IMT-01-046"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         21,
         "インカムマイク（黒）",
         "エナジー",
@@ -264,7 +264,7 @@ const accessory_list = [
         ["IMT-01-047", "IMT-TR-S1-010"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         22,
         "スクウェア眼鏡（黒）",
         "スマート",
@@ -276,7 +276,7 @@ const accessory_list = [
         ["IMT-01-048", "IMT-04-021"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         23,
         "つけひげ",
         "ワンダー",
@@ -288,7 +288,7 @@ const accessory_list = [
         ["IMT-01-049", "IMT-04-019", "IMT-TR-S1-024", "IMT-PM-048"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         24,
         "チェーンブレスレット",
         "スマート",
@@ -300,7 +300,7 @@ const accessory_list = [
         ["IMT-01-050"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         25,
         "ねこのて（白）",
         "スウィート",
@@ -312,7 +312,7 @@ const accessory_list = [
         ["IMT-01-051"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         26,
         "蝶の羽（青アゲハ）",
         "ワンダー",
@@ -324,7 +324,7 @@ const accessory_list = [
         ["IMT-01-052", "IMT-03-019"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         27,
         "へびのぬいぐるみ",
         "ワンダー",
@@ -336,7 +336,7 @@ const accessory_list = [
         ["IMT-01-053"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         28,
         "ウォーターガン",
         "エナジー",
@@ -348,7 +348,7 @@ const accessory_list = [
         ["IMT-02-013"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         29,
         "ダイヤペイント（黒）",
         "エナジー",
@@ -360,7 +360,7 @@ const accessory_list = [
         ["IMT-02-014"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         30,
         "いぬみみ（黒）",
         "スマート",
@@ -372,7 +372,7 @@ const accessory_list = [
         ["IMT-02-015"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         31,
         "いぬしっぽ（黒）",
         "スマート",
@@ -384,7 +384,7 @@ const accessory_list = [
         ["IMT-02-016"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         32,
         "フラワーイヤリング",
         "スウィート",
@@ -396,7 +396,7 @@ const accessory_list = [
         ["IMT-02-017"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         33,
         "レモンネイル",
         "エナジー",
@@ -408,7 +408,7 @@ const accessory_list = [
         ["IMT-02-018"],
         ["アップデートで全員着用可能に"]
     ),
-    new accessory(
+    new Accessory(
         34,
         "ブルーネイル",
         "スマート",
@@ -420,7 +420,7 @@ const accessory_list = [
         ["IMT-02-019"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         35,
         "ポンポン",
         "エナジー",
@@ -432,7 +432,7 @@ const accessory_list = [
         ["IMT-02-020"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         36,
         "天使のリング（黒）",
         "ワンダー",
@@ -444,7 +444,7 @@ const accessory_list = [
         ["IMT-02-021"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         37,
         "天使の羽（黒）",
         "ワンダー",
@@ -456,7 +456,7 @@ const accessory_list = [
         ["IMT-02-022"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         38,
         "ブライトブレスレット（青）",
         "スマート",
@@ -468,7 +468,7 @@ const accessory_list = [
         ["IMT-02-023"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         39,
         "ブライトアンクレット（青）",
         "スマート",
@@ -480,7 +480,7 @@ const accessory_list = [
         ["IMT-02-024"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         40,
         "いぬみみ（茶）",
         "スウィート",
@@ -492,7 +492,7 @@ const accessory_list = [
         ["IMT-02-025"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         41,
         "いぬしっぽ（茶）",
         "スウィート",
@@ -504,7 +504,7 @@ const accessory_list = [
         ["IMT-02-026"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         42,
         "スクウェアサングラス",
         "エナジー",
@@ -516,7 +516,7 @@ const accessory_list = [
         ["IMT-02-027"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         43,
         "フェスリストバンド",
         "エナジー",
@@ -528,7 +528,7 @@ const accessory_list = [
         ["IMT-02-028"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         44,
         "うつぼのぬいぐるみ",
         "ワンダー",
@@ -540,7 +540,7 @@ const accessory_list = [
         ["IMT-02-029"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         45,
         "パープルネイル",
         "ワンダー",
@@ -552,7 +552,7 @@ const accessory_list = [
         ["IMT-03-009"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         46,
         "ハロウィンゴースト",
         "ワンダー",
@@ -564,7 +564,7 @@ const accessory_list = [
         ["IMT-03-010"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         47,
         "スクールリュック（紺）",
         "スウィート",
@@ -576,7 +576,7 @@ const accessory_list = [
         ["IMT-03-011"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         48,
         "インカムマイク（白）",
         "スウィート",
@@ -588,7 +588,7 @@ const accessory_list = [
         ["IMT-03-012"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         49,
         "スクウェア眼鏡（赤）",
         "スウィート",
@@ -600,7 +600,7 @@ const accessory_list = [
         ["IMT-03-013"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         50,
         "悪魔の角（赤）",
         "エナジー",
@@ -612,7 +612,7 @@ const accessory_list = [
         ["IMT-03-014"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         51,
         "悪魔の羽（赤）",
         "エナジー",
@@ -624,7 +624,7 @@ const accessory_list = [
         ["IMT-03-015"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         52,
         "悪魔の尻尾（赤）",
         "エナジー",
@@ -636,7 +636,7 @@ const accessory_list = [
         ["IMT-03-016"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         53,
         "ハートの眼鏡（ピンク）",
         "スウィート",
@@ -648,7 +648,7 @@ const accessory_list = [
         ["IMT-04-010"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         54,
         "花の冠（白）",
         "スウィート",
@@ -660,7 +660,7 @@ const accessory_list = [
         ["IMT-04-011"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         55,
         "スクールリュック（グレー）",
         "スマート",
@@ -672,7 +672,7 @@ const accessory_list = [
         ["IMT-04-012", "IMT-TR-S1-011"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         56,
         "ふわふわブレスレット（白）",
         "エナジー",
@@ -684,7 +684,7 @@ const accessory_list = [
         ["IMT-04-013"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         57,
         "ねこみみ（黒）",
         "スマート",
@@ -696,7 +696,7 @@ const accessory_list = [
         ["IMT-04-014"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         58,
         "ねこしっぽ（黒）",
         "スマート",
@@ -708,7 +708,7 @@ const accessory_list = [
         ["IMT-04-015"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         59,
         "ねこのて（黒）",
         "スマート",
@@ -720,7 +720,7 @@ const accessory_list = [
         ["IMT-04-016", "IMT-PM-047"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         60,
         "花丸ペイント（黒）",
         "スマート",
@@ -732,7 +732,7 @@ const accessory_list = [
         ["IMT-04-017"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         61,
         "フェスリストバンド（白）",
         "スウィート",
@@ -744,7 +744,7 @@ const accessory_list = [
         ["IMT-04-018"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         62,
         "はーとぺいんと（ぴんく）",
         "スウィート",
@@ -756,7 +756,7 @@ const accessory_list = [
         ["IMT-TR-05-014"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         63,
         "ぶらいとぶれすれっと（しろ）",
         "スウィート",
@@ -768,7 +768,7 @@ const accessory_list = [
         ["IMT-TR-05-015"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         64,
         "ぶらいとあんくれっと（しろ）",
         "スウィート",
@@ -780,7 +780,7 @@ const accessory_list = [
         ["IMT-TR-05-018"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         65,
         "シルクハット（白）",
         "スウィート",
@@ -792,7 +792,7 @@ const accessory_list = [
         ["IMT-05-011"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         66,
         "エターナルオーナメント",
         "スマート",
@@ -804,7 +804,7 @@ const accessory_list = [
         ["IMT-05-012"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         67,
         "マスカレードマスク（白）",
         "スウィート",
@@ -816,7 +816,7 @@ const accessory_list = [
         ["IMT-05-013"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         68,
         "スペードペイント（黒）",
         "スマート",
@@ -828,7 +828,7 @@ const accessory_list = [
         ["IMT-05-014"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         69,
         "アニバーサリーバルーン",
         "スウィート",
@@ -840,7 +840,7 @@ const accessory_list = [
         ["IMT-05-015"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         70,
         "花丸ペイント（金）",
         "エナジー",
@@ -852,7 +852,7 @@ const accessory_list = [
         ["IMT-05-016"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         71,
         "うさみみ（白）",
         "ワンダー",
@@ -864,7 +864,7 @@ const accessory_list = [
         ["IMT-05-017"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         72,
         "スクウェアサングラス（オレンジ）",
         "エナジー",
@@ -876,7 +876,7 @@ const accessory_list = [
         ["IMT-05-018"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         73,
         "蝶の羽（黄アゲハ）",
         "エナジー",
@@ -888,7 +888,7 @@ const accessory_list = [
         ["IMT-05-019"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         74,
         "サクラネイル",
         "スウィート",
@@ -900,7 +900,7 @@ const accessory_list = [
         ["IMT-05-020", "IMT-CP-045", "IMT-CP-051"],
         ["2026 レイトサマーキャンペーン 晩夏の調べ"]
     ),
-    new accessory(
+    new Accessory(
         75,
         "サークルサングラス（水色）",
         "スマート",
@@ -912,7 +912,7 @@ const accessory_list = [
         ["IMT-S1-007"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         76,
         "セーラーキャップ",
         "ワンダー",
@@ -924,7 +924,7 @@ const accessory_list = [
         ["IMT-S1-008"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         77,
         "クチバシ",
         "ワンダー",
@@ -936,7 +936,7 @@ const accessory_list = [
         ["IMT-S1-009"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         78,
         "ブライトブレスレット（赤）",
         "エナジー",
@@ -948,7 +948,7 @@ const accessory_list = [
         ["IMT-S1-010"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         79,
         "ブライトアンクレット（赤）",
         "エナジー",
@@ -960,7 +960,7 @@ const accessory_list = [
         ["IMT-S1-011"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         80,
         "デカぜんまい",
         "ワンダー",
@@ -972,7 +972,7 @@ const accessory_list = [
         ["IMT-S1-012"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         81,
         "サマービーチフェス！",
         "エナジー",
@@ -984,7 +984,7 @@ const accessory_list = [
         ["IMT-S1-084", "IMT-S1-085", "IMT-S1-086", "IMT-S1-087", "IMT-S1-088", "IMT-S1-089", "IMT-S1-090", "IMT-S1-091", "IMT-S1-092", "IMT-S1-093", "IMT-S1-094", "IMT-S1-095"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         82,
         "ドリルアーム",
         "ワンダー",
@@ -996,7 +996,7 @@ const accessory_list = [
         ["IMT-TR-S1-007"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         83,
         "ボンバーヘッド",
         "エナジー",
@@ -1008,7 +1008,7 @@ const accessory_list = [
         ["IMT-TR-S1-008"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         84,
         "アンカーペイント（青）",
         "ワンダー",
@@ -1020,7 +1020,7 @@ const accessory_list = [
         ["IMT-TR-S1-010"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         85,
         "だいやぺいんと（くろ）",
         "エナジー",
@@ -1032,7 +1032,7 @@ const accessory_list = [
         ["IMT-TR-S1-022"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         86,
         "ねこしっぽ（くろ）",
         "スマート",
@@ -1044,7 +1044,7 @@ const accessory_list = [
         ["IMT-TR-S1-023"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         87,
         "ねこみみ（くろ）",
         "スマート",
@@ -1056,7 +1056,7 @@ const accessory_list = [
         ["IMT-TR-S1-025"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         88,
         "ぱーぷるねいる",
         "ワンダー",
@@ -1068,7 +1068,7 @@ const accessory_list = [
         ["IMT-TR-S1-026"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         89,
         "ねこのて（くろ）",
         "スマート",
@@ -1080,7 +1080,7 @@ const accessory_list = [
         ["IMT-TR-S1-027"],
         [""]
     ),
-    new accessory(
+    new Accessory(
         202512001,
         "スノーペイント（青）",
         "スウィート",
@@ -1092,7 +1092,7 @@ const accessory_list = [
         ["IMT-CP-011", "IMT-CP-015", "IMT-CP-018"],
         []
     ),
-    new accessory(
+    new Accessory(
         202608001,
         "ボンバーヘッド（ゴールド）",
         "ワンダー",
@@ -1104,7 +1104,7 @@ const accessory_list = [
         ["IMT-CP-038"],
         []
     ),
-    new accessory(
+    new Accessory(
         202608002,
         "クチバシ（ゴールド）",
         "ワンダー",
@@ -1116,7 +1116,7 @@ const accessory_list = [
         ["IMT-CP-039"],
         []
     ),
-    new accessory(
+    new Accessory(
         202608003,
         "スクウェア眼鏡（ゴールド）",
         "スマート",
@@ -1128,7 +1128,7 @@ const accessory_list = [
         ["IMT-CP-040"],
         []
     ),
-    new accessory(
+    new Accessory(
         202609001,
         "狐のお面（ピンク）",
         "スウィート",
@@ -1142,6 +1142,6 @@ const accessory_list = [
     ),
 ];
 
-const accessory_list_last_updated = "2026/10/07";
+const lastUpdated_listAccessory = "2026/10/13";
 
-const accessory_list_remarks = ["第1弾 から S1弾ツアーズレア まで対応"];
+const remarks_listAccessory = ["第1弾 から S1弾ツアーズレア まで対応"];

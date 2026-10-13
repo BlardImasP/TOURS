@@ -1,23 +1,23 @@
 ﻿
-class costume_bonus {
+class CostumeBonus {
 
     id;
 
     text = "";
 
-    bonus_rates;
+    bonusRates = new BonusRates();
 
-    bonus_ex_rates;
+    bonusRatesEx = new BonusRates();
 
     //  コンストラクタ
-    constructor(id, text = "", bonus_rates = new bonus_rates(), bonus_ex_rates = new bonus_rates()) {
+    constructor(id, text = "", bonusRates = new BonusRates(), bonusRatesEx = new BonusRates()) {
 
         this.id = id;
 
         this.text = text;
 
-        this.bonus_rates = bonus_rates;
+        this.bonusRates = bonusRates;
 
-        this.bonus_ex_rates = bonus_ex_rates;
+        this.bonusRatesEx = bonusRatesEx;
     }
 }
