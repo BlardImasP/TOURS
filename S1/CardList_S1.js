@@ -763,7 +763,7 @@ const listCard_S1 = [
         "S1弾",
         "SR",
         "演出セット：Beyond the Brilliance",
-        ["櫻木 真乃"],
+        ["水瀬 伊織"],
         ["このカードを使用するとクリエイトライブで使用する演出を変更できます。"],
         ["演出カードをセットする(Beyond the Brilliance)"],
         [],
@@ -774,7 +774,7 @@ const listCard_S1 = [
         "S1弾",
         "SR",
         "演出セット：サマー",
-        ["櫻木 真乃"],
+        ["渋谷 凛"],
         ["このカードを使用するとクリエイトライブで使用する演出を変更できます。"],
         ["演出カードをセットする(サマー)"],
         [],
@@ -973,6 +973,6 @@ const listCard_S1 = [
     ),
 ];
 
-const lastUpdate_listCard_S1 = "2026/10/21";
+const lastUpdate_listCard_S1 = "2026/10/23";
 
 const remarks_listCard_S1 = ["S1弾"];

@@ -203,7 +203,7 @@ const listCard_S1_TR = [
         "S1弾",
         "TSR",
         "演出セット：ver.Momoko",
-        ["櫻木 真乃"],
+        ["周防 桃子"],
         ["このカードを使用するとクリエイトライブで使用する演出を変更できます。"],
         ["演出カードをセットする(ver.Momoko)"],
         [],
@@ -274,6 +274,6 @@ const listCard_S1_TR = [
     ),
 ];
 
-const lastUpdate_listCard_S1_TR = "2026/10/21";
+const lastUpdate_listCard_S1_TR = "2026/10/23";
 
 const remarks_listCard_S1_TR = ["S1弾ツアーズレア"];

@@ -944,12 +944,25 @@
 
             saveValue(cookieKey, value, age = 90 * 24 * 60 * 60) {
 
-                document.cookie = cookieKey + this.operator + encodeURIComponent(String(value)) + this.separator + "max-age" + this.operator + String(age);
+                const cookieCode = cookieKey + this.operator + encodeURIComponent(String(value)) + this.separator + "max-age" + this.operator + String(age);
+
+                document.cookie = cookieCode;
+
+                const captionDebug = document.getElementById("debug_caption");
+
+                captionDebug.textContent = cookieCode;
+
             }
 
             saveText(cookieKey, text, age = 90 * 24 * 60 * 60) {
 
-                document.cookie = cookieKey + this.operator + encodeURIComponent(text.trim()) + this.separator + "max-age" + this.operator + String(age);
+                const cookieCode = cookieKey + this.operator + encodeURIComponent(text.trim()) + this.separator + "max-age" + this.operator + String(age);
+
+                document.cookie = cookieCode;
+
+                const captionDebug = document.getElementById("debug_caption");
+
+                captionDebug.textContent = cookieCode;
             }
 
             save(cookieKey, age = 90 * 24 * 60 * 60) {
@@ -957,82 +970,82 @@
                 switch (cookieKey) {
                     case "song_id":
 
-                        saveValue(cookieKey, this.song_id, age);
+                        this.saveValue(cookieKey, this.song_id, age);
                         break;
 
                     case "costume_id":
 
-                        saveValue(cookieKey, this.costume_id, age);
+                        this.saveValue(cookieKey, this.costume_id, age);
                         break;
 
                     case "accessory_head_id":
 
-                        saveValue(cookieKey, this.accessory_head_id, age);
+                        this.saveValue(cookieKey, this.accessory_head_id, age);
                         break;
 
                     case "accessory_face_id":
 
-                        saveValue(cookieKey, this.accessory_face_id, age);
+                        this.saveValue(cookieKey, this.accessory_face_id, age);
                         break;
 
                     case "accessory_hand_id":
 
-                        saveValue(cookieKey, this.accessory_hand_id, age);
+                        this.saveValue(cookieKey, this.accessory_hand_id, age);
                         break;
 
                     case "accessory_back_id":
 
-                        saveValue(cookieKey, this.accessory_back_id, age);
+                        this.saveValue(cookieKey, this.accessory_back_id, age);
                         break;
 
                     case "accessory_rump_id":
 
-                        saveValue(cookieKey, this.accessory_rump_id, age);
+                        this.saveValue(cookieKey, this.accessory_rump_id, age);
                         break;
 
                     case "accessory_legs_id":
 
-                        saveValue(cookieKey, this.accessory_legs_id, age);
+                        this.saveValue(cookieKey, this.accessory_legs_id, age);
                         break;
 
                     case "support_1_id":
 
-                        saveText(cookieKey, this.support_1_id, age);
+                        this.saveText(cookieKey, this.support_1_id, age);
                         break;
 
                     case "support_1_filter":
 
-                        saveText(cookieKey, this.support_1_filter, age);
+                        this.saveText(cookieKey, this.support_1_filter, age);
                         break;
 
                     case "support_2_id":
 
-                        saveText(cookieKey, this.support_2_id, age);
+                        this.saveText(cookieKey, this.support_2_id, age);
                         break;
 
                     case "support_2_filter":
 
-                        saveText(cookieKey, this.support_2_filter, age);
+                        this.saveText(cookieKey, this.support_2_filter, age);
                         break;
 
                     case "support_3_id":
 
-                        saveText(cookieKey, this.support_3_id, age);
+                        this.saveText(cookieKey, this.support_3_id, age);
                         break;
 
                     case "support_3_filter":
 
-                        saveText(cookieKey, this.support_3_filter, age);
+                        this.saveText(cookieKey, this.support_3_filter, age);
                         break;
 
                     case "costume_level":
 
-                        saveValue(cookieKey, this.costume_level, age);
+                        this.saveValue(cookieKey, this.costume_level, age);
                         break;
 
                     case "trustiness_level":
 
-                        saveValue(cookieKey, this.trustiness_level, age);
+                        this.saveValue(cookieKey, this.trustiness_level, age);
                         break;
 
                 }
@@ -2237,7 +2250,7 @@
 
             redrawLastUpdatedTBoby();
 
-            redrawDebugTBoby(listAccessoryCard);
+            redrawDebugTBoby(listStageEffectCard);
         }
 
         function song_select_onchange() {
