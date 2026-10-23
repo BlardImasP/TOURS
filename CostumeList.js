@@ -45,7 +45,7 @@ const listCostume = [
         1334,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-01-007", "IMT-01-008", "IMT-01-009", "IMT-01-010", "IMT-05-085"],
+        [],
         [""]
     ),
     new Costume(
@@ -61,7 +61,7 @@ const listCostume = [
         1293,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-01-011", "IMT-01-012", "IMT-01-013", "IMT-01-014", "IMT-05-088"],
+        [],
         [""]
     ),
     new Costume(
@@ -77,7 +77,7 @@ const listCostume = [
         1401,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-01-001", "IMT-01-002", "IMT-01-003", "IMT-01-004", "IMT-01-005", "IMT-01-006", "IMT-02-005", "IMT-02-006", "IMT-02-007", "IMT-02-008", "IMT-03-005", "IMT-03-006", "IMT-04-005", "IMT-04-006", "IMT-05-006", "IMT-05-007", "IMT-05-090", "IMT-CP-036"],
+        [],
         [""]
     ),
     new Costume(
@@ -93,7 +93,7 @@ const listCostume = [
         1638,
         "[Vi]",
         40,
-        ["IMT-01-015", "IMT-01-016"],
+        [],
         [""]
     ),
     new Costume(
@@ -109,7 +109,7 @@ const listCostume = [
         1122,
         "[Da]",
         30,
-        ["IMT-01-017", "IMT-01-018", "IMT-S1-006"],
+        [],
         [""]
     ),
     new Costume(
@@ -125,7 +125,7 @@ const listCostume = [
         1295,
         "[Vo][Da][Vi]",
         30,
-        ["IMT-01-019", "IMT-01-020"],
+        [],
         [""]
     ),
     new Costume(
@@ -141,7 +141,7 @@ const listCostume = [
         1224,
         "[Vo]",
         30,
-        ["IMT-01-021", "IMT-01-022", "IMT-S1-005"],
+        [],
         [""]
     ),
     new Costume(
@@ -157,7 +157,7 @@ const listCostume = [
         1240,
         "[Vo][Da][Vi]",
         20,
-        ["IMT-01-023", "IMT-01-024", "IMT-PM-046", "IMT-04-009"],
+        [],
         [""]
     ),
     new Costume(
@@ -173,7 +173,7 @@ const listCostume = [
         1398,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-02-001", "IMT-02-002", "IMT-02-003", "IMT-02-004", "IMT-05-086"],
+        [],
         [""]
     ),
     new Costume(
@@ -189,7 +189,7 @@ const listCostume = [
         897,
         "[Vo][Da]",
         40,
-        ["IMT-02-009", "IMT-TR-S1-006"],
+        [],
         [""]
     ),
     new Costume(
@@ -205,7 +205,7 @@ const listCostume = [
         1428,
         "[Da][Vi]",
         30,
-        ["IMT-02-010"],
+        [],
         [""]
     ),
     new Costume(
@@ -221,7 +221,7 @@ const listCostume = [
         982,
         "[Da]",
         20,
-        ["IMT-02-011", "IMT-02-012"],
+        [],
         [""]
     ),
     new Costume(
@@ -237,7 +237,7 @@ const listCostume = [
         1272,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-03-001", "IMT-03-002", "IMT-03-003", "IMT-03-004", "IMT-05-087"],
+        [],
         [""]
     ),
     new Costume(
@@ -253,7 +253,7 @@ const listCostume = [
         1199,
         "[Vo]",
         40,
-        ["IMT-03-007"],
+        [],
         [""]
     ),
     new Costume(
@@ -269,7 +269,7 @@ const listCostume = [
         1775,
         "[Vi]",
         30,
-        ["IMT-03-008"],
+        [],
         [""]
     ),
     new Costume(
@@ -285,7 +285,7 @@ const listCostume = [
         1435,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-04-001", "IMT-04-002", "IMT-04-003", "IMT-04-004", "IMT-05-089"],
+        [],
         [""]
     ),
     new Costume(
@@ -301,7 +301,7 @@ const listCostume = [
         1121,
         "[Da]",
         40,
-        ["IMT-04-007", "IMT-CP-048", "IMT-CP-054"],
+        [],
         [""]
     ),
     new Costume(
@@ -317,7 +317,7 @@ const listCostume = [
         1494,
         "[Vo][Vi]",
         30,
-        ["IMT-04-008"],
+        [],
         [""]
     ),
     new Costume(
@@ -333,7 +333,7 @@ const listCostume = [
         1635,
         "[Vi]",
         40,
-        ["IMT-TR-04-006", "IMT-TR-04-007"],
+        [],
         [""]
     ),
     new Costume(
@@ -349,7 +349,7 @@ const listCostume = [
         1348,
         "[Vo][Da][Vi]",
         50,
-        ["IMT-05-001", "IMT-05-002", "IMT-05-003", "IMT-S1-079", "IMT-S1-080", "IMT-TR-S1-028"],
+        [],
         [""]
     ),
     new Costume(
@@ -365,7 +365,7 @@ const listCostume = [
         1498,
         "[Vo][Vi]",
         50,
-        ["IMT-05-004", "IMT-05-005"],
+        [],
         [""]
     ),
     new Costume(
@@ -381,7 +381,7 @@ const listCostume = [
         1564,
         "[Da][Vi]",
         40,
-        ["IMT-05-008"],
+        [],
         [""]
     ),
     new Costume(
@@ -397,7 +397,7 @@ const listCostume = [
         1655,
         "[Vo][Vi]",
         40,
-        ["IMT-05-009", "IMT-05-009"],
+        [],
         [""]
     ),
     new Costume(
@@ -413,7 +413,7 @@ const listCostume = [
         1323,
         "[Vo][Da][Vi]",
         40,
-        ["IMT-TR-05-001", "IMT-TR-05-002", "IMT-TR-05-003", "IMT-TR-05-004", "IMT-TR-05-005", "IMT-TR-05-006", "IMT-TR-05-007", "IMT-TR-05-008", "IMT-TR-05-009", "IMT-TR-05-010", "IMT-TR-05-011", "IMT-TR-05-012"],
+        [],
         [""]
     ),
     new Costume(
@@ -429,7 +429,7 @@ const listCostume = [
         1673,
         "[Vo][Vi]",
         60,
-        ["IMT-S1-001", "IMT-S1-082"],
+        [],
         [""]
     ),
     new Costume(
@@ -445,7 +445,7 @@ const listCostume = [
         948,
         "[Vo][Da]",
         60,
-        ["IMT-S1-002", "IMT-S1-083"],
+        [],
         [""]
     ),
     new Costume(
@@ -461,7 +461,7 @@ const listCostume = [
         1739,
         "[Vi]",
         50,
-        ["IMT-S1-003", "IMT-S1-075", "IMT-S1-076", "IMT-S1-077", "IMT-S1-078"],
+        [],
         [""]
     ),
     new Costume(
@@ -477,7 +477,7 @@ const listCostume = [
         1691,
         "[Vi]",
         40,
-        ["IMT-S1-004"],
+        [],
         [""]
     ),
     new Costume(
@@ -493,9 +493,27 @@ const listCostume = [
         1632,
         "[Da][Vi]",
         50,
-        ["IMT-TR-S1-001", "IMT-TR-S1-002", "IMT-TR-S1-003", "IMT-TR-S1-004", "IMT-TR-S1-005"],
+        [],
         [""]
     ),
+    /*
+    new Costume(
+        31,
+        "",
+        "スウィート",
+        "",
+        "全員",
+        [""],
+        [],
+        0,
+        0,
+        0,
+        "",
+        50,
+        [""],
+        [""]
+    ),
+    */
     new Costume(
         202503001,
         "レッスンウェア",
@@ -509,7 +527,7 @@ const listCostume = [
         995,
         "[Da]",
         30,
-        ["IMT-EX-006", "IMT-EX-007", "IMT-EX-008", "IMT-EX-009", "IMT-EX-010", "IMT-EX-011", "IMT-EX-012", "IMT-EX-013", "IMT-EX-014", "IMT-EX-015", "IMT-EX-016", "IMT-EX-017", "IMT-EX-018", "IMT-EX-019", "IMT-EX-020"],
+        [],
         [""]
     ),
     new Costume(
@@ -525,7 +543,7 @@ const listCostume = [
         1295,
         "[Vo][Da][Vi]",
         30,
-        ["IMT-CP-001", "IMT-CP-002", "IMT-CP-003", "IMT-CP-004", "IMT-CP-005", "IMT-CP-042", "IMT-CP-043", "IMT-CP-044"],
+        [],
         [""]
     ),
     new Costume(
@@ -541,11 +559,11 @@ const listCostume = [
         1770,
         "[Vi]",
         40,
-        ["IMT-CP-050", "IMT-CP-056"],
+        [],
         [""]
     ),
 ];
 
-const lastUpdated_listCostume = "2026/10/13";
+const lastUpdated_listCostume = "2026/10/23";
 
 const remarks_listCostume = ["第1弾 から S1弾ツアーズレア まで対応"];

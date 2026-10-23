@@ -21,7 +21,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-025"],
+        [],
         [""]
     ),
     new Accessory(
@@ -33,7 +33,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-026"],
+        [],
         [""]
     ),
     new Accessory(
@@ -45,7 +45,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-027"],
+        [],
         [""]
     ),
     new Accessory(
@@ -57,7 +57,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-01-028"],
+        [],
         [""]
     ),
     new Accessory(
@@ -69,7 +69,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-029", "IMT-03-017", "IMT-04-020"],
+        [],
         [""]
     ),
     new Accessory(
@@ -81,7 +81,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-030", "IMT-03-018"],
+        [],
         [""]
     ),
     new Accessory(
@@ -93,7 +93,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-031"],
+        [],
         [""]
     ),
     new Accessory(
@@ -105,7 +105,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-032"],
+        [],
         [""]
     ),
     new Accessory(
@@ -117,7 +117,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-033"],
+        [],
         [""]
     ),
     new Accessory(
@@ -129,7 +129,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-01-034"],
+        [],
         [""]
     ),
     new Accessory(
@@ -141,7 +141,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-01-035"],
+        [],
         [""]
     ),
     new Accessory(
@@ -153,7 +153,7 @@ const listAccessory = [
         ["女性用"],
         [],
         ["頭"],
-        ["IMT-01-036"],
+        [],
         [""]
     ),
     new Accessory(
@@ -165,7 +165,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-037"],
+        [],
         [""]
     ),
     new Accessory(
@@ -177,7 +177,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-038", "IMT-02-030"],
+        [],
         [""]
     ),
     new Accessory(
@@ -189,7 +189,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-01-039", "IMT-02-031"],
+        [],
         [""]
     ),
     new Accessory(
@@ -201,7 +201,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-01-040", "IMT-02-032"],
+        [],
         [""]
     ),
     new Accessory(
@@ -213,7 +213,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-041", "IMT-01-042"],
+        [],
         [""]
     ),
     new Accessory(
@@ -225,7 +225,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-01-043", "IMT-01-044"],
+        [],
         [""]
     ),
     new Accessory(
@@ -237,7 +237,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-01-045"],
+        [],
         [""]
     ),
     new Accessory(
@@ -249,7 +249,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-01-046"],
+        [],
         [""]
     ),
     new Accessory(
@@ -261,7 +261,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-047", "IMT-TR-S1-010"],
+        [],
         [""]
     ),
     new Accessory(
@@ -273,7 +273,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-048", "IMT-04-021"],
+        [],
         [""]
     ),
     new Accessory(
@@ -285,7 +285,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-01-049", "IMT-04-019", "IMT-TR-S1-024", "IMT-PM-048"],
+        [],
         [""]
     ),
     new Accessory(
@@ -297,7 +297,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-01-050"],
+        [],
         [""]
     ),
     new Accessory(
@@ -309,7 +309,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-01-051"],
+        [],
         [""]
     ),
     new Accessory(
@@ -321,7 +321,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-01-052", "IMT-03-019"],
+        [],
         [""]
     ),
     new Accessory(
@@ -333,7 +333,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-01-053"],
+        [],
         [""]
     ),
     new Accessory(
@@ -345,7 +345,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-02-013"],
+        [],
         [""]
     ),
     new Accessory(
@@ -357,7 +357,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-02-014"],
+        [],
         [""]
     ),
     new Accessory(
@@ -369,7 +369,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-02-015"],
+        [],
         [""]
     ),
     new Accessory(
@@ -381,7 +381,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-02-016"],
+        [],
         [""]
     ),
     new Accessory(
@@ -393,7 +393,7 @@ const listAccessory = [
         ["女性用"],
         [],
         ["顔"],
-        ["IMT-02-017"],
+        [],
         [""]
     ),
     new Accessory(
@@ -405,7 +405,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-02-018"],
+        [],
         ["アップデートで全員着用可能に"]
     ),
     new Accessory(
@@ -417,7 +417,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-02-019"],
+        [],
         [""]
     ),
     new Accessory(
@@ -429,7 +429,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-02-020"],
+        [],
         [""]
     ),
     new Accessory(
@@ -441,7 +441,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-02-021"],
+        [],
         [""]
     ),
     new Accessory(
@@ -453,7 +453,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-02-022"],
+        [],
         [""]
     ),
     new Accessory(
@@ -465,7 +465,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-02-023"],
+        [],
         [""]
     ),
     new Accessory(
@@ -477,7 +477,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-02-024"],
+        [],
         [""]
     ),
     new Accessory(
@@ -489,7 +489,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-02-025"],
+        [],
         [""]
     ),
     new Accessory(
@@ -501,7 +501,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-02-026"],
+        [],
         [""]
     ),
     new Accessory(
@@ -513,7 +513,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-02-027"],
+        [],
         [""]
     ),
     new Accessory(
@@ -525,7 +525,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-02-028"],
+        [],
         [""]
     ),
     new Accessory(
@@ -537,7 +537,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-02-029"],
+        [],
         [""]
     ),
     new Accessory(
@@ -549,7 +549,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-03-009"],
+        [],
         [""]
     ),
     new Accessory(
@@ -561,7 +561,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-03-010"],
+        [],
         [""]
     ),
     new Accessory(
@@ -573,7 +573,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-03-011"],
+        [],
         [""]
     ),
     new Accessory(
@@ -585,7 +585,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-03-012"],
+        [],
         [""]
     ),
     new Accessory(
@@ -597,7 +597,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-03-013"],
+        [],
         [""]
     ),
     new Accessory(
@@ -609,7 +609,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-03-014"],
+        [],
         [""]
     ),
     new Accessory(
@@ -621,7 +621,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-03-015"],
+        [],
         [""]
     ),
     new Accessory(
@@ -633,7 +633,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-03-016"],
+        [],
         [""]
     ),
     new Accessory(
@@ -645,7 +645,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-04-010"],
+        [],
         [""]
     ),
     new Accessory(
@@ -657,7 +657,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-04-011"],
+        [],
         [""]
     ),
     new Accessory(
@@ -669,7 +669,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-04-012", "IMT-TR-S1-011"],
+        [],
         [""]
     ),
     new Accessory(
@@ -681,7 +681,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-04-013"],
+        [],
         [""]
     ),
     new Accessory(
@@ -693,7 +693,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-04-014"],
+        [],
         [""]
     ),
     new Accessory(
@@ -705,7 +705,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-04-015"],
+        [],
         [""]
     ),
     new Accessory(
@@ -717,7 +717,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-04-016", "IMT-PM-047"],
+        [],
         [""]
     ),
     new Accessory(
@@ -729,7 +729,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-04-017"],
+        [],
         [""]
     ),
     new Accessory(
@@ -741,7 +741,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-04-018"],
+        [],
         [""]
     ),
     new Accessory(
@@ -753,7 +753,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-TR-05-014"],
+        [],
         [""]
     ),
     new Accessory(
@@ -765,7 +765,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-TR-05-015"],
+        [],
         [""]
     ),
     new Accessory(
@@ -777,7 +777,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-TR-05-018"],
+        [],
         [""]
     ),
     new Accessory(
@@ -789,7 +789,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-05-011"],
+        [],
         [""]
     ),
     new Accessory(
@@ -801,7 +801,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-05-012"],
+        [],
         [""]
     ),
     new Accessory(
@@ -813,7 +813,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-05-013"],
+        [],
         [""]
     ),
     new Accessory(
@@ -825,7 +825,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-05-014"],
+        [],
         [""]
     ),
     new Accessory(
@@ -837,7 +837,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-05-015"],
+        [],
         [""]
     ),
     new Accessory(
@@ -849,7 +849,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-05-016"],
+        [],
         [""]
     ),
     new Accessory(
@@ -861,7 +861,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-05-017"],
+        [],
         [""]
     ),
     new Accessory(
@@ -873,7 +873,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-05-018"],
+        [],
         [""]
     ),
     new Accessory(
@@ -885,7 +885,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-05-019"],
+        [],
         [""]
     ),
     new Accessory(
@@ -897,7 +897,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-05-020", "IMT-CP-045", "IMT-CP-051"],
+        [],
         ["2026 レイトサマーキャンペーン 晩夏の調べ"]
     ),
     new Accessory(
@@ -909,7 +909,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-S1-007"],
+        [],
         [""]
     ),
     new Accessory(
@@ -921,7 +921,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-S1-008"],
+        [],
         [""]
     ),
     new Accessory(
@@ -933,7 +933,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-S1-009"],
+        [],
         [""]
     ),
     new Accessory(
@@ -945,7 +945,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-S1-010"],
+        [],
         [""]
     ),
     new Accessory(
@@ -957,7 +957,7 @@ const listAccessory = [
         [],
         [],
         ["脚"],
-        ["IMT-S1-011"],
+        [],
         [""]
     ),
     new Accessory(
@@ -969,7 +969,7 @@ const listAccessory = [
         [],
         [],
         ["胴"],
-        ["IMT-S1-012"],
+        [],
         [""]
     ),
     new Accessory(
@@ -981,7 +981,7 @@ const listAccessory = [
         [],
         ["S1弾シークレット"],
         ["顔"],
-        ["IMT-S1-084", "IMT-S1-085", "IMT-S1-086", "IMT-S1-087", "IMT-S1-088", "IMT-S1-089", "IMT-S1-090", "IMT-S1-091", "IMT-S1-092", "IMT-S1-093", "IMT-S1-094", "IMT-S1-095"],
+        [],
         [""]
     ),
     new Accessory(
@@ -993,7 +993,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-TR-S1-007"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1005,7 +1005,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-TR-S1-008"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1017,7 +1017,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-TR-S1-010"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1029,7 +1029,7 @@ const listAccessory = [
         [],
         [],
         ["顔"],
-        ["IMT-TR-S1-022"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1041,7 +1041,7 @@ const listAccessory = [
         [],
         [],
         ["腰"],
-        ["IMT-TR-S1-023"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1053,7 +1053,7 @@ const listAccessory = [
         [],
         [],
         ["頭"],
-        ["IMT-TR-S1-025"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1065,7 +1065,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-TR-S1-026"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1077,7 +1077,7 @@ const listAccessory = [
         [],
         [],
         ["手"],
-        ["IMT-TR-S1-027"],
+        [],
         [""]
     ),
     new Accessory(
@@ -1089,7 +1089,7 @@ const listAccessory = [
         [],
         ["クリスマスキャンペーン"],
         ["顔"],
-        ["IMT-CP-011", "IMT-CP-015", "IMT-CP-018"],
+        [],
         []
     ),
     new Accessory(
@@ -1101,7 +1101,7 @@ const listAccessory = [
         [],
         ["「ゴールドアクセサリー」ゲットキャンペーン"],
         ["頭"],
-        ["IMT-CP-038"],
+        [],
         []
     ),
     new Accessory(
@@ -1113,7 +1113,7 @@ const listAccessory = [
         [],
         ["「ゴールドアクセサリー」ゲットキャンペーン"],
         ["顔"],
-        ["IMT-CP-039"],
+        [],
         []
     ),
     new Accessory(
@@ -1125,7 +1125,7 @@ const listAccessory = [
         [],
         ["「ゴールドアクセサリー」ゲットキャンペーン"],
         ["顔"],
-        ["IMT-CP-040"],
+        [],
         []
     ),
     new Accessory(
@@ -1137,11 +1137,11 @@ const listAccessory = [
         [],
         ["2026 レイトサマーキャンペーン 晩夏の調べ"],
         ["頭"],
-        ["IMT-CP-049", "IMT-CP-055"],
+        [],
         []
     ),
 ];
 
-const lastUpdated_listAccessory = "2026/10/13";
+const lastUpdated_listAccessory = "2026/10/23";
 
 const remarks_listAccessory = ["第1弾 から S1弾ツアーズレア まで対応"];

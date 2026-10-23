@@ -1,31 +1,17 @@
 ﻿
-class SpecialAppealCard {
+class SpecialAppealCard extends Card {
 
-    id;
-
-    name;
-
-    descriptions;
-
-    targetIdols;
-
-    functions;
-
-    remarks;
+    targetIdols = [""];
 
     //  コンストラクタ
-    constructor(id, name, descriptions, targetIdols, functions, remarks) {
+    constructor(id = "", series = "", rarity = "", name = "", idols = [], descriptions = [], targetIdols = [], functions = [], remarks = []) {
+        super(id, series, rarity, "SPアピール", name, idols, descriptions, functions, [], remarks);
 
-        this.id = id;
+        if (this.descriptions.length == 0) {
 
-        this.name = name;
-
-        this.descriptions = descriptions;
+            this.descriptions = ["このカードを使用するとSPアピールを変更できます。"];
+        }
 
         this.targetIdols = targetIdols;
-
-        this.functions = functions;
-
-        this.remarks = remarks;
     }
 }

@@ -6,19 +6,36 @@ class SupportCard extends Card {
     bonusRates = new BonusRates();
 
     //  コンストラクタ
-    constructor(id = "", series = "", rarity = "", name = "", idols = [], descriptions = [], targetIdols = [], functions = [], appealBonusText = "", remarks = []) {
+    constructor(id = "", series = "", rarity = "", name = "", idols = [], descriptions = [], targetIdols = [], functions = [], remarks = []) {
         super(id, series, rarity, "サポート", name, idols, descriptions, functions, [], remarks);
+
+        if (this.descriptions.length == 0) {
+
+            this.descriptions = ["このカードを使用するとライブのサポートができます。"];
+        }
 
         this.targetIdols = targetIdols;
 
-        const appealBonus = listAppealBonus.find((appealBonus) => appealBonus.text == appealBonusText);
+        let indexFunctions = 0;
 
-        if (appealBonus !== undefined) {
+        while (indexFunctions < functions.length) {
 
-            this.bonusRates = appealBonus.bonusRates;
-        } else {
+            const textFunction = functions[indexFunctions];
 
-            this.attentions.push("※ アピールボーナス値未定義");
+            indexFunctions++;
+
+            if (textFunction == "") {
+
+                break;
+            }
+
+            listAppealBonus.forEach((appealBonus) => {
+
+                if (textFunction.startsWith(appealBonus.text)) {
+
+                    this.bonusRates.addBonusRates(appealBonus.bonusRates);
+                }
+            });
         }
     }
 }

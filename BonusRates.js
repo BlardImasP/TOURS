@@ -16,4 +16,26 @@ class BonusRates {
 
         this.rateVi = rateVi;
     }
+
+    setBonusRates(rateBonus) {
+
+        this.rateVo = rateBonus.rateVo;
+
+        this.rateDa = rateBonus.rateDa;
+
+        this.rateVi = rateBonus.rateVi;
+
+        return this;
+    }
+
+    addBonusRates(rateBonus) {
+
+        this.rateVo += rateBonus.rateVo;
+
+        this.rateDa += rateBonus.rateDa;
+
+        this.rateVi += rateBonus.rateVi;
+
+        return this;
+    }
 }

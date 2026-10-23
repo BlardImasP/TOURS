@@ -31,7 +31,7 @@
         }
 
         .support_selector {
-            width: 32rem;
+            width: 36rem;
             font-size: 1.1em;
         }
     </style>
@@ -323,46 +323,117 @@
         </tbody>
     </table>
 
-    <script src="Rarity.js"></script>
-    <script src="RarityList.js"></script>
+    <hr>
 
-    <script src="Card.js"></script>
+    <table border="1">
+        <caption id="debug_caption">Debug</caption>
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">series</th>
+                <th scope="col">rarity</th>
+                <th scope="col">type</th>
+                <th scope="col">name</th>
+                <th scope="col">idols</th>
+                <th scope="col">descriptions</th>
+                <th scope="col">functions</th>
+                <th scope="col">remarks</th>
+            </tr>
+        </thead>
+        <tbody id="debug_tboby">
+        </tbody>
+    </table>
 
-    <script src="Genre.js"></script>
-    <script src="GenreList.js"></script>
+    <script src="./Rarity.js"></script>
 
-    <script src="Appeal.js"></script>
+    <script src="./Card.js"></script>
 
-    <script src="BonusRates.js"></script>
+    <script src="./Genre.js"></script>
 
-    <script src="AppealBonus.js"></script>
-    <script src="AppealBonusList.js"></script>
+    <script src="./Appeal.js"></script>
 
-    <script src="SongBonus.js"></script>
-    <script src="SongBonusList.js"></script>
+    <script src="./CostumeCard.js"></script>
 
-    <script src="CostumeBonus.js"></script>
-    <script src="CostumeBonusList.js"></script>
+    <script src="./AccessoryCard.js"></script>
 
-    <script src="Song.js"></script>
-    <script src="SongList.js"></script>
+    <script src="./SupportCard.js"></script>
 
-    <script src="Equipment.js"></script>
+    <script src="./SpecialAppealCard.js"></script>
 
-    <script src="Costume.js"></script>
-    <script src="CostumeList.js"></script>
+    <script src="./StageEffectCard.js"></script>
 
-    <script src="Accessory.js"></script>
-    <script src="AccessoryList.js"></script>
+    <script src="./BonusRates.js"></script>
 
-    <script src="SupportCard.js"></script>
-    <script src="SupportCardList.js"></script>
+    <script src="./AppealBonus.js"></script>
 
-    <script src="SpecialAppeal.js"></script>
-    <script src="SpecialAppealList.js"></script>
+    <script src="./SongBonus.js"></script>
 
-    <script src="SetBonus.js"></script>
-    <script src="SetBonusList.js"></script>
+    <script src="./CostumeBonus.js"></script>
+
+    <script src="./Song.js"></script>
+
+    <script src="./Equipment.js"></script>
+
+    <script src="./Costume.js"></script>
+
+    <script src="./Accessory.js"></script>
+
+    <script src="./SetBonus.js"></script>
+
+    <script src="./RarityList.js"></script>
+
+    <script src="./GenreList.js"></script>
+
+    <script src="./AppealBonusList.js"></script>
+
+    <script src="./SongBonusList.js"></script>
+
+    <script src="./CostumeBonusList.js"></script>
+
+    <script src="./SongList.js"></script>
+
+    <script src="./CostumeList.js"></script>
+
+    <script src="./AccessoryList.js"></script>
+
+    <script src="./SetBonusList.js"></script>
+
+    <script src="./LT/CardList_LT.js"></script>
+
+    <script src="./LT2/CardList_LT2.js"></script>
+
+    <script src="./PM/CardList_PM_202503.js"></script>
+
+    <script src="./EX/CardList_EX_202503.js"></script>
+
+    <script src="./01/CardList_01.js"></script>
+    <script src="./01/CardList_01_TR.js"></script>
+
+    <script src="./02/CardList_02.js"></script>
+    <script src="./02/CardList_02_TR.js"></script>
+
+    <script src="./03/CardList_03.js"></script>
+    <script src="./03/CardList_03_TR.js"></script>
+
+    <script src="./04/CardList_04.js"></script>
+    <script src="./04/CardList_04_TR.js"></script>
+
+    <script src="./05/CardList_05.js"></script>
+    <script src="./05/CardList_05_TR.js"></script>
+
+    <script src="./PM/CardList_PM_202607.js"></script>
+
+    <script src="./CP/CardList_CP_202608.js"></script>
+
+    <script src="./S1/CardList_S1.js"></script>
+    <script src="./S1/CardList_S1_TR.js"></script>
+
+    <script src="./CP/CardList_CP_202609.js"></script>
+
+    <script src="./CP/CardList_CP_202610.js"></script>
+
+    <script src="./S2/CardList_S2.js"></script>
+    <script src="./S2/CardList_S2_TR.js"></script>
 
     <script>
 
@@ -389,6 +460,313 @@
 
             return result;
         }
+
+    </script>
+
+    <script>
+
+        function forEachAppendBr(array, element, action, countLine = 0) {
+
+            if (array.length > 0) {
+
+                if (countLine > 0) {
+
+                    element.appendChild(document.createElement("br"));
+                }
+
+                array.forEach((item) => {
+
+                    if (item != "") {
+
+                        if (countLine > 0) {
+
+                            element.appendChild(document.createElement("br"));
+                        }
+
+                        action(item);
+                    }
+
+                    countLine++;
+                });
+            }
+
+            return countLine;
+        }
+
+    </script>
+
+    <script>
+
+        function redrawDebugTBoby(listCard) {
+
+            const tbodyDebug = document.getElementById("debug_tboby");
+
+            if (tbodyDebug === undefined) {
+
+                return;
+            }
+
+            clearElementChildren(tbodyDebug);
+
+            listCard.forEach((card) => {
+
+                const tr = document.createElement("tr");
+
+                //  ID
+                const thID = document.createElement("th");
+
+                thID.scope = "row";
+
+                thID.append(card.id);
+
+                tr.appendChild(thID);
+
+                //  シリーズ
+                const tdSeries = document.createElement("td");
+
+                tdSeries.append(card.series);
+
+                tr.appendChild(tdSeries);
+
+                //  レアリティ
+                const tdRarity = document.createElement("td");
+
+                tdRarity.append(card.rarity);
+
+                tr.appendChild(tdRarity);
+
+                //  カードタイプ
+                const tdType = document.createElement("td");
+
+                tdType.append(card.type);
+
+                tr.appendChild(tdType);
+
+                //  名称
+                const tdName = document.createElement("td");
+
+                tdName.append(card.name);
+
+                tr.appendChild(tdName);
+
+                //  アイドル
+                const tdIdols = document.createElement("td");
+
+                forEachAppendBr(card.idols, tdIdols, (idol) => {
+
+                    tdIdols.append(idol);
+                });
+
+                tr.appendChild(tdIdols);
+
+                //  説明
+                const tdDescriptions = document.createElement("td");
+
+                forEachAppendBr(card.descriptions, tdDescriptions, (description) => {
+
+                    tdDescriptions.append(description);
+                });
+
+                tr.appendChild(tdDescriptions);
+
+                //  効果
+                const tdFunctions = document.createElement("td");
+
+                forEachAppendBr(card.functions, tdFunctions, (func) => {
+
+                    tdFunctions.append(func);
+                });
+
+                tr.appendChild(tdFunctions);
+
+                //  備考
+                const tdRemarks = document.createElement("td");
+
+                forEachAppendBr(card.remarks, tdRemarks, (remark) => {
+
+                    tdRemarks.append(remark);
+                });
+
+                tr.appendChild(tdRemarks);
+
+                tbodyDebug.appendChild(tr);
+            });
+        }
+
+    </script>
+
+    <script>
+
+        const listCardList = [
+            listCard_LT,
+            listCard_LT2,
+            listCard_PM_202503,
+            listCard_EX_202503,
+            listCard_01,
+            listCard_01_TR,
+            listCard_02,
+            listCard_02_TR,
+            listCard_03,
+            listCard_03_TR,
+            listCard_04,
+            listCard_04_TR,
+            listCard_05,
+            listCard_05_TR,
+            listCard_PM_202607,
+            listCard_CP_202608,
+            listCard_S1,
+            listCard_S1_TR,
+            listCard_CP_202609,
+            listCard_CP_202610,
+            listCard_S2,
+            listCard_S2_TR,
+        ];
+
+        const listCostumeCard = [
+            new CostumeCard(
+                "",
+                "",
+                "",
+                "",
+                [],
+                [],
+                [""]
+            ),
+        ];
+
+        const listAccessoryCard = [
+            new AccessoryCard(
+                "",
+                "",
+                "",
+                "",
+                [],
+                [],
+                [""]
+            ),
+        ];
+
+        const listSupportCard = [
+            new SupportCard(
+                "",
+                "",
+                "",
+                "",
+                [],
+                [],
+                ["全員"],
+                [],
+                "",
+                [""]
+            ),
+        ];
+
+        const listSpecialAppealCard = [
+            new SpecialAppealCard(
+                "",
+                "",
+                "",
+                "",
+                [],
+                [],
+                ["全員"],
+                [],
+                [],
+            ),
+        ];
+
+        const listStageEffectCard = [
+            new StageEffectCard(
+                "",
+                "",
+                "",
+                "",
+                [],
+                [],
+                [],
+                [""]
+            ),
+        ];
+
+        function extractCostumeCardList(listCardList) {
+
+            listCardList.forEach((listCard) => {
+
+                listCostumeCard.push(...listCard.filter((card) => (card instanceof CostumeCard)));
+            });
+        }
+
+        function extractAccessoryCardList(listCardList) {
+
+            listCardList.forEach((listCard) => {
+
+                listAccessoryCard.push(...listCard.filter((card) => (card instanceof AccessoryCard)));
+            });
+        }
+
+        function extractSupportCardList(listCardList) {
+
+            listCardList.forEach((listCard) => {
+
+                listSupportCard.push(...listCard.filter((card) => (card instanceof SupportCard)));
+            });
+        }
+
+        function extractSpecialAppealCardList(listCardList) {
+
+            listCardList.forEach((listCard) => {
+
+                listSpecialAppealCard.push(...listCard.filter((card) => (card instanceof SpecialAppealCard)));
+            });
+        }
+
+        function extractStageEffectCardList(listCardList) {
+
+            listCardList.forEach((listCard) => {
+
+                listStageEffectCard.push(...listCard.filter((card) => (card instanceof StageEffectCard)));
+            });
+        }
+
+        function linkageCostumeIds() {
+
+            listCostumeCard.forEach((cardCostume) => {
+
+                let costume = listCostume.find((costume) => (costume.name == cardCostume.name));
+
+                if (costume !== undefined) {
+
+                    costume.cardIds.push(cardCostume.id);
+                } else {
+
+                    const captionDebug = document.getElementById("debug_caption");
+
+                    captionDebug.textContent = cardCostume.name + " is undefined";
+                }
+            });
+        }
+
+        function linkageAccessoryIds() {
+
+            listAccessoryCard.forEach((cardAccessory) => {
+
+                let accessory = listAccessory.find((accessory) => (accessory.name == cardAccessory.name));
+
+                if (accessory !== undefined) {
+
+                    accessory.cardIds.push(cardAccessory.id);
+                } else {
+
+                    const captionDebug = document.getElementById("debug_caption");
+
+                    captionDebug.textContent = cardAccessory.name + " is undefined";
+                }
+            });
+        }
+
+    </script>
+
+    <script>
 
         class CookieStorage {
 
@@ -661,6 +1039,12 @@
             }
         }
 
+        var cookieStorage;
+
+    </script>
+
+    <script>
+
         const COLOR_DESCRIPTION_NOTE = "gold";
 
         const COLOR_DESCRIPTION_ATTENTION = "gold";
@@ -669,7 +1053,7 @@
 
         const COLOR_SUPPORT_DEMERIT = "tomato";
 
-        const COLOR_SET_BONUS_ACVITE = "springgreen";
+        const COLOR_SET_BONUS_ACTIVE = "springgreen";
 
         const WORD_SUPPORT_END_OF_MERIT = "が、"
 
@@ -700,8 +1084,6 @@
             "support_3_rarity_tr",
             "support_3_rarity_n"
         ];
-
-        var cookieStorage;
 
         var songSelected;
 
@@ -1010,6 +1392,20 @@
 
             filterRaritiesSupport3 = convertStringToArray(cookieStorage.support_3_filter);
 
+            extractCostumeCardList(listCardList);
+
+            extractAccessoryCardList(listCardList);
+
+            extractSupportCardList(listCardList);
+
+            extractSpecialAppealCardList(listCardList);
+
+            extractStageEffectCardList(listCardList);
+
+            linkageCostumeIds();
+
+            linkageAccessoryIds();
+
             setupSongSelect(cookieStorage.song_id);
 
             setupCostumeSelect(cookieStorage.costume_id);
@@ -1043,34 +1439,6 @@
             setupTrustinessLevelSelect(cookieStorage.trustiness_level, 60);
         }
 
-        function forEachAppendBr(array, element, action, countLine = 0) {
-
-            if (array.length > 0) {
-
-                if (countLine > 0) {
-
-                    element.appendChild(document.createElement("br"));
-                }
-
-                array.forEach((item) => {
-
-                    if (item != "") {
-
-                        if (countLine > 0) {
-
-                            element.appendChild(document.createElement("br"));
-                        }
-
-                        action(item);
-                    }
-
-                    countLine++;
-                });
-            }
-
-            return countLine;
-        }
-
         function redrawAnyAttentions(elementDescriptions, attentions, countLine = 0) {
 
             countLine = forEachAppendBr(attentions, elementDescriptions, (item) => {
@@ -1094,7 +1462,7 @@
 
                     elementDescriptions.appendChild(bAttention);
                 }
-                
+
             }, countLine);
 
             return countLine;
@@ -1310,7 +1678,7 @@
 
                 const bCostume = document.createElement("b");
 
-                bCostume.style.color = COLOR_SET_BONUS_ACVITE;
+                bCostume.style.color = COLOR_SET_BONUS_ACTIVE;
 
                 bCostume.append(listCostume[indexCostume]);
 
@@ -1356,7 +1724,7 @@
 
                 const bAccessory = document.createElement("b");
 
-                bAccessory.style.color = COLOR_SET_BONUS_ACVITE;
+                bAccessory.style.color = COLOR_SET_BONUS_ACTIVE;
 
                 bAccessory.append(textAreaName);
 
@@ -1569,7 +1937,7 @@
                         //  セット名
                         const bName = document.createElement("b");
 
-                        bName.style.color = COLOR_SET_BONUS_ACVITE;
+                        bName.style.color = COLOR_SET_BONUS_ACTIVE;
 
                         bName.append(itemSetBonus.name);
 
@@ -1580,7 +1948,7 @@
 
                             const bFunction = document.createElement("b");
 
-                            bFunction.style.color = COLOR_SET_BONUS_ACVITE;
+                            bFunction.style.color = COLOR_SET_BONUS_ACTIVE;
 
                             bFunction.append(item);
 
@@ -1747,22 +2115,10 @@
             //  備考
             const tdRemarks = document.createElement("td");
 
-            if (remarks.length > 0) {
+            forEachAppendBr(remarks, tdRemarks, (remark) => {
 
-                let index = 0;
-
-                while (index < remarks.length) {
-
-                    if (index > 0) {
-
-                        tdRemarks.appendChild(document.createElement("br"));
-                    }
-
-                    tdRemarks.append(remarks[index]);
-
-                    index += 1;
-                }
-            }
+                tdRemarks.append(remark);
+            });
 
             tr.appendChild(tdRemarks);
 
@@ -1801,13 +2157,6 @@
                 "CostumeBonusList.js",
                 lastUpdated_listCostumeBonus,
                 remarks_listCostumeBonus
-            );
-
-            appendLastUpdatedTBodyRow(
-                tbodyLastUpdated,
-                "SupportCardList.js",
-                lastUpdate_listSupportCard,
-                remarks_listSupportCard
             );
 
             appendLastUpdatedTBodyRow(
@@ -1887,6 +2236,8 @@
             redrawSetBonusTBody();
 
             redrawLastUpdatedTBoby();
+
+            redrawDebugTBoby(listAccessoryCard);
         }
 
         function song_select_onchange() {
