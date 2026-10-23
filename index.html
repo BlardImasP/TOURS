@@ -325,25 +325,6 @@
 
     <hr>
 
-    <table border="1">
-        <caption id="debug_caption">Debug</caption>
-        <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">series</th>
-                <th scope="col">rarity</th>
-                <th scope="col">type</th>
-                <th scope="col">name</th>
-                <th scope="col">idols</th>
-                <th scope="col">descriptions</th>
-                <th scope="col">functions</th>
-                <th scope="col">remarks</th>
-            </tr>
-        </thead>
-        <tbody id="debug_tboby">
-        </tbody>
-    </table>
-
     <script src="./Rarity.js"></script>
 
     <script src="./Card.js"></script>
@@ -497,106 +478,6 @@
 
     <script>
 
-        function redrawDebugTBoby(listCard) {
-
-            const tbodyDebug = document.getElementById("debug_tboby");
-
-            if (tbodyDebug === undefined) {
-
-                return;
-            }
-
-            clearElementChildren(tbodyDebug);
-
-            listCard.forEach((card) => {
-
-                const tr = document.createElement("tr");
-
-                //  ID
-                const thID = document.createElement("th");
-
-                thID.scope = "row";
-
-                thID.append(card.id);
-
-                tr.appendChild(thID);
-
-                //  シリーズ
-                const tdSeries = document.createElement("td");
-
-                tdSeries.append(card.series);
-
-                tr.appendChild(tdSeries);
-
-                //  レアリティ
-                const tdRarity = document.createElement("td");
-
-                tdRarity.append(card.rarity);
-
-                tr.appendChild(tdRarity);
-
-                //  カードタイプ
-                const tdType = document.createElement("td");
-
-                tdType.append(card.type);
-
-                tr.appendChild(tdType);
-
-                //  名称
-                const tdName = document.createElement("td");
-
-                tdName.append(card.name);
-
-                tr.appendChild(tdName);
-
-                //  アイドル
-                const tdIdols = document.createElement("td");
-
-                forEachAppendBr(card.idols, tdIdols, (idol) => {
-
-                    tdIdols.append(idol);
-                });
-
-                tr.appendChild(tdIdols);
-
-                //  説明
-                const tdDescriptions = document.createElement("td");
-
-                forEachAppendBr(card.descriptions, tdDescriptions, (description) => {
-
-                    tdDescriptions.append(description);
-                });
-
-                tr.appendChild(tdDescriptions);
-
-                //  効果
-                const tdFunctions = document.createElement("td");
-
-                forEachAppendBr(card.functions, tdFunctions, (func) => {
-
-                    tdFunctions.append(func);
-                });
-
-                tr.appendChild(tdFunctions);
-
-                //  備考
-                const tdRemarks = document.createElement("td");
-
-                forEachAppendBr(card.remarks, tdRemarks, (remark) => {
-
-                    tdRemarks.append(remark);
-                });
-
-                tr.appendChild(tdRemarks);
-
-                tbodyDebug.appendChild(tr);
-            });
-        }
-
-    </script>
-
-    <script>
-
         const listCardList = [
             listCard_LT,
             listCard_LT2,
@@ -737,11 +618,6 @@
                 if (costume !== undefined) {
 
                     costume.cardIds.push(cardCostume.id);
-                } else {
-
-                    const captionDebug = document.getElementById("debug_caption");
-
-                    captionDebug.textContent = cardCostume.name + " is undefined";
                 }
             });
         }
@@ -755,11 +631,6 @@
                 if (accessory !== undefined) {
 
                     accessory.cardIds.push(cardAccessory.id);
-                } else {
-
-                    const captionDebug = document.getElementById("debug_caption");
-
-                    captionDebug.textContent = cardAccessory.name + " is undefined";
                 }
             });
         }
@@ -947,11 +818,6 @@
                 const cookieCode = cookieKey + this.operator + encodeURIComponent(String(value)) + this.separator + "max-age" + this.operator + String(age);
 
                 document.cookie = cookieCode;
-
-                const captionDebug = document.getElementById("debug_caption");
-
-                captionDebug.textContent = cookieCode;
-
             }
 
             saveText(cookieKey, text, age = 90 * 24 * 60 * 60) {
@@ -959,10 +825,6 @@
                 const cookieCode = cookieKey + this.operator + encodeURIComponent(text.trim()) + this.separator + "max-age" + this.operator + String(age);
 
                 document.cookie = cookieCode;
-
-                const captionDebug = document.getElementById("debug_caption");
-
-                captionDebug.textContent = cookieCode;
             }
 
             save(cookieKey, age = 90 * 24 * 60 * 60) {
@@ -1373,6 +1235,20 @@
 
         function setup() {
 
+            extractCostumeCardList(listCardList);
+
+            extractAccessoryCardList(listCardList);
+
+            extractSupportCardList(listCardList);
+
+            extractSpecialAppealCardList(listCardList);
+
+            extractStageEffectCardList(listCardList);
+
+            linkageCostumeIds();
+
+            linkageAccessoryIds();
+
             const cookies = document.cookie;
 
             cookieStorage = new CookieStorage(cookies);
@@ -1404,20 +1280,6 @@
             filterRaritiesSupport2 = convertStringToArray(cookieStorage.support_2_filter);
 
             filterRaritiesSupport3 = convertStringToArray(cookieStorage.support_3_filter);
-
-            extractCostumeCardList(listCardList);
-
-            extractAccessoryCardList(listCardList);
-
-            extractSupportCardList(listCardList);
-
-            extractSpecialAppealCardList(listCardList);
-
-            extractStageEffectCardList(listCardList);
-
-            linkageCostumeIds();
-
-            linkageAccessoryIds();
 
             setupSongSelect(cookieStorage.song_id);
 
@@ -2409,9 +2271,9 @@
 
             support1Selected = listSupportCard.find((support) => support.id == idSupport);
 
-            const descriptionsSupport = document.getElementById("support_1_descriptions");
+            const elementDescriptionsSupport1 = document.getElementById("support_1_descriptions");
 
-            redrawSupportDescriptions(descriptionsSupport, support1Selected);
+            redrawSupportDescriptions(elementDescriptionsSupport1, support1Selected);
 
             calculateAppeal();
 
@@ -2426,9 +2288,9 @@
 
             support2Selected = listSupportCard.find((support) => support.id == idSupport);
 
-            const descriptionsSupport = document.getElementById("support_2_descriptions");
+            const elementDescriptionsSupport2 = document.getElementById("support_2_descriptions");
 
-            redrawSupportDescriptions(descriptionsSupport, support2Selected);
+            redrawSupportDescriptions(elementDescriptionsSupport2, support2Selected);
 
             calculateAppeal();
 
@@ -2443,9 +2305,9 @@
 
             support3Selected = listSupportCard.find((support) => support.id == idSupport);
 
-            const descriptionsSupport = document.getElementById("support_3_descriptions");
+            const elementDescriptionsSupport3 = document.getElementById("support_3_descriptions");
 
-            redrawSupportDescriptions(descriptionsSupport, support3Selected);
+            redrawSupportDescriptions(elementDescriptionsSupport3, support3Selected);
 
             calculateAppeal();
 
