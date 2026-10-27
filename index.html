@@ -325,6 +325,125 @@
 
     <hr>
 
+    <table border="1">
+        <caption id="debug_caption">Debug</caption>
+        <thead>
+            <tr>
+                <th scope="col">id</th>
+                <th scope="col">series</th>
+                <th scope="col">rarity</th>
+                <th scope="col">type</th>
+                <th scope="col">name</th>
+                <th scope="col">idols</th>
+                <th scope="col">descriptions</th>
+                <th scope="col">functions</th>
+                <th scope="col">remarks</th>
+            </tr>
+        </thead>
+        <tbody id="debug_tboby">
+        </tbody>
+    </table>
+
+    <script>
+
+        function redrawDebugTBoby(listCard) {
+
+            const tbodyDebug = document.getElementById("debug_tboby");
+
+            if (tbodyDebug === undefined) {
+
+                return;
+            }
+
+            clearElementChildren(tbodyDebug);
+
+            listCard.forEach((card) => {
+
+                const tr = document.createElement("tr");
+
+                //  ID
+                const thID = document.createElement("th");
+
+                thID.scope = "row";
+
+                thID.append(card.id);
+
+                tr.appendChild(thID);
+
+                //  シリーズ
+                const tdSeries = document.createElement("td");
+
+                tdSeries.append(card.series);
+
+                tr.appendChild(tdSeries);
+
+                //  レアリティ
+                const tdRarity = document.createElement("td");
+
+                tdRarity.append(card.rarity);
+
+                tr.appendChild(tdRarity);
+
+                //  カードタイプ
+                const tdType = document.createElement("td");
+
+                tdType.append(card.type);
+
+                tr.appendChild(tdType);
+
+                //  名称
+                const tdName = document.createElement("td");
+
+                tdName.append(card.name);
+
+                tr.appendChild(tdName);
+
+                //  アイドル
+                const tdIdols = document.createElement("td");
+
+                forEachAppendBr(card.idols, tdIdols, (idol) => {
+
+                    tdIdols.append(idol);
+                });
+
+                tr.appendChild(tdIdols);
+
+                //  説明
+                const tdDescriptions = document.createElement("td");
+
+                forEachAppendBr(card.descriptions, tdDescriptions, (description) => {
+
+                    tdDescriptions.append(description);
+                });
+
+                tr.appendChild(tdDescriptions);
+
+                //  効果
+                const tdFunctions = document.createElement("td");
+
+                forEachAppendBr(card.functions, tdFunctions, (func) => {
+
+                    tdFunctions.append(func);
+                });
+
+                tr.appendChild(tdFunctions);
+
+                //  備考
+                const tdRemarks = document.createElement("td");
+
+                forEachAppendBr(card.remarks, tdRemarks, (remark) => {
+
+                    tdRemarks.append(remark);
+                });
+
+                tr.appendChild(tdRemarks);
+
+                tbodyDebug.appendChild(tr);
+            });
+        }
+
+    </script>
+
     <script src="./Rarity.js"></script>
 
     <script src="./Card.js"></script>
@@ -500,7 +619,7 @@
             listCard_CP_202609,
             listCard_CP_202610,
             listCard_S2,
-            listCard_S2_TR,
+            //listCard_S2_TR,
         ];
 
         const listCostumeCard = [
@@ -537,7 +656,6 @@
                 [],
                 ["全員"],
                 [],
-                "",
                 [""]
             ),
         ];
@@ -2112,7 +2230,7 @@
 
             redrawLastUpdatedTBoby();
 
-            redrawDebugTBoby(listStageEffectCard);
+            redrawDebugTBoby(listCard_S2);
         }
 
         function song_select_onchange() {
