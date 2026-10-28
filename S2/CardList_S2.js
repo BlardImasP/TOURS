@@ -727,8 +727,17 @@ const listCard_S2 = [
         ["一定回数すべての判定がPERFECTになる(極大)", "判定が長くなる(極大)"],
         ["パラレル"]
     ),
-    new AccessoryCard(
+    new CostumeCard(
         "IMT-S2-072",
+        "S2弾",
+        "UR",
+        "ヴァイオレットフェアリー",
+        ["渋谷 凛"],
+        ["このカードを使用すると衣装を変更できます。", "※「渋谷 凛」のみ、着用できます。"],
+        ["パラレル"]
+    ),
+    new AccessoryCard(
+        "IMT-S2-073",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -737,7 +746,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-073",
+        "IMT-S2-074",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -746,7 +755,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-074",
+        "IMT-S2-075",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -755,7 +764,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-075",
+        "IMT-S2-076",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -764,7 +773,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-076",
+        "IMT-S2-077",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -773,7 +782,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-077",
+        "IMT-S2-078",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -782,7 +791,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-078",
+        "IMT-S2-079",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -791,7 +800,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-079",
+        "IMT-S2-080",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -800,7 +809,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-080",
+        "IMT-S2-081",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -809,7 +818,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-081",
+        "IMT-S2-082",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -818,7 +827,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-082",
+        "IMT-S2-083",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -827,7 +836,7 @@ const listCard_S2 = [
         ["シークレット", "リストに無し（予測）"]
     ),
     new AccessoryCard(
-        "IMT-S2-083",
+        "IMT-S2-084",
         "S2弾",
         "N",
         "トリックオアトリート！",
@@ -837,6 +846,6 @@ const listCard_S2 = [
     ),
 ];
 
-const lastUpdate_listCard_S2 = "2026/10/27";
+const lastUpdate_listCard_S2 = "2026/10/28";
 
 const remarks_listCard_S2 = ["S2弾"];

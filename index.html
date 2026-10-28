@@ -34,6 +34,31 @@
             width: 36rem;
             font-size: 1.1em;
         }
+
+        .tooltip_text {
+            visibility: hidden;
+            position: absolute;
+            display: block;
+            left: 0%;
+            z-index: 1;
+            padding: 4px;
+            white-space: nowrap;
+            font-size: 1.0em;
+            border-style: solid;
+            border-width: 4px;
+            border-color: rgba(96, 192, 192, 1.0);
+            background: rgba(192, 240, 240, 1.0);
+            color: rgba(0, 0, 0, 1.0);
+        }
+
+        .tooltip_source {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .tooltip_source:hover .tooltip_text {
+            visibility: visible;
+        }
     </style>
 
 </head>
@@ -413,7 +438,19 @@
 
                 forEachAppendBr(card.descriptions, tdDescriptions, (description) => {
 
-                    tdDescriptions.append(description);
+                    if (description[0] == "※") {
+
+                        const bDescription = document.createElement("b");
+
+                        bDescription.style.color = COLOR_DESCRIPTION_NOTE;
+
+                        bDescription.append(description);
+
+                        tdDescriptions.appendChild(bDescription);
+                    } else {
+
+                        tdDescriptions.append(description);
+                    }
                 });
 
                 tr.appendChild(tdDescriptions);
@@ -421,9 +458,25 @@
                 //  効果
                 const tdFunctions = document.createElement("td");
 
+                let demerit = false;
+
                 forEachAppendBr(card.functions, tdFunctions, (func) => {
 
-                    tdFunctions.append(func);
+                    if (demerit) {
+
+                        const fontFunction = document.createElement("font");
+
+                        fontFunction.style.color = COLOR_SUPPORT_DEMERIT;
+
+                        fontFunction.append(func);
+
+                        tdFunctions.appendChild(fontFunction);
+                    } else {
+
+                        tdFunctions.append(func);
+
+                        demerit = func.endsWith(WORD_SUPPORT_END_OF_MERIT);
+                    }
                 });
 
                 tr.appendChild(tdFunctions);
@@ -753,6 +806,27 @@
             });
         }
 
+        function findByCardId(id) {
+
+            let indexCardList = 0;
+
+            while (indexCardList < listCardList.length) {
+
+                const listCard = listCardList[indexCardList];
+
+                const card = listCard.find((card) => (card.id == id));
+
+                if (card !== undefined) {
+
+                    return card;
+                }
+
+                indexCardList++;
+            }
+
+            return undefined;
+        }
+
     </script>
 
     <script>
@@ -1038,7 +1112,7 @@
 
     <script>
 
-        const COLOR_DESCRIPTION_NOTE = "gold";
+        const COLOR_DESCRIPTION_NOTE = "khaki";
 
         const COLOR_DESCRIPTION_ATTENTION = "gold";
 
@@ -1525,7 +1599,58 @@
                     elementDescriptions.appendChild(document.createElement("br"));
                 }
 
-                elementDescriptions.append(equipment.cardIds.join(" / "));
+                let indexIds = 0;
+
+                equipment.cardIds.forEach((id) => {
+
+                    const card = findByCardId(id);
+
+                    if (indexIds > 0) {
+
+                        if (indexIds % 5 === 0) {
+
+                            elementDescriptions.appendChild(document.createElement("br"));
+                        } else {
+
+                            elementDescriptions.append(" / ");
+                        }
+                    }
+
+                    if (card !== undefined) {
+
+                        const spanId = document.createElement("span");
+
+                        spanId.className = "tooltip_source";
+
+                        spanId.append(id);
+
+                        const spanIdToolTip = document.createElement("span");
+
+                        spanIdToolTip.className = "tooltip_text";
+
+                        if (card.series != "") {
+
+                            spanIdToolTip.append(card.series);
+
+                            spanIdToolTip.appendChild(document.createElement("br"));
+                        }
+
+                        spanIdToolTip.append(card.rarity);
+
+                        spanIdToolTip.appendChild(document.createElement("br"));
+
+                        spanIdToolTip.append(card.name);
+
+                        spanId.appendChild(spanIdToolTip);
+
+                        elementDescriptions.appendChild(spanId);
+                    } else {
+
+                        elementDescriptions.append(id);
+                    }
+
+                    indexIds++;
+                });
 
                 countLine++;
             }

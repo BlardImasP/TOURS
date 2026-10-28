@@ -610,6 +610,6 @@ const listCostume = [
     ),
 ];
 
-const lastUpdated_listCostume = "2026/10/23";
+const lastUpdated_listCostume = "2026/10/27";
 
-const remarks_listCostume = ["第1弾 から S1弾ツアーズレア まで対応"];
+const remarks_listCostume = ["第1弾 から S2弾 まで対応"];

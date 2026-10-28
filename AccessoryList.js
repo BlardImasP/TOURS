@@ -908,7 +908,7 @@ const listAccessory = [
         "全員",
         [],
         [],
-        ["顔"],
+        ["頭"],
         [],
         [""]
     ),
@@ -1202,6 +1202,6 @@ const listAccessory = [
     ),
 ];
 
-const lastUpdated_listAccessory = "2026/10/23";
+const lastUpdated_listAccessory = "2026/10/27";
 
-const remarks_listAccessory = ["第1弾 から S1弾ツアーズレア まで対応"];
+const remarks_listAccessory = ["第1弾 から S2弾 まで対応"];
