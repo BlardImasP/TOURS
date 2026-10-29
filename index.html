@@ -531,7 +531,7 @@
 
     <script src="./Accessory.js"></script>
 
-    <script src="./SetBonus.js"></script>
+    <script src="./SettingBonus.js"></script>
 
     <script src="./RarityList.js"></script>
 
@@ -549,7 +549,7 @@
 
     <script src="./AccessoryList.js"></script>
 
-    <script src="./SetBonusList.js"></script>
+    <script src="./SettingBonusList.js"></script>
 
     <script src="./LT/CardList_LT.js"></script>
 
@@ -1180,7 +1180,7 @@
 
         var accessoryLegsSelected;
 
-        var activeSetBonus = false;
+        var activeSettingBonus = false;
 
         var existAccessory = false;
 
@@ -1773,7 +1773,7 @@
             elementIdolAppealTotal.textContent = valueAppealTotal;
         }
 
-        function redrawSetBonusCostume(td, listCostume, indexCostume) {
+        function redrawSettingBonusCostume(td, listCostume, indexCostume) {
 
             if (indexCostume < 0) {
 
@@ -1788,7 +1788,7 @@
 
                     td.append(listCostume[index]);
 
-                    activeSetBonus = false;
+                    activeSettingBonus = false;
 
                     index += 1;
                 }
@@ -1804,7 +1804,7 @@
             }
         }
 
-        function redrawSetBonusAccessory(td, textAreaName, listAccessoryNames, indexAccessory) {
+        function redrawSettingBonusAccessory(td, textAreaName, listAccessoryNames, indexAccessory) {
 
             if (indexAccessory < 0) {
 
@@ -1827,7 +1827,7 @@
 
                     td.append(listAccessoryNames[index]);
 
-                    activeSetBonus = false;
+                    activeSettingBonus = false;
 
                     existAccessory = true;
 
@@ -1854,11 +1854,11 @@
             }
         }
 
-        function redrawSetBonusTBody() {
+        function redrawSettingBonusTBody() {
 
-            const tbodySetBonus = document.getElementById("set_bonus_tbody");
+            const tbodySettingBonus = document.getElementById("set_bonus_tbody");
 
-            clearElementChildren(tbodySetBonus);
+            clearElementChildren(tbodySettingBonus);
 
             let textCostume = "";
 
@@ -1909,7 +1909,7 @@
                 textAccessoryLegs = accessoryLegsSelected.name;
             }
 
-            listSetBonus.forEach((itemSetBonus) => {
+            listSettingBonus.forEach((itemSettingBonus) => {
 
                 do {
 
@@ -1917,9 +1917,9 @@
 
                     if (textCostume != "") {
 
-                        if (itemSetBonus.listCostume.length > 0) {
+                        if (itemSettingBonus.listCostume.length > 0) {
 
-                            indexCostume = itemSetBonus.listCostume.indexOf(textCostume);
+                            indexCostume = itemSettingBonus.listCostume.indexOf(textCostume);
 
                             if (indexCostume < 0) {
 
@@ -1932,9 +1932,9 @@
 
                     if (textAccessoryHead != "") {
 
-                        if (itemSetBonus.listAccessoryHead.length > 0) {
+                        if (itemSettingBonus.listAccessoryHead.length > 0) {
 
-                            indexAccessoryHead = itemSetBonus.listAccessoryHead.indexOf(textAccessoryHead);
+                            indexAccessoryHead = itemSettingBonus.listAccessoryHead.indexOf(textAccessoryHead);
 
                             if (indexAccessoryHead < 0) {
 
@@ -1947,9 +1947,9 @@
 
                     if (textAccessoryFace != "") {
 
-                        if (itemSetBonus.listAccessoryFace.length > 0) {
+                        if (itemSettingBonus.listAccessoryFace.length > 0) {
 
-                            indexAccessoryFace = itemSetBonus.listAccessoryFace.indexOf(textAccessoryFace);
+                            indexAccessoryFace = itemSettingBonus.listAccessoryFace.indexOf(textAccessoryFace);
 
                             if (indexAccessoryFace < 0) {
 
@@ -1962,9 +1962,9 @@
 
                     if (textAccessoryHand != "") {
 
-                        if (itemSetBonus.listAccessoryHand.length > 0) {
+                        if (itemSettingBonus.listAccessoryHand.length > 0) {
 
-                            indexAccessoryHand = itemSetBonus.listAccessoryHand.indexOf(textAccessoryHand);
+                            indexAccessoryHand = itemSettingBonus.listAccessoryHand.indexOf(textAccessoryHand);
 
                             if (indexAccessoryHand < 0) {
 
@@ -1977,9 +1977,9 @@
 
                     if (textAccessoryBack != "") {
 
-                        if (itemSetBonus.listAccessoryBack.length > 0) {
+                        if (itemSettingBonus.listAccessoryBack.length > 0) {
 
-                            indexAccessoryBack = itemSetBonus.listAccessoryBack.indexOf(textAccessoryBack);
+                            indexAccessoryBack = itemSettingBonus.listAccessoryBack.indexOf(textAccessoryBack);
 
                             if (indexAccessoryBack < 0) {
 
@@ -1992,9 +1992,9 @@
 
                     if (textAccessoryRump != "") {
 
-                        if (itemSetBonus.listAccessoryRump.length > 0) {
+                        if (itemSettingBonus.listAccessoryRump.length > 0) {
 
-                            indexAccessoryRump = itemSetBonus.listAccessoryRump.indexOf(textAccessoryRump);
+                            indexAccessoryRump = itemSettingBonus.listAccessoryRump.indexOf(textAccessoryRump);
 
                             if (indexAccessoryRump < 0) {
 
@@ -2007,9 +2007,9 @@
 
                     if (textAccessoryLegs != "") {
 
-                        if (itemSetBonus.listAccessoryLegs.length > 0) {
+                        if (itemSettingBonus.listAccessoryLegs.length > 0) {
 
-                            indexAccessoryLegs = itemSetBonus.listAccessoryLegs.indexOf(textAccessoryLegs);
+                            indexAccessoryLegs = itemSettingBonus.listAccessoryLegs.indexOf(textAccessoryLegs);
 
                             if (indexAccessoryLegs < 0) {
 
@@ -2018,7 +2018,7 @@
                         }
                     }
 
-                    activeSetBonus = true;
+                    activeSettingBonus = true;
 
                     const tr = document.createElement("tr");
 
@@ -2031,38 +2031,38 @@
                     //  衣装
                     const tdCostume = document.createElement("td");
 
-                    redrawSetBonusCostume(tdCostume, itemSetBonus.listCostume, indexCostume);
+                    redrawSettingBonusCostume(tdCostume, itemSettingBonus.listCostume, indexCostume);
 
                     //  アクセサリ
                     const tdAccessory = document.createElement("td");
 
                     existAccessory = false;
 
-                    redrawSetBonusAccessory(tdAccessory, "［頭］", itemSetBonus.listAccessoryHead, indexAccessoryHead);
+                    redrawSettingBonusAccessory(tdAccessory, "［頭］", itemSettingBonus.listAccessoryHead, indexAccessoryHead);
 
-                    redrawSetBonusAccessory(tdAccessory, "［顔］", itemSetBonus.listAccessoryFace, indexAccessoryFace);
+                    redrawSettingBonusAccessory(tdAccessory, "［顔］", itemSettingBonus.listAccessoryFace, indexAccessoryFace);
 
-                    redrawSetBonusAccessory(tdAccessory, "［手］", itemSetBonus.listAccessoryHand, indexAccessoryHand);
+                    redrawSettingBonusAccessory(tdAccessory, "［手］", itemSettingBonus.listAccessoryHand, indexAccessoryHand);
 
-                    redrawSetBonusAccessory(tdAccessory, "［胴］", itemSetBonus.listAccessoryBack, indexAccessoryBack);
+                    redrawSettingBonusAccessory(tdAccessory, "［胴］", itemSettingBonus.listAccessoryBack, indexAccessoryBack);
 
-                    redrawSetBonusAccessory(tdAccessory, "［腰］", itemSetBonus.listAccessoryRump, indexAccessoryRump);
+                    redrawSettingBonusAccessory(tdAccessory, "［腰］", itemSettingBonus.listAccessoryRump, indexAccessoryRump);
 
-                    redrawSetBonusAccessory(tdAccessory, "［脚］", itemSetBonus.listAccessoryLegs, indexAccessoryLegs);
+                    redrawSettingBonusAccessory(tdAccessory, "［脚］", itemSettingBonus.listAccessoryLegs, indexAccessoryLegs);
 
-                    if (activeSetBonus) {
+                    if (activeSettingBonus) {
 
                         //  セット名
                         const bName = document.createElement("b");
 
                         bName.style.color = COLOR_SET_BONUS_ACTIVE;
 
-                        bName.append(itemSetBonus.name);
+                        bName.append(itemSettingBonus.name);
 
                         tdName.appendChild(bName);
 
                         //  効果
-                        forEachAppendBr(itemSetBonus.functions, tdFunctions, (item) => {
+                        forEachAppendBr(itemSettingBonus.functions, tdFunctions, (item) => {
 
                             const bFunction = document.createElement("b");
 
@@ -2075,10 +2075,10 @@
                     } else {
 
                         //  セット名
-                        tdName.append(itemSetBonus.name);
+                        tdName.append(itemSettingBonus.name);
 
                         //  効果
-                        forEachAppendBr(itemSetBonus.functions, tdFunctions, (item) => {
+                        forEachAppendBr(itemSettingBonus.functions, tdFunctions, (item) => {
 
                             tdFunctions.append(item);
                         });
@@ -2092,7 +2092,7 @@
 
                     tr.appendChild(tdAccessory);
 
-                    tbodySetBonus.appendChild(tr);
+                    tbodySettingBonus.appendChild(tr);
 
                 } while (false);
             });
@@ -2293,9 +2293,9 @@
 
             appendLastUpdatedTBodyRow(
                 tbodyLastUpdated,
-                "SetBonusList.js",
-                lastUpdated_listSetBonus,
-                remarks_listSetBonus
+                "SettingBonusList.js",
+                lastUpdated_listSettingBonus,
+                remarks_listSettingBonus
             );
         }
 
@@ -2351,7 +2351,7 @@
 
             calculateAppeal();
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             redrawLastUpdatedTBoby();
 
@@ -2397,7 +2397,7 @@
 
             calculateAppeal();
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("costume_id");
 
@@ -2416,7 +2416,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryHead, accessoryHeadSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_head_id");
         }
@@ -2433,7 +2433,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryFace, accessoryFaceSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_face_id");
         }
@@ -2450,7 +2450,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryHand, accessoryHandSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_hand_id");
         }
@@ -2467,7 +2467,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryBack, accessoryBackSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_back_id");
         }
@@ -2484,7 +2484,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryRump, accessoryRumpSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_rump_id");
         }
@@ -2501,7 +2501,7 @@
 
             redrawEquipmentDescriptions(elementDescriptionsAccessoryLegs, accessoryLegsSelected);
 
-            redrawSetBonusTBody();
+            redrawSettingBonusTBody();
 
             cookieStorage.save("accessory_legs_id");
         }

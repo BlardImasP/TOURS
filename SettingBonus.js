@@ -1,5 +1,5 @@
 ﻿
-class SetBonus {
+class SettingBonus {
 
     id;
 
