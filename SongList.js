@@ -169,7 +169,7 @@ const listSong = [
     new Song(
         21,
         "Study Equal Magic!",
-        "",
+        "[Da]",
         "全員",
         "2026/10/29",
         []
@@ -177,13 +177,13 @@ const listSong = [
     new Song(
         22,
         "SYMPHONY",
-        "",
-        "全員",
+        "[Vo]",
+        "女性",
         "2026/10/29",
         []
     ),
 ];
 
-const lastUpdated_listSong = "2026/10/26";
+const lastUpdated_listSong = "2026/10/30";
 
-const remarks_listSong = ["バージョン 2.0.2 までの対応"];
+const remarks_listSong = ["バージョン 2.1.1 までの対応"];
