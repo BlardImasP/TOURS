@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第3弾" Date="2025-10-29" Version="1.3.1">
+	<Idol>
+		<Name>水瀬 伊織</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>AB</TypeOfBlood>
+		<DateOfBirth>05/05</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>海外旅行</Hobby>
+		<Hobby>食べ歩き</Hobby>
+	</Idol>
+	<Idol>
+		<Name>硲 道夫</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>32</Age>
+		<TypeOfBlood>AB</TypeOfBlood>
+		<DateOfBirth>01/13</DateOfBirth>
+		<BirthPlace>淡路島</BirthPlace>
+		<Hobby>掃除</Hobby>
+		<Hobby>パズル</Hobby>
+	</Idol>
+	<Song AppealBonusType="VoDa">
+		<Name>M@STERPIECE</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="VoDa">
+		<Name>Beyond The Dream</Name>
+		<TargetIdol>男性</TargetIdol>
+	</Song>
+	<Costume Key="パビリオンファンタジア" Genre="Wonder" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>パビリオンファンタジア</Name>
+		<TargetIdol>アイドルマスター ミリオンライブ！</TargetIdol>
+		<Vo>1373</Vo>
+		<Da>1395</Da>
+		<Vi>1272</Vi>
+	</Costume>
+	<Costume Key="スターピースメモリーズ" Genre="Sweet" AppealBonusType="Vo" MaxLevel="40">
+		<Name>スターピースメモリーズ</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>1667</Vo>
+		<Da>1042</Da>
+		<Vi>1199</Vi>
+	</Costume>
+	<Costume Key="オータムテイラード" Genre="Smart" AppealBonusType="Vi" MaxLevel="30">
+		<Name>オータムテイラード</Name>
+		<TargetIdol>男性</TargetIdol>
+		<Vo>1174</Vo>
+		<Da>881</Da>
+		<Vi>1775</Vi>
+	</Costume>
+	<Accessory Key="パープルネイル" Genre="Wonder" Area="Hand">
+		<Name>パープルネイル</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ハロウィンゴースト" Genre="Wonder" Area="Back">
+		<Name>ハロウィンゴースト</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクールリュック（紺）" Genre="Sweet" Area="Back">
+		<Name>スクールリュック（紺）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="インカムマイク（白）" Genre="Sweet" Area="Face">
+		<Name>インカムマイク（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクウェア眼鏡（赤）" Genre="Sweet" Area="Face">
+		<Name>スクウェア眼鏡（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の角（赤）" Genre="Energy" Area="Head">
+		<Name>悪魔の角（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の羽（赤）" Genre="Energy" Area="Back">
+		<Name>悪魔の羽（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の尻尾（赤）" Genre="Energy" Area="Rump">
+		<Name>悪魔の尻尾（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+</ToursDataset>

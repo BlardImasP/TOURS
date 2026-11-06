@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第2弾" Date="2025-08-06" Version="1.2.1">
+	<Idol>
+		<Name>花海 咲季</Name>
+		<Brand>学園アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>16</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>04/02</DateOfBirth>
+		<BirthPlace>愛知県</BirthPlace>
+		<Hobby>勝負ごと全般</Hobby>
+	</Idol>
+	<Idol>
+		<Name>月村 手毬</Name>
+		<Brand>学園アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>AB</TypeOfBlood>
+		<DateOfBirth>06/03</DateOfBirth>
+		<BirthPlace>京都府</BirthPlace>
+		<Hobby>美味しいものを食べること(封印中)</Hobby>
+	</Idol>
+	<Idol>
+		<Name>藤田 ことね</Name>
+		<Brand>学園アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>04/29</DateOfBirth>
+		<BirthPlace>埼玉県</BirthPlace>
+		<Hobby>お金を稼ぐこと</Hobby>
+	</Idol>
+	<Song AppealBonusType="VoVi">
+		<Name>初</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="ワルツ・ド・ペガサス" Genre="Sweet" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>ワルツ・ド・ペガサス</Name>
+		<TargetIdol>アイドルマスター シンデレラガールズ</TargetIdol>
+		<Vo>1286</Vo>
+		<Da>1356</Da>
+		<Vi>1398</Vi>
+	</Costume>
+	<Costume Key="リラックスリゾート" Genre="Smart" AppealBonusType="VoDa" MaxLevel="40">
+		<Name>リラックスリゾート</Name>
+		<TargetIdol>男性</TargetIdol>
+		<Vo>1430</Vo>
+		<Da>1573</Da>
+		<Vi>897</Vi>
+	</Costume>
+	<Costume Key="チアフルドリーマー" Genre="Energy" AppealBonusType="DaVi" MaxLevel="30">
+		<Name>チアフルドリーマー</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>956</Vo>
+		<Da>1440</Da>
+		<Vi>1428</Vi>
+	</Costume>
+	<Costume Key="ブルーサマーグルーヴ" Genre="Smart" AppealBonusType="Da" MaxLevel="20">
+		<Name>ブルーサマーグルーヴ</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1082</Vo>
+		<Da>1711</Da>
+		<Vi>982</Vi>
+	</Costume>
+	<Accessory Key="ウォーターガン" Genre="Energy" Area="Back">
+		<Name>ウォーターガン</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ダイヤペイント（黒）" Genre="Energy" Area="Face">
+		<Name>ダイヤペイント（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="いぬみみ（黒）" Genre="Smart" Area="Head">
+		<Name>いぬみみ（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="いぬしっぽ（黒）" Genre="Smart" Area="Rump">
+		<Name>いぬしっぽ（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="フラワーイヤリング" Genre="Sweet" Area="Face">
+		<Name>フラワーイヤリング</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="レモンネイル" Genre="Energy" Area="Hand">
+		<Name>レモンネイル</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブルーネイル" Genre="Smart" Area="Hand">
+		<Name>ブルーネイル</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ポンポン" Genre="Energy" Area="Hand">
+		<Name>ポンポン</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="天使のリング（黒）" Genre="Wonder" Area="Head">
+		<Name>天使のリング（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="天使の羽（黒）" Genre="Wonder" Area="Back">
+		<Name>天使の羽（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトブレスレット（青）" Genre="Smart" Area="Hand">
+		<Name>ブライトブレスレット（青）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトアンクレット（青）" Genre="Smart" Area="Legs">
+		<Name>ブライトアンクレット（青）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="いぬみみ（茶）" Genre="Sweet" Area="Head">
+		<Name>いぬみみ（茶）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="いぬしっぽ（茶）" Genre="Sweet" Area="Rump">
+		<Name>いぬしっぽ（茶）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクウェアサングラス" Genre="Energy" Area="Face">
+		<Name>スクウェアサングラス</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="フェスリストバンド" Genre="Energy" Area="Hand">
+		<Name>フェスリストバンド</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="うつぼのぬいぐるみ" Genre="Wonder" Area="Legs">
+		<Name>うつぼのぬいぐるみ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+</ToursDataset>

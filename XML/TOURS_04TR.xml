@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第4弾ツアーズレア" Date="2026-03-18">
+	<Song AppealBonusType="Vo">
+		<Name>STARLIGHT CELEBRATE!</Name>
+		<TargetIdol>男性</TargetIdol>
+	</Song>
+	<Costume Key="フューチャーノワール" Genre="Smart" AppealBonusType="Vi" MaxLevel="40">
+		<Name>フューチャーノワール</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1149</Vo>
+		<Da>1047</Da>
+		<Vi>1635</Vi>
+	</Costume>
+</ToursDataset>

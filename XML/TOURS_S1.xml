@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="S1弾" Date="2026-08-06" Version="2.0.1">
+	<Idol>
+		<Name>萩原 雪歩</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>17</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>12/24</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>MY詩集を書くこと</Hobby>
+	</Idol>
+	<Idol>
+		<Name>菊地 真</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>17</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>08/29</DateOfBirth>
+		<BirthPlace>静岡県</BirthPlace>
+		<Hobby>スポーツ全般</Hobby>
+	</Idol>
+	<Song AppealBonusType="Da">
+		<Name>GO MY WAY!!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="VoDa">
+		<Name>→→→SP</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Song>
+	<Costume Key="アーリーサマーメモリー" Genre="Sweet" AppealBonusType="VoVi" MaxLevel="60">
+		<Name>アーリーサマーメモリー</Name>
+		<TargetIdol>天海 春香</TargetIdol>
+		<Vo>1589</Vo>
+		<Da>919</Da>
+		<Vi>1673</Vi>
+	</Costume>
+	<Costume Key="サイレントクライ" Genre="Energy" AppealBonusType="VoDa" MaxLevel="60">
+		<Name>サイレントクライ</Name>
+		<TargetIdol>月村 手毬</TargetIdol>
+		<Vo>1672</Vo>
+		<Da>1561</Da>
+		<Vi>948</Vi>
+	</Costume>
+	<Costume Key="セーラーミズギ" Genre="Wonder" AppealBonusType="Vi" MaxLevel="50">
+		<Name>セーラーミズギ</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>1118</Vo>
+		<Da>1186</Da>
+		<Vi>1739</Vi>
+	</Costume>
+	<Costume Key="ロイヤルテイラード" Genre="Smart" AppealBonusType="Vi" MaxLevel="40">
+		<Name>ロイヤルテイラード</Name>
+		<TargetIdol>男性</TargetIdol>
+		<Vo>1153</Vo>
+		<Da>1087</Da>
+		<Vi>1691</Vi>
+	</Costume>
+	<Accessory Key="サークルサングラス（水色）" Genre="Smart" Area="Head">
+		<Name></Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="セーラーキャップ" Genre="Wonder" Area="Head">
+		<Name>セーラーキャップ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="クチバシ" Genre="Wonder" Area="Face">
+		<Name>クチバシ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトブレスレット（赤）" Genre="Energy" Area="Hand">
+		<Name>ブライトブレスレット（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトアンクレット（赤）" Genre="Energy" Area="Legs">
+		<Name>ブライトアンクレット（赤）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="デカぜんまい" Genre="Wonder" Area="Back">
+		<Name>デカぜんまい</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="サマービーチフェス！" Genre="Energy" Area="Face">
+		<Name>サマービーチフェス！</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スノーペイント（青）" Genre="Sweet" Area="Face">
+		<Name>スノーペイント（青）</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Remark>クリスマスキャンペーン</Remark>
+	</Accessory>
+	<Accessory Key="ボンバーヘッド（ゴールド）" Genre="Wonder" Area="Head">
+		<Name>ボンバーヘッド（ゴールド）</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Remark>「ゴールドアクセサリー」ゲットキャンペーン</Remark>
+	</Accessory>
+	<Accessory Key="クチバシ（ゴールド）" Genre="Wonder" Area="Face">
+		<Name>クチバシ（ゴールド）</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Remark>「ゴールドアクセサリー」ゲットキャンペーン</Remark>
+	</Accessory>
+	<Accessory Key="スクウェア眼鏡（ゴールド）" Genre="Smart" Area="Face">
+		<Name>スクウェア眼鏡（ゴールド）</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Remark>「ゴールドアクセサリー」ゲットキャンペーン</Remark>
+	</Accessory>
+	<Accessory Key="狐のお面（ピンク）" Genre="Sweet" Area="Head">
+		<Name>狐のお面（ピンク）</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Remark>2026 レイトサマーキャンペーン 晩夏の調べ</Remark>
+	</Accessory>
+	<SettingBonus>
+		<Name>天使</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>天使のリング</HeadAccessoryName>
+		<BackAccessoryName>天使の羽</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>天使</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>天使のリング</HeadAccessoryName>
+		<BackAccessoryName>天使の羽</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>堕天使</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>天使のリング（黒）</HeadAccessoryName>
+		<BackAccessoryName>天使の羽（黒）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>悪魔</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>悪魔の角（紫）</HeadAccessoryName>
+		<HeadAccessoryName>悪魔の角（赤）</HeadAccessoryName>
+		<BackAccessoryName>悪魔の羽（紫）</BackAccessoryName>
+		<BackAccessoryName>悪魔の羽（赤）</BackAccessoryName>
+		<RumpAccessoryName>悪魔の尻尾（紫）</RumpAccessoryName>
+		<RumpAccessoryName>悪魔の尻尾（赤）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>仮面舞踏会</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>トワイライトダンス</CostumeName>
+		<CostumeName>ホワイトナイトダンス</CostumeName>
+		<HeadAccessoryName>シルクハット（黒）</HeadAccessoryName>
+		<HeadAccessoryName>シルクハット（白）</HeadAccessoryName>
+		<FaceAccessoryName>マスカレードマスク（黒）</FaceAccessoryName>
+		<FaceAccessoryName>マスカレードマスク（白）</FaceAccessoryName>
+		<FaceAccessoryName>ますかれーどますく（くろ）</FaceAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>しろねこ</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>ねこみみ（白）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（しろ）</HeadAccessoryName>
+		<HandAccessoryName>ねこのて（白）</HandAccessoryName>
+		<HandAccessoryName>ねこのて（しろ）</HandAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（白）</RumpAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（しろ）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>くろねこ</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>ねこみみ（黒）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（くろ）</HeadAccessoryName>
+		<HandAccessoryName>ねこのて（黒）</HandAccessoryName>
+		<HandAccessoryName>ねこのて（くろ）</HandAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（黒）</RumpAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（くろ）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>くろいぬ</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>いぬみみ（黒）</HeadAccessoryName>
+		<RumpAccessoryName>いぬしっぽ（黒）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ちゃいぬ</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>いぬみみ（茶）</HeadAccessoryName>
+		<RumpAccessoryName>いぬしっぽ（茶）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>あべこべアニマル</Name>
+		<Function>スマイル獲得量 +2</Function>
+		<HeadAccessoryName>うさみみ（白）</HeadAccessoryName>
+		<FaceAccessoryName>クチバシ</FaceAccessoryName>
+		<FaceAccessoryName>クチバシ（ゴールド）</FaceAccessoryName>
+		<HandAccessoryName>ねこのて（白）</HandAccessoryName>
+		<HandAccessoryName>ねこのて（黒）</HandAccessoryName>
+		<RumpAccessoryName>いぬしっぽ（黒）</RumpAccessoryName>
+		<RumpAccessoryName>いぬしっぽ（茶）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ビーチスタイル</Name>
+		<Function>マニー獲得量を上昇</Function>
+		<CostumeName>セーラーミズギ</CostumeName>
+		<HeadAccessoryName>セーラーキャップ</HeadAccessoryName>
+		<BackAccessoryName>ウォーターガン</BackAccessoryName>
+		<LegsAccessoryName>うつぼのぬいぐるみ</LegsAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>花蝶風月</Name>
+		<Function>スマイル獲得量 +2</Function>
+		<CostumeName>花蝶爛漫</CostumeName>
+		<HeadAccessoryName>花の冠（青）</HeadAccessoryName>
+		<HeadAccessoryName>花の冠（白）</HeadAccessoryName>
+		<HeadAccessoryName>はなのかんむり（あお）</HeadAccessoryName>
+		<FaceAccessoryName>フラワーイヤリング</FaceAccessoryName>
+		<HandAccessoryName>サクラネイル</HandAccessoryName>
+		<BackAccessoryName>蝶の羽（青アゲハ）</BackAccessoryName>
+		<BackAccessoryName>蝶の羽（黄アゲハ）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>スクールスタイル</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>フルブルームユニフォーム</CostumeName>
+		<CostumeName>アッシュスクールユニフォーム</CostumeName>
+		<BackAccessoryName>スクールリュック（紺）</BackAccessoryName>
+		<BackAccessoryName>スクールリュック（グレー）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ヒットマン？</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<CostumeName>オータムテイラード</CostumeName>
+		<CostumeName>ロイヤルテイラード</CostumeName>
+		<FaceAccessoryName>スクウェアサングラス</FaceAccessoryName>
+		<FaceAccessoryName>スクウェアサングラス（オレンジ）</FaceAccessoryName>
+		<FaceAccessoryName>サマービーチフェス！</FaceAccessoryName>
+		<BackAccessoryName>ウォーターガン</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>バタフライクイーン</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>お姫様ティアラ</HeadAccessoryName>
+		<BackAccessoryName>蝶の羽（青アゲハ）</BackAccessoryName>
+		<BackAccessoryName>蝶の羽（黄アゲハ）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>バタフライキング</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<HeadAccessoryName>クラウン</HeadAccessoryName>
+		<BackAccessoryName>蝶の羽（青アゲハ）</BackAccessoryName>
+		<BackAccessoryName>蝶の羽（黄アゲハ）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>エターナルアニバーサリー</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>エターナルブライト</CostumeName>
+		<HeadAccessoryName>エターナルオーナメント</HeadAccessoryName>
+		<BackAccessoryName>アニバーサリーバルーン</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ライブフェス</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>ミキシンググルーヴ</CostumeName>
+		<CostumeName>ブルーサマーグルーヴ</CostumeName>
+		<FaceAccessoryName>インカムマイク（黒）</FaceAccessoryName>
+		<FaceAccessoryName>インカムマイク（白）</FaceAccessoryName>
+		<HandAccessoryName>フェスリストバンド</HandAccessoryName>
+		<HandAccessoryName>フェスリストバンド（白）</HandAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>チアガール</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>チアフルドリーマー</CostumeName>
+		<HandAccessoryName>ポンポン</HandAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>地球侵略</Name>
+		<Function>マニー獲得量を上昇</Function>
+		<HeadAccessoryName>宇宙人アンテナ</HeadAccessoryName>
+		<HandAccessoryName>ブライトブレスレット（白）</HandAccessoryName>
+		<HandAccessoryName>ブライトブレスレット（青）</HandAccessoryName>
+		<HandAccessoryName>ブライトブレスレット（赤）</HandAccessoryName>
+		<HandAccessoryName>ぶらいとぶれすれっと（しろ）</HandAccessoryName>
+		<BackAccessoryName>ウォーターガン</BackAccessoryName>
+		<LegsAccessoryName>ブライトアンクレット（白）</LegsAccessoryName>
+		<LegsAccessoryName>ブライトアンクレット（青）</LegsAccessoryName>
+		<LegsAccessoryName>ブライトアンクレット（赤）</LegsAccessoryName>
+		<LegsAccessoryName>ぶらいとあんくれっと（しろ）</LegsAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>お祭り男</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>暁光ノ装</CostumeName>
+		<HeadAccessoryName>狐のお面</HeadAccessoryName>
+		<HeadAccessoryName>狐のお面（ピンク）</HeadAccessoryName>
+		<HandAccessoryName>ふわふわブレスレット（白）</HandAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ロボクイーン</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>お姫様ティアラ</HeadAccessoryName>
+		<BackAccessoryName>デカぜんまい</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ロボキング</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HeadAccessoryName>クラウン</HeadAccessoryName>
+		<BackAccessoryName>デカぜんまい</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ストロベリーチョコ</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>フォンダンショコラベリー</CostumeName>
+		<FaceAccessoryName>ハートの眼鏡（ピンク）</FaceAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ブルーブルーブルー！</Name>
+		<Function>マニー獲得量を上昇</Function>
+		<CostumeName>ブルーサマーグルーヴ</CostumeName>
+		<FaceAccessoryName>スノーペイント（青）</FaceAccessoryName>
+		<HandAccessoryName>ブルーネイル</HandAccessoryName>
+		<LegsAccessoryName>ブライトアンクレット（青）</LegsAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>仮面の怪人</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>ノーブルプライド</CostumeName>
+		<HeadAccessoryName>シルクハット（黒）</HeadAccessoryName>
+		<HeadAccessoryName>シルクハット（白）</HeadAccessoryName>
+		<FaceAccessoryName>マスカレードマスク（黒）</FaceAccessoryName>
+		<FaceAccessoryName>マスカレードマスク（白）</FaceAccessoryName>
+		<FaceAccessoryName>ますかれーどますく（くろ）</FaceAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>モフモフきゃっと</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<CostumeName>モフモフビースト</CostumeName>
+		<HeadAccessoryName>ねこみみ（白）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（黒）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（三毛）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（しろ）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（くろ）</HeadAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>モフモフどっぐ</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>モフモフビースト</CostumeName>
+		<HeadAccessoryName>いぬみみ（黒）</HeadAccessoryName>
+		<HeadAccessoryName>いぬみみ（茶）</HeadAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>モフモフらびっと</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<CostumeName>モフモフビースト</CostumeName>
+		<HeadAccessoryName>うさみみ（白）</HeadAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>休暇中</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>リラックスリゾート</CostumeName>
+		<HeadAccessoryName>花の冠（青）</HeadAccessoryName>
+		<HeadAccessoryName>はなのかんむり（あお）</HeadAccessoryName>
+		<FaceAccessoryName>スクウェアサングラス</FaceAccessoryName>
+		<FaceAccessoryName>サマービーチフェス！</FaceAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>0→1</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>アテンダントツアラー</CostumeName>
+		<HeadAccessoryName>エターナルオーナメント</HeadAccessoryName>
+		<BackAccessoryName>アニバーサリーバルーン</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>怪盗キャット</Name>
+		<Function>マニー獲得量を上昇</Function>
+		<CostumeName>フューチャーノワール</CostumeName>
+		<HeadAccessoryName>ねこみみ（黒）</HeadAccessoryName>
+		<HeadAccessoryName>ねこみみ（くろ）</HeadAccessoryName>
+		<FaceAccessoryName>マスカレードマスク（黒）</FaceAccessoryName>
+		<FaceAccessoryName>ますかれーどますく（くろ）</FaceAccessoryName>
+		<HandAccessoryName>ねこのて（黒）</HandAccessoryName>
+		<HandAccessoryName>ねこのて（くろ）</HandAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（黒）</RumpAccessoryName>
+		<RumpAccessoryName>ねこしっぽ（くろ）</RumpAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>夢の案内人</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>ドリームナビゲーター</CostumeName>
+		<FaceAccessoryName>インカムマイク（白）</FaceAccessoryName>
+		<FaceAccessoryName>インカムマイク（黒）</FaceAccessoryName>
+	</SettingBonus>
+</ToursDataset>

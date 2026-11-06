@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第5弾" Date="2026-04-23">
+	<Idol>
+		<Name>小宮 果穂</Name>
+		<Brand>アイドルマスター シャイニーカラーズ</Brand>
+		<Sex>女性</Sex>
+		<Age>12</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>07/29</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>日曜日朝の子供向け番組を見る事</Hobby>
+		<Hobby>グッズ集め</Hobby>
+	</Idol>
+	<Idol>
+		<Name>紫雲 清夏</Name>
+		<Brand>学園アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>11/11</DateOfBirth>
+		<BirthPlace>北海道</BirthPlace>
+		<Hobby>カラオケ</Hobby>
+		<Hobby>SNS</Hobby>
+	</Idol>
+	<Song AppealBonusType="DaVi">
+		<Name>Ambitious Eve</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="Da">
+		<Name>Campus mode!!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="エターナルブライト" Genre="Smart" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>エターナルブライト</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1361</Vo>
+		<Da>1334</Da>
+		<Vi>1348</Vi>
+	</Costume>
+	<Costume Key="ホワイトナイトダンス" Genre="Smart" AppealBonusType="VoVi" MaxLevel="50">
+		<Name>ホワイトナイトダンス</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1511</Vo>
+		<Da>1003</Da>
+		<Vi>1498</Vi>
+	</Costume>
+	<Costume Key="花蝶爛漫" Genre="Sweet" AppealBonusType="DaVi" MaxLevel="40">
+		<Name>花蝶爛漫</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>885</Vo>
+		<Da>1459</Da>
+		<Vi>1564</Vi>
+	</Costume>
+	<Costume Key="モフモフビースト" Genre="Wonder" AppealBonusType="VoVi" MaxLevel="40">
+		<Name>モフモフビースト</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1602</Vo>
+		<Da>651</Da>
+		<Vi>1655</Vi>
+	</Costume>
+	<Accessory Key="花丸ペイント（黒）" Genre="Smart" Area="Face">
+		<Name>花丸ペイント（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="フェスリストバンド（白）" Genre="Sweet" Area="Hand">
+		<Name>フェスリストバンド（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="シルクハット（白）" Genre="Sweet" Area="Head">
+		<Name>シルクハット（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="エターナルオーナメント" Genre="Smart" Area="Head">
+		<Name>エターナルオーナメント</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="マスカレードマスク（白）" Genre="Sweet" Area="Face">
+		<Name>マスカレードマスク（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スペードペイント（黒）" Genre="Smart" Area="Face">
+		<Name>スペードペイント（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="アニバーサリーバルーン" Genre="Sweet" Area="Back">
+		<Name>アニバーサリーバルーン</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="花丸ペイント（金）" Genre="Energy" Area="Face">
+		<Name>花丸ペイント（金）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="うさみみ（白）" Genre="Wonder" Area="Head">
+		<Name>うさみみ（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクウェアサングラス（オレンジ）" Genre="Energy" Area="Face">
+		<Name>スクウェアサングラス（オレンジ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="蝶の羽（黄アゲハ）" Genre="Energy" Area="Back">
+		<Name>蝶の羽（黄アゲハ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="サクラネイル" Genre="Sweet" Area="Hand">
+		<Name>サクラネイル</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+</ToursDataset>

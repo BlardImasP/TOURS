@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第1弾" Date="2025-03-26">
+	<Idol>
+		<Name>天海 春香</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>17</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>04/03</DateOfBirth>
+		<BirthPlace>神奈川県</BirthPlace>
+		<Hobby>カラオケ</Hobby>
+		<Hobby>長電話</Hobby>
+	</Idol>
+	<Idol>
+		<Name>如月 千早</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>16</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>02/25</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>"音楽鑑賞</Hobby>
+		<Hobby>写真</Hobby>
+	</Idol>
+	<Idol>
+		<Name>星井 美希</Name>
+		<Brand>アイドルマスター</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>11/23</DateOfBirth>
+		<BirthPlace>神奈川県</BirthPlace>
+		<Hobby>友達とおしゃべり</Hobby>
+		<Hobby>ネイルアート</Hobby>
+	</Idol>
+	<Idol>
+		<Name>島村 卯月</Name>
+		<Brand>アイドルマスター シンデレラガールズ</Brand>
+		<Sex>女性</Sex>
+		<Age>17</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>04/24</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>友達と長電話</Hobby>
+	</Idol>
+	<Idol>
+		<Name>渋谷 凛</Name>
+		<Brand>アイドルマスター シンデレラガールズ</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>08/10</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>犬の散歩</Hobby>
+	</Idol>
+	<Idol>
+		<Name>本田 未央</Name>
+		<Brand>アイドルマスター シンデレラガールズ</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>12/01</DateOfBirth>
+		<BirthPlace>千葉県</BirthPlace>
+		<Hobby>ショッピング</Hobby>
+	</Idol>
+	<Idol>
+		<Name>春日 未来</Name>
+		<Brand>アイドルマスター ミリオンライブ！</Brand>
+		<Sex>女性</Sex>
+		<Age>14</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>06/28</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>可愛い髪留めを集めること</Hobby>
+	</Idol>
+	<Idol>
+		<Name>最上 静香</Name>
+		<Brand>アイドルマスター ミリオンライブ！</Brand>
+		<Sex>女性</Sex>
+		<Age>14</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>09/14</DateOfBirth>
+		<BirthPlace>埼玉県</BirthPlace>
+		<Hobby>テニス</Hobby>
+	</Idol>
+	<Idol>
+		<Name>伊吹 翼</Name>
+		<Brand>アイドルマスター ミリオンライブ！</Brand>
+		<Sex>女性</Sex>
+		<Age>14</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>07/30</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>遊びの計画をたてること</Hobby>
+	</Idol>
+	<Idol>
+		<Name>天道 輝</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>28</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>02/23</DateOfBirth>
+		<BirthPlace>福島県</BirthPlace>
+		<Hobby>特撮</Hobby>
+		<Hobby>ダーツ</Hobby>
+	</Idol>
+	<Idol>
+		<Name>桜庭 薫</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>26</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>09/24</DateOfBirth>
+		<BirthPlace>京都府</BirthPlace>
+		<Hobby>姉の形見の詩集を読む</Hobby>
+	</Idol>
+	<Idol>
+		<Name>柏木 翼</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>24</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>06/02</DateOfBirth>
+		<BirthPlace>新潟県</BirthPlace>
+		<Hobby>テニス</Hobby>
+		<Hobby>読書</Hobby>
+		<Hobby>エコノミークラスで世界を旅する</Hobby>
+	</Idol>
+	<Idol>
+		<Name>櫻木 真乃</Name>
+		<Brand>アイドルマスター シャイニーカラーズ</Brand>
+		<Sex>女性</Sex>
+		<Age>16</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>04/25</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>お出かけ</Hobby>
+		<Hobby>公園で日向ぼっこ</Hobby>
+	</Idol>
+	<Idol>
+		<Name>風野 灯織</Name>
+		<Brand>アイドルマスター シャイニーカラーズ</Brand>
+		<Sex>女性</Sex>
+		<Age>15</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>03/04</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>音楽鑑賞</Hobby>
+		<Hobby>綺麗な景色を探すこと</Hobby>
+		<Hobby>占い</Hobby>
+	</Idol>
+	<Idol>
+		<Name>八宮 めぐる</Name>
+		<Brand>アイドルマスター シャイニーカラーズ</Brand>
+		<Sex>女性</Sex>
+		<Age>16</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>07/22</DateOfBirth>
+		<BirthPlace>アメリカ</BirthPlace>
+		<Hobby>人と話すこと</Hobby>
+		<Hobby>体を動かすこと</Hobby>
+	</Idol>
+	<Idol>
+		<Name>袖屋 璃空</Name>
+		<Brand>アイドルマスター TOURS</Brand>
+		<Age>25</Age>
+		<TypeOfBlood>AB</TypeOfBlood>
+		<DateOfBirth>09/13</DateOfBirth>
+		<BirthPlace>静岡県</BirthPlace>
+		<Hobby>推し活</Hobby>
+		<Hobby>ライブ鑑賞</Hobby>
+	</Idol>
+	<SongBonus AppealBonusType="VoDaVi">
+		<Vo>40.0</Vo>
+		<Da>40.0</Da>
+		<Vi>40.0</Vi>
+	</SongBonus>
+	<SongBonus AppealBonusType="VoDa">
+		<Vo>55.0</Vo>
+		<Da>55.0</Da>
+	</SongBonus>
+	<SongBonus AppealBonusType="VoVi">
+		<Vo>55.0</Vo>
+		<Vi>55.0</Vi>
+	</SongBonus>
+	<SongBonus AppealBonusType="DaVi">
+		<Da>55.0</Da>
+		<Vi>55.0</Vi>
+	</SongBonus>
+	<SongBonus AppealBonusType="Vo">
+		<Vo>100.0</Vo>
+	</SongBonus>
+	<SongBonus AppealBonusType="Da">
+		<Da>100.0</Da>
+	</SongBonus>
+	<SongBonus AppealBonusType="Vi">
+		<Vi>100.0</Vi>
+	</SongBonus>
+	<Song AppealBonusType="VoDaVi">
+		<Name>なんどでも笑おう</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Song>
+	<Song AppealBonusType="Da">
+		<Name>VOY@GER</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Song>
+	<Song AppealBonusType="VoVi">
+		<Name>THE IDOLM@STER</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="VoVi">
+		<Name>お願い！シンデレラ</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="DaVi">
+		<Name>Thank You!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="DaVi">
+		<Name>DRIVE A LIVE</Name>
+		<TargetIdol>男性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="Vi">
+		<Name>Spread the Wings!!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<CostumeBonus AppealBonusType="VoDaVi">
+		<Vo>0.48</Vo>
+		<Da>0.48</Da>
+		<Vi>0.48</Vi>
+	</CostumeBonus>
+	<CostumeBonus AppealBonusType="VoDa">
+		<Vo>0.45</Vo>
+		<Da>0.45</Da>
+		<ExtraBonus>
+			<Vo>0.10</Vo>
+			<Da>0.10</Da>
+		</ExtraBonus>
+	</CostumeBonus>
+	<CostumeBonus AppealBonusType="VoVi">
+		<Vo>0.45</Vo>
+		<Vi>0.45</Vi>
+		<ExtraBonus>
+			<Vo>0.10</Vo>
+			<Vi>0.10</Vi>
+		</ExtraBonus>
+	</CostumeBonus>
+	<CostumeBonus AppealBonusType="DaVi">
+		<Da>0.45</Da>
+		<Vi>0.45</Vi>
+		<ExtraBonus>
+			<Da>0.10</Da>
+			<Vi>0.10</Vi>
+		</ExtraBonus>
+	</CostumeBonus>
+	<CostumeBonus AppealBonusType="Vo">
+		<Vo>1.00</Vo>
+		<ExtraBonus>
+			<Vo>0.10</Vo>
+		</ExtraBonus>
+	</CostumeBonus>
+	<CostumeBonus AppealBonusType="Da">
+		<Da>1.00</Da>
+		<ExtraBonus>
+			<Da>0.10</Da>
+		</ExtraBonus>
+    </CostumeBonus>
+	<CostumeBonus AppealBonusType="Vi">
+		<Vi>1.00</Vi>
+		<ExtraBonus>
+			<Vi>0.10</Vi>
+		</ExtraBonus>
+	</CostumeBonus>
+	<Costume Key="フューチャーコネクト" AppealBonusType="VoDaVi" MaxLevel="10">
+		<Name>フューチャーコネクト</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1200</Vo>
+		<Da>1200</Da>
+		<Vi>1200</Vi>
+	</Costume>
+	<Costume Key="アテンダントツアラー" Genre="Energy" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>アテンダントツアラー</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1373</Vo>
+		<Da>1226</Da>
+		<Vi>1401</Vi>
+	</Costume>
+	<Costume Key="デイアフターデイAMCG" Genre="Energy" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>デイアフターデイAMCG</Name>
+		<TargetIdol>アイドルマスター</TargetIdol>
+		<Vo>1400</Vo>
+		<Da>1306</Da>
+		<Vi>1334</Vi>
+	</Costume>
+	<Costume Key="ノーブルプライド" Genre="Smart" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>ノーブルプライド</Name>
+		<TargetIdol>アイドルマスター SideM</TargetIdol>
+		<Vo>1333</Vo>
+		<Da>1414</Da>
+		<Vi>1293</Vi>
+	</Costume>
+	<Costume Key="ディープワイヤード" Genre="Energy" AppealBonusType="Da" MaxLevel="30">
+		<Name>ディープワイヤード</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1071</Vo>
+		<Da>1632</Da>
+		<Vi>1122</Vi>
+	</Costume>
+	<Costume Key="オリエンタルクロシズ" Genre="Energy" AppealBonusType="VoDaVi" MaxLevel="30">
+		<Name>オリエンタルクロシズ</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1326</Vo>
+		<Da>1204</Da>
+		<Vi>1295</Vi>
+	</Costume>
+	<Costume Key="トワイライトダンス" Genre="Smart" AppealBonusType="Vi" MaxLevel="40">
+		<Name>トワイライトダンス</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1209</Vo>
+		<Da>1053</Da>
+		<Vi>1638</Vi>
+	</Costume>
+	<Costume Key="ミキシンググルーヴ" Genre="Energy" AppealBonusType="VoDaVi" MaxLevel="20">
+		<Name>ミキシンググルーヴ</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1252</Vo>
+		<Da>1283</Da>
+		<Vi>1240</Vi>
+	</Costume>
+	<Costume Key="ドリームナビゲーター" Genre="Wonder" AppealBonusType="Vo" MaxLevel="30">
+		<Name>ドリームナビゲーター</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1581</Vo>
+		<Da>1020</Da>
+		<Vi>1224</Vi>
+	</Costume>
+	<Costume Key="フルブルームユニフォーム" Genre="Sweet" AppealBonusType="VoDaVi" MaxLevel="30">
+		<Name>フルブルームユニフォーム</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1300</Vo>
+		<Da>1230</Da>
+		<Vi>1295</Vi>
+	</Costume>
+	<Costume Key="レッスンウェア" Genre="Energy" AppealBonusType="Da" MaxLevel="30">
+		<Name>レッスンウェア</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1145</Vo>
+		<Da>1635</Da>
+		<Vi>995</Vi>
+	</Costume>
+	<Accessory Key="花の冠（青）" Genre="Wonder" Area="Head">
+		<Name>花の冠（青）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="シルクハット（黒）" Genre="Smart" Area="Head">
+		<Name>シルクハット（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="天使のリング" Genre="Sweet" Area="Head">
+		<Name>天使のリング</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="天使の羽" Genre="Sweet" Area="Back">
+		<Name>天使の羽</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="狐のお面" Genre="Smart" Area="Head">
+		<Name>狐のお面</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="クラウン" Genre="Smart" Area="Head">
+		<Name>クラウン</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="眼帯（黒）" Genre="Wonder" Area="Face">
+		<Name>眼帯（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ハートペイント（ピンク）" Genre="Sweet" Area="Face">
+		<Name>ハートペイント（ピンク）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="マスカレードマスク（黒）" Genre="Smart" Area="Face">
+		<Name>マスカレードマスク（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトブレスレット（白）" Genre="Sweet" Area="Hand">
+		<Name>ブライトブレスレット（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ブライトアンクレット（白）" Genre="Sweet" Area="Legs">
+		<Name>ブライトアンクレット（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="お姫様ティアラ" Genre="Sweet" Area="Head">
+		<Name>お姫様ティアラ</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Accessory>
+	<Accessory Key="宇宙人アンテナ" Genre="Wonder" Area="Head">
+		<Name>宇宙人アンテナ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の角（紫）" Genre="Wonder" Area="Head">
+		<Name>悪魔の角（紫）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の羽（紫）" Genre="Wonder" Area="Back">
+		<Name>悪魔の羽（紫）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔の尻尾（紫）" Genre="Wonder" Area="Rump">
+		<Name>悪魔の尻尾（紫）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこみみ（白）" Genre="Sweet" Area="Head">
+		<Name>ねこみみ（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこしっぽ（白）" Genre="Sweet" Area="Rump">
+		<Name>ねこしっぽ（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこみみ（三毛）" Genre="Energy" Area="Head">
+		<Name>ねこみみ（三毛）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこしっぽ（三毛）" Genre="Energy" Area="Rump">
+		<Name>ねこしっぽ（三毛）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="インカムマイク（黒）" Genre="Energy" Area="Face">
+		<Name>インカムマイク（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクウェア眼鏡（黒）" Genre="Smart" Area="Face">
+		<Name>スクウェア眼鏡（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="つけひげ" Genre="Wonder" Area="Face">
+		<Name>つけひげ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="チェーンブレスレット" Genre="Smart" Area="Hand">
+		<Name>チェーンブレスレット</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこのて（白）" Genre="Sweet" Area="Hand">
+		<Name>ねこのて（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="蝶の羽（青アゲハ）" Genre="Wonder" Area="Back">
+		<Name>蝶の羽（青アゲハ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="へびのぬいぐるみ" Genre="Wonder" Area="Legs">
+		<Name>へびのぬいぐるみ</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+
+</ToursDataset>

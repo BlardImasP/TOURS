@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第5弾ツアーズレア" Date="2026-06-04">
+	<Song AppealBonusType="Vo">
+		<Name>流れ星キセキ</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="アッシュスクールユニフォーム" Genre="Smart" AppealBonusType="VoDaVi" MaxLevel="40">
+		<Name>アッシュスクールユニフォーム</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1328</Vo>
+		<Da>1257</Da>
+		<Vi>1323</Vi>
+	</Costume>
+    <Accessory Key="はーとぺいんと（ぴんく）" Genre="Sweet" Area="Face">
+        <Name>はーとぺいんと（ぴんく）</Name>
+        <TargetIdol>全員</TargetIdol>
+    </Accessory>
+    <Accessory Key="ぶらいとぶれすれっと（しろ）" Genre="Sweet" Area="Hand">
+        <Name>ぶらいとぶれすれっと（しろ）</Name>
+        <TargetIdol>全員</TargetIdol>
+    </Accessory>
+    <Accessory Key="ぶらいとあんくれっと（しろ）" Genre="Sweet" Area="Legs">
+        <Name>ぶらいとあんくれっと（しろ）</Name>
+        <TargetIdol>全員</TargetIdol>
+    </Accessory>
+</ToursDataset>

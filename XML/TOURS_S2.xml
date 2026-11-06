@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="S2弾" Date="2026-10-29" Version="2.1.1">
+	<Idol>
+		<Name>舞田 類</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>23</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>08/08</DateOfBirth>
+		<BirthPlace>横須賀</BirthPlace>
+		<Hobby>スキー</Hobby>
+		<Hobby>スノボ</Hobby>
+		<Hobby>サーフィン</Hobby>
+	</Idol>
+	<Idol>
+		<Name>山下 次郎</Name>
+		<Brand>アイドルマスター SideM</Brand>
+		<Sex>男性</Sex>
+		<Age>30</Age>
+		<TypeOfBlood>O</TypeOfBlood>
+		<DateOfBirth>09/01</DateOfBirth>
+		<BirthPlace>石川県</BirthPlace>
+		<Hobby>猫カフェめぐり</Hobby>
+		<Hobby>競馬</Hobby>
+	</Idol>
+	<Song AppealBonusType="Da">
+		<Name>Study Equal Magic!</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Song>
+	<Song AppealBonusType="Vo">
+		<Name>SYMPHONY</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="ヴァイオレットフェアリー" Genre="Smart" AppealBonusType="Vo" MaxLevel="60">
+		<Name>ヴァイオレットフェアリー</Name>
+		<TargetIdol>渋谷 凛</TargetIdol>
+		<Vo>1700</Vo>
+		<Da>1226</Da>
+		<Vi>1255</Vi>
+	</Costume>
+	<Costume Key="ウィッチナイトパーティー" Genre="Wonder" AppealBonusType="VoVi" MaxLevel="50">
+		<Name>ウィッチナイトパーティー</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>1685</Vo>
+		<Da>633</Da>
+		<Vi>1726</Vi>
+	</Costume>
+	<Costume Key="コズミック・レンジャー" Genre="Energy" AppealBonusType="Da" MaxLevel="50">
+		<Name>コズミック・レンジャー</Name>
+		<TargetIdol>男性</TargetIdol>
+		<Vo>1172</Vo>
+		<Da>1738</Da>
+		<Vi>1133</Vi>
+	</Costume>
+	<Costume Key="ハロウィングルーヴ" Genre="Wonder" AppealBonusType="Vi" MaxLevel="20">
+		<Name>ハロウィングルーヴ</Name>
+		<TargetIdol>全員</TargetIdol>
+		<Vo>1097</Vo>
+		<Da>984</Da>
+		<Vi>1704</Vi>
+	</Costume>
+	<Accessory Key="フランケンボルト" Genre="Wonder" Area="Head">
+		<Name>フランケンボルト</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スマイルペイント（黄）" Genre="Sweet" Area="Face">
+		<Name>スマイルペイント（黄）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ウルフハンド（グレー）" Genre="Wonder" Area="Hand">
+		<Name>ウルフハンド（グレー）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ハロウィンゴースト（紫）" Genre="Smart" Area="Back">
+		<Name>ハロウィンゴースト（紫）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="悪魔のアンクル（紫）" Genre="Wonder" Area="Legs">
+		<Name>悪魔のアンクル（紫）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<SettingBonus>
+		<Name>ホラーナイトパーティー</Name>
+		<Function>スマイル獲得量 +2</Function>
+		<CostumeName>ウィッチナイトパーティー</CostumeName>
+		<HeadAccessoryName>フランケンボルト</HeadAccessoryName>
+		<HandAccessoryName>ウルフハンド（グレー）</HandAccessoryName>
+		<BackAccessoryName>ハロウィンゴースト</BackAccessoryName>
+		<BackAccessoryName>ハロウィンゴースト（紫）</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>コズミック・ポリス</Name>
+		<Function>スマイル獲得量 +2</Function>
+		<CostumeName>コズミック・レンジャー</CostumeName>
+		<HeadAccessoryName>宇宙人アンテナ</HeadAccessoryName>
+		<FaceAccessoryName>スクウェアサングラス</FaceAccessoryName>
+		<FaceAccessoryName>サマービーチフェス！</FaceAccessoryName>
+		<BackAccessoryName>ウォーターガン</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>ハロウィンパーティー</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<CostumeName>ハロウィングルーヴ</CostumeName>
+		<HeadAccessoryName>悪魔の角（紫）</HeadAccessoryName>
+		<HeadAccessoryName>悪魔の角（赤）</HeadAccessoryName>
+		<FaceAccessoryName>スマイルペイント（黄）</FaceAccessoryName>
+	</SettingBonus>
+</ToursDataset>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="S1弾ツアーズレア" Date="2026-09-17" Version="2.0.2">
+	<Idol>
+		<Name>周防 桃子</Name>
+		<Brand>アイドルマスター ミリオンライブ！</Brand>
+		<Sex>女性</Sex>
+		<Age>11</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>11/06</DateOfBirth>
+		<BirthPlace>東京都</BirthPlace>
+		<Hobby>かわいいシール集め</Hobby>
+	</Idol>
+	<Song AppealBonusType="Vi">
+		<Name>ローリング△さんかく</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="恋花小町" Genre="Sweet" AppealBonusType="Vi" MaxLevel="40">
+		<Name>恋花小町</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>1114</Vo>
+		<Da>1048</Da>
+		<Vi>1770</Vi>
+	</Costume>
+	<Costume Key="サマーティースタイル" Genre="Energy" AppealBonusType="DaVi" MaxLevel="50">
+		<Name>サマーティースタイル</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>795</Vo>
+		<Da>1617</Da>
+		<Vi>1632</Vi>
+	</Costume>
+	<Accessory Key="ドリルアーム" Genre="Wonder" Area="Hand">
+		<Name>ドリルアーム</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ボンバーヘッド" Genre="Energy" Area="Head">
+		<Name>ボンバーヘッド</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="アンカーペイント（青）" Genre="Wonder" Area="Face">
+		<Name>アンカーペイント（青）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="だいやぺいんと（くろ）" Genre="Energy" Area="Face">
+		<Name>だいやぺいんと（くろ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこしっぽ（くろ）" Genre="Smart" Area="Rump">
+		<Name>ねこしっぽ（くろ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこみみ（くろ）" Genre="Smart" Area="Head">
+		<Name>ねこみみ（くろ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ぱーぷるねいる" Genre="Wonder" Area="Hand">
+		<Name>ぱーぷるねいる</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこのて（くろ）" Genre="Smart" Area="Hand">
+		<Name>ねこのて（くろ）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<SettingBonus>
+		<Name>戦闘ロボ</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<HandAccessoryName>ドリルアーム</HandAccessoryName>
+		<BackAccessoryName>デカぜんまい</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>夏の思い出</Name>
+		<Function>マニー獲得量を少し上昇</Function>
+		<CostumeName>恋花小町</CostumeName>
+		<HeadAccessoryName>狐のお面</HeadAccessoryName>
+		<HeadAccessoryName>狐のお面（ピンク）</HeadAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>夏！全開！</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>サマーティースタイル</CostumeName>
+		<FaceAccessoryName>アンカーペイント（青）</FaceAccessoryName>
+		<BackAccessoryName>ウォーターガン</BackAccessoryName>
+	</SettingBonus>
+	<SettingBonus>
+		<Name>Let's dancing!</Name>
+		<Function>スマイル獲得量 +1</Function>
+		<CostumeName>オータムテイラード</CostumeName>
+		<CostumeName>ロイヤルテイラード</CostumeName>
+		<HeadAccessoryName>ボンバーヘッド</HeadAccessoryName>
+		<HeadAccessoryName>ボンバーヘッド（ゴールド）</HeadAccessoryName>
+		<FaceAccessoryName>スクウェアサングラス</FaceAccessoryName>
+		<FaceAccessoryName>スクウェアサングラス（オレンジ）</FaceAccessoryName>
+		<FaceAccessoryName>サマービーチフェス！</FaceAccessoryName>
+	</SettingBonus>
+</ToursDataset>

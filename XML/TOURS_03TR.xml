@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第3弾ツアーズレア" Date="2025-12-17">
+	<Song AppealBonusType="Vo">
+		<Name>READY!!</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Remark>2025/12/17</Remark>
+	</Song>
+</ToursDataset>

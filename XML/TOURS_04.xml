@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ToursDataset xmlns="https://blardimasp.github.io/TOURS/XML/ToursDataset.xsd" SeriesName="第4弾" Date="2026-01-27" Version="1.4.0">
+	<Idol>
+		<Name>神崎 蘭子</Name>
+		<Brand>アイドルマスター シンデレラガールズ</Brand>
+		<Sex>女性</Sex>
+		<Age>14</Age>
+		<TypeOfBlood>A</TypeOfBlood>
+		<DateOfBirth>04/08</DateOfBirth>
+		<BirthPlace>熊本県</BirthPlace>
+		<Hobby>絵を描くこと</Hobby>
+	</Idol>
+	<Idol>
+		<Name>真壁 瑞希</Name>
+		<Brand>アイドルマスター ミリオンライブ！</Brand>
+		<Sex>女性</Sex>
+		<Age>17</Age>
+		<TypeOfBlood>B</TypeOfBlood>
+		<DateOfBirth>01/27</DateOfBirth>
+		<BirthPlace>神奈川県</BirthPlace>
+		<Hobby>手品</Hobby>
+	</Idol>
+	<Song AppealBonusType="Vi">
+		<Name>Shine!!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Song AppealBonusType="VoDaVi">
+		<Name>UNION!!</Name>
+		<TargetIdol>女性</TargetIdol>
+	</Song>
+	<Costume Key="ロマンチカフェザー" Genre="Sweet" AppealBonusType="VoDaVi" MaxLevel="50">
+		<Name>ロマンチカフェザー</Name>
+		<TargetIdol>アイドルマスター シャイニーカラーズ</TargetIdol>
+		<Vo>1313</Vo>
+		<Da>1292</Da>
+		<Vi>1435</Vi>
+	</Costume>
+	<Costume Key="暁光ノ装" Genre="Energy" AppealBonusType="Da" MaxLevel="40">
+		<Name>暁光ノ装</Name>
+		<TargetIdol>男性</TargetIdol>
+		<Vo>1107</Vo>
+		<Da>1680</Da>
+		<Vi>1121</Vi>
+	</Costume>
+	<Costume Key="フォンダンショコラベリー" Genre="Sweet" AppealBonusType="VoVi" MaxLevel="30">
+		<Name>フォンダンショコラベリー</Name>
+		<TargetIdol>女性</TargetIdol>
+		<Vo>1468</Vo>
+		<Da>868</Da>
+		<Vi>1494</Vi>
+	</Costume>
+	<Accessory Key="ハートの眼鏡（ピンク）" Genre="Sweet" Area="Face">
+		<Name>ハートの眼鏡（ピンク）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="花の冠（白）" Genre="Sweet" Area="Head">
+		<Name>花の冠（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="スクールリュック（グレー）" Genre="Smart" Area="Back">
+		<Name>スクールリュック（グレー）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ふわふわブレスレット（白）" Genre="Energy" Area="Hand">
+		<Name>ふわふわブレスレット（白）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこみみ（黒）" Genre="Smart" Area="Head">
+		<Name>ねこみみ（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこしっぽ（黒）" Genre="Smart" Area="Rump">
+		<Name>ねこしっぽ（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+	<Accessory Key="ねこのて（黒）" Genre="Smart" Area="Hand">
+		<Name>ねこのて（黒）</Name>
+		<TargetIdol>全員</TargetIdol>
+	</Accessory>
+</ToursDataset>
