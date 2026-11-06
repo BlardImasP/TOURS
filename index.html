@@ -840,6 +840,19 @@
         function callback_onReadXML(xml) {
 
             outputDebug("callback_onReadXML()");
+
+            const elementsIdol = xml.getElementsByTagName("Idol");
+
+            if (elementsIdol.length > 0) {
+
+                const idol = elementsIdol[0];
+
+                const elementsName = idol.getElementsByTagName("Name");
+
+                const name = elementsName.childNodes[0].nodeValue;
+
+                outputDebug("name" + " = " + name);
+            }
         }
 
         function buttonDebug_onClick() {
