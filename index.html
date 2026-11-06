@@ -6,7 +6,7 @@
 
     <meta charset="utf-8" />
 
-    <title>アピール値計算</title>
+    <title>アイドルマスター TOURS</title>
 
     <style>
 
@@ -27,6 +27,11 @@
 
         .accessory_selector {
             width: 28rem;
+            font-size: 1.1em;
+        }
+
+        .specialappeal_selector {
+            width: 36rem;
             font-size: 1.1em;
         }
 
@@ -65,6 +70,10 @@
 
 <body onload="body_onload()">
 
+    <button onClick="buttonDebug_onClick()">Debug</button>
+
+    <div id="textDebug">Debug Text</div>
+
     <table border="1">
         <caption>楽曲</caption>
         <tbody>
@@ -92,12 +101,302 @@
     </table>
 
     <table border="1">
+        <caption>SPアピール</caption>
+        <tbody>
+            <tr>
+                <th scope="row" rowspan="3">SPアピール 1</th>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_01" value="第1弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            第1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_02" value="第2弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            第2弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_03" value="第3弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            第3弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_04" value="第4弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            第4弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_05" value="第5弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            第5弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_s1" value="S1弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            S1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_series_s2" value="S2弾" checked onchange="specialappeal_1_series_any_onchange()" />
+                            S2弾
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_ssr" value="SSR" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            SSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_tssr" value="TSSR" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            TSSR
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_sr" value="SR" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            SR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_tsr" value="TSR" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            TSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_co" value="CO" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            CO
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_r" value="R" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_tr" value="TR" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_n" value="N" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_cp" value="CP" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            CP
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_1_rarity_pm" value="PM" checked onchange="specialappeal_1_rarity_any_onchange()" />
+                            PM
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" height="32"><select class="specialappeal_selector" id="specialappeal_1_select" onchange="specialappeal_1_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="specialappeal_1_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="3">SPアピール 2</th>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_01" value="第1弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            第1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_02" value="第2弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            第2弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_03" value="第3弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            第3弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_04" value="第4弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            第4弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_05" value="第5弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            第5弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_s1" value="S1弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            S1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_series_s2" value="S2弾" checked onchange="specialappeal_2_series_any_onchange()" />
+                            S2弾
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_ssr" value="SSR" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            SSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_tssr" value="TSSR" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            TSSR
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_sr" value="SR" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            SR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_tsr" value="TSR" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            TSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_co" value="CO" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            CO
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_r" value="R" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_tr" value="TR" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_n" value="N" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_cp" value="CP" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            CP
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_2_rarity_pm" value="PM" checked onchange="specialappeal_2_rarity_any_onchange()" />
+                            PM
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" height="32"><select class="specialappeal_selector" id="specialappeal_2_select" onchange="specialappeal_2_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="specialappeal_2_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="3">SPアピール 3</th>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_01" value="第1弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            第1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_02" value="第2弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            第2弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_03" value="第3弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            第3弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_04" value="第4弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            第4弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_05" value="第5弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            第5弾
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_s1" value="S1弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            S1弾
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_series_s2" value="S2弾" checked onchange="specialappeal_3_series_any_onchange()" />
+                            S2弾
+                        </label>
+                    </div>
+                </td>
+                <td>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_ssr" value="SSR" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            SSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_tssr" value="TSSR" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            TSSR
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_sr" value="SR" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            SR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_tsr" value="TSR" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            TSR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_co" value="CO" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            CO
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_r" value="R" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            R
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_tr" value="TR" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            TR
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_n" value="N" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            N
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_cp" value="CP" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            CP
+                        </label>
+                        <label>
+                            <input type="checkbox" id="specialappeal_3_rarity_pm" value="PM" checked onchange="specialappeal_3_rarity_any_onchange()" />
+                            PM
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" height="32"><select class="specialappeal_selector" id="specialappeal_3_select" onchange="specialappeal_3_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="specialappeal_3_descriptions"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="1">
         <caption>サポート</caption>
         <tbody>
             <tr>
-                <th scope="row" rowspan="2">サポート 1</th>
-                <td height="32"><select class="support_selector" id="support_1_select" onchange="support_1_select_onchange()"></select></td>
-                <td rowspan="2">
+                <th scope="row" rowspan="3">サポート 1</th>
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_1_series_01" value="第1弾" checked onchange="support_1_series_any_onchange()" />
@@ -111,6 +410,8 @@
                             <input type="checkbox" id="support_1_series_03" value="第3弾" checked onchange="support_1_series_any_onchange()" />
                             第3弾
                         </label>
+                    </div>
+                    <div>
                         <label>
                             <input type="checkbox" id="support_1_series_04" value="第4弾" checked onchange="support_1_series_any_onchange()" />
                             第4弾
@@ -131,7 +432,7 @@
                         </label>
                     </div>
                 </td>
-                <td rowspan="2">
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_1_rarity_ssr" value="SSR" checked onchange="support_1_rarity_any_onchange()" />
@@ -183,12 +484,14 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_1_descriptions"></td>
+                <td colspan="2" height="32"><select class="support_selector" id="support_1_select" onchange="support_1_select_onchange()"></select></td>
             </tr>
             <tr>
-                <th scope="row" rowspan="2">サポート 2</th>
-                <td height="32"><select class="support_selector" id="support_2_select" onchange="support_2_select_onchange()"></select></td>
-                <td rowspan="2">
+                <td colspan="2" id="support_1_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="3">サポート 2</th>
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_2_series_01" value="第1弾" checked onchange="support_2_series_any_onchange()" />
@@ -202,6 +505,8 @@
                             <input type="checkbox" id="support_2_series_03" value="第3弾" checked onchange="support_2_series_any_onchange()" />
                             第3弾
                         </label>
+                    </div>
+                    <div>
                         <label>
                             <input type="checkbox" id="support_2_series_04" value="第4弾" checked onchange="support_2_series_any_onchange()" />
                             第4弾
@@ -222,7 +527,7 @@
                         </label>
                     </div>
                 </td>
-                <td rowspan="2">
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_2_rarity_sr" value="SR" checked onchange="support_2_rarity_any_onchange()" />
@@ -254,12 +559,14 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_2_descriptions"></td>
+                <td colspan="2" height="32"><select class="support_selector" id="support_2_select" onchange="support_2_select_onchange()"></select></td>
             </tr>
             <tr>
-                <th scope="row" rowspan="2">サポート 3</th>
-                <td height="32"><select class="support_selector" id="support_3_select" onchange="support_3_select_onchange()"></select></td>
-                <td rowspan="2">
+                <td colspan="2" id="support_2_descriptions"></td>
+            </tr>
+            <tr>
+                <th scope="row" rowspan="3">サポート 3</th>
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_3_series_01" value="第1弾" checked onchange="support_3_series_any_onchange()" />
@@ -273,6 +580,8 @@
                             <input type="checkbox" id="support_3_series_03" value="第3弾" checked onchange="support_3_series_any_onchange()" />
                             第3弾
                         </label>
+                    </div>
+                    <div>
                         <label>
                             <input type="checkbox" id="support_3_series_04" value="第4弾" checked onchange="support_3_series_any_onchange()" />
                             第4弾
@@ -293,7 +602,7 @@
                         </label>
                     </div>
                 </td>
-                <td rowspan="2">
+                <td>
                     <div>
                         <label>
                             <input type="checkbox" id="support_3_rarity_r" value="R" checked onchange="support_3_rarity_any_onchange()" />
@@ -311,7 +620,10 @@
                 </td>
             </tr>
             <tr>
-                <td id="support_3_descriptions"></td>
+                <td colspan="2" height="32"><select class="support_selector" id="support_3_select" onchange="support_3_select_onchange()"></select></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="support_3_descriptions"></td>
             </tr>
         </tbody>
     </table>
@@ -473,18 +785,77 @@
 
     <script>
 
-        function redrawDebugTBoby(listCard) {
+        function outputDebug(text) {
 
-            const tbodyDebug = document.getElementById("debug_tboby");
+            const textDebug = document.getElementById("textDebug");
 
-            if (tbodyDebug === undefined) {
+            if (textDebug === undefined) {
 
                 return;
             }
 
-            clearElementChildren(tbodyDebug);
+            textDebug.innerText = text;
+        }
 
-            listCard.forEach((card) => {
+    </script>
+
+    <script>
+
+        function readXML(url, onReadXML) {
+
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+
+                if (xhr.readyState == XMLHttpRequest.DONE) {
+
+                    if (xhr.status == 200) {
+
+                        onReadXML(xhr.responseXML);
+                    } else {
+
+                        outputDebug("xhr.responseXML" + " = " + String(xhr.responseXML));
+                    }
+                } else {
+
+                    outputDebug("xhr.readyState" + " = " + String(xhr.readyState) + ", " + "xhr.status" + " = " + String(xhr.status));
+                }
+            }
+
+            try {
+
+                xhr.open("GET", url, true);
+
+                xhr.send(null);
+            } catch (ex) {
+
+                outputDebug(ex);
+            }
+        }
+
+    </script>
+
+    <script>
+
+        function callback_onReadXML(xml) {
+
+            outputDebug("callback_onReadXML()");
+        }
+
+        function buttonDebug_onClick() {
+
+            outputDebug("buttonDebug_onClick()");
+
+            readXML("./XML/TOURS_01.xml", callback_onReadXML);
+        }
+
+    </script>
+
+    <script>
+
+        function drawCardTRow(tbody, object) {
+
+            if (object instanceof Card) {
 
                 const tr = document.createElement("tr");
 
@@ -493,42 +864,42 @@
 
                 thID.scope = "row";
 
-                thID.append(card.id);
+                thID.append(object.id);
 
                 tr.appendChild(thID);
 
                 //  シリーズ
                 const tdSeries = document.createElement("td");
 
-                tdSeries.append(card.series);
+                tdSeries.append(object.series);
 
                 tr.appendChild(tdSeries);
 
                 //  レアリティ
                 const tdRarity = document.createElement("td");
 
-                tdRarity.append(card.rarity);
+                tdRarity.append(object.rarity);
 
                 tr.appendChild(tdRarity);
 
                 //  カードタイプ
                 const tdType = document.createElement("td");
 
-                tdType.append(card.type);
+                tdType.append(object.type);
 
                 tr.appendChild(tdType);
 
                 //  名称
                 const tdName = document.createElement("td");
 
-                tdName.append(card.name);
+                tdName.append(object.name);
 
                 tr.appendChild(tdName);
 
                 //  アイドル
                 const tdIdols = document.createElement("td");
 
-                forEachAppendBr(card.idols, tdIdols, (idol) => {
+                forEachAppendBr(object.idols, tdIdols, (idol) => {
 
                     tdIdols.append(idol);
                 });
@@ -538,7 +909,7 @@
                 //  説明
                 const tdDescriptions = document.createElement("td");
 
-                forEachAppendBr(card.descriptions, tdDescriptions, (description) => {
+                forEachAppendBr(object.descriptions, tdDescriptions, (description) => {
 
                     if (description[0] == "※") {
 
@@ -562,7 +933,7 @@
 
                 let demerit = false;
 
-                forEachAppendBr(card.functions, tdFunctions, (func) => {
+                forEachAppendBr(object.functions, tdFunctions, (func) => {
 
                     if (demerit) {
 
@@ -586,15 +957,35 @@
                 //  備考
                 const tdRemarks = document.createElement("td");
 
-                forEachAppendBr(card.remarks, tdRemarks, (remark) => {
+                forEachAppendBr(object.remarks, tdRemarks, (remark) => {
 
                     tdRemarks.append(remark);
                 });
 
                 tr.appendChild(tdRemarks);
 
-                tbodyDebug.appendChild(tr);
-            });
+                tbody.appendChild(tr);
+            } else {
+
+                if (Array.isArray(object)) {
+
+                    object.forEach((item) => drawCardTRow(tbody, item));
+                }
+            }
+        }
+
+        function redrawDebugTBoby(listCard) {
+
+            const tbodyDebug = document.getElementById("debug_tboby");
+
+            if (tbodyDebug === undefined) {
+
+                return;
+            }
+
+            clearElementChildren(tbodyDebug);
+
+            drawCardTRow(tbodyDebug, listCard);
         }
 
     </script>
@@ -955,6 +1346,24 @@
 
             accessory_legs_id;
 
+            specialappeal_1_id;
+
+            specialappeal_1_filter_series;
+
+            specialappeal_1_filter_rarity;
+
+            specialappeal_2_id;
+
+            specialappeal_2_filter_series;
+
+            specialappeal_2_filter_rarity;
+
+            specialappeal_3_id;
+
+            specialappeal_3_filter_series;
+
+            specialappeal_3_filter_rarity;
+
             support_1_id;
 
             support_1_filter_series;
@@ -995,6 +1404,24 @@
                 this.accessory_rump_id = 0;
 
                 this.accessory_legs_id = 0;
+
+                this.specialappeal_1_id = "";
+
+                this.specialappeal_1_filter_series = "第1弾 第2弾 第3弾 第4弾 第5弾 S1弾 S2弾";
+
+                this.specialappeal_1_filter_rarity = "SSR";
+
+                this.specialappeal_2_id = "";
+
+                this.specialappeal_2_filter_series = "第1弾 第2弾 第3弾 第4弾 第5弾 S1弾 S2弾";
+
+                this.specialappeal_2_filter_rarity = "SSR";
+
+                this.specialappeal_3_id = "";
+
+                this.specialappeal_3_filter_series = "第1弾 第2弾 第3弾 第4弾 第5弾 S1弾 S2弾";
+
+                this.specialappeal_3_filter_rarity = "SSR";
 
                 this.support_1_id = "";
 
@@ -1268,6 +1695,75 @@
 
         const WORD_SUPPORT_END_OF_MERIT = "が、"
 
+        const listSpecialAppeal1SeriesCheckboxId = [
+            "specialappeal_1_series_01",
+            "specialappeal_1_series_02",
+            "specialappeal_1_series_03",
+            "specialappeal_1_series_04",
+            "specialappeal_1_series_05",
+            "specialappeal_1_series_s1",
+            "specialappeal_1_series_s2"
+        ];
+
+        const listSpecialAppeal1RarityCheckboxId = [
+            "specialappeal_1_rarity_ssr",
+            "specialappeal_1_rarity_tssr",
+            "specialappeal_1_rarity_sr",
+            "specialappeal_1_rarity_tsr",
+            "specialappeal_1_rarity_co",
+            "specialappeal_1_rarity_r",
+            "specialappeal_1_rarity_tr",
+            "specialappeal_1_rarity_n",
+            "specialappeal_1_rarity_cp",
+            "specialappeal_1_rarity_pm"
+        ];
+
+        const listSpecialAppeal2SeriesCheckboxId = [
+            "specialappeal_2_series_01",
+            "specialappeal_2_series_02",
+            "specialappeal_2_series_03",
+            "specialappeal_2_series_04",
+            "specialappeal_2_series_05",
+            "specialappeal_2_series_s1",
+            "specialappeal_2_series_s2"
+        ];
+
+        const listSpecialAppeal2RarityCheckboxId = [
+            "specialappeal_2_rarity_ssr",
+            "specialappeal_2_rarity_tssr",
+            "specialappeal_2_rarity_sr",
+            "specialappeal_2_rarity_tsr",
+            "specialappeal_2_rarity_co",
+            "specialappeal_2_rarity_r",
+            "specialappeal_2_rarity_tr",
+            "specialappeal_2_rarity_n",
+            "specialappeal_2_rarity_cp",
+            "specialappeal_2_rarity_pm"
+        ];
+
+        const listSpecialAppeal3SeriesCheckboxId = [
+            "specialappeal_3_series_01",
+            "specialappeal_3_series_02",
+            "specialappeal_3_series_03",
+            "specialappeal_3_series_04",
+            "specialappeal_3_series_05",
+            "specialappeal_3_series_s1",
+            "specialappeal_3_series_s2"
+        ];
+
+        const listSpecialAppeal3RarityCheckboxId = [
+            "specialappeal_3_rarity_ssr",
+            "specialappeal_3_rarity_tssr",
+            "specialappeal_3_rarity_sr",
+            "specialappeal_3_rarity_tsr",
+            "specialappeal_3_rarity_co",
+            "specialappeal_3_rarity_r",
+            "specialappeal_3_rarity_tr",
+            "specialappeal_3_rarity_n",
+            "specialappeal_3_rarity_cp",
+            "specialappeal_3_rarity_pm"
+        ];
+
         const listSupport1SeriesCheckboxId = [
             "support_1_series_01",
             "support_1_series_02",
@@ -1329,6 +1825,24 @@
         var songSelected;
 
         var costumeSelected;
+
+        var filterSeriesSpecialAppeal1;
+
+        var filterRaritySpecialAppeal1;
+
+        var specialAppeal1Selected;
+
+        var filterSeriesSpecialAppeal2;
+
+        var filterRaritySpecialAppeal2;
+
+        var specialAppeal2Selected;
+
+        var filterSeriesSpecialAppeal3;
+
+        var filterRaritySpecialAppeal3;
+
+        var specialAppeal3Selected;
 
         var filterSeriesSupport1;
 
@@ -1485,6 +1999,59 @@
             setupAccessoryAnySelect(idAccessory, "accessory_legs_select", "脚");
         }
 
+        function setupSpecialAppealSelect(idSpecialAppealCard, idElement, filterSeries, filterRarity) {
+
+            const selectSpecialAppeal = document.getElementById(idElement);
+
+            clearElementChildren(selectSpecialAppeal);
+
+            listSpecialAppealCard.forEach((itemSpecialAppealCard) => {
+
+                const indexFoundSeries = filterSeries.indexOf(itemSpecialAppealCard.series);
+
+                const indexFoundRerity = filterRarity.indexOf(itemSpecialAppealCard.rarity);
+
+                if ((indexFoundSeries >= 0) && (indexFoundRerity >= 0)) {
+
+                    let text = "";
+
+                    if (itemSpecialAppealCard.series != "") {
+
+                        if (itemSpecialAppealCard.rarity != "") {
+
+                            text += "［" + itemSpecialAppealCard.series + "/" + itemSpecialAppealCard.rarity + "］";
+                        } else {
+
+                            text += "［" + itemSpecialAppealCard.series + "］";
+                        }
+                    } else {
+
+                        if (itemSpecialAppealCard.rarity != "") {
+
+                            text += "［" + itemSpecialAppealCard.rarity + "］";
+                        } else {
+
+                            text += "";
+                        }
+                    }
+
+                    if (itemSpecialAppealCard.name != "") {
+
+                        text += itemSpecialAppealCard.name;
+                    }
+
+                    if (itemSpecialAppealCard.idols.length > 0) {
+
+                        text += "（" + itemSpecialAppealCard.idols.join("、") + "）";
+                    }
+
+                    appendSelectOption(selectSpecialAppeal, itemSpecialAppealCard.id, text);
+                }
+            });
+
+            selectSpecialAppeal.value = idSpecialAppealCard;
+        }
+
         function setupSupportSelect(idSupportCard, idElement, filterSeries, filterRarity) {
 
             const selectSupport = document.getElementById(idElement);
@@ -1538,13 +2105,11 @@
             selectSupport.value = idSupportCard;
         }
 
-        function setupSupportFilter(idCheckBoxArray, filter) {
-
-            let checkboxRarity;
+        function setupFilterCheckBoxes(idCheckBoxArray, filter) {
 
             idCheckBoxArray.forEach((id) => {
 
-                checkboxRarity = document.getElementById(id);
+                const checkboxRarity = document.getElementById(id);
 
                 checkboxRarity.checked = filter.includes(checkboxRarity.value);
             });
@@ -1666,6 +2231,18 @@
 
             support3Selected = listSupportCard.find((support) => support.id == cookieStorage.support_3_id);
 
+            filterSeriesSpecialAppeal1 = convertStringToArray(cookieStorage.specialappeal_1_filter_series);
+
+            filterRaritySpecialAppeal1 = convertStringToArray(cookieStorage.specialappeal_1_filter_rarity);
+
+            filterSeriesSpecialAppeal2 = convertStringToArray(cookieStorage.specialappeal_2_filter_series);
+
+            filterRaritySpecialAppeal2 = convertStringToArray(cookieStorage.specialappeal_2_filter_rarity);
+
+            filterSeriesSpecialAppeal3 = convertStringToArray(cookieStorage.specialappeal_3_filter_series);
+
+            filterRaritySpecialAppeal3 = convertStringToArray(cookieStorage.specialappeal_3_filter_rarity);
+
             filterSeriesSupport1 = convertStringToArray(cookieStorage.support_1_filter_series);
 
             filterRaritySupport1 = convertStringToArray(cookieStorage.support_1_filter_rarity);
@@ -1694,23 +2271,41 @@
 
             setupAccessoryLegsSelect(cookieStorage.accessory_legs_id);
 
+            setupSpecialAppealSelect(cookieStorage.specialappeal_1_id, "specialappeal_1_select", filterSeriesSpecialAppeal1, filterRaritySpecialAppeal1);
+
+            setupFilterCheckBoxes(listSpecialAppeal1SeriesCheckboxId, filterSeriesSpecialAppeal1);
+
+            setupFilterCheckBoxes(listSpecialAppeal1RarityCheckboxId, filterRaritySpecialAppeal1);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_2_id, "specialappeal_2_select", filterSeriesSpecialAppeal2, filterRaritySpecialAppeal2);
+
+            setupFilterCheckBoxes(listSpecialAppeal2SeriesCheckboxId, filterSeriesSpecialAppeal2);
+
+            setupFilterCheckBoxes(listSpecialAppeal2RarityCheckboxId, filterRaritySpecialAppeal2);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_3_id, "specialappeal_3_select", filterSeriesSpecialAppeal3, filterRaritySpecialAppeal3);
+
+            setupFilterCheckBoxes(listSpecialAppeal3SeriesCheckboxId, filterSeriesSpecialAppeal3);
+
+            setupFilterCheckBoxes(listSpecialAppeal3RarityCheckboxId, filterRaritySpecialAppeal3);
+
             setupSupportSelect(cookieStorage.support_1_id, "support_1_select", filterSeriesSupport1, filterRaritySupport1);
 
-            setupSupportFilter(listSupport1SeriesCheckboxId, filterSeriesSupport1);
+            setupFilterCheckBoxes(listSupport1SeriesCheckboxId, filterSeriesSupport1);
 
-            setupSupportFilter(listSupport1RarityCheckboxId, filterRaritySupport1);
+            setupFilterCheckBoxes(listSupport1RarityCheckboxId, filterRaritySupport1);
 
             setupSupportSelect(cookieStorage.support_2_id, "support_2_select", filterSeriesSupport2, filterRaritySupport2);
 
-            setupSupportFilter(listSupport2SeriesCheckboxId, filterSeriesSupport2);
+            setupFilterCheckBoxes(listSupport2SeriesCheckboxId, filterSeriesSupport2);
 
-            setupSupportFilter(listSupport2RarityCheckboxId, filterRaritySupport2);
+            setupFilterCheckBoxes(listSupport2RarityCheckboxId, filterRaritySupport2);
 
             setupSupportSelect(cookieStorage.support_3_id, "support_3_select", filterSeriesSupport3, filterRaritySupport3);
 
-            setupSupportFilter(listSupport3SeriesCheckboxId, filterSeriesSupport3);
+            setupFilterCheckBoxes(listSupport3SeriesCheckboxId, filterSeriesSupport3);
 
-            setupSupportFilter(listSupport3RarityCheckboxId, filterRaritySupport3);
+            setupFilterCheckBoxes(listSupport3RarityCheckboxId, filterRaritySupport3);
 
             setupCostumeLevelSelect(cookieStorage.costume_level, 60);
 
@@ -2566,7 +3161,7 @@
 
             redrawLastUpdatedTBoby();
 
-            redrawDebugTBoby(listCard_S2);
+            redrawDebugTBoby(listCardList);
         }
 
         function song_select_onchange() {
@@ -2717,6 +3312,51 @@
             cookieStorage.save("accessory_legs_id");
         }
 
+        function specialappeal_1_select_onchange() {
+
+            const idSpecialAppeal = document.getElementById("specialappeal_1_select").value;
+
+            cookieStorage.specialappeal_1_id = idSpecialAppeal;
+
+            specialAppeal1Selected = listSpecialAppealCard.find((support) => support.id == idSpecialAppeal);
+
+            const elementDescriptionsSpecialAppeal1 = document.getElementById("specialappeal_1_descriptions");
+
+            redrawSupportDescriptions(elementDescriptionsSpecialAppeal1, specialAppeal1Selected);
+
+            cookieStorage.save("specialappeal_1_id");
+        }
+
+        function specialappeal_2_select_onchange() {
+
+            const idSpecialAppeal = document.getElementById("specialappeal_2_select").value;
+
+            cookieStorage.specialappeal_2_id = idSpecialAppeal;
+
+            specialAppeal2Selected = listSpecialAppealCard.find((support) => support.id == idSpecialAppeal);
+
+            const elementDescriptionsSpecialAppeal2 = document.getElementById("specialappeal_2_descriptions");
+
+            redrawSupportDescriptions(elementDescriptionsSpecialAppeal2, specialAppeal2Selected);
+
+            cookieStorage.save("specialappeal_2_id");
+        }
+
+        function specialappeal_3_select_onchange() {
+
+            const idSpecialAppeal = document.getElementById("specialappeal_3_select").value;
+
+            cookieStorage.specialappeal_3_id = idSpecialAppeal;
+
+            specialAppeal3Selected = listSpecialAppealCard.find((support) => support.id == idSpecialAppeal);
+
+            const elementDescriptionsSpecialAppeal3 = document.getElementById("specialappeal_3_descriptions");
+
+            redrawSupportDescriptions(elementDescriptionsSpecialAppeal3, specialAppeal3Selected);
+
+            cookieStorage.save("specialappeal_3_id");
+        }
+
         function support_1_select_onchange() {
 
             const idSupport = document.getElementById("support_1_select").value;
@@ -2788,6 +3428,84 @@
             calculateAppeal();
 
             cookieStorage.save("trustiness_level");
+        }
+
+        function specialappeal_1_series_any_onchange() {
+
+            filterSeriesSpecialAppeal1 = extractFilterSeries(listSpecialAppeal1SeriesCheckboxId);
+
+            cookieStorage.specialappeal_1_filter_series = convertArrayToString(filterSeriesSpecialAppeal1);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_1_id, "specialappeal_1_select", filterSeriesSpecialAppeal1, filterRaritySpecialAppeal1);
+
+            specialappeal_1_select_onchange();
+
+            cookieStorage.save("specialappeal_1_filter_series");
+        }
+
+        function specialappeal_1_rarity_any_onchange() {
+
+            filterRaritySpecialAppeal1 = extractFilterRarity(listSpecialAppeal1SeriesCheckboxId);
+
+            cookieStorage.specialappeal_1_filter_rarity = convertArrayToString(filterRaritySpecialAppeal1);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_1_id, "specialappeal_1_select", filterSeriesSpecialAppeal1, filterRaritySpecialAppeal1);
+
+            specialappeal_1_select_onchange();
+
+            cookieStorage.save("specialappeal_1_filter_rarity");
+        }
+
+        function specialappeal_2_series_any_onchange() {
+
+            filterSeriesSpecialAppeal2 = extractFilterSeries(listSpecialAppeal2SeriesCheckboxId);
+
+            cookieStorage.specialappeal_2_filter_series = convertArrayToString(filterSeriesSpecialAppeal2);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_2_id, "specialappeal_2_select", filterSeriesSpecialAppeal2, filterRaritySpecialAppeal2);
+
+            specialappeal_2_select_onchange();
+
+            cookieStorage.save("specialappeal_2_filter_series");
+        }
+
+        function specialappeal_2_rarity_any_onchange() {
+
+            filterRaritySpecialAppeal2 = extractFilterRarity(listSpecialAppeal2RarityCheckboxId);
+
+            cookieStorage.specialappeal_2_filter_rarity = convertArrayToString(filterRaritySpecialAppeal2);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_2_id, "specialappeal_2_select", filterSeriesSpecialAppeal2, filterRaritySpecialAppeal2);
+
+            specialappeal_2_select_onchange();
+
+            cookieStorage.save("specialappeal_2_filter_rarity");
+        }
+
+        function specialappeal_3_series_any_onchange() {
+
+            filterSeriesSpecialAppeal3 = extractFilterSeries(listSpecialAppeal3SeriesCheckboxId);
+
+            cookieStorage.specialappeal_3_filter_series = convertArrayToString(filterSeriesSpecialAppeal3);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_3_id, "specialappeal_3_select", filterSeriesSpecialAppeal3, filterRaritySpecialAppeal3);
+
+            specialappeal_3_select_onchange();
+
+            cookieStorage.save("specialappeal_3_filter_series");
+        }
+
+        function specialappeal_3_rarity_any_onchange() {
+
+            filterRaritySpecialAppeal3 = extractFilterRarity(listSpecialAppeal3RarityCheckboxId);
+
+            cookieStorage.specialappeal_3_filter_rarity = convertArrayToString(filterRaritySpecialAppeal3);
+
+            setupSpecialAppealSelect(cookieStorage.specialappeal_3_id, "specialappeal_3_select", filterSeriesSpecialAppeal3, filterRaritySpecialAppeal3);
+
+            specialappeal_3_select_onchange();
+
+            cookieStorage.save("specialappeal_3_filter_rarity");
         }
 
         function support_1_series_any_onchange() {

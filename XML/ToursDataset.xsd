@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ToursDataset"
+    targetNamespace="http://tempuri.org/ToursDataset.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/ToursDataset.xsd"
+    xmlns:mstns="http://tempuri.org/ToursDataset.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+	<xs:simpleType name="Rarity">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="N" />
+			<xs:enumeration value="R" />
+			<xs:enumeration value="SR" />
+			<xs:enumeration value="SSR" />
+			<xs:enumeration value="TR" />
+			<xs:enumeration value="CO" />
+			<xs:enumeration value="PM" />
+			<xs:enumeration value="CP" />
+			<xs:enumeration value="EX" />
+			<xs:enumeration value="UR" />
+			<xs:enumeration value="TSR" />
+			<xs:enumeration value="TSSR" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="CardType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Costume" />
+			<xs:enumeration value="Accessory" />
+			<xs:enumeration value="Support" />
+			<xs:enumeration value="SpecialAppeal" />
+			<xs:enumeration value="StageEffect" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Genre">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Sweet" />
+			<xs:enumeration value="Smart" />
+			<xs:enumeration value="Energy" />
+			<xs:enumeration value="Wonder" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="AppealBonusType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="VoDaVi" />
+			<xs:enumeration value="VoDa" />
+			<xs:enumeration value="VoVi" />
+			<xs:enumeration value="DaVi" />
+			<xs:enumeration value="Vo" />
+			<xs:enumeration value="Da" />
+			<xs:enumeration value="Vi" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="AppealBonus">
+		<xs:sequence>
+			<xs:element name="Vo" type="xs:decimal" minOccurs="0" />
+			<xs:element name="Da" type="xs:decimal" minOccurs="0" />
+			<xs:element name="Vi" type="xs:decimal" minOccurs="0" />
+		</xs:sequence>
+		<xs:attribute name="AppealBonusType" type="AppealBonusType" use="optional" default="Unknown" />
+	</xs:complexType>
+
+	<xs:complexType name="SongBonus">
+		<xs:complexContent>
+			<xs:extension base="AppealBonus" />
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="CostumeBonus">
+		<xs:complexContent>
+			<xs:extension base="AppealBonus">
+				<xs:sequence>
+					<xs:element name="ExtraBonus" type="AppealBonus" minOccurs="0" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="EquipmentArea">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Unknown" />
+			<xs:enumeration value="Head" />
+			<xs:enumeration value="Face" />
+			<xs:enumeration value="Hand" />
+			<xs:enumeration value="Back" />
+			<xs:enumeration value="Rump" />
+			<xs:enumeration value="Legs" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="Idol">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Brand" type="xs:string" minOccurs="0" />
+			<xs:element name="Sex" type="xs:string" minOccurs="0" />
+			<xs:element name="Age" type="xs:integer" minOccurs="0" />
+			<xs:element name="TypeOfBlood" type="xs:string" minOccurs="0" />
+			<xs:element name="DateOfBirth" type="xs:string" minOccurs="0" />
+			<xs:element name="BirthPlace" type="xs:string" minOccurs="0" />
+			<xs:element name="Hobby" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Song">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="TargetIdol" type="xs:string" />
+			<xs:element name="Vocalist" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="AppealBonusType" type="AppealBonusType" use="optional" default="Unknown" />
+	</xs:complexType>
+
+	<xs:complexType name="Equipment">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="TargetIdol" type="xs:string" />
+			<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="Key" type="xs:string" use="required" />
+		<xs:attribute name="Genre" type="Genre" use="optional" default="Unknown" />
+	</xs:complexType>
+
+	<xs:complexType name="Costume">
+		<xs:complexContent>
+			<xs:extension base="Equipment">
+				<xs:sequence>
+					<xs:element name="Vo" type="xs:integer" />
+					<xs:element name="Da" type="xs:integer" />
+					<xs:element name="Vi" type="xs:integer" />
+				</xs:sequence>
+				<xs:attribute name="AppealBonusType" type="AppealBonusType" use="optional" default="Unknown" />
+				<xs:attribute name="MaxLevel" type="xs:integer" use="optional" default="10" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Accessory">
+		<xs:complexContent>
+			<xs:extension base="Equipment">
+				<xs:attribute name="Area" type="EquipmentArea" use="optional" default="Unknown" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Card">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Idol" type="xs:string" maxOccurs="unbounded" />
+			<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="ID" type="xs:string" use="required" />
+		<xs:attribute name="Rarity" type="Rarity" use="optional" default="Unknown" />
+		<xs:attribute name="CardType" type="CardType" use="optional" default="Unknown" />
+	</xs:complexType>
+
+	<xs:complexType name="CostumeCard">
+		<xs:complexContent>
+			<xs:extension base="Card">
+				<xs:attribute name="refCostumeKey" type="xs:string" use="required" />
+				<xs:attribute name="CardType" type="CardType" fixed="Costume" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="AccessoryCard">
+		<xs:complexContent>
+			<xs:extension base="Card">
+				<xs:attribute name="refAccessoryKey" type="xs:string" use="required" />
+				<xs:attribute name="CardType" type="CardType" fixed="Accessory" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SupportCard">
+		<xs:complexContent>
+			<xs:extension base="Card">
+				<xs:attribute name="CardType" type="CardType" fixed="Support" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SpecialAppealCard">
+		<xs:complexContent>
+			<xs:extension base="Card">
+				<xs:sequence>
+					<xs:element name="AppealIdol" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="CardType" type="CardType" fixed="SpecialAppeal" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="StageEffectCard">
+		<xs:complexContent>
+			<xs:extension base="Card">
+				<xs:sequence>
+					<xs:element name="StageEffect" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+				<xs:attribute name="CardType" type="CardType" fixed="StageEffect" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="SettingBonus">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Function" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="CostumeName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="HeadAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="FaceAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="HandAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="BackAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="RumpAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="LegsAccessoryName" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="CardList">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="CostumeCard" type="CostumeCard" />
+			<xs:element name="AccessoryCard" type="AccessoryCard" />
+			<xs:element name="SupportCard" type="SupportCard" />
+			<xs:element name="SpecialAppealCard" type="SpecialAppealCard" />
+			<xs:element name="StageEffectCard" type="StageEffectCard" />
+		</xs:choice>
+		<xs:attribute name="Name" type="xs:string" use="optional" default="" />
+	</xs:complexType>
+
+	<xs:complexType name="ToursDataset">
+		<xs:sequence>
+			<xs:element name="Idol" type="Idol" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="SongBonus" type="SongBonus" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Song" type="Song" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="CostumeBonus" type="CostumeBonus" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Costume" type="Costume" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Accessory" type="Accessory" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="CardList" type="CardList" minOccurs="0" />
+			<xs:element name="SettingBonus" type="SettingBonus" minOccurs="0" maxOccurs="unbounded" />
+			<xs:element name="Remark" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="SeriesName" type="xs:string" use="required" />
+		<xs:attribute name="Date" type="xs:date" use="optional" />
+		<xs:attribute name="Version" type="xs:string" use="optional" default="" />
+	</xs:complexType>
+
+	<xs:element name="ToursDataset" type="ToursDataset" />
+
+</xs:schema>

@@ -180,6 +180,6 @@ const listAppealBonus = [
     ),
 ];
 
-const lastUpdated_listAppealBonus = "2026/10/13";
+const lastUpdated_listAppealBonus = "2026/10/30";
 
 const remarks_listAppealBonus = ["バージョン 2.0.2 で確認"];

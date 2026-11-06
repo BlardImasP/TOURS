@@ -12,41 +12,41 @@ const listCostumeBonus = [
     new CostumeBonus(
         2,
         "[Vo][Da]",
-        new BonusRates(0.45, 0.45, 0),
-        new BonusRates(0.10, 0.10, 0)
+        new BonusRates(0.45, 0.45, 0.00),
+        new BonusRates(0.10, 0.10, 0.00)
     ),
     new CostumeBonus(
         3,
         "[Vo][Vi]",
-        new BonusRates(0.45, 0, 0.45),
-        new BonusRates(0.10, 0, 0.10)
+        new BonusRates(0.45, 0.00, 0.45),
+        new BonusRates(0.10, 0.00, 0.10)
     ),
     new CostumeBonus(
         4,
         "[Da][Vi]",
-        new BonusRates(0, 0.45, 0.45),
-        new BonusRates(0, 0.10, 0.10)
+        new BonusRates(0.00, 0.45, 0.45),
+        new BonusRates(0.00, 0.10, 0.10)
     ),
     new CostumeBonus(
         5,
         "[Vo]",
-        new BonusRates(1.0, 0, 0),
-        new BonusRates(0.1, 0, 0)
+        new BonusRates(1.00, 0.00, 0.00),
+        new BonusRates(0.10, 0.00, 0.00)
     ),
     new CostumeBonus(
         6,
         "[Da]",
-        new BonusRates(0, 1.0, 0),
-        new BonusRates(0, 0.1, 0)
+        new BonusRates(0.00, 1.00, 0.00),
+        new BonusRates(0.00, 0.10, 0.00)
     ),
     new CostumeBonus(
         7,
         "[Vi]",
-        new BonusRates(0, 0, 1.0),
-        new BonusRates(0, 0, 0.1)
+        new BonusRates(0.00, 0.00, 1.00),
+        new BonusRates(0.00, 0.00, 0.10)
     )
 ];
 
-const lastUpdated_listCostumeBonus = "2026/10/13";
+const lastUpdated_listCostumeBonus = "2026/11/04";
 
-const remarks_listCostumeBonus = ["バージョン 2.0.2 で確認"];
+const remarks_listCostumeBonus = ["バージョン 2.1.1 で確認"];
